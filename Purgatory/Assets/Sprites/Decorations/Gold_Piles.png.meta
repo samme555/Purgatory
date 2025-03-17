@@ -127,20 +127,20 @@ TextureImporter:
       name: Gold_Piles_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 20
-        width: 25
-        height: 25
+        x: 0
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e9c196e44ea3780b0800000000000000
-      internalID: -5726543648935830370
+      spriteID: c3aff08565928ee40a7bef9e3dc2af3a
+      internalID: 694546265
       vertices: []
       indices: 
       edges: []
@@ -149,20 +149,20 @@ TextureImporter:
       name: Gold_Piles_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 11
-        width: 32
-        height: 33
+        x: 16
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 3b5de5fdb1e8d4680800000000000000
-      internalID: -8769196649057692237
+      spriteID: 44ab91730ac57f842aec84d1db4fd5e7
+      internalID: -1940892781
       vertices: []
       indices: 
       edges: []
@@ -171,20 +171,20 @@ TextureImporter:
       name: Gold_Piles_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 4
-        width: 8
-        height: 8
+        x: 32
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 34d36932bb95d5ab0800000000000000
-      internalID: -5017755749530059453
+      spriteID: 62954bc8044222840b07bb709f6680f1
+      internalID: 54783191
       vertices: []
       indices: 
       edges: []
@@ -193,20 +193,20 @@ TextureImporter:
       name: Gold_Piles_3
       rect:
         serializedVersion: 2
-        x: 6
-        y: 7
-        width: 8
-        height: 10
+        x: 48
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 5b4d76c8efc99e670800000000000000
-      internalID: 8568552383140320437
+      spriteID: f2613cb103224f24e9cae6a66c2715a3
+      internalID: 314360787
       vertices: []
       indices: 
       edges: []
@@ -215,20 +215,20 @@ TextureImporter:
       name: Gold_Piles_4
       rect:
         serializedVersion: 2
-        x: 8
-        y: 0
-        width: 8
-        height: 8
+        x: 0
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 62c08b44693a6ab90800000000000000
-      internalID: -7230912285903418330
+      spriteID: 77f32c041e9e6df4895d376c230d62d2
+      internalID: 1332093568
       vertices: []
       indices: 
       edges: []
@@ -237,20 +237,20 @@ TextureImporter:
       name: Gold_Piles_5
       rect:
         serializedVersion: 2
-        x: 18
-        y: 0
-        width: 13
-        height: 17
+        x: 16
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b358e318f401474a0800000000000000
-      internalID: -6596629620534115013
+      spriteID: 63cbd221f7a3ae14f8cd2faeed7098b5
+      internalID: -156665084
       vertices: []
       indices: 
       edges: []
@@ -260,19 +260,19 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 8
-        width: 8
-        height: 8
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: fe657ed446dcc6ea0800000000000000
-      internalID: -5878097582937909521
+      spriteID: 8947f729a182dfc4cb380c40ad16db91
+      internalID: 499376404
       vertices: []
       indices: 
       edges: []
@@ -281,20 +281,20 @@ TextureImporter:
       name: Gold_Piles_7
       rect:
         serializedVersion: 2
-        x: 42
-        y: 4
-        width: 8
-        height: 8
+        x: 48
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 37abcb62b6bc80550800000000000000
-      internalID: 6127370954109401715
+      spriteID: 050f3ada5f81e9a468ed0cdec2aee88e
+      internalID: -1535185449
       vertices: []
       indices: 
       edges: []
@@ -303,20 +303,86 @@ TextureImporter:
       name: Gold_Piles_8
       rect:
         serializedVersion: 2
-        x: 53
-        y: 2
-        width: 8
-        height: 8
+        x: 0
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: fa6d3c7ab7f882e00800000000000000
-      internalID: 1020223076857796271
+      spriteID: 79bc7023e0bf14c44a43a0ccc3e58f9f
+      internalID: -1495567683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gold_Piles_9
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52b39d6300a0e314a9a9e9bfd169dabf
+      internalID: 1357047574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gold_Piles_10
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8c2cc75c9d74db439c551fc021169c9
+      internalID: 416267997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gold_Piles_11
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16d192449593bc4489c05470b70cba76
+      internalID: 186660727
       vertices: []
       indices: 
       edges: []
@@ -325,7 +391,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5376d44f79204c74080a12370fa4a228
     internalID: 0
     vertices: []
     indices: 
@@ -334,7 +400,19 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Gold_Piles_0: 694546265
+      Gold_Piles_1: -1940892781
+      Gold_Piles_10: 416267997
+      Gold_Piles_11: 186660727
+      Gold_Piles_2: 54783191
+      Gold_Piles_3: 314360787
+      Gold_Piles_4: 1332093568
+      Gold_Piles_5: -156665084
+      Gold_Piles_6: 499376404
+      Gold_Piles_7: -1535185449
+      Gold_Piles_8: -1495567683
+      Gold_Piles_9: 1357047574
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

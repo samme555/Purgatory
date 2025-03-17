@@ -103,9 +103,9 @@ TextureImporter:
       name: Small_Wooden_Bridge_0
       rect:
         serializedVersion: 2
-        x: 11
+        x: 0
         y: 0
-        width: 58
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -113,10 +113,98 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 0515d495e3d695e60800000000000000
-      internalID: 7951506731652960592
+      spriteID: af19e1c03c9459c4b97db458a30bdc95
+      internalID: 759384148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Small_Wooden_Bridge_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41d4cd6b51c265046b5a0d32d2ff6f59
+      internalID: 656000066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Small_Wooden_Bridge_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72148d19ec4e4ae4bbd84da304374fa9
+      internalID: 451229890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Small_Wooden_Bridge_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47b46a42b0e045640ac7052429781193
+      internalID: -681424587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Small_Wooden_Bridge_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 778be070a7a14d04cab93a335545d6ec
+      internalID: -1034698232
       vertices: []
       indices: 
       edges: []
@@ -125,7 +213,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5239083c803eddb4990b15b3b271d30e
     internalID: 0
     vertices: []
     indices: 
@@ -134,7 +222,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Small_Wooden_Bridge_0: 759384148
+      Small_Wooden_Bridge_1: 656000066
+      Small_Wooden_Bridge_2: 451229890
+      Small_Wooden_Bridge_3: -681424587
+      Small_Wooden_Bridge_4: -1034698232
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

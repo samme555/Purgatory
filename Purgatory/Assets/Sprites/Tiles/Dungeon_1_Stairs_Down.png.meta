@@ -113,10 +113,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 5b35fa3c161a078a0800000000000000
-      internalID: -6309365636679117899
+      spriteID: f6ce3686d71ac8b4588d466cd5b698b2
+      internalID: 1081362106
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: badc67780e78a2a478c70f28a570ad92
     internalID: 0
     vertices: []
     indices: 
@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Dungeon_1_Stairs_Down_0: 1081362106
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

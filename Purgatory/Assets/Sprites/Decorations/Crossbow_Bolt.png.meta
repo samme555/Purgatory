@@ -103,20 +103,20 @@ TextureImporter:
       name: Crossbow_Bolt_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 4
-        width: 11
-        height: 7
+        x: 0
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: cd4a7999c475d1a10800000000000000
-      internalID: 1881756205816718556
+      spriteID: c847a9a0c58544a4f85a2745073891c8
+      internalID: 330231155
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 59f16a29fd5723544bf16e5a77aae4e9
     internalID: 0
     vertices: []
     indices: 
@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Crossbow_Bolt_0: 330231155
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

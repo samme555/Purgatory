@@ -118,17 +118,17 @@ TextureImporter:
         x: 0
         y: 0
         width: 16
-        height: 15
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e377e0243f2c84170800000000000000
-      internalID: 8162988674650109758
+      spriteID: fa921adbc825a4b4cbdd44be229b26e9
+      internalID: 1186742321
       vertices: []
       indices: 
       edges: []
@@ -140,17 +140,17 @@ TextureImporter:
         x: 16
         y: 0
         width: 16
-        height: 15
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f083569674f07c7e0800000000000000
-      internalID: -1745409531197442033
+      spriteID: 367e124af5a9ff2409bbd3841b9f3458
+      internalID: 1813573113
       vertices: []
       indices: 
       edges: []
@@ -159,20 +159,20 @@ TextureImporter:
       name: Mounted_Crossbow_anim_2
       rect:
         serializedVersion: 2
-        x: 31
+        x: 32
         y: 0
-        width: 17
-        height: 15
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a4a683845ef49c530800000000000000
-      internalID: 3875716800506784330
+      spriteID: 7262ca82bd7bf4c4c860381471488963
+      internalID: 337908139
       vertices: []
       indices: 
       edges: []
@@ -184,17 +184,17 @@ TextureImporter:
         x: 48
         y: 0
         width: 16
-        height: 15
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a765d9528abd7d330800000000000000
-      internalID: 3735695931159172730
+      spriteID: 025dd7f935496e743a2e8e313afea374
+      internalID: -1465223097
       vertices: []
       indices: 
       edges: []
@@ -206,17 +206,17 @@ TextureImporter:
         x: 64
         y: 0
         width: 16
-        height: 15
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 58e81140120d87780800000000000000
-      internalID: -8684963041163243899
+      spriteID: 2578f1872a6c44243815be78e16cffe0
+      internalID: 1381502705
       vertices: []
       indices: 
       edges: []
@@ -225,7 +225,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 4e56278d797263e4580b9b487bcb6d44
     internalID: 0
     vertices: []
     indices: 
@@ -234,7 +234,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Mounted_Crossbow_anim_0: 1186742321
+      Mounted_Crossbow_anim_1: 1813573113
+      Mounted_Crossbow_anim_2: 337908139
+      Mounted_Crossbow_anim_3: -1465223097
+      Mounted_Crossbow_anim_4: 1381502705
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

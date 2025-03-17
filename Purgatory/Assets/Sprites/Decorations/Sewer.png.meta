@@ -103,9 +103,9 @@ TextureImporter:
       name: Sewer_0
       rect:
         serializedVersion: 2
-        x: 1
+        x: 0
         y: 0
-        width: 14
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -113,10 +113,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 0adc06791ddbad140800000000000000
-      internalID: 4745313865273757088
+      spriteID: dd6b63cdd7700e247904ef94f7ddb915
+      internalID: 408492792
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: cff6720b5dbdda342a8b43d091ddf1af
     internalID: 0
     vertices: []
     indices: 
@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Sewer_0: 408492792
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
