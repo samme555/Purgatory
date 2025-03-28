@@ -4,7 +4,12 @@ public class Movement : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 5f;
     [SerializeField] Rigidbody2D rb;
+    [SerializeField] LayerMask collisionLayer;
     private Vector2 movementDirection;
+
+    [Header("Raycast Settings")]
+    [SerializeField] float raycastDistance = 2f;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -18,12 +23,26 @@ public class Movement : MonoBehaviour
         float moveY = Input.GetAxisRaw("Vertical");
 
         movementDirection = new Vector2(moveX, moveY).normalized;
-
     }
 
     void FixedUpdate()
     {
-        rb.linearVelocity = movementDirection * moveSpeed;
+
+        if (!IsBlocked(movementDirection))
+        {
+            rb.linearVelocity = movementDirection * moveSpeed;
+        }
+        else
+        {
+            rb.linearVelocity = Vector2.zero;
+        }
+
+    }
+
+    private bool IsBlocked(Vector2 direction)
+    {
+        RaycastHit2D hit = Physics2D.Raycast(rb.position, direction, raycastDistance, collisionLayer);
+        return hit.collider != null; 
     }
 
 
