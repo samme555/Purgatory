@@ -14862,6 +14862,9 @@ PrefabInstance:
       addedObject: {fileID: 1096834297}
     - targetCorrespondingSourceObject: {fileID: 1230018945513600170, guid: e011c842c4c65154d8f695596fa82111, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 1096834302}
+    - targetCorrespondingSourceObject: {fileID: 1230018945513600170, guid: e011c842c4c65154d8f695596fa82111, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 1096834296}
     - targetCorrespondingSourceObject: {fileID: 1230018945513600170, guid: e011c842c4c65154d8f695596fa82111, type: 3}
       insertIndex: -1
@@ -14988,6 +14991,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1096834302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096834295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71ef61009b1eadd4e86f302648066254, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 2044557973}
+  rb: {fileID: 1096834296}
+  cameraZoomDistance: -1
 --- !u!1 &1123927749
 GameObject:
   m_ObjectHideFlags: 0
