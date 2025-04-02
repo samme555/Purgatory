@@ -21,4 +21,13 @@ public class EnemyMovement : MonoBehaviour
             transform.Translate(direction * speed * Time.deltaTime);
         }
     }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            Debug.Log("Player and enemy collided!");
+            // Apply damage to the player here
+        }
+    }
+
 }
