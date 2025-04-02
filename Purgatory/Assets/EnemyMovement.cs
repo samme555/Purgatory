@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-
+    Rigidbody rb;
     public float speed = 0.5f;
     private Transform player;
 
