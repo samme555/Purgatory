@@ -23316,6 +23316,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 1.5
   rb: {fileID: 1096834296}
+  anim: {fileID: 1096834301}
 --- !u!61 &1096834298
 BoxCollider2D:
   m_ObjectHideFlags: 0
