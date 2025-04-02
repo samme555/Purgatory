@@ -1,82 +1,67 @@
 fileFormatVersion: 2
-guid: 49a86ee5a7ee11049827841e88d9c8d9
+guid: 87b856343d6dcc54ca0961a9017cbe06
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5032990790905509716
-    second: UI_Frames_0
+      213: 50435548957511090
+    second: ArcherFliped_0
   - first:
-      213: -6679953284920075913
-    second: UI_Frames_1
+      213: -5016436523870327580
+    second: ArcherFliped_1
   - first:
-      213: 3346837577694019691
-    second: UI_Frames_2
+      213: 5701045812967402911
+    second: ArcherFliped_2
   - first:
-      213: -8791061684223605669
-    second: UI_Frames_3
+      213: 4926910169471456729
+    second: ArcherFliped_3
   - first:
-      213: -7374546139589807423
-    second: UI_Frames_4
+      213: 4601483432432570089
+    second: ArcherFliped_4
   - first:
-      213: 6494682971960736090
-    second: UI_Frames_5
+      213: 2296236571830811026
+    second: ArcherFliped_5
   - first:
-      213: 492313034574852574
-    second: UI_Frames_6
+      213: -3101666552780046972
+    second: ArcherFliped_6
   - first:
-      213: 6316763320169654456
-    second: UI_Frames_7
+      213: 3124744046506390549
+    second: ArcherFliped_7
   - first:
-      213: 1420900625701767438
-    second: UI_Frames_8
+      213: 1087055183086011041
+    second: ArcherFliped_8
   - first:
-      213: -3457276847671156071
-    second: UI_Frames_9
+      213: -7239449001704632348
+    second: ArcherFliped_9
   - first:
-      213: 5745178936549529749
-    second: UI_Frames_10
+      213: -8666705953887585373
+    second: ArcherFliped_10
   - first:
-      213: 3224011000309181488
-    second: UI_Frames_11
+      213: 4896766638392480853
+    second: ArcherFliped_11
   - first:
-      213: 7764871120084573160
-    second: UI_Frames_12
+      213: 4809743074994632181
+    second: ArcherFliped_12
   - first:
-      213: -912385335382948652
-    second: UI_Frames_13
+      213: -4872279985308737372
+    second: ArcherFliped_13
   - first:
-      213: 239788920320451221
-    second: UI_Frames_14
+      213: -4067096609306543131
+    second: ArcherFliped_14
   - first:
-      213: 8543167340527907790
-    second: UI_Frames_15
+      213: 4458447238256866368
+    second: ArcherFliped_15
   - first:
-      213: -6474153178337083997
-    second: UI_Frames_16
+      213: 438290009437484493
+    second: ArcherFliped_16
   - first:
-      213: 7962500669415199613
-    second: UI_Frames_17
+      213: -290304046967325432
+    second: ArcherFliped_17
   - first:
-      213: 6807654065617630088
-    second: UI_Frames_18
+      213: -2338663934954490727
+    second: ArcherFliped_18
   - first:
-      213: 8916156736367152456
-    second: UI_Frames_19
-  - first:
-      213: 3193305353492422719
-    second: UI_Frames_20
-  - first:
-      213: -6268959639627834742
-    second: UI_Frames_21
-  - first:
-      213: -7294562437934596049
-    second: UI_Frames_22
-  - first:
-      213: -4494089286520263261
-    second: UI_Frames_23
-  - first:
-      213: -5538786102408219600
-    second: UI_Frames_24
+      213: -4283905156196903822
+    second: ArcherFliped_19
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,7 +94,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -147,7 +132,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -172,166 +157,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: UI_Frames_0
+      name: ArcherFliped_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 137
-        width: 26
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4573cb95576c8d540800000000000000
-      internalID: 5032990790905509716
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_Frames_1
-      rect:
-        serializedVersion: 2
-        x: 62
-        y: 142
-        width: 20
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 779922811e90c43a0800000000000000
-      internalID: -6679953284920075913
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_Frames_2
-      rect:
-        serializedVersion: 2
-        x: 101
-        y: 137
-        width: 32
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b60816b6b0b527e20800000000000000
-      internalID: 3346837577694019691
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_Frames_3
-      rect:
-        serializedVersion: 2
-        x: 155
-        y: 132
-        width: 26
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b540e49a9ffdff580800000000000000
-      internalID: -8791061684223605669
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_Frames_4
-      rect:
-        serializedVersion: 2
-        x: 198
-        y: 134
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1c2750aab5958a990800000000000000
-      internalID: -7374546139589807423
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_Frames_5
-      rect:
-        serializedVersion: 2
-        x: 246
-        y: 134
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a597f70b0cfb12a50800000000000000
-      internalID: 6494682971960736090
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_Frames_6
-      rect:
-        serializedVersion: 2
-        x: 294
-        y: 134
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ed1f028b81c05d600800000000000000
-      internalID: 492313034574852574
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_Frames_7
-      rect:
-        serializedVersion: 2
-        x: 3
-        y: 80
-        width: 42
+        x: 0
+        y: 528
+        width: 48
         height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -341,19 +172,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8b8ede4a5c6a9a750800000000000000
-      internalID: 6316763320169654456
+      spriteID: 2bd0aa35dde23b000800000000000000
+      internalID: 50435548957511090
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_Frames_8
+      name: ArcherFliped_1
       rect:
         serializedVersion: 2
-        x: 51
-        y: 80
-        width: 42
+        x: 48
+        y: 528
+        width: 48
         height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -363,19 +194,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e098510479d08b310800000000000000
-      internalID: 1420900625701767438
+      spriteID: 4ece96c4f89026ab0800000000000000
+      internalID: -5016436523870327580
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_Frames_9
+      name: ArcherFliped_2
       rect:
         serializedVersion: 2
-        x: 99
-        y: 80
-        width: 42
+        x: 96
+        y: 528
+        width: 48
         height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -385,20 +216,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 992e06446094500d0800000000000000
-      internalID: -3457276847671156071
+      spriteID: f9d662226fe2e1f40800000000000000
+      internalID: 5701045812967402911
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_Frames_10
+      name: ArcherFliped_3
       rect:
         serializedVersion: 2
-        x: 155
-        y: 84
-        width: 26
-        height: 33
+        x: 144
+        y: 528
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -407,20 +238,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5985714bdc9fabf40800000000000000
-      internalID: 5745178936549529749
+      spriteID: 9d51b9bf1b6ef5440800000000000000
+      internalID: 4926910169471456729
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_Frames_11
+      name: ArcherFliped_4
       rect:
         serializedVersion: 2
-        x: 198
-        y: 81
-        width: 36
-        height: 41
+        x: 192
+        y: 528
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -429,20 +260,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 03c61695cecfdbc20800000000000000
-      internalID: 3224011000309181488
+      spriteID: 9ee0df55dc0cbdf30800000000000000
+      internalID: 4601483432432570089
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_Frames_12
+      name: ArcherFliped_5
       rect:
         serializedVersion: 2
-        x: 246
-        y: 81
-        width: 36
-        height: 41
+        x: 240
+        y: 528
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -451,20 +282,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8eb9457c42d52cb60800000000000000
-      internalID: 7764871120084573160
+      spriteID: 2997c300ffedddf10800000000000000
+      internalID: 2296236571830811026
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_Frames_13
+      name: ArcherFliped_6
       rect:
         serializedVersion: 2
-        x: 294
-        y: 80
-        width: 36
-        height: 42
+        x: 0
+        y: 384
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -473,20 +304,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4d4493a1f5e8653f0800000000000000
-      internalID: -912385335382948652
+      spriteID: 48db5dd14baa4f4d0800000000000000
+      internalID: -3101666552780046972
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_Frames_14
+      name: ArcherFliped_7
       rect:
         serializedVersion: 2
-        x: 11
-        y: 43
-        width: 26
-        height: 26
+        x: 48
+        y: 384
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -495,20 +326,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 59266c8a0c6e35300800000000000000
-      internalID: 239788920320451221
+      spriteID: 514b70a97225d5b20800000000000000
+      internalID: 3124744046506390549
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_Frames_15
+      name: ArcherFliped_8
       rect:
         serializedVersion: 2
-        x: 53
-        y: 43
-        width: 32
-        height: 26
+        x: 96
+        y: 384
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -517,20 +348,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ec372ecbe6d6f8670800000000000000
-      internalID: 8543167340527907790
+      spriteID: 1a2c617fdeef51f00800000000000000
+      internalID: 1087055183086011041
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_Frames_16
+      name: ArcherFliped_9
       rect:
         serializedVersion: 2
-        x: 107
-        y: 36
-        width: 26
-        height: 33
+        x: 144
+        y: 384
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -539,20 +370,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3ad70cf5cff2726a0800000000000000
-      internalID: -6474153178337083997
+      spriteID: 4efc6db3d7f488b90800000000000000
+      internalID: -7239449001704632348
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_Frames_17
+      name: ArcherFliped_10
       rect:
         serializedVersion: 2
-        x: 142
-        y: 46
-        width: 20
-        height: 20
+        x: 192
+        y: 384
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -561,20 +392,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d739d44fb2c708e60800000000000000
-      internalID: 7962500669415199613
+      spriteID: 3ab74c56adca9b780800000000000000
+      internalID: -8666705953887585373
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_Frames_18
+      name: ArcherFliped_11
       rect:
         serializedVersion: 2
-        x: 174
-        y: 46
-        width: 20
-        height: 20
+        x: 240
+        y: 384
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -583,20 +414,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 883f1eedd45a97e50800000000000000
-      internalID: 6807654065617630088
+      spriteID: 5541e5d305fc4f340800000000000000
+      internalID: 4896766638392480853
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_Frames_19
+      name: ArcherFliped_12
       rect:
         serializedVersion: 2
-        x: 206
-        y: 46
-        width: 20
-        height: 20
+        x: 0
+        y: 240
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -605,20 +436,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 84dced8df4d8cbb70800000000000000
-      internalID: 8916156736367152456
+      spriteID: 5f533f5f7d3afb240800000000000000
+      internalID: 4809743074994632181
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_Frames_20
+      name: ArcherFliped_13
       rect:
         serializedVersion: 2
-        x: 238
-        y: 46
-        width: 20
-        height: 20
+        x: 48
+        y: 240
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -627,20 +458,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f30e446dc46e05c20800000000000000
-      internalID: 3193305353492422719
+      spriteID: 4a06d65fa2f226cb0800000000000000
+      internalID: -4872279985308737372
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_Frames_21
+      name: ArcherFliped_14
       rect:
         serializedVersion: 2
-        x: 270
-        y: 46
-        width: 20
-        height: 20
+        x: 96
+        y: 240
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -649,20 +480,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a8ad8b01c6e2009a0800000000000000
-      internalID: -6268959639627834742
+      spriteID: 5eb7617ae25ce87c0800000000000000
+      internalID: -4067096609306543131
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_Frames_22
+      name: ArcherFliped_15
       rect:
         serializedVersion: 2
-        x: 302
-        y: 46
-        width: 20
-        height: 20
+        x: 144
+        y: 240
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -671,20 +502,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f2040076c1284ca90800000000000000
-      internalID: -7294562437934596049
+      spriteID: 0443f1e24269fdd30800000000000000
+      internalID: 4458447238256866368
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_Frames_23
+      name: ArcherFliped_16
       rect:
         serializedVersion: 2
-        x: 142
-        y: 14
-        width: 20
-        height: 20
+        x: 192
+        y: 240
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -693,20 +524,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3ad2218ca99c1a1c0800000000000000
-      internalID: -4494089286520263261
+      spriteID: dc5bf11017e151600800000000000000
+      internalID: 438290009437484493
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_Frames_24
+      name: ArcherFliped_17
       rect:
         serializedVersion: 2
-        x: 188
-        y: 18
-        width: 24
-        height: 12
+        x: 240
+        y: 240
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -715,8 +546,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0347617b2674223b0800000000000000
-      internalID: -5538786102408219600
+      spriteID: 80d77a3e102a8fbf0800000000000000
+      internalID: -290304046967325432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcherFliped_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 994350cba856b8fd0800000000000000
+      internalID: -2338663934954490727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcherFliped_19
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 48
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2745b6125f28c84c0800000000000000
+      internalID: -4283905156196903822
       vertices: []
       indices: 
       edges: []
@@ -725,7 +600,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 064c2c3fe6a234b429ff2ff385047f6e
     internalID: 0
     vertices: []
     indices: 
@@ -735,31 +610,26 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      UI_Frames_0: 5032990790905509716
-      UI_Frames_1: -6679953284920075913
-      UI_Frames_10: 5745178936549529749
-      UI_Frames_11: 3224011000309181488
-      UI_Frames_12: 7764871120084573160
-      UI_Frames_13: -912385335382948652
-      UI_Frames_14: 239788920320451221
-      UI_Frames_15: 8543167340527907790
-      UI_Frames_16: -6474153178337083997
-      UI_Frames_17: 7962500669415199613
-      UI_Frames_18: 6807654065617630088
-      UI_Frames_19: 8916156736367152456
-      UI_Frames_2: 3346837577694019691
-      UI_Frames_20: 3193305353492422719
-      UI_Frames_21: -6268959639627834742
-      UI_Frames_22: -7294562437934596049
-      UI_Frames_23: -4494089286520263261
-      UI_Frames_24: -5538786102408219600
-      UI_Frames_3: -8791061684223605669
-      UI_Frames_4: -7374546139589807423
-      UI_Frames_5: 6494682971960736090
-      UI_Frames_6: 492313034574852574
-      UI_Frames_7: 6316763320169654456
-      UI_Frames_8: 1420900625701767438
-      UI_Frames_9: -3457276847671156071
+      ArcherFliped_0: 50435548957511090
+      ArcherFliped_1: -5016436523870327580
+      ArcherFliped_10: -8666705953887585373
+      ArcherFliped_11: 4896766638392480853
+      ArcherFliped_12: 4809743074994632181
+      ArcherFliped_13: -4872279985308737372
+      ArcherFliped_14: -4067096609306543131
+      ArcherFliped_15: 4458447238256866368
+      ArcherFliped_16: 438290009437484493
+      ArcherFliped_17: -290304046967325432
+      ArcherFliped_18: -2338663934954490727
+      ArcherFliped_19: -4283905156196903822
+      ArcherFliped_2: 5701045812967402911
+      ArcherFliped_3: 4926910169471456729
+      ArcherFliped_4: 4601483432432570089
+      ArcherFliped_5: 2296236571830811026
+      ArcherFliped_6: -3101666552780046972
+      ArcherFliped_7: 3124744046506390549
+      ArcherFliped_8: 1087055183086011041
+      ArcherFliped_9: -7239449001704632348
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
