@@ -25,8 +25,8 @@ public class EnemyMovement : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Player and enemy collided!");
-            // Apply damage to the player here
+            //Debug.Log("Player and enemy collided!");
+            //// Apply damage to the player here
         }
     }
 
