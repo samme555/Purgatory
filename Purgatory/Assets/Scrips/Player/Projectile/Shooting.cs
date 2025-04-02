@@ -6,6 +6,7 @@ public class Shooting : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public Transform firePoint;
     public GameObject projectilePrefab;
+    
     public float attackSpeed = 1f;
     public float bulletForce = 20f;
     private float nextFireTime = 0f;
@@ -38,13 +39,9 @@ public class Shooting : MonoBehaviour
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         bullet.transform.rotation = Quaternion.Euler(0,0,angle);
 
-        Collider2D playerCollider = GetComponent<Collider2D>();
-        Collider2D bulletCollider = projectilePrefab.GetComponent<Collider2D>();
 
-        if (playerCollider != null && bulletCollider != null) 
-        {
-            Physics2D.IgnoreCollision(bulletCollider, playerCollider);
-        }
+        Destroy(bullet, 2f);
+       
 
         
 
