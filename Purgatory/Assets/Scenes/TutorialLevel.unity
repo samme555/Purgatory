@@ -23336,6 +23336,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5607518826592593501, guid: e011c842c4c65154d8f695596fa82111, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -7285376162372006033, guid: ccf61a4ebfd5a4d428b49a71a6dd6cf2, type: 3}
+    - target: {fileID: 5607518826592593501, guid: e011c842c4c65154d8f695596fa82111, type: 3}
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
@@ -25589,7 +25593,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08144b2a68eb2ba479dbeb33a09a8b14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 0}
   speed: 0.5
+  anim: {fileID: 0}
 --- !u!50 &1687961770
 Rigidbody2D:
   serializedVersion: 5
@@ -25709,6 +25715,28 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.11690891, y: 0.042789415}
   m_EdgeRadius: 0
+--- !u!95 &1687961775
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1687961768}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8424d258a33494444a16f7e8cf579e80, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1757454801
 GameObject:
   m_ObjectHideFlags: 0
@@ -33286,6 +33314,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6762314250208754536, guid: 0d2ec83d9a7b7f9449af1e48ba80efd0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1687961769}
+    - targetCorrespondingSourceObject: {fileID: 6762314250208754536, guid: 0d2ec83d9a7b7f9449af1e48ba80efd0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1687961775}
   m_SourcePrefab: {fileID: 100100000, guid: 0d2ec83d9a7b7f9449af1e48ba80efd0, type: 3}
 --- !u!1 &2044557971
 GameObject:
