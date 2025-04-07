@@ -23542,6 +23542,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 1551491911}
   projectilePrefab: {fileID: 1925677939549781835, guid: 6328ede7909628e40be14ffe56bee71e, type: 3}
+  playerMovement: {fileID: 0}
   attackSpeed: 10
   bulletForce: 2
 --- !u!1 &1123927749
@@ -25520,7 +25521,7 @@ Transform:
   m_GameObject: {fileID: 1551491910}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.161, y: -0.096, z: 0}
+  m_LocalPosition: {x: -0.08, y: -0.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -4,6 +4,7 @@ public class Movement : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 5f;
     [SerializeField] Rigidbody2D rb;
+    
     private Vector2 movementDirection;
 
     public Animator anim;
@@ -12,6 +13,7 @@ public class Movement : MonoBehaviour
     private float y;
 
     private Vector2 input;
+    public Vector2 inputDirection => input;
     private bool moving;
 
     private void Start()
@@ -36,6 +38,7 @@ public class Movement : MonoBehaviour
         y = Input.GetAxisRaw("Vertical");
 
         input = new Vector2(x, y);
+
         input.Normalize();
     }
 
