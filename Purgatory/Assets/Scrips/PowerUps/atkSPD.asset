@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed2441639cd16c048a5b841b3e5347f0, type: 3}
+  m_Name: atkSPD
+  m_EditorClassIdentifier: 
+  powerUpImage: {fileID: -4175376993140800949, guid: baecf07ef91835d4ea645d727daf8901, type: 3}
+  powerUpText: + 10% atkSPD
+  effectType: 0
+  effectValue: 0.1
