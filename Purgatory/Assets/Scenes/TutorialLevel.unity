@@ -23336,6 +23336,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5607518826592593501, guid: e011c842c4c65154d8f695596fa82111, type: 3}
+      propertyPath: m_Size.x
+      value: 0.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 5607518826592593501, guid: e011c842c4c65154d8f695596fa82111, type: 3}
+      propertyPath: m_Size.y
+      value: 0.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 5607518826592593501, guid: e011c842c4c65154d8f695596fa82111, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -7285376162372006033, guid: ccf61a4ebfd5a4d428b49a71a6dd6cf2, type: 3}
@@ -23470,7 +23478,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.48, y: 0.48}
-    newSize: {x: 0.48, y: 0.48}
+    newSize: {x: 0.17, y: 0.23}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -25593,9 +25601,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08144b2a68eb2ba479dbeb33a09a8b14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 0}
+  spriteRenderer: {fileID: 1687961776}
   speed: 0.5
-  anim: {fileID: 0}
+  anim: {fileID: 1687961775}
 --- !u!50 &1687961770
 Rigidbody2D:
   serializedVersion: 5
@@ -25737,6 +25745,11 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!212 &1687961776 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 3463036064131439585, guid: 0d2ec83d9a7b7f9449af1e48ba80efd0, type: 3}
+  m_PrefabInstance: {fileID: 2017376688}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1757454801
 GameObject:
   m_ObjectHideFlags: 0
