@@ -1,199 +1,199 @@
 fileFormatVersion: 2
-guid: 5584e8fd5d9738144ace91473c12c330
+guid: ccf61a4ebfd5a4d428b49a71a6dd6cf2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7132172409892320828
-    second: Archer_0
+      213: -7285376162372006033
+    second: Mage_0
   - first:
-      213: -1353735933490891112
-    second: Archer_1
+      213: 1377322663251520538
+    second: Mage_1
   - first:
-      213: 3001767060249510921
-    second: Archer_2
+      213: 2429379624658069490
+    second: Mage_2
   - first:
-      213: -2936497657700248757
-    second: Archer_3
+      213: -3092618186771702557
+    second: Mage_3
   - first:
-      213: 818616984480399886
-    second: Archer_4
+      213: -4641263954899877479
+    second: Mage_4
   - first:
-      213: -3506536579647068688
-    second: Archer_5
+      213: -8166337472594541346
+    second: Mage_5
   - first:
-      213: 7243941689720402736
-    second: Archer_6
+      213: 1096285362524239212
+    second: Mage_6
   - first:
-      213: -5511490489121558247
-    second: Archer_7
+      213: 4253546779495731248
+    second: Mage_7
   - first:
-      213: -6542253794372221699
-    second: Archer_8
+      213: 1274746488674406708
+    second: Mage_8
   - first:
-      213: 8994285840009083728
-    second: Archer_9
+      213: 9212246532928583636
+    second: Mage_9
   - first:
-      213: 8249779470359433977
-    second: Archer_10
+      213: -5942188552865138373
+    second: Mage_10
   - first:
-      213: -1962031107855546696
-    second: Archer_11
+      213: -6145811785143785226
+    second: Mage_11
   - first:
-      213: -9041807797270712669
-    second: Archer_12
+      213: 2500756243025465008
+    second: Mage_12
   - first:
-      213: 1747913851310489417
-    second: Archer_13
+      213: 165249942049237903
+    second: Mage_13
   - first:
-      213: -8185391877506459701
-    second: Archer_14
+      213: -2299194201641771868
+    second: Mage_14
   - first:
-      213: -2650744301020191532
-    second: Archer_15
+      213: 5778758470489192460
+    second: Mage_15
   - first:
-      213: -3491436940040637017
-    second: Archer_16
+      213: 8304308162624823460
+    second: Mage_16
   - first:
-      213: 737703663463909888
-    second: Archer_17
+      213: 724036592561312853
+    second: Mage_17
   - first:
-      213: 1138581748509411818
-    second: Archer_18
+      213: -4238177709470043494
+    second: Mage_18
   - first:
-      213: 6586155937423818303
-    second: Archer_19
+      213: -7137835376753442
+    second: Mage_19
   - first:
-      213: 8009077841664831659
-    second: Archer_20
+      213: -4155876389953645837
+    second: Mage_20
   - first:
-      213: -3538350284264479481
-    second: Archer_21
+      213: -7701205261946630212
+    second: Mage_21
   - first:
-      213: 7628983629375039337
-    second: Archer_22
+      213: 3833122427344389646
+    second: Mage_22
   - first:
-      213: -5971151869562673699
-    second: Archer_23
+      213: -8818395805821502685
+    second: Mage_23
   - first:
-      213: -7252216144125549621
-    second: Archer_24
+      213: -715291917276890088
+    second: Mage_24
   - first:
-      213: -3239827517386730994
-    second: Archer_25
+      213: -6774040804925556745
+    second: Mage_25
   - first:
-      213: -7000998780855177912
-    second: Archer_26
+      213: -2235294348357820249
+    second: Mage_26
   - first:
-      213: 4974585343492711331
-    second: Archer_27
+      213: -4436453726814458780
+    second: Mage_27
   - first:
-      213: -3846518608479097937
-    second: Archer_28
+      213: 7204741587825200610
+    second: Mage_28
   - first:
-      213: 4557645022326242426
-    second: Archer_29
+      213: -1184466108291028268
+    second: Mage_29
   - first:
-      213: 7023020952865225556
-    second: Archer_30
+      213: 8500114434529349520
+    second: Mage_30
   - first:
-      213: 7188338922220243952
-    second: Archer_31
+      213: 3373308337185956342
+    second: Mage_31
   - first:
-      213: 5810893230690756336
-    second: Archer_32
+      213: -7155467020076445409
+    second: Mage_32
   - first:
-      213: -974982828150314320
-    second: Archer_33
+      213: 2691408081326803586
+    second: Mage_33
   - first:
-      213: 1648995814239754866
-    second: Archer_34
+      213: -2635387592081919345
+    second: Mage_34
   - first:
-      213: -6773332133559497501
-    second: Archer_35
+      213: 8169229147089231738
+    second: Mage_35
   - first:
-      213: -6406475812940037373
-    second: Archer_36
+      213: 7844678767184748752
+    second: Mage_36
   - first:
-      213: -831034980683400404
-    second: Archer_37
+      213: 433529322505726068
+    second: Mage_37
   - first:
-      213: 4706408571880953610
-    second: Archer_38
+      213: 1859793429014651665
+    second: Mage_38
   - first:
-      213: 2507926002511818775
-    second: Archer_39
+      213: 7422069680259526487
+    second: Mage_39
   - first:
-      213: -5561081503392899682
-    second: Archer_40
+      213: -3693535396094084368
+    second: Mage_40
   - first:
-      213: -6658925714778641832
-    second: Archer_41
+      213: 8863685254093422987
+    second: Mage_41
   - first:
-      213: 4987308344126289578
-    second: Archer_42
+      213: -1223702417391427480
+    second: Mage_42
   - first:
-      213: -2309302278628930799
-    second: Archer_43
+      213: -268469376807146634
+    second: Mage_43
   - first:
-      213: -5938886292679005284
-    second: Archer_44
+      213: -2779173501256480311
+    second: Mage_44
   - first:
-      213: -5632558480353415302
-    second: Archer_45
+      213: -6462780465973174848
+    second: Mage_45
   - first:
-      213: 8285793340310895079
-    second: Archer_46
+      213: 7652243846267085138
+    second: Mage_46
   - first:
-      213: -5574892827587305999
-    second: Archer_47
+      213: -8254361597379199856
+    second: Mage_47
   - first:
-      213: 2727244525004801755
-    second: Archer_48
+      213: 1049816399914854203
+    second: Mage_48
   - first:
-      213: -9178085699852703378
-    second: Archer_49
+      213: 3470458480075055141
+    second: Mage_49
   - first:
-      213: 6517412418285932028
-    second: Archer_50
+      213: 633221466027007138
+    second: Mage_50
   - first:
-      213: -6363745783416740174
-    second: Archer_51
+      213: -6105036548963489285
+    second: Mage_51
   - first:
-      213: 7207943461883000607
-    second: Archer_52
+      213: -130182088711984932
+    second: Mage_52
   - first:
-      213: -7842966496701673447
-    second: Archer_53
+      213: -5647176263201191180
+    second: Mage_53
   - first:
-      213: -7496578106510736855
-    second: Archer_54
+      213: -6450692462812461282
+    second: Mage_54
   - first:
-      213: 7373893106507137603
-    second: Archer_55
+      213: 8064642455897884462
+    second: Mage_55
   - first:
-      213: 2677105474008719561
-    second: Archer_56
+      213: -7009843078653311707
+    second: Mage_56
   - first:
-      213: 8167009325714835159
-    second: Archer_57
+      213: 3422743565819823806
+    second: Mage_57
   - first:
-      213: -1201827876199940216
-    second: Archer_58
+      213: -5234072607592949243
+    second: Mage_58
   - first:
-      213: 3662490532564934435
-    second: Archer_59
+      213: -7804914957889669364
+    second: Mage_59
   - first:
-      213: 7829758640622273135
-    second: Archer_60
+      213: -5652357889159562923
+    second: Mage_60
   - first:
-      213: -2485814907079751562
-    second: Archer_61
+      213: 4795237139000241082
+    second: Mage_61
   - first:
-      213: 5846177069153783481
-    second: Archer_62
+      213: -3556525918775055912
+    second: Mage_62
   - first:
-      213: 5177155292046633791
-    second: Archer_63
+      213: 7721997775167621439
+    second: Mage_63
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -289,7 +289,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Archer_0
+      name: Mage_0
       rect:
         serializedVersion: 2
         x: 0
@@ -304,14 +304,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4c9c6872bfe650d90800000000000000
-      internalID: -7132172409892320828
+      spriteID: f6fc7badaf425ea90800000000000000
+      internalID: -7285376162372006033
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_1
+      name: Mage_1
       rect:
         serializedVersion: 2
         x: 48
@@ -326,14 +326,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 896f7944750963de0800000000000000
-      internalID: -1353735933490891112
+      spriteID: a1ca3343aab3d1310800000000000000
+      internalID: 1377322663251520538
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_2
+      name: Mage_2
       rect:
         serializedVersion: 2
         x: 96
@@ -348,14 +348,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 90404acbc3b68a920800000000000000
-      internalID: 3001767060249510921
+      spriteID: 2f7e050b5e3e6b120800000000000000
+      internalID: 2429379624658069490
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_3
+      name: Mage_3
       rect:
         serializedVersion: 2
         x: 144
@@ -370,14 +370,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b43920540f67f37d0800000000000000
-      internalID: -2936497657700248757
+      spriteID: 3ec5f8ff420d415d0800000000000000
+      internalID: -3092618186771702557
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_4
+      name: Mage_4
       rect:
         serializedVersion: 2
         x: 192
@@ -392,14 +392,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e024e076fcf4c5b00800000000000000
-      internalID: 818616984480399886
+      spriteID: 9914e53060be69fb0800000000000000
+      internalID: -4641263954899877479
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_5
+      name: Mage_5
       rect:
         serializedVersion: 2
         x: 240
@@ -414,14 +414,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0f5293a2f87465fc0800000000000000
-      internalID: -3506536579647068688
+      spriteID: ed48a06f5575bae80800000000000000
+      internalID: -8166337472594541346
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_6
+      name: Mage_6
       rect:
         serializedVersion: 2
         x: 0
@@ -436,14 +436,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0337d653696a78460800000000000000
-      internalID: 7243941689720402736
+      spriteID: c65b7b59ab9c63f00800000000000000
+      internalID: 1096285362524239212
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_7
+      name: Mage_7
       rect:
         serializedVersion: 2
         x: 48
@@ -458,14 +458,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 91137fce9904383b0800000000000000
-      internalID: -5511490489121558247
+      spriteID: 030995b7242a70b30800000000000000
+      internalID: 4253546779495731248
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_8
+      name: Mage_8
       rect:
         serializedVersion: 2
         x: 96
@@ -480,14 +480,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: df40efb16de3535a0800000000000000
-      internalID: -6542253794372221699
+      spriteID: 4315d147d2fc0b110800000000000000
+      internalID: 1274746488674406708
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_9
+      name: Mage_9
       rect:
         serializedVersion: 2
         x: 144
@@ -502,14 +502,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 05b3116515f12dc70800000000000000
-      internalID: 8994285840009083728
+      spriteID: 4d73882c96978df70800000000000000
+      internalID: 9212246532928583636
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_10
+      name: Mage_10
       rect:
         serializedVersion: 2
         x: 192
@@ -524,14 +524,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9f2951618ba1d7270800000000000000
-      internalID: 8249779470359433977
+      spriteID: b39b4168efa198da0800000000000000
+      internalID: -5942188552865138373
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_11
+      name: Mage_11
       rect:
         serializedVersion: 2
         x: 240
@@ -546,14 +546,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8b6010a4a1775c4e0800000000000000
-      internalID: -1962031107855546696
+      spriteID: 6f8681a4eb0b5baa0800000000000000
+      internalID: -6145811785143785226
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_12
+      name: Mage_12
       rect:
         serializedVersion: 2
         x: 0
@@ -568,14 +568,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3ae6254c6bb058280800000000000000
-      internalID: -9041807797270712669
+      spriteID: 0be8f5fad8874b220800000000000000
+      internalID: 2500756243025465008
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_13
+      name: Mage_13
       rect:
         serializedVersion: 2
         x: 48
@@ -590,14 +590,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 94fb85d0366d14810800000000000000
-      internalID: 1747913851310489417
+      spriteID: f8baffe52f51b4200800000000000000
+      internalID: 165249942049237903
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_14
+      name: Mage_14
       rect:
         serializedVersion: 2
         x: 96
@@ -612,14 +612,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bc71cd99475a76e80800000000000000
-      internalID: -8185391877506459701
+      spriteID: 4ac11852e0f9710e0800000000000000
+      internalID: -2299194201641771868
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_15
+      name: Mage_15
       rect:
         serializedVersion: 2
         x: 144
@@ -634,14 +634,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4d4ec4b3a1aa63bd0800000000000000
-      internalID: -2650744301020191532
+      spriteID: c08b9443636423050800000000000000
+      internalID: 5778758470489192460
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_16
+      name: Mage_16
       rect:
         serializedVersion: 2
         x: 192
@@ -656,14 +656,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7a57339f99ceb8fc0800000000000000
-      internalID: -3491436940040637017
+      spriteID: 4a021aa9644de3370800000000000000
+      internalID: 8304308162624823460
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_17
+      name: Mage_17
       rect:
         serializedVersion: 2
         x: 240
@@ -678,14 +678,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 00a454ac299dc3a00800000000000000
-      internalID: 737703663463909888
+      spriteID: 5545000e17b4c0a00800000000000000
+      internalID: 724036592561312853
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_18
+      name: Mage_18
       rect:
         serializedVersion: 2
         x: 0
@@ -700,14 +700,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ae985ab511e0dcf00800000000000000
-      internalID: 1138581748509411818
+      spriteID: a923f0cf3d7fe25c0800000000000000
+      internalID: -4238177709470043494
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_19
+      name: Mage_19
       rect:
         serializedVersion: 2
         x: 48
@@ -722,14 +722,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f3ef97d1ee9b66b50800000000000000
-      internalID: 6586155937423818303
+      spriteID: ed447e13d24a6eff0800000000000000
+      internalID: -7137835376753442
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_20
+      name: Mage_20
       rect:
         serializedVersion: 2
         x: 96
@@ -744,14 +744,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ba072e2fcd5f52f60800000000000000
-      internalID: 8009077841664831659
+      spriteID: 3f2516e217c5356c0800000000000000
+      internalID: -4155876389953645837
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_21
+      name: Mage_21
       rect:
         serializedVersion: 2
         x: 144
@@ -766,14 +766,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7056387d92145eec0800000000000000
-      internalID: -3538350284264479481
+      spriteID: cbf4d43fd92df1590800000000000000
+      internalID: -7701205261946630212
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_22
+      name: Mage_22
       rect:
         serializedVersion: 2
         x: 192
@@ -788,14 +788,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9676b2ad0389fd960800000000000000
-      internalID: 7628983629375039337
+      spriteID: e060276f98cf13530800000000000000
+      internalID: 3833122427344389646
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_23
+      name: Mage_23
       rect:
         serializedVersion: 2
         x: 240
@@ -810,14 +810,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dd5aecad205322da0800000000000000
-      internalID: -5971151869562673699
+      spriteID: 32bf6398cb3ce9580800000000000000
+      internalID: -8818395805821502685
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_24
+      name: Mage_24
       rect:
         serializedVersion: 2
         x: 0
@@ -832,14 +832,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bc32b0f37d3fa5b90800000000000000
-      internalID: -7252216144125549621
+      spriteID: 81cb0008ac5c216f0800000000000000
+      internalID: -715291917276890088
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_25
+      name: Mage_25
       rect:
         serializedVersion: 2
         x: 48
@@ -854,14 +854,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e02d0acc902d903d0800000000000000
-      internalID: -3239827517386730994
+      spriteID: 7f7396047c5cdf1a0800000000000000
+      internalID: -6774040804925556745
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_26
+      name: Mage_26
       rect:
         serializedVersion: 2
         x: 96
@@ -876,14 +876,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 84d2f22a3b477de90800000000000000
-      internalID: -7000998780855177912
+      spriteID: 7a0a1bd12a3aaf0e0800000000000000
+      internalID: -2235294348357820249
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_27
+      name: Mage_27
       rect:
         serializedVersion: 2
         x: 144
@@ -898,14 +898,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3a36fbf6307490540800000000000000
-      internalID: 4974585343492711331
+      spriteID: 46c24ce37dc8e62c0800000000000000
+      internalID: -4436453726814458780
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_28
+      name: Mage_28
       rect:
         serializedVersion: 2
         x: 192
@@ -920,14 +920,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fab6caf84bb6e9ac0800000000000000
-      internalID: -3846518608479097937
+      spriteID: 2ed0ec04d426cf360800000000000000
+      internalID: 7204741587825200610
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_29
+      name: Mage_29
       rect:
         serializedVersion: 2
         x: 240
@@ -942,14 +942,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a7c35181002004f30800000000000000
-      internalID: 4557645022326242426
+      spriteID: 4dae2de995eef8fe0800000000000000
+      internalID: -1184466108291028268
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_30
+      name: Mage_30
       rect:
         serializedVersion: 2
         x: 0
@@ -964,14 +964,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 45b38a9d858c67160800000000000000
-      internalID: 7023020952865225556
+      spriteID: 09fca4cea0976f570800000000000000
+      internalID: 8500114434529349520
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_31
+      name: Mage_31
       rect:
         serializedVersion: 2
         x: 48
@@ -986,14 +986,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0fb4d001a2c12c360800000000000000
-      internalID: 7188338922220243952
+      spriteID: 6f125d36f0660de20800000000000000
+      internalID: 3373308337185956342
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_32
+      name: Mage_32
       rect:
         serializedVersion: 2
         x: 96
@@ -1008,14 +1008,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0f66b0b1b9074a050800000000000000
-      internalID: 5810893230690756336
+      spriteID: f11125218aca2bc90800000000000000
+      internalID: -7155467020076445409
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_33
+      name: Mage_33
       rect:
         serializedVersion: 2
         x: 144
@@ -1030,14 +1030,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0baaef1984a2872f0800000000000000
-      internalID: -974982828150314320
+      spriteID: 28a8919e36dc95520800000000000000
+      internalID: 2691408081326803586
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_34
+      name: Mage_34
       rect:
         serializedVersion: 2
         x: 192
@@ -1052,14 +1052,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 27adddfc4f862e610800000000000000
-      internalID: 1648995814239754866
+      spriteID: f823c78a2f83d6bd0800000000000000
+      internalID: -2635387592081919345
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_35
+      name: Mage_35
       rect:
         serializedVersion: 2
         x: 240
@@ -1074,14 +1074,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3ec8279af4a4002a0800000000000000
-      internalID: -6773332133559497501
+      spriteID: a7f550970aeee5170800000000000000
+      internalID: 8169229147089231738
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_36
+      name: Mage_36
       rect:
         serializedVersion: 2
         x: 0
@@ -1096,14 +1096,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 303c39be030a717a0800000000000000
-      internalID: -6406475812940037373
+      spriteID: 0d0a81f96c5eddc60800000000000000
+      internalID: 7844678767184748752
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_37
+      name: Mage_37
       rect:
         serializedVersion: 2
         x: 48
@@ -1118,14 +1118,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c2b317c86129774f0800000000000000
-      internalID: -831034980683400404
+      spriteID: 4786ba33f94340600800000000000000
+      internalID: 433529322505726068
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_38
+      name: Mage_38
       rect:
         serializedVersion: 2
         x: 96
@@ -1140,14 +1140,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a0751d619a5805140800000000000000
-      internalID: 4706408571880953610
+      spriteID: 113260425405fc910800000000000000
+      internalID: 1859793429014651665
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_39
+      name: Mage_39
       rect:
         serializedVersion: 2
         x: 144
@@ -1162,14 +1162,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 710bea66961fdc220800000000000000
-      internalID: 2507926002511818775
+      spriteID: 75fe016ec0d700760800000000000000
+      internalID: 7422069680259526487
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_40
+      name: Mage_40
       rect:
         serializedVersion: 2
         x: 192
@@ -1184,14 +1184,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e9d554726d113d2b0800000000000000
-      internalID: -5561081503392899682
+      spriteID: 0fafa7e502dedbcc0800000000000000
+      internalID: -3693535396094084368
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_41
+      name: Mage_41
       rect:
         serializedVersion: 2
         x: 240
@@ -1206,14 +1206,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 85aa7e8c75eb693a0800000000000000
-      internalID: -6658925714778641832
+      spriteID: b814b1bd6c2220b70800000000000000
+      internalID: 8863685254093422987
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_42
+      name: Mage_42
       rect:
         serializedVersion: 2
         x: 0
@@ -1228,14 +1228,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: aa63dfcd38a763540800000000000000
-      internalID: 4987308344126289578
+      spriteID: 860e8948229840fe0800000000000000
+      internalID: -1223702417391427480
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_43
+      name: Mage_43
       rect:
         serializedVersion: 2
         x: 48
@@ -1250,14 +1250,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 11b825310d5b3ffd0800000000000000
-      internalID: -2309302278628930799
+      spriteID: 67be6523684364cf0800000000000000
+      internalID: -268469376807146634
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_44
+      name: Mage_44
       rect:
         serializedVersion: 2
         x: 96
@@ -1272,14 +1272,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c9b6e63e166d49da0800000000000000
-      internalID: -5938886292679005284
+      spriteID: 9c9cd60ec646e69d0800000000000000
+      internalID: -2779173501256480311
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_45
+      name: Mage_45
       rect:
         serializedVersion: 2
         x: 144
@@ -1294,14 +1294,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a7fabe997e125d1b0800000000000000
-      internalID: -5632558480353415302
+      spriteID: 0cdd55058679f46a0800000000000000
+      internalID: -6462780465973174848
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_46
+      name: Mage_46
       rect:
         serializedVersion: 2
         x: 192
@@ -1316,14 +1316,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7e9378b942d0df270800000000000000
-      internalID: 8285793340310895079
+      spriteID: 2512b6f1c3b323a60800000000000000
+      internalID: 7652243846267085138
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_47
+      name: Mage_47
       rect:
         serializedVersion: 2
         x: 240
@@ -1338,14 +1338,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1fd19c6a28002a2b0800000000000000
-      internalID: -5574892827587305999
+      spriteID: 09c36945cdd927d80800000000000000
+      internalID: -8254361597379199856
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_48
+      name: Mage_48
       rect:
         serializedVersion: 2
         x: 0
@@ -1360,14 +1360,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bd64a88227e19d520800000000000000
-      internalID: 2727244525004801755
+      spriteID: b37ed4c1472b19e00800000000000000
+      internalID: 1049816399914854203
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_49
+      name: Mage_49
       rect:
         serializedVersion: 2
         x: 48
@@ -1382,14 +1382,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e69ef2efea3e0a080800000000000000
-      internalID: -9178085699852703378
+      spriteID: 520ad90b99b892030800000000000000
+      internalID: 3470458480075055141
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_50
+      name: Mage_50
       rect:
         serializedVersion: 2
         x: 96
@@ -1404,14 +1404,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cfd07ae4010827a50800000000000000
-      internalID: 6517412418285932028
+      spriteID: 2ac11b28197a9c800800000000000000
+      internalID: 633221466027007138
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_51
+      name: Mage_51
       rect:
         serializedVersion: 2
         x: 144
@@ -1426,14 +1426,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2b62e823dee6fa7a0800000000000000
-      internalID: -6363745783416740174
+      spriteID: bf92146ca9d864ba0800000000000000
+      internalID: -6105036548963489285
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_52
+      name: Mage_52
       rect:
         serializedVersion: 2
         x: 192
@@ -1448,14 +1448,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f17b2a6a362c70460800000000000000
-      internalID: 7207943461883000607
+      spriteID: cd8243e7410813ef0800000000000000
+      internalID: -130182088711984932
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_53
+      name: Mage_53
       rect:
         serializedVersion: 2
         x: 240
@@ -1470,14 +1470,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9109eca668f282390800000000000000
-      internalID: -7842966496701673447
+      spriteID: 4fa00efcb1331a1b0800000000000000
+      internalID: -5647176263201191180
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_54
+      name: Mage_54
       rect:
         serializedVersion: 2
         x: 0
@@ -1492,14 +1492,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 92205724eedc6f790800000000000000
-      internalID: -7496578106510736855
+      spriteID: e1706ced1698a76a0800000000000000
+      internalID: -6450692462812461282
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_55
+      name: Mage_55
       rect:
         serializedVersion: 2
         x: 48
@@ -1514,14 +1514,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3424f0936b4555660800000000000000
-      internalID: 7373893106507137603
+      spriteID: e27c358d59d5bef60800000000000000
+      internalID: 8064642455897884462
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_56
+      name: Mage_56
       rect:
         serializedVersion: 2
         x: 96
@@ -1536,14 +1536,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9c02b84ae3df62520800000000000000
-      internalID: 2677105474008719561
+      spriteID: 52583a51cd808be90800000000000000
+      internalID: -7009843078653311707
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_57
+      name: Mage_57
       rect:
         serializedVersion: 2
         x: 144
@@ -1558,14 +1558,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7d6098806bb075170800000000000000
-      internalID: 8167009325714835159
+      spriteID: eb6c1fd7327008f20800000000000000
+      internalID: 3422743565819823806
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_58
+      name: Mage_58
       rect:
         serializedVersion: 2
         x: 0
@@ -1580,14 +1580,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 88fb0f50aef325fe0800000000000000
-      internalID: -1201827876199940216
+      spriteID: 50ad1d7d1b6dc57b0800000000000000
+      internalID: -5234072607592949243
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_59
+      name: Mage_59
       rect:
         serializedVersion: 2
         x: 48
@@ -1602,14 +1602,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 32f93c21cb7c3d230800000000000000
-      internalID: 3662490532564934435
+      spriteID: c077ad0b23f5fa390800000000000000
+      internalID: -7804914957889669364
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_60
+      name: Mage_60
       rect:
         serializedVersion: 2
         x: 0
@@ -1624,14 +1624,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f620653fff3e8ac60800000000000000
-      internalID: 7829758640622273135
+      spriteID: 5597441827ace81b0800000000000000
+      internalID: -5652357889159562923
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_61
+      name: Mage_61
       rect:
         serializedVersion: 2
         x: 48
@@ -1646,14 +1646,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 678042e238c908dd0800000000000000
-      internalID: -2485814907079751562
+      spriteID: abbaedb85ca1c8240800000000000000
+      internalID: 4795237139000241082
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_62
+      name: Mage_62
       rect:
         serializedVersion: 2
         x: 0
@@ -1668,14 +1668,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9be02fce11bc12150800000000000000
-      internalID: 5846177069153783481
+      spriteID: 8d961f8258ea4aec0800000000000000
+      internalID: -3556525918775055912
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Archer_63
+      name: Mage_63
       rect:
         serializedVersion: 2
         x: 48
@@ -1690,8 +1690,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f3b2971fe43f8d740800000000000000
-      internalID: 5177155292046633791
+      spriteID: f390939401c0a2b60800000000000000
+      internalID: 7721997775167621439
       vertices: []
       indices: 
       edges: []
@@ -1700,7 +1700,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: f9265c60408827d4db8ebea4451d93bc
+    spriteID: ec1d785eb36c9d14c8277487b94dfbdd
     internalID: 0
     vertices: []
     indices: 
@@ -1710,70 +1710,70 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Archer_0: -7132172409892320828
-      Archer_1: -1353735933490891112
-      Archer_10: 8249779470359433977
-      Archer_11: -1962031107855546696
-      Archer_12: -9041807797270712669
-      Archer_13: 1747913851310489417
-      Archer_14: -8185391877506459701
-      Archer_15: -2650744301020191532
-      Archer_16: -3491436940040637017
-      Archer_17: 737703663463909888
-      Archer_18: 1138581748509411818
-      Archer_19: 6586155937423818303
-      Archer_2: 3001767060249510921
-      Archer_20: 8009077841664831659
-      Archer_21: -3538350284264479481
-      Archer_22: 7628983629375039337
-      Archer_23: -5971151869562673699
-      Archer_24: -7252216144125549621
-      Archer_25: -3239827517386730994
-      Archer_26: -7000998780855177912
-      Archer_27: 4974585343492711331
-      Archer_28: -3846518608479097937
-      Archer_29: 4557645022326242426
-      Archer_3: -2936497657700248757
-      Archer_30: 7023020952865225556
-      Archer_31: 7188338922220243952
-      Archer_32: 5810893230690756336
-      Archer_33: -974982828150314320
-      Archer_34: 1648995814239754866
-      Archer_35: -6773332133559497501
-      Archer_36: -6406475812940037373
-      Archer_37: -831034980683400404
-      Archer_38: 4706408571880953610
-      Archer_39: 2507926002511818775
-      Archer_4: 818616984480399886
-      Archer_40: -5561081503392899682
-      Archer_41: -6658925714778641832
-      Archer_42: 4987308344126289578
-      Archer_43: -2309302278628930799
-      Archer_44: -5938886292679005284
-      Archer_45: -5632558480353415302
-      Archer_46: 8285793340310895079
-      Archer_47: -5574892827587305999
-      Archer_48: 2727244525004801755
-      Archer_49: -9178085699852703378
-      Archer_5: -3506536579647068688
-      Archer_50: 6517412418285932028
-      Archer_51: -6363745783416740174
-      Archer_52: 7207943461883000607
-      Archer_53: -7842966496701673447
-      Archer_54: -7496578106510736855
-      Archer_55: 7373893106507137603
-      Archer_56: 2677105474008719561
-      Archer_57: 8167009325714835159
-      Archer_58: -1201827876199940216
-      Archer_59: 3662490532564934435
-      Archer_6: 7243941689720402736
-      Archer_60: 7829758640622273135
-      Archer_61: -2485814907079751562
-      Archer_62: 5846177069153783481
-      Archer_63: 5177155292046633791
-      Archer_7: -5511490489121558247
-      Archer_8: -6542253794372221699
-      Archer_9: 8994285840009083728
+      Mage_0: -7285376162372006033
+      Mage_1: 1377322663251520538
+      Mage_10: -5942188552865138373
+      Mage_11: -6145811785143785226
+      Mage_12: 2500756243025465008
+      Mage_13: 165249942049237903
+      Mage_14: -2299194201641771868
+      Mage_15: 5778758470489192460
+      Mage_16: 8304308162624823460
+      Mage_17: 724036592561312853
+      Mage_18: -4238177709470043494
+      Mage_19: -7137835376753442
+      Mage_2: 2429379624658069490
+      Mage_20: -4155876389953645837
+      Mage_21: -7701205261946630212
+      Mage_22: 3833122427344389646
+      Mage_23: -8818395805821502685
+      Mage_24: -715291917276890088
+      Mage_25: -6774040804925556745
+      Mage_26: -2235294348357820249
+      Mage_27: -4436453726814458780
+      Mage_28: 7204741587825200610
+      Mage_29: -1184466108291028268
+      Mage_3: -3092618186771702557
+      Mage_30: 8500114434529349520
+      Mage_31: 3373308337185956342
+      Mage_32: -7155467020076445409
+      Mage_33: 2691408081326803586
+      Mage_34: -2635387592081919345
+      Mage_35: 8169229147089231738
+      Mage_36: 7844678767184748752
+      Mage_37: 433529322505726068
+      Mage_38: 1859793429014651665
+      Mage_39: 7422069680259526487
+      Mage_4: -4641263954899877479
+      Mage_40: -3693535396094084368
+      Mage_41: 8863685254093422987
+      Mage_42: -1223702417391427480
+      Mage_43: -268469376807146634
+      Mage_44: -2779173501256480311
+      Mage_45: -6462780465973174848
+      Mage_46: 7652243846267085138
+      Mage_47: -8254361597379199856
+      Mage_48: 1049816399914854203
+      Mage_49: 3470458480075055141
+      Mage_5: -8166337472594541346
+      Mage_50: 633221466027007138
+      Mage_51: -6105036548963489285
+      Mage_52: -130182088711984932
+      Mage_53: -5647176263201191180
+      Mage_54: -6450692462812461282
+      Mage_55: 8064642455897884462
+      Mage_56: -7009843078653311707
+      Mage_57: 3422743565819823806
+      Mage_58: -5234072607592949243
+      Mage_59: -7804914957889669364
+      Mage_6: 1096285362524239212
+      Mage_60: -5652357889159562923
+      Mage_61: 4795237139000241082
+      Mage_62: -3556525918775055912
+      Mage_63: 7721997775167621439
+      Mage_7: 4253546779495731248
+      Mage_8: 1274746488674406708
+      Mage_9: 9212246532928583636
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
