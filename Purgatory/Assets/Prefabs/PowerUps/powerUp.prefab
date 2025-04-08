@@ -450,6 +450,7 @@ GameObject:
   - component: {fileID: 340191760362114090}
   - component: {fileID: 7107924418303359793}
   - component: {fileID: 1974782844120534674}
+  - component: {fileID: 3900016153432411301}
   m_Layer: 0
   m_Name: powerUp
   m_TagString: Untagged
@@ -466,8 +467,8 @@ Transform:
   m_GameObject: {fileID: 8999081144419089078}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.268, y: -0.767, z: 0}
-  m_LocalScale: {x: 1.5, y: 0.456, z: 0.6}
+  m_LocalPosition: {x: 6.2549, y: -0.7728, z: 0}
+  m_LocalScale: {x: 1.4739, y: 0.444372, z: 0.6}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5516598299474870385}
@@ -543,3 +544,49 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   powerUpImageRenderer: {fileID: 6924503913490463389}
   powerUpTextRenderer: {fileID: 2659247740493081321}
+--- !u!61 &3900016153432411301
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8999081144419089078}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 2048
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: -0.0032702237}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 0.9934596}
+  m_EdgeRadius: 0

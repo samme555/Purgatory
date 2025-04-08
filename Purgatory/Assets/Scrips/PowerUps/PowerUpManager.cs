@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,10 +20,39 @@ public class PowerUpManager : MonoBehaviour
 
     List<PowerUpSO> alreadySelectedPowerUp = new List<PowerUpSO>();
 
-    private void Start()
+    public static PowerUpManager instance;
+
+    Vector3 screenCenter = new Vector3(Screen.width / 2, Screen.height / 2, 0f);
+    
+    
+    void Awake()
     {
-        RandomizeNewPowerUps();
+        
+        instance = this;
+        if (GameManager.instance != null) 
+        {
+            GameManager.instance.OnGameStateChanged += HandleGameStateChanged;
+        }
     }
+
+    private void OnDisable()
+    {
+        
+        if (GameManager.instance != null)
+        {
+            GameManager.instance.OnGameStateChanged -= HandleGameStateChanged;
+        }
+    }
+
+    private void HandleGameStateChanged(GameManager.GameState state)
+    {
+        if (state == GameManager.GameState.powerUpSelection) 
+        { 
+            RandomizeNewPowerUps();
+        }
+    }
+    
+
 
     void RandomizeNewPowerUps() 
     {
@@ -33,16 +63,30 @@ public class PowerUpManager : MonoBehaviour
         List<PowerUpSO> randomizedPowerUps = new List<PowerUpSO>();
 
         List<PowerUpSO> availablePowerUps = new List<PowerUpSO>(powerUpList);
+
+        
+
+        if (availablePowerUps.Count < 3) 
+        {
+            Debug.Log("Not enough powerUps. Add more into the cardManager object inspector");
+            return;
+        }
         
         while (randomizedPowerUps.Count < 3) 
         { 
             PowerUpSO randomPowerUp = availablePowerUps[Random.Range(0, availablePowerUps.Count)];
-            if (!alreadySelectedPowerUp.Contains(randomPowerUp))
+            if (!randomizedPowerUps.Contains(randomPowerUp))
             { 
                 randomizedPowerUps.Add(randomPowerUp);  
             }
         }
+        Vector3 worldCenter = Camera.main.ScreenToWorldPoint(screenCenter);
+        worldCenter.z = 0f;
+        float offset = 0.5f;
 
+        powerUpPositionOne.position = worldCenter + new Vector3(0, -offset, 0);
+        powerUpPositionTwo.position = worldCenter;
+        powerUpPositionThree.position = worldCenter + new Vector3(0, +offset, 0);
         powerUpOne = InstantiatePowerUp(randomizedPowerUps[0], powerUpPositionOne);
         powerUpTwo = InstantiatePowerUp(randomizedPowerUps[1], powerUpPositionTwo);
         powerUpThree = InstantiatePowerUp(randomizedPowerUps[2], powerUpPositionThree);
@@ -56,4 +100,22 @@ public class PowerUpManager : MonoBehaviour
         }
     }
 
+    public void SelectPowerUp(PowerUpSO selectedPowerUp) 
+    {
+        if (!alreadySelectedPowerUp.Contains(selectedPowerUp)) 
+        { 
+            alreadySelectedPowerUp.Add(selectedPowerUp);
+        }
+
+        GameManager.instance.ChangeState(GameManager.GameState.playing);
+    }
+
+    public void ShowPowerUpSelection() 
+    { 
+        powerUpSelectionUI.SetActive(true);
+    }
+    public void HidePowerUpSelection() 
+    { 
+        powerUpSelectionUI.SetActive(false);
+    }
 }
