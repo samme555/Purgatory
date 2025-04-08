@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed2441639cd16c048a5b841b3e5347f0, type: 3}
   m_Name: critDMG
   m_EditorClassIdentifier: 
-  powerUpImage: {fileID: 9131090102501861027, guid: 98e9fc5d539de4f439905df57f4ca42a, type: 3}
-  powerUpText: +10% critDMG
-  effectType: 3
-  effectValue: 0.1
+  powerUpImage: {fileID: 0}
+  powerUpText: 
+  effectType: 0
+  effectValue: 0

@@ -23379,9 +23379,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a10e183435a39f047a126880b1adf4f6, type: 2}
   - {fileID: 11400000, guid: 1c5c13b4a9fce6447880763f162d1808, type: 2}
   - {fileID: 11400000, guid: 8975e70fed323954caffb91c5f459217, type: 2}
-  - {fileID: 11400000, guid: bebab2cb1657a58459c74185a294970c, type: 2}
-  - {fileID: 11400000, guid: 72f786250fdc3194882168b53c207eec, type: 2}
-  - {fileID: 11400000, guid: 95b8b14a4bf3d8c4fbdb10036135ef6b, type: 2}
   powerUpOne: {fileID: 0}
   powerUpTwo: {fileID: 0}
   powerUpThree: {fileID: 0}
@@ -25682,50 +25679,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &1413028087
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1413028089}
-  - component: {fileID: 1413028088}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1413028088
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1413028087}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 309a9f2beeef7464582986b75e24f372, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1413028089
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1413028087}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.74756545, y: 0.40798533, z: 0.07183849}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1551491910
 GameObject:
   m_ObjectHideFlags: 0
@@ -33659,10 +33612,9 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 2044557974}
-  - {fileID: 1413028089}
   - {fileID: 1582903447}
-  - {fileID: 898084731}
-  - {fileID: 1012308146}
   - {fileID: 1123927751}
   - {fileID: 1096834294}
   - {fileID: 2017376688}
+  - {fileID: 898084731}
+  - {fileID: 1012308146}
