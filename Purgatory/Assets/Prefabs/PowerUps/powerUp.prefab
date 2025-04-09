@@ -543,6 +543,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerUpImageRenderer: {fileID: 6924503913490463389}
+  imageSlotRenderer: {fileID: 0}
   powerUpTextRenderer: {fileID: 2659247740493081321}
 --- !u!61 &3900016153432411301
 BoxCollider2D:

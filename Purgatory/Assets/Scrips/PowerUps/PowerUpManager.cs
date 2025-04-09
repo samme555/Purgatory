@@ -27,13 +27,15 @@ public class PowerUpManager : MonoBehaviour
     
     void Awake()
     {
-        
+        RandomizeNewPowerUps();
         instance = this;
         if (GameManager.instance != null) 
         {
             GameManager.instance.OnGameStateChanged += HandleGameStateChanged;
         }
     }
+
+   
 
     private void OnDisable()
     {

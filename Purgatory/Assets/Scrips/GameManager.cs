@@ -19,7 +19,8 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space))
+        
+        if (Input.GetKey(KeyCode.P))
         { 
             ChangeState(GameState.powerUpSelection);
         }

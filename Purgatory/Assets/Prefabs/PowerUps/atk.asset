@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed2441639cd16c048a5b841b3e5347f0, type: 3}
   m_Name: atk
   m_EditorClassIdentifier: 
-  powerUpImage: {fileID: 0}
-  powerUpText: 
-  effectType: 0
-  effectValue: 0
+  powerUpImage: {fileID: 4706965592451445220, guid: 3dd220759ceeaac418f0160bb6084f5d, type: 3}
+  powerUpText: +10% atk
+  effectType: 4
+  effectValue: 0.1
