@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: critCH
   m_EditorClassIdentifier: 
   powerUpImage: {fileID: 7684888172474171163, guid: 6386ba37db3ef274a953ed826c60d993, type: 3}
-  powerUpText: +10% critDMG
-  effectType: 3
+  powerUpText: +10% critCH
+  effectType: 2
   effectValue: 0.1
