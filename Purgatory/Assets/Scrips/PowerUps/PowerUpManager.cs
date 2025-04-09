@@ -27,7 +27,7 @@ public class PowerUpManager : MonoBehaviour
     
     void Awake()
     {
-        RandomizeNewPowerUps();
+        
         instance = this;
         if (GameManager.instance != null) 
         {
