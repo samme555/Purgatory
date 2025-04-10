@@ -28,6 +28,11 @@ public class SliderHandleImageChanger : MonoBehaviour, IPointerDownHandler
 
         wasMouseDownLastFrame = isMouseDown;
 
+        if (Input.GetMouseButton(0))
+        {
+            AudioListener.volume = slider.value;
+        }
+
         if (!Input.GetMouseButton(0))
         {
             isPressed = false;
