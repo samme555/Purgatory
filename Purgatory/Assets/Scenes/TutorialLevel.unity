@@ -23370,21 +23370,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01bf03a75a90c0c4a89db13f8910098f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerUpSelectionUI: {fileID: 1012308145}
-  powerUpPrefab: {fileID: 8999081144419089078, guid: 3bb3f476ee6b93e47b2b7af153039480, type: 3}
-  powerUpPositionOne: {fileID: 1095828139}
-  powerUpPositionTwo: {fileID: 370284675}
-  powerUpPositionThree: {fileID: 87791151}
-  powerUpList:
-  - {fileID: 11400000, guid: a10e183435a39f047a126880b1adf4f6, type: 2}
-  - {fileID: 11400000, guid: 1c5c13b4a9fce6447880763f162d1808, type: 2}
-  - {fileID: 11400000, guid: 8975e70fed323954caffb91c5f459217, type: 2}
-  - {fileID: 11400000, guid: 72f786250fdc3194882168b53c207eec, type: 2}
-  - {fileID: 11400000, guid: bebab2cb1657a58459c74185a294970c, type: 2}
-  - {fileID: 11400000, guid: 95b8b14a4bf3d8c4fbdb10036135ef6b, type: 2}
-  powerUpOne: {fileID: 0}
-  powerUpTwo: {fileID: 0}
-  powerUpThree: {fileID: 0}
 --- !u!4 &898084731
 Transform:
   m_ObjectHideFlags: 0
@@ -23522,6 +23507,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5607518826592593501, guid: e011c842c4c65154d8f695596fa82111, type: 3}
+      propertyPath: m_Size.x
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5607518826592593501, guid: e011c842c4c65154d8f695596fa82111, type: 3}
+      propertyPath: m_Size.y
+      value: 0.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 5607518826592593501, guid: e011c842c4c65154d8f695596fa82111, type: 3}
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
@@ -23652,7 +23645,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.48, y: 0.48}
-    newSize: {x: 0.48, y: 0.48}
+    newSize: {x: 0.15, y: 0.23}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -23738,9 +23731,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c904c55ed968f894697ab4379285fb9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentXP: 0
-  level: 1
-  xpToNextLevel: 100
 --- !u!1 &1123927749
 GameObject:
   m_ObjectHideFlags: 0
@@ -25759,7 +25749,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08144b2a68eb2ba479dbeb33a09a8b14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 0}
   speed: 0.5
+  anim: {fileID: 0}
 --- !u!50 &1687961770
 Rigidbody2D:
   serializedVersion: 5
