@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - WalkDestructible
+  - Camera
   layers:
   - Default
   - TransparentFX
@@ -20,8 +21,8 @@ TagManager:
   - Walls
   - Player
   - Projectile
-  - 
-  - 
+  - TeleportTarget
+  - Enemy
   - 
   - 
   - 
