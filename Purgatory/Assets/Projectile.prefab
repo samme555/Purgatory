@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2748962676490695829}
   - component: {fileID: 4261477686882687661}
   - component: {fileID: 6116167444467947447}
-  - component: {fileID: 1420789627289938584}
   m_Layer: 12
   m_Name: Projectile
   m_TagString: Untagged
@@ -98,7 +97,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1925677939549781835}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -163,15 +162,3 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.10243581, y: 0.068228625}
   m_EdgeRadius: 0
---- !u!114 &1420789627289938584
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1925677939549781835}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ef4578463aeb54439aa2cf7c76b9655, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
