@@ -16,10 +16,13 @@ public class Shooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1") && Time.time >= nextFireTime) 
+        if (!PauseMenu.isPaused)
         {
-            Shoot();
-            nextFireTime = Time.time + (1f / attackSpeed);
+            if (Input.GetButtonDown("Fire1") && Time.time >= nextFireTime)
+            {
+                Shoot();
+                nextFireTime = Time.time + (1f / attackSpeed);
+            }
         }
     }
 
@@ -52,14 +55,11 @@ public class Shooting : MonoBehaviour
             }
         }
 
-        
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePosition.z = 0f;
 
         Vector2 direction = (mousePosition - firePoint.position).normalized;
         
-
-
         GameObject bullet = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
 
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
@@ -68,13 +68,6 @@ public class Shooting : MonoBehaviour
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         bullet.transform.rotation = Quaternion.Euler(0,0,angle);
 
-
         Destroy(bullet, 2f);
-       
-
-        
-
     }
-
-    
 }
