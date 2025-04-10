@@ -5,21 +5,26 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     [SerializeField] SpriteRenderer spriteRenderer;
+ 
     Rigidbody2D rb;
     public float speed = 0.5f;
     private Transform player;
     public Animator anim;
+
     private Vector2 direction;
 
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
     public ContactFilter2D movementFilter;
     public float collisionOffset = 0.05f;
+ 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         player = GameObject.FindWithTag("Player").transform;
+
         rb = GetComponent<Rigidbody2D>();
+
     }
 
     // Update is called once per frame
