@@ -5,7 +5,12 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     Rigidbody rb;
+=======
+    [SerializeField] SpriteRenderer spriteRenderer;
+    Rigidbody2D rb;
+>>>>>>> Stashed changes
     public float speed = 0.5f;
     private Transform player;
 =======
@@ -19,6 +24,9 @@ public class EnemyMovement : MonoBehaviour
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
     public ContactFilter2D movementFilter;
     public float collisionOffset = 0.05f;
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -26,6 +34,10 @@ public class EnemyMovement : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player").transform;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+        rb = GetComponent<Rigidbody2D>();
+>>>>>>> Stashed changes
 =======
         rb = GetComponent<Rigidbody2D>();
 >>>>>>> Stashed changes
@@ -37,9 +49,12 @@ public class EnemyMovement : MonoBehaviour
         if (player != null)
         {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             Vector2 direction = (player.position - transform.position).normalized;
             transform.Translate(direction * speed * Time.deltaTime);
 =======
+=======
+>>>>>>> Stashed changes
             direction = (player.position - transform.position).normalized;
 
             if (direction != Vector2.zero)
@@ -78,6 +93,9 @@ public class EnemyMovement : MonoBehaviour
 
                 Animate(direction);
             }
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
         }
     }
