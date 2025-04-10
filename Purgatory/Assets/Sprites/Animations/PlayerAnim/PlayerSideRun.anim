@@ -23,14 +23,14 @@ AnimationClip:
     - time: 0
       value: {fileID: -715291917276890088, guid: ccf61a4ebfd5a4d428b49a71a6dd6cf2, type: 3}
     - time: 0.083333336
-      value: {fileID: -6774040804925556745, guid: ccf61a4ebfd5a4d428b49a71a6dd6cf2, type: 3}
+      value: {fileID: -1184466108291028268, guid: ccf61a4ebfd5a4d428b49a71a6dd6cf2, type: 3}
     - time: 0.16666667
       value: {fileID: -2235294348357820249, guid: ccf61a4ebfd5a4d428b49a71a6dd6cf2, type: 3}
-    - time: 0.23333333
-      value: {fileID: -4436453726814458780, guid: ccf61a4ebfd5a4d428b49a71a6dd6cf2, type: 3}
-    - time: 0.31666666
+    - time: 0.25
       value: {fileID: 7204741587825200610, guid: ccf61a4ebfd5a4d428b49a71a6dd6cf2, type: 3}
-    - time: 0.4
+    - time: 0.33333334
+      value: {fileID: -6774040804925556745, guid: ccf61a4ebfd5a4d428b49a71a6dd6cf2, type: 3}
+    - time: 0.41666666
       value: {fileID: -1184466108291028268, guid: ccf61a4ebfd5a4d428b49a71a6dd6cf2, type: 3}
     - time: 0.48333332
       value: {fileID: -715291917276890088, guid: ccf61a4ebfd5a4d428b49a71a6dd6cf2, type: 3}
@@ -57,10 +57,10 @@ AnimationClip:
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
     - {fileID: -715291917276890088, guid: ccf61a4ebfd5a4d428b49a71a6dd6cf2, type: 3}
-    - {fileID: -6774040804925556745, guid: ccf61a4ebfd5a4d428b49a71a6dd6cf2, type: 3}
+    - {fileID: -1184466108291028268, guid: ccf61a4ebfd5a4d428b49a71a6dd6cf2, type: 3}
     - {fileID: -2235294348357820249, guid: ccf61a4ebfd5a4d428b49a71a6dd6cf2, type: 3}
-    - {fileID: -4436453726814458780, guid: ccf61a4ebfd5a4d428b49a71a6dd6cf2, type: 3}
     - {fileID: 7204741587825200610, guid: ccf61a4ebfd5a4d428b49a71a6dd6cf2, type: 3}
+    - {fileID: -6774040804925556745, guid: ccf61a4ebfd5a4d428b49a71a6dd6cf2, type: 3}
     - {fileID: -1184466108291028268, guid: ccf61a4ebfd5a4d428b49a71a6dd6cf2, type: 3}
     - {fileID: -715291917276890088, guid: ccf61a4ebfd5a4d428b49a71a6dd6cf2, type: 3}
   m_AnimationClipSettings:

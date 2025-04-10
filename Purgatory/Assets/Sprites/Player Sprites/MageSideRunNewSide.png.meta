@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: e81a99a019b4861448405067f589df58
+guid: abad9dc87e983b14db7f3c0974c188f1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7684888172474171163
-    second: row-1-column-1_0
+      213: 8849889194813229553
+    second: MageSideRunNewSide_0
   - first:
-      213: -2994429016429806007
-    second: row-1-column-1_1
+      213: -1580441575931863929
+    second: MageSideRunNewSide_1
   - first:
-      213: -1599198997331933793
-    second: row-1-column-1_2
+      213: 6538379024761488358
+    second: MageSideRunNewSide_2
   - first:
-      213: 4297536815058135264
-    second: row-1-column-1_3
+      213: -2968018155702346602
+    second: MageSideRunNewSide_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -33,7 +33,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 1
+  isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -66,7 +66,7 @@ TextureImporter:
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 7
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -109,79 +109,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: row-1-column-1_0
+      name: MageSideRunNewSide_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 5
-        width: 7
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b1f7cea931536aa60800000000000000
-      internalID: 7684888172474171163
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: row-1-column-1_1
-      rect:
-        serializedVersion: 2
-        x: 5
-        y: 9
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 94e349abca6a176d0800000000000000
-      internalID: -2994429016429806007
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: row-1-column-1_2
-      rect:
-        serializedVersion: 2
-        x: 9
-        y: 5
-        width: 7
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f958ede1cf08ec9e0800000000000000
-      internalID: -1599198997331933793
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: row-1-column-1_3
-      rect:
-        serializedVersion: 2
-        x: 5
         y: 0
-        width: 6
-        height: 7
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,8 +124,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0e824b6c6fae3ab30800000000000000
-      internalID: 4297536815058135264
+      spriteID: 1f9096e755f11da70800000000000000
+      internalID: 8849889194813229553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageSideRunNewSide_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78c925e92c4211ae0800000000000000
+      internalID: -1580441575931863929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageSideRunNewSide_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e306c9c41dfcba50800000000000000
+      internalID: 6538379024761488358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageSideRunNewSide_3
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69c937e663b7fc6d0800000000000000
+      internalID: -2968018155702346602
       vertices: []
       indices: 
       edges: []
@@ -200,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 963e75f6c8c78964ea50cff2a9e37d4c
     internalID: 0
     vertices: []
     indices: 
@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      MageSideRunNewSide_0: 8849889194813229553
+      MageSideRunNewSide_1: -1580441575931863929
+      MageSideRunNewSide_2: 6538379024761488358
+      MageSideRunNewSide_3: -2968018155702346602
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
