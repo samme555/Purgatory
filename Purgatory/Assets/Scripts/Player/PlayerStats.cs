@@ -1,12 +1,19 @@
 using UnityEngine;
 
 
+
 public class PlayerStats : MonoBehaviour
 {
     public int currentXP = 0;
     public int level = 1;
     public int xpToNextLevel = 100;
 
+    public int hp = 3;
+    public float critCH = 0;
+    public float critDMG = 2;
+    public float moveSpeed = 1;
+    public float atkSPD = 1;
+    public float atk = 1;
    
    
 

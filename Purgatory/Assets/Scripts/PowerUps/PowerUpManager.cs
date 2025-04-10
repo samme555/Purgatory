@@ -1,4 +1,3 @@
-using JetBrains.Annotations;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -20,6 +19,8 @@ public class PowerUpManager : MonoBehaviour
 
     List<PowerUpSO> alreadySelectedPowerUp = new List<PowerUpSO>();
 
+    PlayerStats playerStats;
+
     public static PowerUpManager instance;
 
     Vector3 screenCenter = new Vector3(Screen.width / 2, Screen.height / 2, 0f);
@@ -32,10 +33,11 @@ public class PowerUpManager : MonoBehaviour
         if (GameManager.instance != null) 
         {
             GameManager.instance.OnGameStateChanged += HandleGameStateChanged;
+            playerStats = FindAnyObjectByType<PlayerStats>();
         }
     }
 
-   
+    
 
     private void OnDisable()
     {
@@ -53,8 +55,33 @@ public class PowerUpManager : MonoBehaviour
             RandomizeNewPowerUps();
         }
     }
-    
 
+    public void ApplyPowerUp(PowerUpSO powerUp, PlayerStats stats) 
+    {
+     
+            switch (powerUp.effectType) 
+            {
+                case PowerUpEffect.maxHP:
+                    stats.hp += (int)powerUp.effectValue;
+                    break;
+                case PowerUpEffect.moveSPD:
+                    stats.moveSpeed += (float)powerUp.effectValue;
+                    break;
+                case PowerUpEffect.atk:
+                    stats.atk += (float)powerUp.effectValue;
+                    break;
+                case PowerUpEffect.atkSPD:
+                    stats.atkSPD += (float)powerUp.effectValue;
+                    break;
+                case PowerUpEffect.critCH:
+                    stats.critCH += (float)powerUp.effectValue;
+                    break;
+                case PowerUpEffect.critDMG:
+                    stats.critDMG += (float)powerUp.effectValue;
+                    break;
+            }
+        
+    }
 
     void RandomizeNewPowerUps() 
     {
@@ -104,10 +131,10 @@ public class PowerUpManager : MonoBehaviour
 
     public void SelectPowerUp(PowerUpSO selectedPowerUp) 
     {
-        if (!alreadySelectedPowerUp.Contains(selectedPowerUp)) 
-        { 
-            alreadySelectedPowerUp.Add(selectedPowerUp);
-        }
+        
+        alreadySelectedPowerUp.Add(selectedPowerUp);
+        ApplyPowerUp(selectedPowerUp, playerStats);
+        
 
         GameManager.instance.ChangeState(GameManager.GameState.playing);
     }
