@@ -1,0 +1,97 @@
+[33m60ed666[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mPauseMenu[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/PauseMenu[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m HEAD@{0}: checkout: moving from main to PauseMenu
+[33m60ed666[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mPauseMenu[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/PauseMenu[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m HEAD@{1}: checkout: moving from PauseMenu to main
+[33m60ed666[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mPauseMenu[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/PauseMenu[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m HEAD@{2}: merge main: Fast-forward
+[33m6fddff2[m HEAD@{3}: checkout: moving from main to PauseMenu
+[33m60ed666[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mPauseMenu[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/PauseMenu[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m HEAD@{4}: commit: Small fix
+[33mb8c70cf[m[33m ([m[1;31morigin/Orvar[m[33m, [m[1;31morigin/FilipNy[m[33m, [m[1;32mOrvar[m[33m, [m[1;32mFilipNy[m[33m)[m HEAD@{5}: checkout: moving from PauseMenu to main
+[33m6fddff2[m HEAD@{6}: checkout: moving from main to PauseMenu
+[33mb8c70cf[m[33m ([m[1;31morigin/Orvar[m[33m, [m[1;31morigin/FilipNy[m[33m, [m[1;32mOrvar[m[33m, [m[1;32mFilipNy[m[33m)[m HEAD@{7}: pull --ff --recurse-submodules --progress origin: Fast-forward
+[33m224653f[m HEAD@{8}: pull --ff --recurse-submodules --progress origin: Fast-forward
+[33m6fddff2[m HEAD@{9}: checkout: moving from main to main
+[33m6fddff2[m HEAD@{10}: reset: moving to HEAD@{26}
+[33m6f9ce04[m HEAD@{11}: checkout: moving from PauseMenu to main
+[33m6fddff2[m HEAD@{12}: checkout: moving from main to PauseMenu
+[33m6f9ce04[m HEAD@{13}: rebase (finish): returning to refs/heads/main
+[33m6f9ce04[m HEAD@{14}: rebase (continue): Revert "test"
+[33mdeecfea[m HEAD@{15}: rebase (pick): Revert "test"
+[33m462bae2[m HEAD@{16}: rebase (pick): test
+[33m1f0ba44[m HEAD@{17}: rebase (continue): test
+[33mc689e52[m HEAD@{18}: rebase (continue): Revert "a"
+[33m8ae30a2[m HEAD@{19}: rebase (continue): Revert "a"
+[33mcd5f5c2[m HEAD@{20}: rebase (continue): a
+[33m046dbb5[m HEAD@{21}: rebase (continue): a
+[33m67f18a9[m HEAD@{22}: rebase (pick): Revert "Merge remote-tracking branch 'origin/FilipNy'"
+[33ma0552ee[m HEAD@{23}: rebase (pick): SideAnim
+[33m69ae205[m HEAD@{24}: rebase (continue): SideRunAnim Update
+[33m19eed7e[m HEAD@{25}: rebase (pick): Revert "Merge branch 'PauseMenu'"
+[33me042608[m HEAD@{26}: rebase (pick): lkj
+[33m99cce9f[m HEAD@{27}: rebase (pick): xp system, level up = power up pop up
+[33m1e74d34[m HEAD@{28}: rebase (pick): knas med powerup system. fixat nu
+[33mdcaf1d9[m HEAD@{29}: rebase (pick): fix
+[33m2cf18fb[m HEAD@{30}: rebase (pick): Revert "a"
+[33m4f5fcd4[m HEAD@{31}: rebase (pick): a
+[33mdd1d097[m HEAD@{32}: rebase (pick): powerupsystem snart färdig
+[33m6b79596[m HEAD@{33}: rebase (continue): powerup system snart färdigt
+[33m6fddff2[m HEAD@{34}: rebase (start): checkout PauseMenu
+[33m224653f[m HEAD@{35}: pull --ff --recurse-submodules --progress origin: Fast-forward
+[33mf3a8eab[m HEAD@{36}: rebase (abort): returning to refs/heads/main
+[33m6fddff2[m HEAD@{37}: rebase (start): checkout PauseMenu
+[33mf3a8eab[m HEAD@{38}: checkout: moving from PauseMenu to main
+[33m6fddff2[m HEAD@{39}: reset: moving to HEAD
+[33m6fddff2[m HEAD@{40}: checkout: moving from main to PauseMenu
+[33mf3a8eab[m HEAD@{41}: pull --ff --recurse-submodules --progress origin: Fast-forward
+[33m5768073[m HEAD@{42}: reset: moving to HEAD
+[33m5768073[m HEAD@{43}: checkout: moving from PauseMenu to main
+[33m6fddff2[m HEAD@{44}: checkout: moving from main to PauseMenu
+[33m5768073[m HEAD@{45}: checkout: moving from PauseMenu to main
+[33m6fddff2[m HEAD@{46}: checkout: moving from main to PauseMenu
+[33m5768073[m HEAD@{47}: checkout: moving from PauseMenu to main
+[33m6fddff2[m HEAD@{48}: checkout: moving from main to PauseMenu
+[33m5768073[m HEAD@{49}: checkout: moving from PauseMenu to main
+[33m6fddff2[m HEAD@{50}: checkout: moving from main to PauseMenu
+[33m5768073[m HEAD@{51}: checkout: moving from PauseMenu to main
+[33m6fddff2[m HEAD@{52}: checkout: moving from main to PauseMenu
+[33m5768073[m HEAD@{53}: checkout: moving from PauseMenu to main
+[33m6fddff2[m HEAD@{54}: checkout: moving from main to PauseMenu
+[33m5768073[m HEAD@{55}: revert: Revert "Merge branch 'PauseMenu'"
+[33m8b3055b[m HEAD@{56}: commit (merge): Merge branch 'PauseMenu'
+[33mc6b2162[m HEAD@{57}: checkout: moving from PauseMenu to main
+[33m6fddff2[m HEAD@{58}: checkout: moving from main to PauseMenu
+[33mc6b2162[m HEAD@{59}: reset: moving to HEAD
+[33mc6b2162[m HEAD@{60}: pull --ff --recurse-submodules --progress origin: Fast-forward
+[33ma17c532[m HEAD@{61}: checkout: moving from Orvar to main
+[33mb1da025[m HEAD@{62}: checkout: moving from PauseMenu to Orvar
+[33m6fddff2[m HEAD@{63}: checkout: moving from Orvar to PauseMenu
+[33mb1da025[m HEAD@{64}: checkout: moving from PauseMenu to Orvar
+[33m6fddff2[m HEAD@{65}: commit: Added music
+[33m2a6a5af[m HEAD@{66}: checkout: moving from main to PauseMenu
+[33ma17c532[m HEAD@{67}: checkout: moving from PauseMenu to main
+[33m2a6a5af[m HEAD@{68}: commit: Added a pausemenu
+[33ma17c532[m HEAD@{69}: checkout: moving from main to PauseMenu
+[33ma17c532[m HEAD@{70}: commit: Something?
+[33m876c819[m HEAD@{71}: commit: Main Menu merge
+[33md8d30d6[m HEAD@{72}: commit (merge): Merge branch 'Dam'
+[33m82da432[m HEAD@{73}: checkout: moving from Dam to main
+[33m74ee9bd[m[33m ([m[1;31morigin/Dam[m[33m, [m[1;32mDam[m[33m)[m HEAD@{74}: checkout: moving from main to Dam
+[33m82da432[m HEAD@{75}: checkout: moving from Dam to main
+[33m74ee9bd[m[33m ([m[1;31morigin/Dam[m[33m, [m[1;32mDam[m[33m)[m HEAD@{76}: checkout: moving from main to Dam
+[33m82da432[m HEAD@{77}: checkout: moving from Dam to main
+[33m74ee9bd[m[33m ([m[1;31morigin/Dam[m[33m, [m[1;32mDam[m[33m)[m HEAD@{78}: checkout: moving from Samuel to Dam
+[33m290ef80[m HEAD@{79}: checkout: moving from PalJobb to Samuel
+[33m5989099[m HEAD@{80}: checkout: moving from Orvar to PalJobb
+[33mca1d3b4[m HEAD@{81}: checkout: moving from FilipNy to Orvar
+[33m99a15e5[m HEAD@{82}: checkout: moving from Filip to FilipNy
+[33m16987d4[m[33m ([m[1;31morigin/Filip[m[33m, [m[1;32mFilip[m[33m)[m HEAD@{83}: checkout: moving from Dam to Filip
+[33m74ee9bd[m[33m ([m[1;31morigin/Dam[m[33m, [m[1;32mDam[m[33m)[m HEAD@{84}: checkout: moving from main to Dam
+[33m99a15e5[m HEAD@{85}: checkout: moving from Dam to main
+[33m74ee9bd[m[33m ([m[1;31morigin/Dam[m[33m, [m[1;32mDam[m[33m)[m HEAD@{86}: commit: MainMenu
+[33m290ef80[m HEAD@{87}: checkout: moving from main to Dam
+[33m290ef80[m HEAD@{88}: pull --ff --recurse-submodules --progress origin: Fast-forward
+[33ma31e401[m HEAD@{89}: pull --ff --recurse-submodules --progress origin: Fast-forward
+[33me0d3051[m HEAD@{90}: pull --ff --recurse-submodules --progress origin: Fast-forward
+[33meb551b2[m HEAD@{91}: pull --ff --recurse-submodules --progress origin: Merge made by the 'ort' strategy.
+[33mb9eadb0[m HEAD@{92}: commit: Fixad collision(?)
+[33m5424f08[m HEAD@{93}: pull --ff --recurse-submodules --progress origin: Fast-forward
+[33m7dd492d[m HEAD@{94}: pull --ff --recurse-submodules --progress origin: Fast-forward
+[33m11d8b89[m HEAD@{95}: reset: moving to HEAD
+[33m11d8b89[m HEAD@{96}: clone: from https://github.com/samme555/Purgatory.git
