@@ -11,11 +11,14 @@ public class VolumeSlider : MonoBehaviour
     {
         if (!PlayerPrefs.HasKey("volume"))
         {
+            Debug.Log("Volume did not exist");
             PlayerPrefs.SetFloat("volume", 1);
         }
-
-        else
+        else if (PlayerPrefs.HasKey("volume"))
+        {
+            Debug.Log("Loading volume");
             Load();
+        }
 
         volumeSlider.onValueChanged.AddListener((v) =>
         {
@@ -31,12 +34,16 @@ public class VolumeSlider : MonoBehaviour
 
     private void Load()
     {
-        volumeSlider.value = PlayerPrefs.GetFloat("volume");
+        float savedVolume = PlayerPrefs.GetFloat("volume");
+        volumeSlider.value = savedVolume;
+        volumeText.text = (savedVolume * 100).ToString("0") + "%";
+        Debug.Log("Loaded volume: " + savedVolume);
     }
 
     private void Save()
     {
         PlayerPrefs.SetFloat("volume", volumeSlider.value);
-        Debug.Log(volumeSlider.value);
+        PlayerPrefs.Save();
+        Debug.Log("Saved volume: " + volumeSlider.value);
     }
 }
