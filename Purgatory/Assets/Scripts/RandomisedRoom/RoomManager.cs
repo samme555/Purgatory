@@ -85,34 +85,60 @@ public class RoomManager : MonoBehaviour
         int x = roomIndex.x;
         int y = roomIndex.y;
 
-        if (x >= gridSizeX || y >= gridSizeY || x < 0 || y < 0)
+        if (!IsInBounds(roomIndex) || roomGrid[x, y] != 0 || roomCount >= maxRooms)
             return false;
 
-        if (roomCount >= maxRooms)
+        // Count valid neighbors to ensure connection
+        Vector2Int[] directions = { Vector2Int.up, Vector2Int.down, Vector2Int.left, Vector2Int.right };
+        List<Vector2Int> validConnections = new List<Vector2Int>();
+
+        foreach (Vector2Int dir in directions)
+        {
+            Vector2Int neighbor = roomIndex + dir;
+            if (IsInBounds(neighbor) && roomGrid[neighbor.x, neighbor.y] == 1)
+            {
+                validConnections.Add(dir);
+            }
+        }
+
+        // We only want to accept rooms that connect to exactly ONE neighbor most of the time
+        if (validConnections.Count == 0)
             return false;
 
-        if(Random.value < 0.5f && roomIndex != Vector2Int.zero)
-            return false;
-        
-        if(CountAdjacentRooms(roomIndex) > 1)
-            return false;
-        if (roomGrid[x, y] != 0)
+        // Bias against more than 1 neighbor to avoid clustering
+        if (validConnections.Count > 1 && Random.value < 0.8f)
             return false;
 
+        // Now it's safe to add the room
         roomQueue.Enqueue(roomIndex);
         roomGrid[x, y] = 1;
         roomCount++;
 
         var newRoom = Instantiate(GetRandomRoomPrefab(), GetPositionFromGridIndex(roomIndex), Quaternion.identity);
-
-        newRoom.GetComponent<Room>().RoomIndex = roomIndex;
         newRoom.name = $"Room-{roomCount}";
+        newRoom.GetComponent<Room>().RoomIndex = roomIndex;
         roomObjects.Add(newRoom);
 
-        OpenDoors(newRoom, x, y);
+        // Connect doors
+        foreach (var dir in validConnections)
+        {
+            Vector2Int neighborIndex = roomIndex + dir;
+            Room neighborRoom = GetRoomScriptAt(neighborIndex);
+            Room currentRoom = newRoom.GetComponent<Room>();
+
+            currentRoom.OpenDoor(dir);
+            neighborRoom?.OpenDoor(-dir);
+        }
 
         return true;
     }
+
+
+    private bool IsInBounds(Vector2Int index)
+    {
+        return index.x >= 0 && index.y >= 0 && index.x < gridSizeX && index.y < gridSizeY;
+    }
+
 
     //Clear all rooms
     private void RegenerateRooms()
