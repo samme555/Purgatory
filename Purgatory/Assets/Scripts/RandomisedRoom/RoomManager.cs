@@ -41,10 +41,40 @@ public class RoomManager : MonoBehaviour
             int gridX = roomIndex.x;
             int gridY = roomIndex.y;
 
-            TryGenerateRoom(new Vector2Int(gridX + 1, gridY));
-            TryGenerateRoom(new Vector2Int(gridX - 1, gridY));
-            TryGenerateRoom(new Vector2Int(gridX, gridY + 1));
-            TryGenerateRoom(new Vector2Int(gridX, gridY - 1));
+            List<Vector2Int> directions = new List<Vector2Int>
+            {
+                new Vector2Int(1, 0),   // Right
+                new Vector2Int(-1, 0),  // Left
+                new Vector2Int(0, 1),   // Up
+                new Vector2Int(0, -1)   // Down
+            };
+
+            // Shuffle directions
+            for (int i = 0; i < directions.Count; i++)
+            {
+                Vector2Int temp = directions[i];
+                int randomIndex = Random.Range(i, directions.Count);
+                directions[i] = directions[randomIndex];
+                directions[randomIndex] = temp;
+            }
+
+            int attempts = 0;
+            foreach (Vector2Int dir in directions)
+            {
+                if (TryGenerateRoom(roomIndex + dir))
+                {
+                    attempts++;
+
+                    // Always allow one
+                    if (attempts == 1)
+                        continue;
+
+                    // Small chance for 2nd and 3rd neighbors
+                    float chance = (attempts == 2) ? 0.1f : 0.05f;
+                    if (Random.value > chance)
+                        break; // stop early if chance fails
+                }
+            }
         }
         else if (roomCount < minRooms)
         {
@@ -88,7 +118,6 @@ public class RoomManager : MonoBehaviour
         if (!IsInBounds(roomIndex) || roomGrid[x, y] != 0 || roomCount >= maxRooms)
             return false;
 
-        // Count valid neighbors to ensure connection
         Vector2Int[] directions = { Vector2Int.up, Vector2Int.down, Vector2Int.left, Vector2Int.right };
         List<Vector2Int> validConnections = new List<Vector2Int>();
 
@@ -101,15 +130,12 @@ public class RoomManager : MonoBehaviour
             }
         }
 
-        // We only want to accept rooms that connect to exactly ONE neighbor most of the time
         if (validConnections.Count == 0)
             return false;
 
-        // Bias against more than 1 neighbor to avoid clustering
-        if (validConnections.Count > 1 && Random.value < 0.8f)
+        if (validConnections.Count > 1 && Random.value < 0.9f)
             return false;
 
-        // Now it's safe to add the room
         roomQueue.Enqueue(roomIndex);
         roomGrid[x, y] = 1;
         roomCount++;
@@ -119,15 +145,19 @@ public class RoomManager : MonoBehaviour
         newRoom.GetComponent<Room>().RoomIndex = roomIndex;
         roomObjects.Add(newRoom);
 
-        // Connect doors
+        Room currentRoom = newRoom.GetComponent<Room>();
+
         foreach (var dir in validConnections)
         {
             Vector2Int neighborIndex = roomIndex + dir;
             Room neighborRoom = GetRoomScriptAt(neighborIndex);
-            Room currentRoom = newRoom.GetComponent<Room>();
 
             currentRoom.OpenDoor(dir);
             neighborRoom?.OpenDoor(-dir);
+
+            // Connect teleporters automatically
+            EnableTeleporters(currentRoom, dir, neighborRoom);
+            EnableTeleporters(neighborRoom, -dir, currentRoom); // optional: makes it two-way
         }
 
         return true;
@@ -137,6 +167,32 @@ public class RoomManager : MonoBehaviour
     private bool IsInBounds(Vector2Int index)
     {
         return index.x >= 0 && index.y >= 0 && index.x < gridSizeX && index.y < gridSizeY;
+    }
+
+    private void EnableTeleporters(Room fromRoom, Vector2Int direction, Room toRoom)
+    {
+        string tpName = GetTeleportNameFromDirection(direction); // e.g., "tpRight"
+        string targetName = "TeleportTarget"; // child object inside the teleporter
+
+        Transform fromTp = fromRoom.transform.Find("Teleports/" + tpName);
+        Transform toTpTarget = toRoom.transform.Find("Teleports/" + GetTeleportNameFromDirection(-direction) + "/TeleportTarget");
+
+        if (fromTp != null && toTpTarget != null)
+        {
+            fromTp.gameObject.SetActive(true);
+
+            TeleportTrigger tpScript = fromTp.GetComponent<TeleportTrigger>();
+            tpScript.teleportTarget = toTpTarget;
+        }
+    }
+
+    private string GetTeleportNameFromDirection(Vector2Int dir)
+    {
+        if (dir == Vector2Int.right) return "tpRight";
+        if (dir == Vector2Int.left) return "tpLeft";
+        if (dir == Vector2Int.up) return "tpUp";
+        if (dir == Vector2Int.down) return "tpDown";
+        return "";
     }
 
 

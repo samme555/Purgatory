@@ -2,14 +2,14 @@ using UnityEngine;
 
 public class TeleportTrigger : MonoBehaviour
 {
-    public Transform teleportTarget; // drag the target in the inspector
+    [Tooltip("Where the player will be teleported to")]
+    public Transform teleportTarget;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player")) // Make sure your player has the "Player" tag
+        if (other.CompareTag("Player") && teleportTarget != null)
         {
             other.transform.position = teleportTarget.position;
         }
     }
 }
-
