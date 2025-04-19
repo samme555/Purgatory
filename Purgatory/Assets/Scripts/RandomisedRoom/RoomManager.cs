@@ -24,6 +24,10 @@ public class RoomManager : MonoBehaviour
 
     private bool generationComplete = false;
 
+    private Camera currentCamera;
+
+    public static RoomManager Instance { get; private set; }
+
     private void Start()
     {
         roomGrid = new int[gridSizeX, gridSizeY];
@@ -88,12 +92,30 @@ public class RoomManager : MonoBehaviour
         }
     }
 
+    private void Awake()
+    {
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(gameObject);
+    }
+
+    public void ActivateRoomCamera(Room room)
+    {
+        if (currentCamera != null)
+            currentCamera.gameObject.SetActive(false);
+
+        currentCamera = room.RoomCamera;
+
+        if (currentCamera != null)
+            currentCamera.gameObject.SetActive(true);
+    }
+
     private GameObject GetRandomRoomPrefab()
     {
         if (roomPrefabs.Length == 0) return null;
         return roomPrefabs[Random.Range(0, roomPrefabs.Length)];
     }
-
 
     private void StartRoomGenerationFromRoom(Vector2Int roomIndex)
     {
@@ -108,6 +130,9 @@ public class RoomManager : MonoBehaviour
         initialRoom.name = $"Room-{roomCount}";
         initialRoom.GetComponent<Room>().RoomIndex = roomIndex;
         roomObjects.Add(initialRoom);
+
+        Room initialRoomScript = initialRoom.GetComponent<Room>();
+        ActivateRoomCamera(initialRoomScript); // This will turn on the first camera
     }
 
     private bool TryGenerateRoom(Vector2Int roomIndex)

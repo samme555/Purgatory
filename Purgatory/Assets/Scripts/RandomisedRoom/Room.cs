@@ -14,6 +14,9 @@ public class Room : MonoBehaviour
     [SerializeField] GameObject leftWall;
     [SerializeField] GameObject rightWall;
 
+    [SerializeField] private Camera roomCamera;
+    public Camera RoomCamera => roomCamera;
+
     public Vector2Int RoomIndex { get; set; }
 
     public void OpenDoor(Vector2Int direction)
