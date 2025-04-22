@@ -8,6 +8,8 @@ TagManager:
   - WalkDestructible
   - Camera
   - Wall
+  - Boss
+
   layers:
   - Default
   - TransparentFX
@@ -24,7 +26,7 @@ TagManager:
   - Projectile
   - TeleportTarget
   - Enemy
-  - 
+  - Boss
   - 
   - 
   - 
