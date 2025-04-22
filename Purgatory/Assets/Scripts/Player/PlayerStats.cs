@@ -46,4 +46,19 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
+    public void TakeDamage(int damage)
+    {
+        hp -= damage;
+
+        if (hp <= 0)
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        Destroy(gameObject);
+    }
+
 }
