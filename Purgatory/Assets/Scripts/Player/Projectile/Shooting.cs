@@ -6,8 +6,10 @@ public class Shooting : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public Transform firePoint;
     public GameObject projectilePrefab;
-    public Movement playerMovement;
-    
+    private Movement playerMovement;
+
+    public PlayerStats playerStats;
+
     public float attackSpeed = 1f;
     public float bulletForce = 20f;
     private float nextFireTime = 0f;
@@ -16,6 +18,8 @@ public class Shooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        attackSpeed = playerStats.atkSPD;
+
         if (Input.GetButtonDown("Fire1") && Time.time >= nextFireTime) 
         {
             Shoot();

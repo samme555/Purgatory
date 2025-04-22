@@ -28096,7 +28096,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 1551491911}
   projectilePrefab: {fileID: 135968465}
-  playerMovement: {fileID: 0}
+  playerStats: {fileID: 1096834308}
   attackSpeed: 10
   bulletForce: 2
 --- !u!114 &1096834308
