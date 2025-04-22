@@ -310,6 +310,9 @@ MonoBehaviour:
   roomPrefabs:
   - {fileID: 5219237122793748789, guid: 61579b1e5b1ee4b42ada0a36b7687714, type: 3}
   - {fileID: 2790700096519703735, guid: 9e44caf0119b8424284bdb7d937b90fc, type: 3}
+  bossRoomPrefabs:
+  - {fileID: 2342789604691106487, guid: 21e5a0ff99ab0e344ab8b3b22b4a0921, type: 3}
+  startRoomPrefab: {fileID: 5219237122793748789, guid: 61579b1e5b1ee4b42ada0a36b7687714, type: 3}
   maxRooms: 15
   minRooms: 10
   gridSizeX: 10
