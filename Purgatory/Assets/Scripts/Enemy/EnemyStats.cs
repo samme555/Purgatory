@@ -17,6 +17,8 @@ public class EnemyStats : MonoBehaviour
     {
         health -= damage;
 
+        Debug.Log($"damage dealt:" + damage);
+
         UpdateHealthBar();
 
         if (health <= 0)
