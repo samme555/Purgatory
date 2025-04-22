@@ -14,6 +14,7 @@ public class BossController : MonoBehaviour
     public float spreadAngle = 90f;
 
     private bool canAttack = true;
+    private bool isActive = false;
 
     public Image healthBar;
 
@@ -27,9 +28,23 @@ public class BossController : MonoBehaviour
     {
         if (canAttack)
         {
+            Debug.Log("Boss trying to attack...");
             StartCoroutine(WaveAttack());
         }
     }
+
+    public void SetActive(bool active)
+    {
+        isActive = active;
+        this.enabled = active;
+        Debug.Log($"Boss is now {(active ? "ACTIVE" : "INACTIVE")}");
+    }
+
+    private void Awake()
+    {
+        this.enabled = false; // So Update() doesn't run until player enters
+    }
+
 
     private IEnumerator WaveAttack()
     {

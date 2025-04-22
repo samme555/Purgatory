@@ -17,6 +17,9 @@ public class Room : MonoBehaviour
     [SerializeField] private Camera roomCamera;
     public Camera RoomCamera => roomCamera;
 
+    private List<EnemyMovement> enemies = new List<EnemyMovement>();
+    private BossController boss;
+
     public Vector2Int RoomIndex { get; set; }
 
     public void OpenDoor(Vector2Int direction)
@@ -40,6 +43,46 @@ public class Room : MonoBehaviour
         {
             rightDoor.SetActive(true);
             rightWall.SetActive(false);
+        }
+    }
+    private void Awake()
+    {
+        // Automatically find all enemies in the room
+        enemies.AddRange(GetComponentsInChildren<EnemyMovement>(true));
+        boss = GetComponentInChildren<BossController>(true);
+
+        foreach (var enemy in enemies)
+        {
+            enemy.enabled = false;
+        }
+
+        if (boss != null)
+        {
+            boss.SetActive(false);
+        }
+    }
+
+    public void SetEnemyActive(bool active)
+    {
+        Debug.Log($"SetEnemyActive({active}) called on room {name}");
+
+        foreach (var enemy in enemies)
+        {
+            enemy.enabled = active;
+
+            // Optional: also stop animations or reset states
+            if (!active && enemy.anim != null)
+            {
+                enemy.anim.SetBool("Moving", false);
+            }
+        }
+        if (boss != null)
+        {
+            boss.SetActive(active);
+        }
+        else
+        {
+            Debug.Log("No boss found in this room.");
         }
     }
 }

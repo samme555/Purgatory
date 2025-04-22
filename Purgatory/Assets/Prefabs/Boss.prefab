@@ -243,7 +243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
-  bossProjectile: {fileID: 1925677939549781835, guid: 6328ede7909628e40be14ffe56bee71e, type: 3}
+  bossProjectile: {fileID: 6243859482360521023, guid: b342a9deee1e8344080801bff9816e6c, type: 3}
   projectileCount: 5
   waveCooldown: 3
   spreadAngle: 90
