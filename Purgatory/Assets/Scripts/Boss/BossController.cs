@@ -1,9 +1,12 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BossController : MonoBehaviour
 {
-    public int health = 1;
+
+    public int health;
+    float maxHealth;
 
     public GameObject bossProjectile;
     public int projectileCount = 5;
@@ -11,6 +14,14 @@ public class BossController : MonoBehaviour
     public float spreadAngle = 90f;
 
     private bool canAttack = true;
+
+    public Image healthBar;
+
+    private void Start()
+    {
+        maxHealth = health;
+        UpdateHealthBar();
+    }
 
     private void Update()
     {
@@ -24,7 +35,16 @@ public class BossController : MonoBehaviour
     {
         canAttack = false;
 
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (health == 6)
+        {
+            waveCooldown = 2f;
+        }
+        else if (health == 3)
+        {
+            waveCooldown = 1f;
+        }
+
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
 
         if (player == null)
         {
@@ -56,10 +76,17 @@ public class BossController : MonoBehaviour
     {
         health -= damage;
 
+        UpdateHealthBar();
+
         if (health <= 0)
         {
             Die();
         }
+    }
+
+    public void UpdateHealthBar()
+    {
+        healthBar.fillAmount = health / maxHealth;
     }
 
     private void Die()
