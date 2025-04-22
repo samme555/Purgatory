@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
-  bossProjectile: {fileID: 0}
+  bossProjectile: {fileID: 6243859482360521023, guid: b342a9deee1e8344080801bff9816e6c, type: 3}
   projectileCount: 5
   waveCooldown: 3
   spreadAngle: 90

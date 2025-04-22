@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class BossController : MonoBehaviour
 {
-    public int health = 1;
+    public int health = 10;
 
     public GameObject bossProjectile;
     public int projectileCount = 5;
@@ -22,6 +22,16 @@ public class BossController : MonoBehaviour
 
     private IEnumerator WaveAttack()
     {
+
+        if (health == 6)
+        {
+            waveCooldown = 2f;
+        }
+        else if (health == 3)
+        {
+            waveCooldown = 1f;
+        }
+
         canAttack = false;
 
         GameObject player = GameObject.FindGameObjectWithTag("Player");
