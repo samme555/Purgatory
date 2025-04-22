@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5323450114703441625}
   - component: {fileID: 4270628945863058644}
   - component: {fileID: 3330851968858458643}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TopWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1082,7 +1082,7 @@ Transform:
   m_GameObject: {fileID: 762782936883059097}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.406, y: -1.351, z: 0}
+  m_LocalPosition: {x: 0.417, y: -1.413, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1123,7 +1123,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.013930753, y: 0.008899551}
+  m_Offset: {x: 0.013930753, y: 0.001134947}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1133,7 +1133,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.48194084, y: 0.1788086}
+  m_Size: {x: 0.48194084, y: 0.16327938}
   m_EdgeRadius: 0
 --- !u!114 &6127401129787558373
 MonoBehaviour:
@@ -1175,7 +1175,7 @@ Transform:
   m_GameObject: {fileID: 1126564442460499807}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.676, y: -0.05, z: 0}
+  m_LocalPosition: {x: 2.724, y: -0.055, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1267,7 +1267,7 @@ Transform:
   m_GameObject: {fileID: 1368187945842282909}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.307, y: -0.009, z: 0}
+  m_LocalPosition: {x: 0.415, y: 0.018, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1307,7 +1307,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.0065022707, y: 0.000000029802322}
+  m_Offset: {x: 0.0022209883, y: 0.04326316}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1317,7 +1317,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.14700079, y: 0.5779579}
+  m_Size: {x: 0.0728519, y: 0.17961575}
   m_EdgeRadius: 0
 --- !u!1 &1488290511664346106
 GameObject:
@@ -1346,7 +1346,7 @@ Transform:
   m_GameObject: {fileID: 1488290511664346106}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.398, y: 1.197, z: 0}
+  m_LocalPosition: {x: 0.4, y: 1.283, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1387,7 +1387,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.013930753, y: 0.008899551}
+  m_Offset: {x: 0.013930753, y: -0.0039696097}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1397,7 +1397,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.48194084, y: 0.1788086}
+  m_Size: {x: 0.48194084, y: 0.09691417}
   m_EdgeRadius: 0
 --- !u!114 &7912862363871243538
 MonoBehaviour:
@@ -1422,9 +1422,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4419122466643834216}
   - component: {fileID: 4401658296737106665}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Map
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1521,7 +1521,7 @@ Transform:
   m_GameObject: {fileID: 2679289846770271430}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.88, y: -0.058, z: 0}
+  m_LocalPosition: {x: -1.884, y: -0.023, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1562,7 +1562,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.006497383, y: 0.0027050078}
+  m_Offset: {x: 0.00095927715, y: 0.0027050078}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1572,7 +1572,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.14991283, y: 0.51331455}
+  m_Size: {x: 0.098962545, y: 0.51331455}
   m_EdgeRadius: 0
 --- !u!114 &1585090735010333424
 MonoBehaviour:
@@ -1613,7 +1613,7 @@ Transform:
   m_GameObject: {fileID: 3088268789404065025}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.259, y: 0.001, z: 0}
+  m_LocalPosition: {x: -0.276, y: 0.014, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1653,7 +1653,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.021307409, y: 0.0038319826}
+  m_Offset: {x: 0.0019985437, y: -0.0020159706}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1663,7 +1663,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.12248838, y: 0.51802886}
+  m_Size: {x: 0.08387065, y: 0.1304063}
   m_EdgeRadius: 0
 --- !u!1 &3108311731411602286
 GameObject:
@@ -1691,7 +1691,7 @@ Transform:
   m_GameObject: {fileID: 3108311731411602286}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.005, y: 0.437, z: 0}
+  m_LocalPosition: {x: 0.02, y: 0.324, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1731,7 +1731,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.0021475554, y: 0.000000029802322}
+  m_Offset: {x: 0.0021475554, y: 0.009058833}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1741,7 +1741,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.60914755, y: 0.15782422}
+  m_Size: {x: 0.60914755, y: 0.13970661}
   m_EdgeRadius: 0
 --- !u!1 &3280658457981891823
 GameObject:
@@ -1754,7 +1754,7 @@ GameObject:
   - component: {fileID: 6434397226690683425}
   - component: {fileID: 4922585665840025276}
   - component: {fileID: 2868289559577461973}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1841,7 +1841,7 @@ GameObject:
   - component: {fileID: 5882005028969087303}
   - component: {fileID: 2536471293639637599}
   - component: {fileID: 7940625743731673999}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Doors
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1931,7 +1931,7 @@ GameObject:
   - component: {fileID: 3634561852124802703}
   - component: {fileID: 1412273106156814232}
   - component: {fileID: 1762973766156519978}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TopDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2736,7 +2736,15 @@ CompositeCollider2D:
   m_EdgeRadius: 0
   m_ColliderPaths: []
   m_CompositePaths:
-    m_Paths: []
+    m_Paths:
+    - - {x: 2.2399704, y: 0.96000004}
+      - {x: 2.2399704, y: 1.2800001}
+      - {x: 0.16, y: 1.2799708}
+      - {x: 0.1600293, y: 0.96000004}
+    - - {x: -0.1600293, y: 0.96000004}
+      - {x: -0.1600293, y: 1.2800001}
+      - {x: -2.24, y: 1.2799708}
+      - {x: -2.239971, y: 0.96000004}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
@@ -2755,7 +2763,7 @@ GameObject:
   - component: {fileID: 165518417795584720}
   - component: {fileID: 9222322192434350026}
   - component: {fileID: 8811645157512081485}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BottomDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3540,7 +3548,15 @@ CompositeCollider2D:
   m_EdgeRadius: 0
   m_ColliderPaths: []
   m_CompositePaths:
-    m_Paths: []
+    m_Paths:
+    - - {x: 2.2399704, y: -1.28}
+      - {x: 2.2399704, y: -0.96000004}
+      - {x: 0.16, y: -0.9600293}
+      - {x: 0.1600293, y: -1.28}
+    - - {x: -0.1600293, y: -1.28}
+      - {x: -0.1600293, y: -0.96000004}
+      - {x: -2.24, y: -0.9600293}
+      - {x: -2.239971, y: -1.28}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
@@ -3597,7 +3613,7 @@ GameObject:
   - component: {fileID: 3200152931017870027}
   - component: {fileID: 7747600879326178094}
   - component: {fileID: 8843241542011915086}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BottomWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7970,7 +7986,7 @@ GameObject:
   - component: {fileID: 2039973673189682840}
   - component: {fileID: 8903501381779410904}
   - component: {fileID: 3750675032421985139}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RightWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8432,7 +8448,7 @@ GameObject:
   - component: {fileID: 725255763119990484}
   - component: {fileID: 5708072384766876833}
   - component: {fileID: 4578345942674414174}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RightDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8779,7 +8795,15 @@ CompositeCollider2D:
   m_EdgeRadius: 0
   m_ColliderPaths: []
   m_CompositePaths:
-    m_Paths: []
+    m_Paths:
+    - - {x: 2.2399704, y: 0.16}
+      - {x: 2.2399704, y: 0.9599999}
+      - {x: 2.08, y: 0.9599706}
+      - {x: 2.0800292, y: 0.16}
+    - - {x: 2.2399704, y: -0.96000004}
+      - {x: 2.2399704, y: -0.16}
+      - {x: 2.08, y: -0.1600293}
+      - {x: 2.0800292, y: -0.96000004}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
@@ -8848,7 +8872,7 @@ Transform:
   m_GameObject: {fileID: 8071317957177991671}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.02, y: -0.408, z: 0}
+  m_LocalPosition: {x: 0.02, y: -0.286, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8888,7 +8912,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.0021475554, y: 0.000000029802322}
+  m_Offset: {x: 0.0021475554, y: -0.020730883}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -8898,7 +8922,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.60914755, y: 0.15782422}
+  m_Size: {x: 0.60914755, y: 0.11636239}
   m_EdgeRadius: 0
 --- !u!1 &8212261503095057936
 GameObject:
@@ -8914,7 +8938,7 @@ GameObject:
   - component: {fileID: 7725290812052764815}
   - component: {fileID: 8856937184513714429}
   - component: {fileID: 7449541385790889018}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LeftDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9299,7 +9323,15 @@ CompositeCollider2D:
   m_EdgeRadius: 0
   m_ColliderPaths: []
   m_CompositePaths:
-    m_Paths: []
+    m_Paths:
+    - - {x: -2.0800297, y: 0.16}
+      - {x: -2.0800297, y: 0.9599999}
+      - {x: -2.24, y: 0.9599706}
+      - {x: -2.239971, y: 0.16}
+    - - {x: -2.0800297, y: -0.96000004}
+      - {x: -2.0800297, y: -0.16}
+      - {x: -2.24, y: -0.1600293}
+      - {x: -2.239971, y: -0.96000004}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
@@ -9318,7 +9350,7 @@ GameObject:
   - component: {fileID: 2581216658082248318}
   - component: {fileID: 3310655403035088021}
   - component: {fileID: 2421889484584228113}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LeftWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
