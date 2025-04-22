@@ -5,6 +5,9 @@ using System.Collections.Generic;
 public class RoomManager : MonoBehaviour
 {
     [SerializeField] GameObject[] roomPrefabs;
+    [SerializeField] private GameObject[] bossRoomPrefabs;
+    [SerializeField] private GameObject startRoomPrefab;
+
     [SerializeField] private int maxRooms = 15;
     [SerializeField] private int minRooms = 10;
 
@@ -13,6 +16,10 @@ public class RoomManager : MonoBehaviour
 
     [SerializeField] int gridSizeX = 10;
     [SerializeField] int gridSizeY = 10;
+
+    private GameObject selectedBossRoomPrefab;
+    private Vector2Int bossRoomIndex;
+
 
     private List<GameObject> roomObjects = new List<GameObject> ();
 
@@ -24,18 +31,23 @@ public class RoomManager : MonoBehaviour
 
     private bool generationComplete = false;
 
+    private bool bossRoomPlaced = false;
+
     private Camera currentCamera;
 
     public static RoomManager Instance { get; private set; }
 
     private void Start()
     {
+        selectedBossRoomPrefab = bossRoomPrefabs[Random.Range(0, bossRoomPrefabs.Length)];
+
         roomGrid = new int[gridSizeX, gridSizeY];
         roomQueue = new Queue<Vector2Int>();
 
         Vector2Int initialRoomIndex = new Vector2Int(gridSizeX / 2, gridSizeY / 2);
         StartRoomGenerationFromRoom(initialRoomIndex);
     }
+
 
     private void Update()
     {
@@ -87,8 +99,93 @@ public class RoomManager : MonoBehaviour
         }
         else if (!generationComplete)
         {
+            PlaceSingleBossRoom();
             Debug.Log($"Generation complete, {roomCount} rooms");
             generationComplete = true;
+        }
+    }
+
+    private void PlaceSingleBossRoom()
+    {
+        if (bossRoomPlaced)
+        {
+            Debug.LogWarning("Boss room already placed, skipping.");
+            return;
+        }
+
+        bossRoomPlaced = true;
+
+        List<Vector2Int> leafCandidates = new List<Vector2Int>();
+
+        foreach (GameObject roomObj in roomObjects)
+        {
+            Room room = roomObj.GetComponent<Room>();
+            Vector2Int index = room.RoomIndex;
+
+            if (CountAdjacentRooms(index) == 1) // it's a "leaf" or dead-end
+            {
+                leafCandidates.Add(index);
+            }
+        }
+
+        if (leafCandidates.Count == 0)
+        {
+            Debug.LogWarning("No valid leaf rooms for boss room.");
+            return;
+        }
+
+        // Pick one dead-end room to become the boss room
+        bossRoomIndex = leafCandidates[Random.Range(0, leafCandidates.Count)];
+
+        // Remove the regular room at that index
+        GameObject oldRoom = roomObjects.Find(r => r.GetComponent<Room>().RoomIndex == bossRoomIndex);
+
+        if (oldRoom != null)
+        {
+            roomObjects.Remove(oldRoom);
+            Destroy(oldRoom);
+        }
+        else
+        {
+            Debug.LogWarning($"Could not find room to replace at {bossRoomIndex}. Skipping boss room placement.");
+            return;
+        }
+
+
+        // Spawn the boss room
+        var bossRoom = Instantiate(selectedBossRoomPrefab, GetPositionFromGridIndex(bossRoomIndex), Quaternion.identity);
+        bossRoom.name = "BossRoom";
+        Room bossRoomScript = bossRoom.GetComponent<Room>();
+        bossRoomScript.RoomIndex = bossRoomIndex;
+        roomObjects.Add(bossRoom);
+
+        // Reconnect it
+        ReconnectBossRoom(bossRoomScript, bossRoomIndex);
+
+        int bossRoomCount = roomObjects.FindAll(r => r.name == "BossRoom").Count;
+        Debug.Log($"Boss rooms in scene: {bossRoomCount}");
+
+    }
+
+    private void ReconnectBossRoom(Room bossRoom, Vector2Int bossIndex)
+    {
+        Vector2Int[] directions = { Vector2Int.up, Vector2Int.down, Vector2Int.left, Vector2Int.right };
+
+        foreach (var dir in directions)
+        {
+            Vector2Int neighborIndex = bossIndex + dir;
+            if (IsInBounds(neighborIndex) && roomGrid[neighborIndex.x, neighborIndex.y] == 1)
+            {
+                Room neighbor = GetRoomScriptAt(neighborIndex);
+                if (neighbor != null)
+                {
+                    bossRoom.OpenDoor(dir);
+                    neighbor.OpenDoor(-dir);
+
+                    EnableTeleporters(bossRoom, dir, neighbor);
+                    EnableTeleporters(neighbor, -dir, bossRoom);
+                }
+            }
         }
     }
 
@@ -125,15 +222,15 @@ public class RoomManager : MonoBehaviour
         roomGrid[x, y] = 1;
         roomCount++;
 
-        var initialRoom = Instantiate(GetRandomRoomPrefab(), GetPositionFromGridIndex(roomIndex), Quaternion.identity);
-
-        initialRoom.name = $"Room-{roomCount}";
+        var initialRoom = Instantiate(startRoomPrefab, GetPositionFromGridIndex(roomIndex), Quaternion.identity);
+        initialRoom.name = $"StartRoom";
         initialRoom.GetComponent<Room>().RoomIndex = roomIndex;
         roomObjects.Add(initialRoom);
 
         Room initialRoomScript = initialRoom.GetComponent<Room>();
-        ActivateRoomCamera(initialRoomScript); // This will turn on the first camera
+        ActivateRoomCamera(initialRoomScript); // activate the first camera
     }
+
 
     private bool TryGenerateRoom(Vector2Int roomIndex)
     {
@@ -230,6 +327,7 @@ public class RoomManager : MonoBehaviour
         roomQueue.Clear();
         roomCount = 0;
         generationComplete = false;
+        bossRoomPlaced = false;
 
         Vector2Int initialRoomIndex = new Vector2Int(gridSizeX / 2, gridSizeY / 2);
         StartRoomGenerationFromRoom(initialRoomIndex);
