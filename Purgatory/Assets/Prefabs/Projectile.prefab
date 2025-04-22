@@ -177,6 +177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
+  impactEffect: {fileID: 2267736383564715800, guid: e151e9121f6387b499640f9c402bb2b5, type: 3}
 --- !u!114 &-4687059176414647329
 MonoBehaviour:
   m_ObjectHideFlags: 0

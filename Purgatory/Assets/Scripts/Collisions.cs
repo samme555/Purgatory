@@ -23,7 +23,15 @@ public class Collisions : MonoBehaviour
         {
             if (impactEffect != null)
             {
-                Instantiate(impactEffect, transform.position, Quaternion.identity);
+                GameObject fx = Instantiate(impactEffect, transform.position, Quaternion.identity);
+                fx.transform.localScale = Vector3.one;
+
+                ParticleSystem ps = fx.GetComponent<ParticleSystem>();
+                if (ps != null)
+                {
+                    ps.Play();
+                    
+                }                
             }
 
             Destroy(gameObject);
