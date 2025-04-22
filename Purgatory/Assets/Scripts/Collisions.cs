@@ -8,6 +8,7 @@ public class Collisions : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         bool isEnemy = other.CompareTag("Enemy");
+        bool isBoss = other.CompareTag("Boss");
         bool isWall = other.CompareTag("Wall");
 
         if (isEnemy)
@@ -19,7 +20,7 @@ public class Collisions : MonoBehaviour
             }
         }
 
-        if (isEnemy || isWall)
+        if (isEnemy || isWall || isBoss)
         {
             if (impactEffect != null)
             {
