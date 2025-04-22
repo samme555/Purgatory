@@ -9,7 +9,7 @@ public class Collisions : MonoBehaviour
     {
         bool isEnemy = other.CompareTag("Enemy");
         bool isBoss = other.CompareTag("Boss");
-        bool isWall = other.CompareTag("Wall");
+        bool isWall = other.gameObject.layer == LayerMask.NameToLayer("Walls");
 
         if (isEnemy)
         {

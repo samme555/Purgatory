@@ -9,7 +9,6 @@ TagManager:
   - Camera
   - Wall
   - Boss
-
   layers:
   - Default
   - TransparentFX
@@ -17,16 +16,16 @@ TagManager:
   - 
   - Water
   - UI
-  - Tiles
-  - Characters
-  - Decorations
-  - Destructible Decorations
   - Walls
-  - Player
-  - Projectile
-  - TeleportTarget
-  - Enemy
-  - Boss
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
