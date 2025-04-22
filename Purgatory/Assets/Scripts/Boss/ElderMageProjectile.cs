@@ -7,6 +7,7 @@ public class ElderMageProjectile : MonoBehaviour
     private Vector2 direction;
     public int damage = 1;
 
+
     public void Initialize(Vector2 dir)
     {
         direction = dir.normalized;
