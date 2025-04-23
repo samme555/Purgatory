@@ -28,7 +28,6 @@ public class BossController : MonoBehaviour
     {
         if (canAttack)
         {
-            Debug.Log("Boss trying to attack...");
             StartCoroutine(WaveAttack());
         }
     }
@@ -37,7 +36,6 @@ public class BossController : MonoBehaviour
     {
         isActive = active;
         this.enabled = active;
-        Debug.Log($"Boss is now {(active ? "ACTIVE" : "INACTIVE")}");
     }
 
     private void Awake()

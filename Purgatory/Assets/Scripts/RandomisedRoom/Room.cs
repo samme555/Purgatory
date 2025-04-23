@@ -64,8 +64,6 @@ public class Room : MonoBehaviour
 
     public void SetEnemyActive(bool active)
     {
-        Debug.Log($"SetEnemyActive({active}) called on room {name}");
-
         foreach (var enemy in enemies)
         {
             enemy.enabled = active;
@@ -79,10 +77,6 @@ public class Room : MonoBehaviour
         if (boss != null)
         {
             boss.SetActive(active);
-        }
-        else
-        {
-            Debug.Log("No boss found in this room.");
         }
     }
 }
