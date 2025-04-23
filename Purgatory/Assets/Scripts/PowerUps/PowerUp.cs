@@ -19,9 +19,29 @@ public class PowerUp : MonoBehaviour
 
     private void OnMouseDown()
     {
-        Debug.Log("You Selected a power up");
+        Debug.Log($"You Selected a power up " + powerUpInfo);
         PowerUpManager.instance.SelectPowerUp(powerUpInfo);
     }
+
+    void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            Vector3 worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            RaycastHit2D hit = Physics2D.Raycast(worldPos, Vector2.zero);
+
+            if (hit.collider != null)
+            {
+                Debug.Log("Raycast hit: " + hit.collider.gameObject.name + " (Full Path: " + hit.collider.gameObject.transform.GetHierarchyPath() + ")");
+            }
+            else
+            {
+                Debug.Log("Raycast hit nothing.");
+            }
+        }
+    }
+
+
 
     private void FitSpriteInSlot(SpriteRenderer iconRenderer, SpriteRenderer slotRenderer)
     {

@@ -6,6 +6,7 @@ public class EnemyStats : MonoBehaviour
     public float health;
     float maxHealth;
     public Image healthBar;
+    public int xpReward = 15;
 
     public void Start()
     {
@@ -13,7 +14,7 @@ public class EnemyStats : MonoBehaviour
         UpdateHealthBar();
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
         health -= damage;
 
@@ -34,6 +35,17 @@ public class EnemyStats : MonoBehaviour
 
     private void Die()
     {
+        GameObject player = GameObject.FindWithTag("Player");
+
+        if (player != null)
+        {
+            PlayerStats stats = player.GetComponent<PlayerStats>();
+
+            if (stats != null)
+            {
+                stats.AddXP(xpReward);
+            }
+        }
         Destroy(gameObject);
     }
 }

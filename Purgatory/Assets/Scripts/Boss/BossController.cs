@@ -5,8 +5,9 @@ using UnityEngine.UI;
 public class BossController : MonoBehaviour
 {
 
-    public int health;
+    public float health;
     float maxHealth;
+    public int xpReward = 50;
 
     public GameObject bossProjectile;
     public int projectileCount = 5;
@@ -85,11 +86,12 @@ public class BossController : MonoBehaviour
         canAttack = true;
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
         health -= damage;
 
         UpdateHealthBar();
+        
 
         if (health <= 0)
         {
@@ -104,6 +106,17 @@ public class BossController : MonoBehaviour
 
     private void Die()
     {
+        GameObject player = GameObject.FindWithTag("Player");
+
+        if (player != null)
+        {
+            PlayerStats stats = player.GetComponent<PlayerStats>();
+
+            if (stats != null)
+            {
+                stats.AddXP(xpReward);
+            }
+        }
         Destroy(gameObject);
     }
 }

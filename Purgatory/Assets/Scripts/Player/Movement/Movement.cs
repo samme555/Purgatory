@@ -24,12 +24,16 @@ public class Movement : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+
     }
 
     private void Update()
     {
         GetInput(); //detect user input
         Animate();
+
+        PlayerStats playerStats = rb.GetComponent<PlayerStats>();
+        moveSpeed = playerStats.moveSpeed;
     }
 
     private void FixedUpdate()

@@ -7905,7 +7905,7 @@ GameObject:
   - component: {fileID: 5924985546248732565}
   - component: {fileID: 5044540570438264551}
   - component: {fileID: 7500323960703814759}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: RoomTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}

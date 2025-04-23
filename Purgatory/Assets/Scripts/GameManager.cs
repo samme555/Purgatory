@@ -44,9 +44,21 @@ public class GameManager : MonoBehaviour
         {
             case GameState.playing:
                 PowerUpManager.instance.HidePowerUpSelection();
+                Time.timeScale = 1f;
+                GameObject roomTriggerTrue = GameObject.Find("RoomTrigger");
+                if (roomTriggerTrue != null)
+                {
+                    roomTriggerTrue.SetActive(true);
+                }
                 break;
             case GameState.powerUpSelection:
                 PowerUpManager.instance.ShowPowerUpSelection();
+                Time.timeScale = 0f;
+                GameObject roomTriggerFalse = GameObject.Find("RoomTrigger");
+                if (roomTriggerFalse != null)
+                {
+                    roomTriggerFalse.SetActive(false);
+                }
                 break;
         }
     }

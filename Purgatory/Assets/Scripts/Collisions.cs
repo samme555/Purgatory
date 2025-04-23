@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Collisions : MonoBehaviour
 {
-    [SerializeField] private int damage = 1;
+    [SerializeField] private float damage;
     [SerializeField] private GameObject impactEffect;
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -10,6 +10,9 @@ public class Collisions : MonoBehaviour
         bool isEnemy = other.CompareTag("Enemy");
         bool isBoss = other.CompareTag("Boss");
         bool isWall = other.gameObject.layer == LayerMask.NameToLayer("Projectile Block");
+
+        PlayerStats playerStats = GetComponent<PlayerStats>();
+
 
         if (isEnemy)
         {
