@@ -29,10 +29,15 @@ public class ElderMageProjectile : MonoBehaviour
             Destroy(gameObject);
             Debug.Log("collided with player");
         }
-        else if (collision.gameObject.layer == LayerMask.NameToLayer("Walls"))
+        //else if (collision.gameObject.layer == LayerMask.NameToLayer("Walls"))
+        //{
+        //    Destroy(gameObject);
+        //    Debug.Log("projectile collision!");
+        //}
+        else if (collision.gameObject.layer == LayerMask.NameToLayer("Projectile Block"))
         {
             Destroy(gameObject);
-            Debug.Log("projectile collision!");
+            Debug.Log("boss projectile collision!");
         }
     }
 }

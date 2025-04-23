@@ -219,7 +219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 1.5
-  rb: {fileID: 0}
+  rb: {fileID: 231527437642002472}
   movementFilter:
     useTriggers: 0
     useLayerMask: 1
