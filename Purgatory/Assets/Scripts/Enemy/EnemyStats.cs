@@ -44,6 +44,7 @@ public class EnemyStats : MonoBehaviour
             if (stats != null)
             {
                 stats.AddXP(xpReward);
+                PlayerData.instance.SaveFrom(stats);
             }
         }
         Destroy(gameObject);

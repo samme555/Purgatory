@@ -4,15 +4,24 @@ public class Collisions : MonoBehaviour
 {
     [SerializeField] private float damage;
     [SerializeField] private GameObject impactEffect;
+    public PlayerStats playerstats;
+
+    public void Start()
+    {
+        SetStats(playerstats);
+    }
+
+    public void SetStats(PlayerStats stats)
+    {
+        playerstats = stats;
+        damage = playerstats.atk;
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         bool isEnemy = other.CompareTag("Enemy");
         bool isBoss = other.CompareTag("Boss");
         bool isWall = other.gameObject.layer == LayerMask.NameToLayer("Projectile Block");
-
-        PlayerStats playerStats = GetComponent<PlayerStats>();
-
 
         if (isEnemy)
         {
