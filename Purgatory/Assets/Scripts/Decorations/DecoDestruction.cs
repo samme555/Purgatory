@@ -1,36 +1,25 @@
 using UnityEngine;
-using UnityEngine.Tilemaps;
 using System.Collections.Generic;
 
-public class RobustTileDestroyer : MonoBehaviour
+public class RobustPrefabDestroyer : MonoBehaviour
 {
-    [SerializeField] private Tilemap destructibleTilemap;
     [SerializeField] private Vector2 overlapSize = new Vector2(0.9f, 0.9f);
-    [SerializeField] private int sampleResolution = 3;
+    [SerializeField] private LayerMask destroyableLayer;
+    [SerializeField] private List<string> requiredTags = new List<string>(); // Now multiple tags!
 
     private void FixedUpdate()
     {
-        Bounds bounds = new Bounds(transform.position, overlapSize);
-        List<Vector3Int> checkedCells = new List<Vector3Int>();
+        Collider2D[] hits = Physics2D.OverlapBoxAll(transform.position, overlapSize, 0f, destroyableLayer);
 
-        for (int x = 0; x < sampleResolution; x++)
+        foreach (var hit in hits)
         {
-            for (int y = 0; y < sampleResolution; y++)
-            {
-                float px = Mathf.Lerp(bounds.min.x, bounds.max.x, x / (float)(sampleResolution - 1));
-                float py = Mathf.Lerp(bounds.min.y, bounds.max.y, y / (float)(sampleResolution - 1));
-                Vector3Int cell = destructibleTilemap.WorldToCell(new Vector3(px, py, 0));
+            if (requiredTags.Count > 0 && !requiredTags.Contains(hit.tag)) continue;
 
-                if (checkedCells.Contains(cell)) continue;
-                checkedCells.Add(cell);
+            Destroy(hit.gameObject);
+            Debug.Log($"Destroyed prefab: {hit.name} at {hit.transform.position}");
+            return; // destroy only one per frame
 
-                if (destructibleTilemap.HasTile(cell))
-                {
-                    destructibleTilemap.SetTile(cell, null);
-                    Debug.Log($"Destroyed tile at {cell}");
-                    return;
-                }
-            }
+            Debug.Log($"Hit: {hit.name} | Tag: {hit.tag} | Layer: {LayerMask.LayerToName(hit.gameObject.layer)}");
         }
     }
 

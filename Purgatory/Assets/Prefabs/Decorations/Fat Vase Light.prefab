@@ -11,9 +11,12 @@ GameObject:
   - component: {fileID: 7858698288978323229}
   - component: {fileID: 7539118344222504085}
   - component: {fileID: 4305399004705488112}
-  m_Layer: 0
+  - component: {fileID: 4058918433587985751}
+  - component: {fileID: 3617175946158210158}
+  - component: {fileID: 257315800607763337}
+  m_Layer: 8
   m_Name: Tilemap
-  m_TagString: Untagged
+  m_TagString: WalkDestructible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -171,6 +174,154 @@ TilemapRenderer:
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
+--- !u!19719996 &4058918433587985751
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2991733587173158396}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 1
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0
+  m_UseDelaunayMesh: 0
+--- !u!50 &3617175946158210158
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2991733587173158396}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!66 &257315800607763337
+CompositeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2991733587173158396}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_GeometryType: 0
+  m_GenerationType: 0
+  m_EdgeRadius: 0
+  m_ColliderPaths:
+  - m_Collider: {fileID: 4058918433587985751}
+    m_ColliderPaths:
+    - - X: -17800000
+        Y: -7899999
+      - X: -18100000
+        Y: -7600000
+      - X: -18699998
+        Y: -7600000
+      - X: -18999998
+        Y: -7899999
+      - X: -18999998
+        Y: -7999999
+      - X: -17800000
+        Y: -7999999
+    - - X: -17599998
+        Y: -9100000
+      - X: -17599998
+        Y: -8000000
+      - X: -19200000
+        Y: -8000000
+      - X: -19200000
+        Y: -9400000
+      - X: -18899998
+        Y: -9500000
+      - X: -17900000
+        Y: -9500000
+  m_CompositePaths:
+    m_Paths:
+    - - {x: -1.7900132, y: -0.95}
+      - {x: -1.7599999, y: -0.9099915}
+      - {x: -1.7600292, y: -0.8}
+      - {x: -1.78, y: -0.7999706}
+      - {x: -1.7800076, y: -0.78999233}
+      - {x: -1.8100108, y: -0.76}
+      - {x: -1.8700074, y: -0.7600076}
+      - {x: -1.8999999, y: -0.7900107}
+      - {x: -1.9000292, y: -0.8}
+      - {x: -1.9200001, y: -0.80002934}
+      - {x: -1.9199812, y: -0.9400062}
+      - {x: -1.8899956, y: -0.95}
+  m_VertexDistance: 0.0005
+  m_OffsetDistance: 0.00005
+  m_UseDelaunayMesh: 0
+  m_CompositeGameObject: {fileID: 2991733587173158396}
 --- !u!1 &4894520778642960605
 GameObject:
   m_ObjectHideFlags: 0
@@ -181,7 +332,7 @@ GameObject:
   m_Component:
   - component: {fileID: 585901960382859765}
   - component: {fileID: 2900174760421158550}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -225,9 +376,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4337646312489145785}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fat Vase Light
-  m_TagString: Destructible
+  m_TagString: WalkDestructible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
