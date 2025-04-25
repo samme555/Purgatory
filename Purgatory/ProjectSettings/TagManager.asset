@@ -9,6 +9,7 @@ TagManager:
   - Camera
   - Wall
   - Boss
+  - Destructible
   layers:
   - Default
   - TransparentFX
