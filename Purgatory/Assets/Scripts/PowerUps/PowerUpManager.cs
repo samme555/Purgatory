@@ -85,6 +85,9 @@ public class PowerUpManager : MonoBehaviour
 
     void RandomizeNewPowerUps() 
     {
+        Vector3 screenCenter = new Vector3(Screen.width / 2, Screen.height / 2, Camera.main.nearClipPlane);
+        Vector3 worldCenter = Camera.main.ScreenToWorldPoint(screenCenter);
+        worldCenter.z = 0f;
         if (powerUpOne != null) Destroy(powerUpOne);
         if (powerUpTwo != null) Destroy(powerUpTwo);
         if (powerUpThree != null) Destroy(powerUpThree);
@@ -109,7 +112,7 @@ public class PowerUpManager : MonoBehaviour
                 randomizedPowerUps.Add(randomPowerUp);  
             }
         }
-        Vector3 worldCenter = Camera.main.ScreenToWorldPoint(screenCenter);
+        
         worldCenter.z = 0f;
         float offset = 0.5f;
 
