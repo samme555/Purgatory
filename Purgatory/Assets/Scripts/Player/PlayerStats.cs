@@ -1,3 +1,5 @@
+using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -23,8 +25,23 @@ public class PlayerStats : MonoBehaviour
     public float atkSPD = 1;
     //damage inflicted on target, put in script holding the method to apply damage
     public float atk = 1;
-   
-   
+
+    public bool damageImmunity = false;
+    public float immunityTimer = 0f;
+    public float immunityDuration = 2f;
+    public float timer = 1f;
+
+    private SpriteRenderer spriteRenderer;
+    
+    
+
+
+    private void Start()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        
+    }
+
 
     public void AddXP(int xp) 
     {
@@ -49,21 +66,58 @@ public class PlayerStats : MonoBehaviour
 
     private void Update()
     {
+        
         if (Input.GetKeyDown(KeyCode.L)) 
         {
             AddXP(100);
         }
+        if (damageImmunity)
+        {
+            immunityTimer -= Time.deltaTime;
+            SetPlayerOpacity(0.6f);
+            if (immunityTimer <= 0f)
+            {
+                damageImmunity = false;
+                SetPlayerOpacity(1f);
+                Debug.Log("Immunity ended");
+            }
+        }
+
+        
     }
 
     public void TakeDamage(int damage)
     {
-        hp -= damage;
+
+        if (!damageImmunity) 
+        {
+            hp -= damage;
+            Debug.Log("Took damage, HP now: " + hp);
+            
+            damageImmunity = true;
+            immunityTimer = immunityDuration;
+
+           
+        }
+        
 
         if (hp <= 0)
         {
             Die();
         }
     }
+
+    void SetPlayerOpacity(float alpha)
+    {
+        if (spriteRenderer != null)
+        {
+            Color color = spriteRenderer.color;
+            color.a = alpha;
+            spriteRenderer.color = color;
+        }
+    }
+
+    
 
     private void Die()
     {
