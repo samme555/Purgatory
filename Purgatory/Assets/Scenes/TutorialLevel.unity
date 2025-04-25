@@ -50514,6 +50514,7 @@ GameObject:
   - component: {fileID: 2044557973}
   - component: {fileID: 2044557972}
   - component: {fileID: 2044557975}
+  - component: {fileID: 2044557976}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -50639,6 +50640,18 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!114 &2044557976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044557971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 573113056c24dc14daf53bd8aa2dbba2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2099613291 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1230018945513600170, guid: e011c842c4c65154d8f695596fa82111, type: 3}
@@ -50762,6 +50775,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 531783463737051170, guid: e011c842c4c65154d8f695596fa82111, type: 3}
+      propertyPath: immunityDuration
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1230018945513600170, guid: e011c842c4c65154d8f695596fa82111, type: 3}
       propertyPath: m_Name
       value: Player

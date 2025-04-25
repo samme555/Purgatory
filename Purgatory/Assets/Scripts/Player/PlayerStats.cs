@@ -28,8 +28,8 @@ public class PlayerStats : MonoBehaviour
 
     public bool damageImmunity = false;
     public float immunityTimer = 0f;
-    public float immunityDuration = 2f;
-    public float timer = 1f;
+    public float immunityDuration = 0.3f;
+    public float timer = 0.3f;
 
     private SpriteRenderer spriteRenderer;
     
@@ -74,11 +74,11 @@ public class PlayerStats : MonoBehaviour
         if (damageImmunity)
         {
             immunityTimer -= Time.deltaTime;
-            SetPlayerOpacity(0.6f);
+            
             if (immunityTimer <= 0f)
             {
                 damageImmunity = false;
-                SetPlayerOpacity(1f);
+                
                 Debug.Log("Immunity ended");
             }
         }
@@ -95,9 +95,15 @@ public class PlayerStats : MonoBehaviour
             Debug.Log("Took damage, HP now: " + hp);
             
             damageImmunity = true;
+            StartCoroutine(FlashWhite());
             immunityTimer = immunityDuration;
 
-           
+            CameraShake camShake = Camera.main.GetComponent<CameraShake>();
+            if(camShake != null)
+            {
+                camShake.TriggerShake(0.10f, 0.2f);
+            }
+
         }
         
 
@@ -107,17 +113,21 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
-    void SetPlayerOpacity(float alpha)
+    
+
+    private IEnumerator FlashWhite(float duration = 0.2f)
     {
         if (spriteRenderer != null)
         {
-            Color color = spriteRenderer.color;
-            color.a = alpha;
-            spriteRenderer.color = color;
+            spriteRenderer.color = Color.red;
+
+            yield return new WaitForSeconds(duration);
+
+            spriteRenderer.color = Color.white;
         }
     }
 
-    
+
 
     private void Die()
     {
