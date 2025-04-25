@@ -50811,6 +50811,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 645170482}
     - target: {fileID: 5671874025091958328, guid: e011c842c4c65154d8f695596fa82111, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: b153abfd951e3984d9a7b1e5d03c2ce0, type: 2}
+    - target: {fileID: 5671874025091958328, guid: e011c842c4c65154d8f695596fa82111, type: 3}
       propertyPath: m_ContactCaptureLayers.m_Bits
       value: 64
       objectReference: {fileID: 0}
