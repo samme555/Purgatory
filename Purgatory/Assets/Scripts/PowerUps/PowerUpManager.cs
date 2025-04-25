@@ -80,7 +80,7 @@ public class PowerUpManager : MonoBehaviour
                     stats.critDMG += (float)powerUp.effectValue;
                     break;
             }
-        
+        PlayerData.instance.SaveFrom(stats);
     }
 
     void RandomizeNewPowerUps() 

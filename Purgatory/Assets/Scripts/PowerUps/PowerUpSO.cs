@@ -19,5 +19,4 @@ public enum PowerUpEffect
     critDMG,
     atk,
     moveSPD
-      
 }

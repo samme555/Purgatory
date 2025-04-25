@@ -61,10 +61,17 @@ public class Shooting : MonoBehaviour
         mousePosition.z = 0f;
 
         Vector2 direction = (mousePosition - firePoint.position).normalized;
-        
+
 
 
         GameObject bullet = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
+        Collisions collisionScript = bullet.GetComponent<Collisions>();
+
+        if (collisionScript != null)
+        {
+            Debug.Log("Setting stats on new bullet"); // debug
+            collisionScript.SetStats(playerStats);
+        }
 
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.linearVelocity = direction * bulletForce;

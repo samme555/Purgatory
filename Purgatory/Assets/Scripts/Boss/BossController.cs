@@ -91,6 +91,8 @@ public class BossController : MonoBehaviour
         health -= damage;
 
         UpdateHealthBar();
+
+        Debug.Log("Damage: " + damage);
         
 
         if (health <= 0)

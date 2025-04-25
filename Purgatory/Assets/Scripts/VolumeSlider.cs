@@ -20,6 +20,8 @@ public class VolumeSlider : MonoBehaviour
             Load();
         }
 
+        ChangeVolume();
+
         volumeSlider.onValueChanged.AddListener((v) =>
         {
             volumeText.text = (v * 100).ToString("0") + "%"; 
