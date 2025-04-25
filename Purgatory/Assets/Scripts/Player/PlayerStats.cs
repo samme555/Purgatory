@@ -140,7 +140,7 @@ public class PlayerStats : MonoBehaviour
 
     
 
-    private void Die()
+    public void Die()
     {
         Destroy(gameObject);
     }
