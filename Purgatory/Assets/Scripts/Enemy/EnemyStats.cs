@@ -1,3 +1,4 @@
+
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,7 +8,8 @@ public class EnemyStats : MonoBehaviour
     float maxHealth;
     public Image healthBar;
     public int xpReward = 15;
-
+    
+    
     public void Start()
     {
         maxHealth = health;
@@ -16,6 +18,7 @@ public class EnemyStats : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        
         health -= damage;
 
         Debug.Log($"damage dealt:" + damage);

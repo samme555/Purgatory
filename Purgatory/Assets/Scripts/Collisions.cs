@@ -3,8 +3,11 @@ using UnityEngine;
 public class Collisions : MonoBehaviour
 {
     [SerializeField] private float damage;
+    [SerializeField] private float critChance;
+    [SerializeField] private float critDMG;
     [SerializeField] private GameObject impactEffect;
     public PlayerStats playerstats;
+    
 
     public void Start()
     {
@@ -15,6 +18,8 @@ public class Collisions : MonoBehaviour
     {
         playerstats = stats;
         damage = playerstats.atk;
+        critChance = playerstats.critCH;
+        critDMG = playerstats.critDMG;  
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -28,8 +33,18 @@ public class Collisions : MonoBehaviour
             EnemyStats stats = other.GetComponent<EnemyStats>();
             if (stats != null)
             {
-                stats.TakeDamage(damage);
+                var crit = Random.Range((int)0f, (int)10f);
+                Debug.Log(crit);
+                if (crit <= critChance)
+                {
+                    stats.TakeDamage(damage * critDMG);
+                }
+                else
+                {
+                    stats.TakeDamage(damage);
+                }
             }
+           
         }
 
         if (isEnemy || isWall || isBoss)
