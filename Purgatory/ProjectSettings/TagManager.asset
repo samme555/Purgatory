@@ -9,6 +9,7 @@ TagManager:
   - Camera
   - Wall
   - Boss
+  - Destructible
   layers:
   - Default
   - TransparentFX
@@ -20,6 +21,8 @@ TagManager:
   - Projectile Block
   - VFX
   - Characters
+  - Destructibles
+  - 
   - 
   - 
   - 

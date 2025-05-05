@@ -2,22 +2,16 @@ using UnityEngine;
 
 public class cameraFollow : MonoBehaviour
 {
-    [SerializeField] Camera cam;
-    [SerializeField] Rigidbody2D rb;
-    [SerializeField] float cameraZoomDistance;
-    Vector3 position;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField] private Camera cam;
+    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private float cameraZoomDistance = -10f;
 
-    // Update is called once per frame
-    void Update()
+    private void LateUpdate()
     {
-        position = new Vector3(rb.position.x, rb.position.y, cameraZoomDistance);  
-        cam.transform.position = position;
-        
-
+        if (cam.enabled)
+        {
+            Vector3 position = new Vector3(rb.position.x, rb.position.y, cameraZoomDistance);
+            cam.transform.position = position;
+        }
     }
 }
