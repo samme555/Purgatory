@@ -261,7 +261,7 @@ MonoBehaviour:
   atk: 1
   damageImmunity: 0
   immunityTimer: 0
-  immunityDuration: 2
+  immunityDuration: 0.7
   timer: 1
 --- !u!70 &-7819226315413948657
 CapsuleCollider2D:

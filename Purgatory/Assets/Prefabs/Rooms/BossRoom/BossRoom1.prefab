@@ -4959,6 +4959,7 @@ GameObject:
   - component: {fileID: 933584258192837147}
   - component: {fileID: 1953273508656777436}
   - component: {fileID: 7672518166101407257}
+  - component: {fileID: 2370331036602521982}
   - component: {fileID: 5742327280718693630}
   m_Layer: 0
   m_Name: Cam1
@@ -5041,6 +5042,18 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2900829351072590812}
   m_Enabled: 1
+--- !u!114 &2370331036602521982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2900829351072590812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 573113056c24dc14daf53bd8aa2dbba2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &5742327280718693630
 MonoBehaviour:
   m_ObjectHideFlags: 0
