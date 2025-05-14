@@ -18,6 +18,7 @@ public class Room : MonoBehaviour
     public Camera RoomCamera => roomCamera;
 
     private List<EnemyMovement> enemies = new List<EnemyMovement>();
+    private List<ReaperController> reapers = new List<ReaperController>();
     private BossController boss;
 
     public Vector2Int RoomIndex { get; set; }
@@ -49,11 +50,17 @@ public class Room : MonoBehaviour
     {
         // Automatically find all enemies in the room
         enemies.AddRange(GetComponentsInChildren<EnemyMovement>(true));
+        reapers.AddRange(GetComponentsInChildren<ReaperController>(true));
         boss = GetComponentInChildren<BossController>(true);
 
         foreach (var enemy in enemies)
         {
             enemy.enabled = false;
+        }
+
+        foreach (var reaper in reapers)
+        {
+            reaper.enabled = false;
         }
 
         if (boss != null)
@@ -73,6 +80,11 @@ public class Room : MonoBehaviour
             {
                 enemy.anim.SetBool("Moving", false);
             }
+        }
+        foreach (var reaper in reapers)
+        {
+            reaper.enabled = active;
+
         }
         if (boss != null)
         {
