@@ -94,13 +94,11 @@ public class RoomManager : MonoBehaviour
         }
         else if (roomCount < minRooms)
         {
-            Debug.Log("RoomCount was less than minimum amount of rooms. Trying again");
             RegenerateRooms();
         }
         else if (!generationComplete)
         {
             PlaceSingleBossRoom();
-            Debug.Log($"Generation complete, {roomCount} rooms");
             generationComplete = true;
         }
     }
@@ -109,7 +107,6 @@ public class RoomManager : MonoBehaviour
     {
         if (bossRoomPlaced)
         {
-            Debug.LogWarning("Boss room already placed, skipping.");
             return;
         }
 
@@ -130,7 +127,6 @@ public class RoomManager : MonoBehaviour
 
         if (leafCandidates.Count == 0)
         {
-            Debug.LogWarning("No valid leaf rooms for boss room.");
             return;
         }
 
@@ -145,11 +141,6 @@ public class RoomManager : MonoBehaviour
             roomObjects.Remove(oldRoom);
             Destroy(oldRoom);
         }
-        else
-        {
-            Debug.LogWarning($"Could not find room to replace at {bossRoomIndex}. Skipping boss room placement.");
-            return;
-        }
 
 
         // Spawn the boss room
@@ -163,7 +154,6 @@ public class RoomManager : MonoBehaviour
         ReconnectBossRoom(bossRoomScript, bossRoomIndex);
 
         int bossRoomCount = roomObjects.FindAll(r => r.name == "BossRoom").Count;
-        Debug.Log($"Boss rooms in scene: {bossRoomCount}");
 
     }
 
@@ -334,49 +324,46 @@ public class RoomManager : MonoBehaviour
         StartRoomGenerationFromRoom(initialRoomIndex);
     }
 
-    void OpenDoors(GameObject room, int x, int y)
+    public void OpenDoors(Room room)
     {
-        Room newRoomScript = room.GetComponent<Room>();
+        Vector2Int idx = room.RoomIndex;
+        int x = idx.x, y = idx.y;
 
-        //Neightbors
-        Room leftRoomScript = GetRoomScriptAt(new Vector2Int(x - 1, y));
-        Room rightRoomScript = GetRoomScriptAt(new Vector2Int(x + 1, y));
-        Room topRoomScript = GetRoomScriptAt(new Vector2Int(x, y + 1));
-        Room bottomRoomScript = GetRoomScriptAt(new Vector2Int(x, y - 1));
+        // Find neighbors (null if no room there)
+        Room left = GetRoomScriptAt(new Vector2Int(x - 1, y));
+        Room right = GetRoomScriptAt(new Vector2Int(x + 1, y));
+        Room down = GetRoomScriptAt(new Vector2Int(x, y - 1));
+        Room up = GetRoomScriptAt(new Vector2Int(x, y + 1));
 
-        //what doors to open depending on neighbor
-        if (x > 0 && roomGrid[x - 1, y] != 0)
+        // If a neighbor exists, open the connecting doors on both rooms:
+        if (left != null)
         {
-            //Neighboring to the Left
-            newRoomScript.OpenDoor(Vector2Int.left);
-            leftRoomScript.OpenDoor(Vector2Int.right);
+            room.OpenDoor(Vector2Int.left);
+            left.OpenDoor(Vector2Int.right);
         }
-        if (x < gridSizeX - 1 && roomGrid[x + 1, y] != 0)
+        if (right != null)
         {
-            //Neighboring to the Right
-            newRoomScript.OpenDoor(Vector2Int.right);
-            rightRoomScript.OpenDoor(Vector2Int.left);
+            room.OpenDoor(Vector2Int.right);
+            right.OpenDoor(Vector2Int.left);
         }
-        if (y > 0 && roomGrid[x, y -1] != 0)
+        if (down != null)
         {
-            //Neighboring room Below
-            newRoomScript.OpenDoor(Vector2Int.down);
-            bottomRoomScript.OpenDoor(Vector2Int.up);
+            room.OpenDoor(Vector2Int.down);
+            down.OpenDoor(Vector2Int.up);
         }
-        if (y < gridSizeX -1 &&  roomGrid[x, y + 1] != 0)
+        if (up != null)
         {
-            //Neighboring room Above
-            newRoomScript.OpenDoor(Vector2Int.up);
-            topRoomScript.OpenDoor(Vector2Int.down);
+            room.OpenDoor(Vector2Int.up);
+            up.OpenDoor(Vector2Int.down);
         }
     }
 
     Room GetRoomScriptAt(Vector2Int index)
     {
         GameObject roomObject = roomObjects.Find(r => r.GetComponent<Room>().RoomIndex == index);
-        if (roomObject != null)
-            return roomObject.GetComponent<Room>();
-        return null;
+        return roomObject != null
+            ? roomObject.GetComponent<Room>()
+            : null;
     }
 
     private int CountAdjacentRooms(Vector2Int roomIndex)
