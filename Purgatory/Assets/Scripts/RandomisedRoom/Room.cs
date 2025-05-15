@@ -91,6 +91,8 @@ public class Room : MonoBehaviour
     /// Returns true if any enemy is still enabled (i.e. alive)
     public bool HasLiveEnemies()
     {
-        return enemies.Exists(e => e != null && e.enabled);
+        bool anyMinions = enemies.Exists(e => e != null && e.enabled);
+        bool bossStillUp = boss != null && boss.gameObject.activeSelf;
+        return anyMinions || bossStillUp;
     }
 }
