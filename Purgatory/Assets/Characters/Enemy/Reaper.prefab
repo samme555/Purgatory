@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4386657778474052313}
   - component: {fileID: 935824687843476310}
   - component: {fileID: 723841263298787527}
+  - component: {fileID: 8019749027363643152}
   m_Layer: 0
   m_Name: Reaper
   m_TagString: Enemy
@@ -138,3 +139,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   afterImagePrefab: {fileID: 8767316024056564119, guid: 2fb8cd1387d0c4b418131261f8a5dd82, type: 3}
   spawnInterval: 0.1
+--- !u!70 &8019749027363643152
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4690223868148245260}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.00815779, y: 0.059342295}
+  m_Size: {x: 0.29483736, y: 0.29483742}
+  m_Direction: 0

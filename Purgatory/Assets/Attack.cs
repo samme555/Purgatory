@@ -7,6 +7,8 @@ public class Attack : MonoBehaviour
     public float attackCooldown = 5f;
     public float scytheOffset = 1.5f;
 
+    private int damage = 1;
+
     private float cooldownTimer;
 
     void Start()
@@ -17,6 +19,8 @@ public class Attack : MonoBehaviour
             if (obj != null)
                 player = obj.transform;
         }
+
+        
     }
 
     void Update()
@@ -31,6 +35,7 @@ public class Attack : MonoBehaviour
             cooldownTimer = attackCooldown;
         }
     }
+
 
     void SummonScythes()
     {
