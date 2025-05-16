@@ -20,6 +20,7 @@ public class Room : MonoBehaviour
     private List<EnemyMovement> enemies = new List<EnemyMovement>();
     private List<ReaperController> reapers = new List<ReaperController>();
     private List<Attack> reaperattacks = new List<Attack>();
+    private List<SpawnReapers> reaperSpawner = new List<SpawnReapers>();
     private BossController boss;
 
     public Vector2Int RoomIndex { get; set; }
@@ -53,6 +54,7 @@ public class Room : MonoBehaviour
         enemies.AddRange(GetComponentsInChildren<EnemyMovement>(true));
         reapers.AddRange(GetComponentsInChildren<ReaperController>(true));
         reaperattacks.AddRange(GetComponentsInChildren<Attack>(true));
+        reaperSpawner.AddRange(GetComponentsInChildren<SpawnReapers>(true));
         boss = GetComponentInChildren<BossController>(true);
 
         foreach (var enemy in enemies)
@@ -67,6 +69,10 @@ public class Room : MonoBehaviour
         foreach (var reaperattack in reaperattacks)
         {
             reaperattack.enabled = false;
+        }
+        foreach (var spawner in reaperSpawner)
+        {
+            spawner.enabled = false;
         }
 
         if (boss != null)
@@ -95,6 +101,10 @@ public class Room : MonoBehaviour
         foreach (var reaperattack in reaperattacks)
         {
             reaperattack.enabled = active;
+        }
+        foreach (var spawner in reaperSpawner)
+        {
+            spawner.enabled = active;
         }
         if (boss != null)
         {
