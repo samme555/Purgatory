@@ -111,4 +111,26 @@ public class Room : MonoBehaviour
             boss.SetActive(active);
         }
     }
+    /// Shut every door (walls up)
+    public void CloseAllDoors()
+    {
+        topDoor.SetActive(false); topWall.SetActive(true);
+        bottomDoor.SetActive(false); bottomWall.SetActive(true);
+        leftDoor.SetActive(false); leftWall.SetActive(true);
+        rightDoor.SetActive(false); rightWall.SetActive(true);
+    }
+
+    /// Returns true if any enemy is still enabled (i.e. alive)
+    public bool HasLiveEnemies()
+    {
+        bool anyMinions = enemies.Exists(e => e != null && e.enabled);
+        bool bossStillUp = boss != null && boss.gameObject.activeSelf;
+        return anyMinions || bossStillUp;
+    }
+
+    public bool BossIsAlive()
+    {
+        bool bossStillUp = boss != null && boss.gameObject.activeSelf;
+        return bossStillUp;
+    }
 }
