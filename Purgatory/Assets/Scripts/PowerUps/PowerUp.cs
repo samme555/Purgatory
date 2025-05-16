@@ -19,7 +19,7 @@ public class PowerUp : MonoBehaviour
 
     private void OnMouseDown()
     {
-        Debug.Log($"You Selected a power up " + powerUpInfo);
+        Debug.Log("Clicked via OnMouseDown: " + powerUpInfo.name);
         PowerUpManager.instance.SelectPowerUp(powerUpInfo);
     }
 
@@ -27,21 +27,24 @@ public class PowerUp : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Vector3 worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            RaycastHit2D hit = Physics2D.Raycast(worldPos, Vector2.zero);
+            if (UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject()) return;
 
-            if (hit.collider != null)
+            Vector3 wp = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            wp.z = 0;
+
+            Collider2D[] hits = Physics2D.OverlapPointAll(wp);
+
+            foreach (var hit in hits)
             {
-                Debug.Log("Raycast hit: " + hit.collider.gameObject.name + " (Full Path: " + hit.collider.gameObject.transform.GetHierarchyPath() + ")");
-            }
-            else
-            {
-                Debug.Log("Raycast hit nothing.");
+                PowerUp pu = hit.GetComponent<PowerUp>();
+                if (pu != null)
+                {
+                    pu.OnMouseDown();
+                    break;
+                }
             }
         }
     }
-
-
 
     private void FitSpriteInSlot(SpriteRenderer iconRenderer, SpriteRenderer slotRenderer)
     {
@@ -54,7 +57,7 @@ public class PowerUp : MonoBehaviour
         float scaleX = slotSize.x / iconSize.x;
         float scaleY = slotSize.y / iconSize.y;
 
-        float scale = Mathf.Min(scaleX, scaleY) * 0.9f; // 90% of slot size for padding
+        float scale = Mathf.Min(scaleX, scaleY);
 
         iconRenderer.transform.localScale = new Vector3(scale, scale, 1f);
     }
