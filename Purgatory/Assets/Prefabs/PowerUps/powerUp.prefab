@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5124100341079786092}
   - component: {fileID: 4833573409163030828}
   - component: {fileID: 2659247740493081321}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: powerUpText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -186,7 +186,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5341510910913187065}
   - component: {fileID: 6924503913490463389}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: powerUpImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -273,7 +273,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8018542392676808949}
   - component: {fileID: 3884700815674512511}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: powerUpTextHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -361,7 +361,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5516598299474870385}
   - component: {fileID: 5172916423365437028}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: powerUpImageHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -451,7 +451,7 @@ GameObject:
   - component: {fileID: 7107924418303359793}
   - component: {fileID: 1974782844120534674}
   - component: {fileID: 3900016153432411301}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: powerUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}

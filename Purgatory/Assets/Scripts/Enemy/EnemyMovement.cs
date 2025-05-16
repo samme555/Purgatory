@@ -1,11 +1,14 @@
 using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyMovement : MonoBehaviour
 {
     [SerializeField] SpriteRenderer spriteRenderer;
- 
+
+    NavMeshAgent agent;
+
     Rigidbody2D rb;
     public float speed = 0.5f;
     private Transform player;
@@ -18,62 +21,30 @@ public class EnemyMovement : MonoBehaviour
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
     public ContactFilter2D movementFilter;
     public float collisionOffset = 0.05f;
- 
+    void Awake()
+    {
+        agent = GetComponent<NavMeshAgent>();
+        rb = GetComponent<Rigidbody2D>();
+        agent.updateRotation = false;
+        agent.updateUpAxis = false;
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Start()
     {
-        player = GameObject.FindWithTag("Player").transform;
-
-        rb = GetComponent<Rigidbody2D>();
-
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    private void Update()
     {
         if (player != null)
         {
-            direction = (player.position - transform.position).normalized;
-
-            if (direction != Vector2.zero)
-            {
-                castCollisions.Clear();
-                float moveDistance = speed * Time.fixedDeltaTime + collisionOffset;
-
-                // Try full direction
-                int count = rb.Cast(direction, movementFilter, castCollisions, moveDistance);
-                if (count == 0)
-                {
-                    rb.MovePosition(rb.position + direction * speed * Time.fixedDeltaTime);
-                }
-                else
-                {
-                    // Try horizontal only
-                    castCollisions.Clear();
-                    Vector2 horizontalMove = new Vector2(direction.x, 0);
-                    count = rb.Cast(horizontalMove, movementFilter, castCollisions, moveDistance);
-                    if (count == 0)
-                    {
-                        rb.MovePosition(rb.position + horizontalMove * speed * Time.fixedDeltaTime);
-                    }
-                    else
-                    {
-                        // Try vertical only
-                        castCollisions.Clear();
-                        Vector2 verticalMove = new Vector2(0, direction.y);
-                        count = rb.Cast(verticalMove, movementFilter, castCollisions, moveDistance);
-                        if (count == 0)
-                        {
-                            rb.MovePosition(rb.position + verticalMove * speed * Time.fixedDeltaTime);
-                        }
-                    }
-                }
-
-                Animate(direction);
-            }
+            agent.SetDestination(player.position);
+            Animate(agent.velocity.normalized);
         }
     }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         PlayerStats stats = other.GetComponent<PlayerStats>();
