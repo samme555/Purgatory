@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4261477686882687661}
   - component: {fileID: 6116167444467947447}
   - component: {fileID: 1420789627289938584}
+  - component: {fileID: 8980392684182878915}
   m_Layer: 12
   m_Name: Projectile
   m_TagString: Untagged
@@ -177,7 +178,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
+  critChance: 0
+  critDMG: 0
   impactEffect: {fileID: 2267736383564715800, guid: e151e9121f6387b499640f9c402bb2b5, type: 3}
+  playerstats: {fileID: 0}
+--- !u!95 &8980392684182878915
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1925677939549781835}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 508092f7980d64242a94f9cb2e3d93fc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3167168028411252984
 GameObject:
   m_ObjectHideFlags: 0
@@ -1102,7 +1128,7 @@ ParticleSystem:
     rateOverDistance:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 100
+      scalar: 50
       minScalar: 50
       maxCurve:
         serializedVersion: 2
@@ -1487,15 +1513,15 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 0.78736246, b: 0, a: 1}
-        key1: {r: 1, g: 0.45336083, b: 0, a: 1}
+        key0: {r: 1, g: 0.95200574, b: 0.023584902, a: 1}
+        key1: {r: 0.49056602, g: 0.49056602, b: 0.49056602, a: 0.8117647}
         key2: {r: 0, g: 0, b: 0, a: 1}
         key3: {r: 0, g: 0, b: 0, a: 1}
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
         key6: {r: 0, g: 0, b: 0, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
-        ctime0: 386
+        ctime0: 0
         ctime1: 65535
         ctime2: 0
         ctime3: 0
@@ -1547,8 +1573,8 @@ ParticleSystem:
         m_NumAlphaKeys: 2
   UVModule:
     serializedVersion: 2
-    enabled: 0
-    mode: 0
+    enabled: 1
+    mode: 1
     timeMode: 0
     fps: 30
     frameOverTime:
@@ -1662,11 +1688,13 @@ ParticleSystem:
     tilesY: 1
     animationType: 0
     rowIndex: 0
-    cycles: 1
+    cycles: 0.0001
     uvChannelMask: -1
     rowMode: 1
     sprites:
-    - sprite: {fileID: 0}
+    - sprite: {fileID: 8610159706626620801, guid: 9d0cf64407e2e7c468bf81452fbc018c, type: 3}
+    - sprite: {fileID: -6089571662414341754, guid: 9d0cf64407e2e7c468bf81452fbc018c, type: 3}
+    - sprite: {fileID: 2720409066828231804, guid: 9d0cf64407e2e7c468bf81452fbc018c, type: 3}
     flipU: 0
     flipV: 0
   VelocityModule:
@@ -4180,7 +4208,7 @@ ParticleSystem:
     sizeAffectsLifetime: 0
     inheritParticleColor: 1
     generateLightingData: 0
-    splitSubEmitterRibbons: 0
+    splitSubEmitterRibbons: 1
     attachRibbonsToTransform: 0
     colorOverLifetime:
       serializedVersion: 2
@@ -4959,7 +4987,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
   - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -5004,7 +5032,7 @@ ParticleSystemRenderer:
   m_VertexStreams: 00010304
   m_UseCustomTrailVertexStreams: 0
   m_TrailVertexStreams: 00010304
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
