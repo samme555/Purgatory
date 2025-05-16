@@ -203,9 +203,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2accfb725fef6c44eba37c0527d91b53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destructibleTilemap: {fileID: 0}
   overlapSize: {x: 0.08974155, y: 0.03011765}
-  sampleResolution: 3
+  destroyableLayer:
+    serializedVersion: 2
+    m_Bits: 32768
+  requiredTags: []
 --- !u!114 &5983002003068823391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,6 +255,7 @@ MonoBehaviour:
   currentXP: 0
   level: 1
   xpToNextLevel: 100
+  xpBar: {fileID: 0}
   hp: 3
   critCH: 0
   critDMG: 2

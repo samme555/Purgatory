@@ -10,6 +10,7 @@ TagManager:
   - Wall
   - Boss
   - AdvanceLevel
+  - ShootDestructible
   layers:
   - Default
   - TransparentFX
@@ -26,7 +27,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - Destructible
   - 
   - 
   - 
