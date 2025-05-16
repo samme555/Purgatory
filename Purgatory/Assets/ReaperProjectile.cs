@@ -16,6 +16,7 @@ public class ReaperProjectile : MonoBehaviour
     private Vector2 moveDirection;
     private float timer = 0f;
     private bool launched = false;
+    [SerializeField] private GameObject impactEffect;
 
     public void Initialize(Vector3 targetPosition)
     {
@@ -58,6 +59,29 @@ public class ReaperProjectile : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         PlayerStats stats = other.GetComponent<PlayerStats>();
+
+
+        bool isWall = other.gameObject.layer == LayerMask.NameToLayer("Projectile Block");
+        bool isPlayer = other.CompareTag("Player");
+
+
+        if (isPlayer || isWall)
+        {
+            if (impactEffect != null)
+            {
+                GameObject fx = Instantiate(impactEffect, transform.position, Quaternion.identity);
+                fx.transform.localScale = Vector3.one;
+
+                ParticleSystem ps = fx.GetComponent<ParticleSystem>();
+                if (ps != null)
+                {
+                    ps.Play();
+
+                }
+            }
+
+            Destroy(gameObject);
+        }
 
         if (other.CompareTag("Player"))
         {

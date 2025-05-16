@@ -4860,6 +4860,7 @@ GameObject:
   - component: {fileID: -2441277126037706326}
   - component: {fileID: -4655646506548250465}
   - component: {fileID: 6267934988780861674}
+  - component: {fileID: 6030231376495862809}
   m_Layer: 0
   m_Name: ElderMageProjectile
   m_TagString: Untagged
@@ -5017,3 +5018,25 @@ CapsuleCollider2D:
   m_Offset: {x: -0.001462698, y: -0.004906893}
   m_Size: {x: 0.107550144, y: 0.11059427}
   m_Direction: 0
+--- !u!95 &6030231376495862809
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6243859482360521023}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 88204ce261bb87141965d27dbd01e4ea, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
