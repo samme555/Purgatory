@@ -8,7 +8,7 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] SpriteRenderer spriteRenderer;
 
     NavMeshAgent agent;
- 
+
     Rigidbody2D rb;
     public float speed = 0.5f;
     private Transform player;
@@ -21,15 +21,17 @@ public class EnemyMovement : MonoBehaviour
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
     public ContactFilter2D movementFilter;
     public float collisionOffset = 0.05f;
-
+    void Awake()
+    {
+        agent = GetComponent<NavMeshAgent>();
+        rb = GetComponent<Rigidbody2D>();
+        agent.updateRotation = false;
+        agent.updateUpAxis = false;
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
     {
-        agent = GetComponent<NavMeshAgent>();
-        agent.updateRotation = false;
-        agent.updateUpAxis = false;
-
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 

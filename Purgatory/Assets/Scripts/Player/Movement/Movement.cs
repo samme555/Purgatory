@@ -41,7 +41,7 @@ public class Movement : MonoBehaviour
     {
         if (input != Vector2.zero)
         {
-            rb.MovePosition(rb.position + input * moveSpeed * Time.fixedDeltaTime);
+            rb.MovePosition(rb.position + input.normalized * moveSpeed * Time.fixedDeltaTime);
         }
     }
 

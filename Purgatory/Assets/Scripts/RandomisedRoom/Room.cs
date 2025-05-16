@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using NavMeshPlus.Components;
 
 public class Room : MonoBehaviour
 {
@@ -15,6 +16,9 @@ public class Room : MonoBehaviour
     [SerializeField] GameObject rightWall;
 
     [SerializeField] private Camera roomCamera;
+
+    //[SerializeField] NavMeshSurface navMeshSurface;
+
     public Camera RoomCamera => roomCamera;
 
     private List<EnemyMovement> enemies = new List<EnemyMovement>();
