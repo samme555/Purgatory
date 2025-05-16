@@ -15,6 +15,7 @@ public class RoomTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("Entered");
         if (entered || !other.CompareTag("Player"))
             return;
 
@@ -42,12 +43,17 @@ public class RoomTrigger : MonoBehaviour
 
     private IEnumerator WatchForClear()
     {
-        while (room.HasLiveEnemies())
+        // 1) wait until at least one spawner fires, if that’s relevant  
+        //or skip this if you want to allow zero-spawn rooms
+        yield return new WaitUntil(() => room.HasLiveSpawners());
+
+        // 2) now wait until there are neither live enemies nor live spawners
+        while (room.HasLiveEnemies() || room.HasLiveSpawners())
             yield return new WaitForSeconds(0.5f);
 
-        // 4) all dead open just the connected exits
         OpenConnectedExits();
     }
+
 
     private void OpenConnectedExits()
     {

@@ -7,10 +7,23 @@ public class SpawnReapers : MonoBehaviour
     public float spawnInterval = 3f;
     public float spawnRadius = 3f;
 
+    /// <summary>True from the moment this component is enabled until it’s disabled.</summary>
+    public bool IsSpawning { get; private set; }
+    /// <summary>Becomes true once at least one reaper has been spawned.</summary>
+    public bool HasSpawnedAtLeastOne { get; private set; }
+
     private float spawnTimer;
 
+    private void OnEnable()
+    {
+        IsSpawning = true;
+        HasSpawnedAtLeastOne = false;
+    }
 
-    
+    private void OnDisable()
+    {
+        IsSpawning = false;
+    }
 
     private void Update()
     {
@@ -25,12 +38,10 @@ public class SpawnReapers : MonoBehaviour
 
     private void SpawnReaper()
     {
-        Vector2 randomOffset = Random.insideUnitCircle * spawnRadius; //"insideUnitCircle" returns a random point with radius 1.0
-                                                                      // we multiply by our own radius to make it 3.0
+        HasSpawnedAtLeastOne = true;
 
+        Vector2 randomOffset = Random.insideUnitCircle * spawnRadius;
         Vector3 spawnPosition = transform.position + new Vector3(randomOffset.x, randomOffset.y, 0);
-
         GameObject newReaper = Instantiate(reaperPrefab, spawnPosition, Quaternion.identity);
     }
-
 }

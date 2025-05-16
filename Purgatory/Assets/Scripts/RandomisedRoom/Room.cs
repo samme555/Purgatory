@@ -21,6 +21,7 @@ public class Room : MonoBehaviour
 
     public Camera RoomCamera => roomCamera;
 
+    private List<SpawnReapers> reaperSpawners = new List<SpawnReapers>();
     private List<EnemyMovement> enemies = new List<EnemyMovement>();
     private List<ReaperController> reapers = new List<ReaperController>();
     private List<Attack> reaperattacks = new List<Attack>();
@@ -56,9 +57,15 @@ public class Room : MonoBehaviour
     {
         // Automatically find all enemies in the room
         enemies.AddRange(GetComponentsInChildren<EnemyMovement>(true));
+
         reapers.AddRange(GetComponentsInChildren<ReaperController>(true));
+        reaperSpawners.AddRange(GetComponentsInChildren<SpawnReapers>(true));
+        
+
         reaperattacks.AddRange(GetComponentsInChildren<Attack>(true));
+
         reaperSpawner.AddRange(GetComponentsInChildren<SpawnReapers>(true));
+
         boss = GetComponentInChildren<BossController>(true);
 
         foreach (var enemy in enemies)
@@ -74,7 +81,7 @@ public class Room : MonoBehaviour
         {
             reaperattack.enabled = false;
         }
-        foreach (var spawner in reaperSpawner)
+        foreach (var spawner in reaperSpawners)
         {
             spawner.enabled = false;
         }
@@ -136,5 +143,10 @@ public class Room : MonoBehaviour
     {
         bool bossStillUp = boss != null && boss.gameObject.activeSelf;
         return bossStillUp;
+    }
+    public bool HasLiveSpawners()
+    {
+        // Assume SpawnReapers has a public bool IsSpawning that goes true as it spawns
+        return reaperSpawners.Exists(s => s != null && s.IsSpawning);
     }
 }

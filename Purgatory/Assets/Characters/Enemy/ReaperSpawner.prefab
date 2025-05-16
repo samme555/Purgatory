@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4564685121657404282}
   - component: {fileID: 4396434446923065730}
   - component: {fileID: 7810142589518468451}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ReaperSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,7 +169,7 @@ GameObject:
   - component: {fileID: 2875442820738805682}
   - component: {fileID: 3332592948937505572}
   - component: {fileID: 3730998474636870182}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -245,7 +245,7 @@ GameObject:
   - component: {fileID: 3179680781006950994}
   - component: {fileID: 3424145779029413409}
   - component: {fileID: 7103563479840872400}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -347,7 +347,7 @@ GameObject:
   - component: {fileID: 645727621078179544}
   - component: {fileID: 6222754777513959558}
   - component: {fileID: 7001809079079892458}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
