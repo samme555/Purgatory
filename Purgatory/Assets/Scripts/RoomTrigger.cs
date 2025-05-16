@@ -43,13 +43,15 @@ public class RoomTrigger : MonoBehaviour
 
     private IEnumerator WatchForClear()
     {
-        // 1) wait until at least one spawner fires, if that’s relevant  
-        //or skip this if you want to allow zero-spawn rooms
-        yield return new WaitUntil(() => room.HasLiveSpawners());
+        // 1) If this room has spawners, wait until the first spawns
+        if (room.HasSpawners)
+            yield return new WaitUntil(() => room.HasSpawnedReapers);
 
-        // 2) now wait until there are neither live enemies nor live spawners
-        while (room.HasLiveEnemies() || room.HasLiveSpawners())
-            yield return new WaitForSeconds(0.5f);
+        // 2) Now wait until no spawner is active AND no live enemies remain
+        yield return new WaitUntil(
+            () => !room.HasLiveSpawners  // all spawners have finished
+               && !room.HasLiveEnemies() // and every spawned reaper is dead
+        );
 
         OpenConnectedExits();
     }

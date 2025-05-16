@@ -43,5 +43,16 @@ public class SpawnReapers : MonoBehaviour
         Vector2 randomOffset = Random.insideUnitCircle * spawnRadius;
         Vector3 spawnPosition = transform.position + new Vector3(randomOffset.x, randomOffset.y, 0);
         GameObject newReaper = Instantiate(reaperPrefab, spawnPosition, Quaternion.identity);
+
+        var movement = newReaper.GetComponent<EnemyMovement>();
+        var room = GetComponentInParent<Room>();
+        if (movement != null && room != null)
+        {
+            room.RegisterEnemy(movement);
+        }
+        var rc = newReaper.GetComponent<ReaperController>();
+        if (rc != null && room != null)
+            room.RegisterReaper(rc);
+
     }
 }

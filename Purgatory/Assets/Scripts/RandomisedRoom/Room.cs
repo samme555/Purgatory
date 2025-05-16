@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using NavMeshPlus.Components;
@@ -21,14 +22,20 @@ public class Room : MonoBehaviour
 
     public Camera RoomCamera => roomCamera;
 
-    private List<SpawnReapers> reaperSpawners = new List<SpawnReapers>();
     private List<EnemyMovement> enemies = new List<EnemyMovement>();
     private List<ReaperController> reapers = new List<ReaperController>();
     private List<Attack> reaperattacks = new List<Attack>();
-    private List<SpawnReapers> reaperSpawner = new List<SpawnReapers>();
+    private List<SpawnReapers> reaperSpawners = new List<SpawnReapers>();
     private BossController boss;
 
     public Vector2Int RoomIndex { get; set; }
+
+    public bool HasSpawners => reaperSpawners.Count > 0;
+    public bool HasSpawnedReapers => reaperSpawners.Any(s => s.HasSpawnedAtLeastOne);
+    public bool HasLiveSpawners => reaperSpawners.Exists(s => s.IsSpawning);
+
+    private bool enemiesActivated = true;
+
 
     public void OpenDoor(Vector2Int direction)
     {
@@ -63,8 +70,6 @@ public class Room : MonoBehaviour
         
 
         reaperattacks.AddRange(GetComponentsInChildren<Attack>(true));
-
-        reaperSpawner.AddRange(GetComponentsInChildren<SpawnReapers>(true));
 
         boss = GetComponentInChildren<BossController>(true);
 
@@ -113,7 +118,7 @@ public class Room : MonoBehaviour
         {
             reaperattack.enabled = active;
         }
-        foreach (var spawner in reaperSpawner)
+        foreach (var spawner in reaperSpawners)
         {
             spawner.enabled = active;
         }
@@ -135,8 +140,10 @@ public class Room : MonoBehaviour
     public bool HasLiveEnemies()
     {
         bool anyMinions = enemies.Exists(e => e != null && e.enabled);
+        bool anyReapers = reapers.Exists(r => r != null && r.enabled);
         bool bossStillUp = boss != null && boss.gameObject.activeSelf;
-        return anyMinions || bossStillUp;
+
+        return anyMinions || anyReapers || bossStillUp;
     }
 
     public bool BossIsAlive()
@@ -144,9 +151,21 @@ public class Room : MonoBehaviour
         bool bossStillUp = boss != null && boss.gameObject.activeSelf;
         return bossStillUp;
     }
-    public bool HasLiveSpawners()
+    public void RegisterEnemy(EnemyMovement e)
     {
-        // Assume SpawnReapers has a public bool IsSpawning that goes true as it spawns
-        return reaperSpawners.Exists(s => s != null && s.IsSpawning);
+        if (!enemies.Contains(e))
+        {
+            enemies.Add(e);
+            e.enabled = enemiesActivated;    
+        }
     }
+    public void RegisterReaper(ReaperController rc)
+    {
+        if (!reapers.Contains(rc))
+        {
+            reapers.Add(rc);
+            rc.enabled = enemiesActivated;
+        }
+    }
+
 }
