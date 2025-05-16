@@ -9,6 +9,7 @@ TagManager:
   - Camera
   - Wall
   - Boss
+  - AdvanceLevel
   layers:
   - Default
   - TransparentFX

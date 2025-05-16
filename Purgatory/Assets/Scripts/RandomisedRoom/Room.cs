@@ -95,4 +95,10 @@ public class Room : MonoBehaviour
         bool bossStillUp = boss != null && boss.gameObject.activeSelf;
         return anyMinions || bossStillUp;
     }
+
+    public bool BossIsAlive()
+    {
+        bool bossStillUp = boss != null && boss.gameObject.activeSelf;
+        return bossStillUp;
+    }
 }
