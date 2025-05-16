@@ -11,7 +11,7 @@ public class LevelMoveScript : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            SceneManager.LoadScene(sceneBuildingIndex, LoadSceneMode.Single);
+            SceneLoader.LoadWithLoadingScreen("Loading");
         }
     }
 }
