@@ -32,7 +32,6 @@ public class Room : MonoBehaviour
 
     public bool HasSpawners => reaperSpawners.Count > 0;
     public bool HasSpawnedReapers => reaperSpawners.Any(s => s.HasSpawnedAtLeastOne);
-    public bool HasLiveSpawners => reaperSpawners.Exists(s => s.IsSpawning);
 
     private bool enemiesActivated = true;
 
@@ -99,6 +98,9 @@ public class Room : MonoBehaviour
 
     public void SetEnemyActive(bool active)
     {
+
+        CleanupDeadReferences();
+
         foreach (var enemy in enemies)
         {
             enemy.enabled = active;
@@ -139,11 +141,20 @@ public class Room : MonoBehaviour
     /// Returns true if any enemy is still enabled (i.e. alive)
     public bool HasLiveEnemies()
     {
+        CleanupDeadReferences();
         bool anyMinions = enemies.Exists(e => e != null && e.enabled);
         bool anyReapers = reapers.Exists(r => r != null && r.enabled);
         bool bossStillUp = boss != null && boss.gameObject.activeSelf;
 
         return anyMinions || anyReapers || bossStillUp;
+    }
+    public bool HasLiveSpawners
+    {
+        get
+        {
+            CleanupDeadReferences();
+            return reaperSpawners.Exists(s => s.IsSpawning);
+        }
     }
 
     public bool BossIsAlive()
@@ -167,5 +178,10 @@ public class Room : MonoBehaviour
             rc.enabled = enemiesActivated;
         }
     }
-
+    private void CleanupDeadReferences()
+    {
+        enemies.RemoveAll(e => e == null);
+        reapers.RemoveAll(r => r == null);
+        reaperSpawners.RemoveAll(s => s == null);
+    }
 }
