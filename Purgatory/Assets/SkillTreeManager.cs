@@ -114,17 +114,35 @@ public class SkillTreeManager : MonoBehaviour
 
         if (player == null)
         {
-            Debug.Log("Player not found!");
+            Debug.Log("player not found!");
             return;
         }
 
-        if (upgrade.attackSpeedBoost > 0)
+        if (upgrade.attackSpeedBoost >= 0)
         {
             player.atkSPD += upgrade.attackSpeedBoost;
             Debug.Log($"Attack speed boosted! New atkSPD: {player.atkSPD}");
         }
-
-        // Add other stat upgrades here as needed
+        if (upgrade.attackDamageBoost >= 0)
+        {
+            player.atk += upgrade.attackDamageBoost;
+            Debug.Log($"Attack speed boosted! New atkDMG: {player.atk}");
+        }
+        if (upgrade.moveSpeedBoost >= 0)
+        {
+            player.moveSpeed += upgrade.moveSpeedBoost;
+            Debug.Log($"Attack speed boosted! New moveSpeed: {player.moveSpeed}");
+        }
+        if (upgrade.critChanceBoost >= 0)
+        {
+            player.critCH += upgrade.critChanceBoost;
+            Debug.Log($"Attack speed boosted! New critCH: {player.critCH}");
+        }
+        if (upgrade.critDamageBoost >= 0)
+        {
+            player.critDMG += upgrade.critDamageBoost;
+            Debug.Log($"Attack speed boosted! New critDMG: {player.critDMG}");
+        }
     }
 
     void EnableNextInBranch(List<SkillNode> branch, SkillNode current)

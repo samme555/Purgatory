@@ -10,8 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74a9ebccebc1782419fac00a57f01bb7, type: 3}
-  m_Name: AttackSpeedBoost
+  m_Name: Precision Training
   m_EditorClassIdentifier: 
-  upgradeName: Attackspeed Boost
-  description: Adds +0.3 attack speed.
-  attackSpeedBoost: 0.3
+  upgradeName: Precision Training
+  description: +0.7 Critical Chance
+  attackSpeedBoost: 0
+  attackDamageBoost: 0
+  moveSpeedBoost: 0
+  critChanceBoost: 0.7
+  critDamageBoost: 0

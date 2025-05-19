@@ -99,17 +99,17 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.6603774, g: 0.6603774, b: 0.6603774, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 205450509277786665, guid: 92f1eb03fe01752408f215b80c005416, type: 3}
+    m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 0}
     m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 7512576432887170180, guid: b71b2a3f90bfe60428b4261bd8438a6e, type: 3}
+    m_DisabledSprite: {fileID: 205450509277786665, guid: 92f1eb03fe01752408f215b80c005416, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -120,19 +120,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7342761319310410543}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SkillTreeManager, Assembly-CSharp
-        m_MethodName: OnSkillClicked
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 7219325694028249051}
-          m_ObjectArgumentAssemblyTypeName: SkillNode, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &7219325694028249051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,6 +133,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acf6743eaf092a04da3a4c628bb531d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 0}
+  button: {fileID: 5920297889217453101}
   isUnlocked: 0
   isAvailable: 0
+  incomingLines: []
+  upgradeData: {fileID: 11400000, guid: d661b7b65d2ac2b4db1ff7c86ffe3b0b, type: 2}

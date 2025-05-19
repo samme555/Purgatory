@@ -8,4 +8,8 @@ public class SkillUpgrade : ScriptableObject
 
     //effects
     public float attackSpeedBoost;
+    public float attackDamageBoost;
+    public float moveSpeedBoost;
+    public float critChanceBoost;
+    public float critDamageBoost;
 }
