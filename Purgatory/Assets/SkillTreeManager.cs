@@ -4,15 +4,33 @@ using UnityEngine;
 
 public class SkillTreeManager : MonoBehaviour
 {
+
+    // last upgrade = minion/companion/pet, slow atk speed, small damage, but can block damage
+    public static SkillTreeManager Instance { get; private set; }
+
     public SkillNode root;
 
-    public List<SkillNode> leftBranch;
-    public List<SkillNode> middleBranch;
-    public List<SkillNode> rightBranch;
+    //from left to right
+    public List<SkillNode> branch1;
+    public List<SkillNode> branch2;
+    public List<SkillNode> branch3;
+    public List<SkillNode> branch4;
+    public List<SkillNode> branch5;
 
-    private bool branchChosen = false;
-    private List<SkillNode> activeBranch;
+    private List<List<SkillNode>> pickedBranches = new(); //list of lists of branches
+    private int maxBranches = 3;
 
+    private void Awake()
+    {
+        // Ensure only one instance exists
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+    }
     private void Start()
     {
         root.SetState(true, false);
@@ -25,30 +43,43 @@ public class SkillTreeManager : MonoBehaviour
 
         node.Unlock();
 
-        if (node == root && !branchChosen)
+        if (node == root && pickedBranches.Count == 0)
         {
-            leftBranch[0].SetState(true, false);
-            middleBranch[0].SetState(true, false);
-            rightBranch[0].SetState(true, false);
+            branch1[0].SetState(true, false);
+            branch2[0].SetState(true, false);
+            branch3[0].SetState(true, false);
+            branch4[0].SetState(true, false);
+            branch5[0].SetState(true, false);
 
-            HookUpBranch(leftBranch);
-            HookUpBranch(middleBranch);
-            HookUpBranch(rightBranch);
-        }
-        else if (branchChosen == false)
-        {
-            branchChosen = true; //first branch node picked -> lock the rest
-
-            if (leftBranch.Contains(node)) activeBranch = leftBranch;
-            else if (middleBranch.Contains(node)) activeBranch = middleBranch;
-            else if (rightBranch.Contains(node)) activeBranch = rightBranch;
-
-            LockOtherBranches();
-            EnableNextInBranch(activeBranch, node);
+            HookUpBranch(branch1);
+            HookUpBranch(branch2);
+            HookUpBranch(branch3);
+            HookUpBranch(branch4);
+            HookUpBranch(branch5);
         }
         else
         {
-            EnableNextInBranch(activeBranch, node);
+            // Handle picking and locking branches
+            List<List<SkillNode>> allBranches = new() { branch1, branch2, branch3, branch4, branch5 };
+
+            foreach (var branch in allBranches)
+            {
+                if (branch.Contains(node))
+                {
+                    if (!pickedBranches.Contains(branch))
+                    {
+                        pickedBranches.Add(branch);
+
+                        if (pickedBranches.Count == maxBranches)
+                        {
+                            LockRemainingBranches();
+                        }
+                    }
+
+                    EnableNextInBranch(branch, node);
+                    break;
+                }
+            }
         }
     }
 
@@ -56,24 +87,44 @@ public class SkillTreeManager : MonoBehaviour
     {
         foreach (var node in branch)
         {
+            node.button.onClick.RemoveAllListeners(); // optional safeguard
             node.button.onClick.AddListener(() => OnSkillClicked(node));
         }
     }
 
-    void LockOtherBranches()
+    void LockRemainingBranches()
     {
-        List<List<SkillNode>> allBranches = new() { leftBranch, middleBranch, rightBranch };
+        List<List<SkillNode>> allBranches = new() { branch1, branch2, branch3, branch4, branch5 };
 
         foreach (var branch in allBranches)
         {
-            if (branch != activeBranch)
+            if (!pickedBranches.Contains(branch))
             {
                 foreach (var node in branch)
                 {
-                    node.SetState(false, false); //inactivate slots for "non-chosen" branches
+                    node.SetState(false, false); // lock unused branches
                 }
             }
         }
+    }
+
+    public void ApplyUpgrade(SkillUpgrade upgrade)
+    {
+        var player = FindFirstObjectByType<PlayerData>();
+
+        if (player == null)
+        {
+            Debug.Log("Player not found!");
+            return;
+        }
+
+        if (upgrade.attackSpeedBoost > 0)
+        {
+            player.atkSPD += upgrade.attackSpeedBoost;
+            Debug.Log($"Attack speed boosted! New atkSPD: {player.atkSPD}");
+        }
+
+        // Add other stat upgrades here as needed
     }
 
     void EnableNextInBranch(List<SkillNode> branch, SkillNode current)
