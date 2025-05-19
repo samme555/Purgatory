@@ -12,7 +12,7 @@ public class PlayerStats : MonoBehaviour
     //level
     public int level;
     //amount of XP needed to level up
-    public float xpToNextLevel;
+    public float xpToNextLevel = 50;
 
     //visual image of the xp
     public Image xpBar;

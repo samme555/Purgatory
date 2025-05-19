@@ -6,7 +6,7 @@ public class PlayerData : MonoBehaviour
 
     public float currentXP = 0;
     public int level = 1;
-    public float xpToNextLevel = 100;
+    public float xpToNextLevel = 50;
     public int hp = 3;
     public float critCH = 0;
     public float critDMG = 2;

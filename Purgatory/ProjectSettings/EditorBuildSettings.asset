@@ -20,5 +20,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Loading.unity
     guid: fb3555271751fb2419976e45e4ea65fd
+  - enabled: 1
+    path: Assets/Scenes/Lobby.unity
+    guid: daf03b4c3caad5b47aefa70eb8471b86
+  - enabled: 1
+    path: Assets/Scenes/Upgrades.unity
+    guid: 3d514aa04057cc64f8fdc09d31de4c04
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
