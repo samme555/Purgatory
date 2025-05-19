@@ -14,16 +14,19 @@ public class PowerUpManager : MonoBehaviour
     [SerializeField] Transform powerUpPositionThree;
 
     [SerializeField] List<PowerUpSO> powerUpList;
+    [SerializeField] List<MajorPowerUpSO> majorPowerUpList;
 
     [SerializeField] GameObject powerUpOne, powerUpTwo, powerUpThree;
+    [SerializeField] GameObject majorPowerUpOne, majorPowerUpTwo, majorPowerUpThree;
 
     List<PowerUpSO> alreadySelectedPowerUp = new List<PowerUpSO>();
+    List<MajorPowerUpSO> alreadySelectedMajorPowerUp = new List<MajorPowerUpSO>();
 
     PlayerStats playerStats;
 
     public static PowerUpManager instance;
 
-    Vector3 screenCenter = new Vector3(Screen.width / 2, Screen.height / 2, 0f);
+   
     
     
     void Awake()
@@ -54,6 +57,12 @@ public class PowerUpManager : MonoBehaviour
         { 
             RandomizeNewPowerUps();
         }
+
+        if (state == GameManager.GameState.majorPowerUpSelection) 
+        { 
+            RandomizeNewMajorPowerUps();
+            Debug.Log("MAJORPOWERUPSTATE");
+        }
     }
 
     public void ApplyPowerUp(PowerUpSO powerUp, PlayerStats stats) 
@@ -83,6 +92,35 @@ public class PowerUpManager : MonoBehaviour
         PlayerData.instance.SaveFrom(stats);
     }
 
+    public void ApplyMajorPowerUp(MajorPowerUpSO powerUp, PlayerStats stats)
+    {
+
+        switch (powerUp.effectType)
+        {
+            case MajorPowerUpEffect.burstFire:
+                stats.burstFire = true;
+                break;
+            case MajorPowerUpEffect.medkit:
+                stats.medkit = true;
+                break;
+            case MajorPowerUpEffect.shield:
+                stats.shield = true;
+                break;
+            case MajorPowerUpEffect.iceShot:
+                stats.iceShot = true;
+                break;
+            case MajorPowerUpEffect.fireShot:
+                stats.fireShot = true;
+                break;
+            case MajorPowerUpEffect.shotgun:
+                stats.shotgun = true;
+                break;
+            
+
+        }
+        PlayerData.instance.SaveFrom(stats);
+    }
+
     void RandomizeNewPowerUps() 
     {
         Vector3 screenCenter = new Vector3(Screen.width / 2, Screen.height / 2, Camera.main.nearClipPlane);
@@ -96,6 +134,8 @@ public class PowerUpManager : MonoBehaviour
 
         List<PowerUpSO> availablePowerUps = new List<PowerUpSO>(powerUpList);
 
+       
+
         
 
         if (availablePowerUps.Count < 3) 
@@ -103,6 +143,8 @@ public class PowerUpManager : MonoBehaviour
             Debug.Log("Not enough powerUps. Add more into the cardManager object inspector");
             return;
         }
+
+        
         
         while (randomizedPowerUps.Count < 3) 
         { 
@@ -123,12 +165,61 @@ public class PowerUpManager : MonoBehaviour
         powerUpTwo = InstantiatePowerUp(randomizedPowerUps[1], powerUpPositionTwo);
         powerUpThree = InstantiatePowerUp(randomizedPowerUps[2], powerUpPositionThree);
 
+        
+
+        
+
         GameObject InstantiatePowerUp(PowerUpSO powerUpSO, Transform position) 
         { 
             GameObject powerUpGO = Instantiate(powerUpPrefab, position.position, Quaternion.identity, position);
             PowerUp powerUp = powerUpGO.GetComponent<PowerUp>();
             powerUp.Setup(powerUpSO);
             return powerUpGO;
+        }
+        
+    }
+
+    void RandomizeNewMajorPowerUps()
+    {
+        Vector3 screenCenter = new Vector3(Screen.width / 2, Screen.height / 2, Camera.main.nearClipPlane);
+        Vector3 worldCenter = Camera.main.ScreenToWorldPoint(screenCenter);
+        List<MajorPowerUpSO> randomizedMajorPowerUps = new List<MajorPowerUpSO>();
+
+        List<MajorPowerUpSO> availableMajorPowerUps = new List<MajorPowerUpSO>(majorPowerUpList);
+        if (availableMajorPowerUps.Count < 3)
+        {
+            Debug.Log("Not enough major powerUps. Add more into the cardManager object inspector");
+            return;
+        }
+
+
+
+        while (randomizedMajorPowerUps.Count < 3)
+        {
+            MajorPowerUpSO randomMajorPowerUp = availableMajorPowerUps[Random.Range(0, availableMajorPowerUps.Count)];
+            if (!randomizedMajorPowerUps.Contains(randomMajorPowerUp))
+            {
+                randomizedMajorPowerUps.Add(randomMajorPowerUp);
+            }
+        }
+
+        worldCenter.z = 0f;
+        float offset = 0.5f;
+
+
+        powerUpPositionOne.position = worldCenter + new Vector3(0, -offset, 0);
+        powerUpPositionTwo.position = worldCenter;
+        powerUpPositionThree.position = worldCenter + new Vector3(0, +offset, 0);
+        majorPowerUpOne = InstantiateMajorPowerUp(randomizedMajorPowerUps[0], powerUpPositionOne);
+        majorPowerUpTwo = InstantiateMajorPowerUp(randomizedMajorPowerUps[1], powerUpPositionTwo);
+        majorPowerUpThree = InstantiateMajorPowerUp(randomizedMajorPowerUps[2], powerUpPositionThree);
+
+        GameObject InstantiateMajorPowerUp(MajorPowerUpSO mPowerUpSO, Transform position)
+        {
+            GameObject mPowerUpGO = Instantiate(powerUpPrefab, position.position, Quaternion.identity, position);
+            MajorPowerUp mPowerUp = mPowerUpGO.GetComponent<MajorPowerUp>();
+            mPowerUp.Setup(mPowerUpSO);
+            return mPowerUpGO;
         }
     }
 
@@ -138,6 +229,15 @@ public class PowerUpManager : MonoBehaviour
         alreadySelectedPowerUp.Add(selectedPowerUp);
         ApplyPowerUp(selectedPowerUp, playerStats);
         
+
+        GameManager.instance.ChangeState(GameManager.GameState.playing);
+    }
+    public void SelectMajorPowerUp(MajorPowerUpSO selectedPowerUp)
+    {
+
+        alreadySelectedMajorPowerUp.Add(selectedPowerUp);
+        ApplyMajorPowerUp(selectedPowerUp, playerStats);
+
 
         GameManager.instance.ChangeState(GameManager.GameState.playing);
     }

@@ -24,6 +24,11 @@ public class GameManager : MonoBehaviour
         { 
             ChangeState(GameState.powerUpSelection);
         }
+
+        if (Input.GetKey(KeyCode.M))
+        { 
+            ChangeState(GameState.majorPowerUpSelection);
+        }
     }
 
     public int GetCurrentLevel() 
@@ -50,6 +55,10 @@ public class GameManager : MonoBehaviour
                 PowerUpManager.instance.ShowPowerUpSelection();
                 Time.timeScale = 0f;
                 break;
+            case GameState.majorPowerUpSelection:
+                PowerUpManager.instance.ShowPowerUpSelection();
+                Time.timeScale = 0f;
+                break;
         }
     }
 
@@ -57,6 +66,7 @@ public class GameManager : MonoBehaviour
     { 
         playing,
 
-        powerUpSelection
+        powerUpSelection,
+        majorPowerUpSelection
     }
 }

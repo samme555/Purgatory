@@ -30,6 +30,14 @@ public class PlayerStats : MonoBehaviour
     //damage inflicted on target, put in script holding the method to apply damage
     public float atk;
 
+    public bool burstFire = false;
+    public bool shotgun = false;
+    public bool medkit = false;
+    public bool fireShot = false;
+    public bool iceShot = false;
+    public bool shield = false;
+    public bool bigBullet = false;
+
     public bool damageImmunity = false;
     public float immunityTimer = 0f;
     public float immunityDuration = 0.3f;
