@@ -256,6 +256,7 @@ MonoBehaviour:
   level: 1
   xpToNextLevel: 50
   xpBar: {fileID: 0}
+  skillPoints: 1
   hp: 3
   critCH: 0
   critDMG: 2

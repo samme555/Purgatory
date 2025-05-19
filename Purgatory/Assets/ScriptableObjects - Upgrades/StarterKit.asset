@@ -19,3 +19,4 @@ MonoBehaviour:
   moveSpeedBoost: 0
   critChanceBoost: 0.1
   critDamageBoost: 0
+  cost: 1

@@ -13,6 +13,7 @@ public class PlayerData : MonoBehaviour
     public float moveSpeed = 1;
     public float atkSPD = 1;
     public float atk = 1;
+    public int skillPoints = 1;
 
     private void Awake()
     {

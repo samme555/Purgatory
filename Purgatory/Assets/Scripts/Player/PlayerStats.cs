@@ -16,6 +16,7 @@ public class PlayerStats : MonoBehaviour
 
     //visual image of the xp
     public Image xpBar;
+    public int skillPoints;
 
     //player health
     public int hp;
@@ -79,6 +80,8 @@ public class PlayerStats : MonoBehaviour
         PlayerData.instance.SaveFrom(this);
 
         GameManager.instance.ChangeState(GameManager.GameState.powerUpSelection);
+
+        skillPoints += 1;
     }
 
     private void Update()

@@ -20,11 +20,14 @@ public class SkillNode : MonoBehaviour
         button.interactable = available;
     }
 
+
+
     public void Unlock()
     {
         isUnlocked = true;
         isAvailable = false;
         button.interactable = false;
+
         Debug.Log($"{name} unlocked.");
 
         if (upgradeData != null)

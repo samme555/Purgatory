@@ -39,48 +39,7 @@ public class SkillTreeManager : MonoBehaviour
 
     public void OnSkillClicked(SkillNode node)
     {
-        if (!node.isAvailable && !node.isUnlocked) return;
-
-        node.Unlock();
-
-        if (node == root && pickedBranches.Count == 0)
-        {
-            branch1[0].SetState(true, false);
-            branch2[0].SetState(true, false);
-            branch3[0].SetState(true, false);
-            branch4[0].SetState(true, false);
-            branch5[0].SetState(true, false);
-
-            HookUpBranch(branch1);
-            HookUpBranch(branch2);
-            HookUpBranch(branch3);
-            HookUpBranch(branch4);
-            HookUpBranch(branch5);
-        }
-        else
-        {
-            // Handle picking and locking branches
-            List<List<SkillNode>> allBranches = new() { branch1, branch2, branch3, branch4, branch5 };
-
-            foreach (var branch in allBranches)
-            {
-                if (branch.Contains(node))
-                {
-                    if (!pickedBranches.Contains(branch))
-                    {
-                        pickedBranches.Add(branch);
-
-                        if (pickedBranches.Count == maxBranches)
-                        {
-                            LockRemainingBranches();
-                        }
-                    }
-
-                    EnableNextInBranch(branch, node);
-                    break;
-                }
-            }
-        }
+        AttemptUnlock(node);
     }
 
     void HookUpBranch(List<SkillNode> branch)
@@ -152,6 +111,76 @@ public class SkillTreeManager : MonoBehaviour
         {
             var next = branch[index + 1];
             next.SetState(true, false);
+        }
+    }
+
+    void AttemptUnlock(SkillNode node)
+    {
+        if (!node.isAvailable || node.isUnlocked) return;
+
+        int cost = node.upgradeData.cost;
+        var player = FindFirstObjectByType<PlayerData>();
+
+        if (player == null)
+        {
+            Debug.Log("playerdata not found!");
+            return;
+        }
+
+        if (player.skillPoints < cost)
+        {
+            Debug.Log("Not enough skill points!");
+            return;
+        }
+
+        player.skillPoints -= cost;
+        node.Unlock();
+
+
+        OnSkillPurchased(node);
+    }
+
+    public void OnSkillPurchased(SkillNode node)
+    {
+        if (!node.isAvailable && !node.isUnlocked) return;
+
+        if (node == root && pickedBranches.Count == 0)
+        {
+            branch1[0].SetState(true, false);
+            branch2[0].SetState(true, false);
+            branch3[0].SetState(true, false);
+            branch4[0].SetState(true, false);
+            branch5[0].SetState(true, false);
+
+            HookUpBranch(branch1);
+            HookUpBranch(branch2);
+            HookUpBranch(branch3);
+            HookUpBranch(branch4);
+            HookUpBranch(branch5);
+        }
+        else
+        {
+            // Handle picking and locking branches
+            List<List<SkillNode>> allBranches = new() { branch1, branch2, branch3, branch4, branch5 };
+
+            foreach (var branch in allBranches)
+            {
+                if (branch.Contains(node))
+                {
+                    if (!pickedBranches.Contains(branch))
+                    {
+                        pickedBranches.Add(branch);
+
+                        if (pickedBranches.Count == maxBranches)
+                        {
+                            LockRemainingBranches();
+                        }
+                    }
+
+                    EnableNextInBranch(branch, node);
+                    break;
+                }
+            }
         }
     }
 }

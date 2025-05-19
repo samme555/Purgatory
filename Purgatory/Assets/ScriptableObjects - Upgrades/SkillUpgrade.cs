@@ -12,4 +12,6 @@ public class SkillUpgrade : ScriptableObject
     public float moveSpeedBoost;
     public float critChanceBoost;
     public float critDamageBoost;
+
+    public int cost;
 }
