@@ -15,7 +15,7 @@ public class PlayerData : MonoBehaviour
     public float moveSpeed = 1;
     public float atkSPD = 1;
     public float atk = 1;
-    public int skillPoints = 5;
+    public int skillPoints = 0;
 
     public List<int> unlockedSkillSlots = new();
     public List<int> chosenBranches = new();
