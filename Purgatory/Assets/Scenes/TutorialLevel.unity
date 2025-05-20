@@ -29674,6 +29674,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: bebab2cb1657a58459c74185a294970c, type: 2}
   - {fileID: 11400000, guid: a10e183435a39f047a126880b1adf4f6, type: 2}
   - {fileID: 11400000, guid: 8975e70fed323954caffb91c5f459217, type: 2}
+  - {fileID: 11400000, guid: 90f78b44cc060df478b2645e3358c9a1, type: 2}
+  - {fileID: 11400000, guid: 0f82686f67f58384fb82b3829a1f62dc, type: 2}
+  - {fileID: 11400000, guid: 04e5f755e8f8ff1449eda03b1ca1aa8b, type: 2}
   powerUpOne: {fileID: 0}
   powerUpTwo: {fileID: 0}
   powerUpThree: {fileID: 0}
