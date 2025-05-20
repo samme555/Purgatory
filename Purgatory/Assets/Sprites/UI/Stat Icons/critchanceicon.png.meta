@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      critchanceicon_0: 6506314555751983005
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
