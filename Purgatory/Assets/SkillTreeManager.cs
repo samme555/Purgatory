@@ -35,6 +35,8 @@ public class SkillTreeManager : MonoBehaviour
     {
         root.SetState(true, false);
         root.button.onClick.AddListener(() => OnSkillClicked(root));
+
+        LoadSkillTreeProgress();
     }
 
     public void OnSkillClicked(SkillNode node)
@@ -191,6 +193,86 @@ public class SkillTreeManager : MonoBehaviour
                     break;
                 }
             }
+        }
+    }
+
+    public void LoadSkillTreeProgress()
+    {
+        List<List<SkillNode>> allBranches = new() { branch1, branch2, branch3, branch4, branch5 };
+
+        foreach (int branchIndex in PlayerData.instance.chosenBranches)
+        {
+            if (branchIndex >= 0 && branchIndex < allBranches.Count)
+            {
+                var branch = allBranches[branchIndex];
+
+                if (!pickedBranches.Contains(branch))
+                {
+                    pickedBranches.Add(branch);
+                    HookUpBranch(branch);
+                    Debug.Log($"Restored chosen branch: {branchIndex}");
+                }
+            }
+        }
+
+        if (pickedBranches.Count >= maxBranches)
+        {
+            LockRemainingBranches();
+        }
+
+        Transform skillTreeRoot = GameObject.Find("SkillTree").transform;
+        List<SkillNode> flatList = new();
+
+        foreach (Transform child in skillTreeRoot)
+        {
+            SkillNode node = child.GetComponent<SkillNode>();
+            if (node != null)
+            {
+                flatList.Add(node);
+            }
+        }
+
+        foreach (int index in PlayerData.instance.unlockedSkillSlots)
+        {
+            if (index >= 0 && index < flatList.Count)
+            {
+                SkillNode node = flatList[index];
+                node.SetState(false, true);
+                node.isUnlocked = true;
+                node.isAvailable = false;
+
+                foreach (var line in node.incomingLines)
+                {
+                    line.SetActive(true);
+                }
+
+                Debug.Log($"Restored unlocked skill slot: {node.name} (index {index})");
+
+                foreach (var branch in allBranches)
+                {
+                    if (branch.Contains(node))
+                    {
+                        EnableNextInBranch(branch, node);
+                        break;
+                    }
+                }
+            }
+        }
+        if (root.isUnlocked && pickedBranches.Count == 0)
+        {
+            branch1[0].SetState(true, false);
+            branch2[0].SetState(true, false);
+            branch3[0].SetState(true, false);
+            branch4[0].SetState(true, false);
+            branch5[0].SetState(true, false);
+
+            HookUpBranch(branch1);
+            HookUpBranch(branch2);
+            HookUpBranch(branch3);
+            HookUpBranch(branch4);
+            HookUpBranch(branch5);
+
+            Debug.Log("Root was unlocked but no branches were picked — enabled first row.");
         }
     }
 }
