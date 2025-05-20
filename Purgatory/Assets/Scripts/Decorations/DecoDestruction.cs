@@ -16,7 +16,6 @@ public class RobustPrefabDestroyer : MonoBehaviour
             if (requiredTags.Count > 0 && !requiredTags.Contains(hit.tag)) continue;
 
             Destroy(hit.gameObject);
-            Debug.Log($"Destroyed prefab: {hit.name} at {hit.transform.position}");
             return; // destroy only one per frame
         }
     }
