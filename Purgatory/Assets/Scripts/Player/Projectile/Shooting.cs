@@ -9,7 +9,7 @@ public class Shooting : MonoBehaviour
     private Movement playerMovement;
 
     public PlayerStats playerStats;
-
+   
     public float attackSpeed = 1f;
     public float bulletForce = 20f;
     private float nextFireTime = 0f;
@@ -18,15 +18,25 @@ public class Shooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        attackSpeed = playerStats.atkSPD;
-
+        projectilePrefab.transform.localScale = Vector3.one;
+        if (playerStats.biggerBullets)
+        {
+            attackSpeed = playerStats.atkSPD / 2;
+            playerStats.atk *= 2;
+            projectilePrefab.transform.localScale = new Vector3(2, 2, 0);
+        }
+        
+        
+        
         if (Input.GetButtonDown("Fire1") && Time.time >= nextFireTime) 
         {
             Shoot();
             nextFireTime = Time.time + (1f / attackSpeed);
+            
         }
     }
 
+    
     void Shoot() 
     {
         if (playerMovement == null) 

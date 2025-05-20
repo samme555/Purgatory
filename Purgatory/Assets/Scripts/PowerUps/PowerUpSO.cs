@@ -23,5 +23,6 @@ public enum PowerUpEffect
     moveSPD,
     burstfire,
     shotgun,
-    shield
+    shield,
+    biggerBullets
 }

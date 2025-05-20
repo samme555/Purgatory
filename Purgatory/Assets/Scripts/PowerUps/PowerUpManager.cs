@@ -84,6 +84,10 @@ public class PowerUpManager : MonoBehaviour
                 case PowerUpEffect.critDMG:
                     stats.critDMG += (float)powerUp.effectValue;
                     break;
+                case PowerUpEffect.biggerBullets:
+                    stats.biggerBullets = true;
+                    break;
+
             }
         PlayerData.instance.SaveFrom(stats);
     }
