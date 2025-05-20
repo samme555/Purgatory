@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class PowerUpManager : MonoBehaviour
 {
@@ -52,7 +53,11 @@ public class PowerUpManager : MonoBehaviour
     {
         if (state == GameManager.GameState.powerUpSelection) 
         { 
-            RandomizeNewPowerUps();
+            RandomizeNewPowerUps(false);
+        }
+        if (state == GameManager.GameState.majorPowerUpSelection) 
+        {
+            RandomizeNewPowerUps(true);
         }
     }
 
@@ -83,7 +88,7 @@ public class PowerUpManager : MonoBehaviour
         PlayerData.instance.SaveFrom(stats);
     }
 
-    void RandomizeNewPowerUps() 
+    void RandomizeNewPowerUps(bool isMajor) 
     {
         Vector3 screenCenter = new Vector3(Screen.width / 2, Screen.height / 2, Camera.main.nearClipPlane);
         Vector3 worldCenter = Camera.main.ScreenToWorldPoint(screenCenter);
@@ -96,7 +101,14 @@ public class PowerUpManager : MonoBehaviour
 
         List<PowerUpSO> availablePowerUps = new List<PowerUpSO>(powerUpList);
 
-        
+        if (isMajor)
+        {
+            availablePowerUps = availablePowerUps.FindAll(p => p.isMajor);
+        }
+        else 
+        { 
+            availablePowerUps = availablePowerUps.FindAll(p => p.isMajor = false);
+        }
 
         if (availablePowerUps.Count < 3) 
         {

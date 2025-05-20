@@ -7,6 +7,8 @@ public class PowerUpSO : ScriptableObject
     public string powerUpText; // name of the power up 
     public PowerUpEffect effectType; // power up effect
     public float effectValue; // value of the effect
+    [SerializeField]
+    public bool isMajor;
     
 
 }
@@ -18,5 +20,8 @@ public enum PowerUpEffect
     critCH,
     critDMG,
     atk,
-    moveSPD
+    moveSPD,
+    burstfire,
+    shotgun,
+    shield
 }
