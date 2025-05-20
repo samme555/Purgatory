@@ -310,4 +310,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destructionEffect: {fileID: 0}
   replacementPrefab: {fileID: 436890450855020390, guid: 5d0555dd874e00c46916b8b8ac0fe840, type: 3}
-  dropProbability: 0.5
+  dropProbability: 0.1
