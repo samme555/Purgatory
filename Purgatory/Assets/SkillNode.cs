@@ -30,9 +30,19 @@ public class SkillNode : MonoBehaviour
 
         Debug.Log($"{name} unlocked.");
 
+        int index = transform.GetSiblingIndex();
+        if (!PlayerData.instance.unlockedSkillSlots.Contains(index))
+        {
+            PlayerData.instance.unlockedSkillSlots.Add(index); //add the unlocked slot to index
+            Debug.Log($"Chosen slot index {index} added to PlayerData.");
+        }
+
         if (upgradeData != null)
         {
             SkillTreeManager.Instance.ApplyUpgrade(upgradeData);
+
+            PlayerData.instance.SaveToFile();
+            Debug.Log($"Saved playerdata to file!");
         }
 
         foreach (var line in incomingLines)

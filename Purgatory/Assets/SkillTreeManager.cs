@@ -171,6 +171,13 @@ public class SkillTreeManager : MonoBehaviour
                     {
                         pickedBranches.Add(branch);
 
+                        int branchIndex = allBranches.IndexOf(branch);
+                        if (!PlayerData.instance.chosenBranches.Contains(branchIndex))
+                        {
+                            PlayerData.instance.chosenBranches.Add(branchIndex);
+                            Debug.Log($"Chosen branch index {branchIndex} added to PlayerData.");
+                        }
+
                         if (pickedBranches.Count == maxBranches)
                         {
                             LockRemainingBranches();
@@ -178,6 +185,9 @@ public class SkillTreeManager : MonoBehaviour
                     }
 
                     EnableNextInBranch(branch, node);
+
+                    PlayerData.instance.SaveToFile();
+                    Debug.Log($"Saved playerdata to file!");
                     break;
                 }
             }
