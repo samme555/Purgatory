@@ -285,7 +285,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 3463036064131439585}
-  rb: {fileID: 1112577173338437132}
   speed: 0.5
   anim: {fileID: 9219600239701076213}
   movementFilter:
@@ -423,7 +422,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f960e28d727cfca45b4ea3ba77cd426f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 7
   healthBar: {fileID: 6531719404410110601}
   xpReward: 15
 --- !u!1 &6979173358010926143

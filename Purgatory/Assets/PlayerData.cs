@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 public class PlayerData : MonoBehaviour
@@ -6,13 +8,19 @@ public class PlayerData : MonoBehaviour
 
     public float currentXP = 0;
     public int level = 1;
-    public float xpToNextLevel = 100;
+    public float xpToNextLevel = 50;
     public int hp = 3;
     public float critCH = 0;
     public float critDMG = 2;
     public float moveSpeed = 1;
     public float atkSPD = 1;
     public float atk = 1;
+    public int skillPoints = 0;
+
+    public List<int> unlockedSkillSlots = new();
+    public List<int> chosenBranches = new();
+
+    private string path;
 
     private void Awake()
     {
@@ -20,7 +28,10 @@ public class PlayerData : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject); // Behåll mellan scener
+            path = Application.persistentDataPath + "/playerdata.json";
             Debug.Log("Instantiated playerData");
+
+            LoadFromFile();
         }
         else
         {
@@ -72,5 +83,67 @@ public class PlayerData : MonoBehaviour
         atk = 1;
 
         Debug.Log("Reset the stats");
+    }
+
+    public void SaveToFile()
+    {
+        PlayerSaveData data = new PlayerSaveData(this);
+        string json = JsonUtility.ToJson(data, true);
+        File.WriteAllText(path, json);
+        Debug.Log("Saved player data to: " + path);
+    }
+
+    public void LoadFromFile()
+    {
+        if (!File.Exists(path))
+        {
+            Debug.Log("No save file found at: " + path);
+            return;
+        }
+
+        string json = File.ReadAllText(path);
+        PlayerSaveData data = JsonUtility.FromJson<PlayerSaveData>(json);
+
+        hp = data.hp;
+        critCH = data.critCH;
+        critDMG = data.critDMG;
+        moveSpeed = data.moveSpeed;
+        atkSPD = data.atkSPD;
+        atk = data.atk;
+        skillPoints = data.skillPoints;
+
+        unlockedSkillSlots = new List<int>(data.unlockedSkillSlots);
+        chosenBranches = new List<int>(data.chosenBranches);
+
+        Debug.Log("Loaded player data from: " + path);
+    }
+
+    [System.Serializable]
+    private class PlayerSaveData
+    {
+        public int hp;
+        public float critCH;
+        public float critDMG;
+        public float moveSpeed;
+        public float atkSPD;
+        public float atk;
+        public int skillPoints;
+
+        public List<int> unlockedSkillSlots;
+        public List<int> chosenBranches;
+
+        public PlayerSaveData(PlayerData pd)
+        {
+            hp = pd.hp;
+            critCH = pd.critCH;
+            critDMG = pd.critDMG;
+            moveSpeed = pd.moveSpeed;
+            atkSPD = pd.atkSPD;
+            atk = pd.atk;
+            skillPoints = pd.skillPoints;
+
+            unlockedSkillSlots = new List<int>(pd.unlockedSkillSlots);
+            chosenBranches = new List<int>(pd.chosenBranches);
+        }
     }
 }
