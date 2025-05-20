@@ -4,6 +4,7 @@ using UnityEngine;
 public class DaemonController : MonoBehaviour
 {
     public Transform player;
+    public int damage = 1;
 
     [Header("Movement Settings")]
     public float speed = 2f;
@@ -177,5 +178,30 @@ public class DaemonController : MonoBehaviour
 
         if (dashIndicatorInstance != null)
             dashIndicatorInstance.SetActive(false);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+
+        bool isWall = collision.gameObject.layer == LayerMask.NameToLayer("Projectile Block");
+        bool isPlayer = collision.CompareTag("Player");
+
+        if (collision.CompareTag("Player"))
+        {
+            PlayerStats hp = collision.GetComponent<PlayerStats>();
+            hp.TakeDamage(damage);
+            Destroy(gameObject);
+            Debug.Log("collided with player");
+        }
+        //else if (collision.gameObject.layer == LayerMask.NameToLayer("Walls"))
+        //{
+        //    Destroy(gameObject);
+        //    Debug.Log("projectile collision!");
+        //}
+        else if (collision.gameObject.layer == LayerMask.NameToLayer("Projectile Block"))
+        {
+            Destroy(gameObject);
+            Debug.Log("boss projectile collision!");
+        }
     }
 }
