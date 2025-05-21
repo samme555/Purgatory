@@ -14,8 +14,6 @@ public class EnemyMovement : MonoBehaviour
     private Transform player;
     public Animator anim;
 
-    private int contactDamage = 1;
-
     private Vector2 direction;
 
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
@@ -42,17 +40,6 @@ public class EnemyMovement : MonoBehaviour
         {
             agent.SetDestination(player.position);
             Animate(agent.velocity.normalized);
-        }
-    }
-
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        PlayerStats stats = other.GetComponent<PlayerStats>();
-
-        if (other.CompareTag("Player"))
-        {
-            stats.TakeDamage(contactDamage);
-            Debug.Log("player took damage");
         }
     }
 

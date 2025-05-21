@@ -1220,7 +1220,7 @@ GameObject:
   - component: {fileID: 3886997160867246808}
   - component: {fileID: 9032258773774655836}
   - component: {fileID: 6127401129787558373}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: tpDown
   m_TagString: Untagged
   m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
@@ -1313,7 +1313,7 @@ GameObject:
   - component: {fileID: 7399410830359279065}
   - component: {fileID: 6332625772395976546}
   - component: {fileID: 549993909607159355}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: tpRight
   m_TagString: Untagged
   m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
@@ -1405,7 +1405,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1509382934995124074}
   - component: {fileID: 3665421366788695279}
-  m_Layer: 13
+  m_Layer: 25
   m_Name: TeleportTarget
   m_TagString: Untagged
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
@@ -1484,7 +1484,7 @@ GameObject:
   - component: {fileID: 51939364034931034}
   - component: {fileID: 5568658807642126284}
   - component: {fileID: 7912862363871243538}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: tpUp
   m_TagString: Untagged
   m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
@@ -1623,7 +1623,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8737434124901506637}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: Teleports
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3203,7 +3203,7 @@ GameObject:
   - component: {fileID: 7580708316472782767}
   - component: {fileID: 9058018704163081409}
   - component: {fileID: 1585090735010333424}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: tpLeft
   m_TagString: Untagged
   m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
@@ -3462,7 +3462,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5090966693610004931}
   - component: {fileID: 6968322387675914120}
-  m_Layer: 13
+  m_Layer: 25
   m_Name: TeleportTarget
   m_TagString: Untagged
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
@@ -3540,7 +3540,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3286818808135627463}
   - component: {fileID: 1722930514624643332}
-  m_Layer: 13
+  m_Layer: 25
   m_Name: TeleportTarget
   m_TagString: Untagged
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
@@ -6480,7 +6480,6 @@ MonoBehaviour:
   leftWall: {fileID: 9045063417425633833}
   rightWall: {fileID: 7035086695572273886}
   roomCamera: {fileID: 957331746346199373}
-  navMeshSurface: {fileID: 4020157793614263522}
 --- !u!114 &4020157793614263522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11286,7 +11285,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3380150285080017242}
   - component: {fileID: 9069731769528274402}
-  m_Layer: 13
+  m_Layer: 25
   m_Name: TeleportTarget
   m_TagString: Untagged
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}

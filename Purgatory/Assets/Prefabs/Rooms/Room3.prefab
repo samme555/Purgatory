@@ -669,7 +669,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1928764494759115912}
   - component: {fileID: 5301181457124558307}
-  m_Layer: 13
+  m_Layer: 25
   m_Name: TeleportTarget
   m_TagString: Untagged
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
@@ -1566,7 +1566,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8909689646757448855}
   - component: {fileID: 3849651810633097133}
-  m_Layer: 13
+  m_Layer: 25
   m_Name: TeleportTarget
   m_TagString: Untagged
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
@@ -1644,7 +1644,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5773407473867474973}
   - component: {fileID: 8174046337320185351}
-  m_Layer: 13
+  m_Layer: 25
   m_Name: TeleportTarget
   m_TagString: Untagged
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
@@ -1722,7 +1722,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6611060315059668770}
   - component: {fileID: 2511612018281943403}
-  m_Layer: 13
+  m_Layer: 25
   m_Name: TeleportTarget
   m_TagString: Untagged
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
@@ -3900,7 +3900,7 @@ GameObject:
   - component: {fileID: 8917461569003101230}
   - component: {fileID: 6409877827780804070}
   - component: {fileID: 1168086975252422446}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: tpDown
   m_TagString: Untagged
   m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
@@ -3993,7 +3993,7 @@ GameObject:
   - component: {fileID: 6799555784260459269}
   - component: {fileID: 2931754446746592076}
   - component: {fileID: 7465679753339525099}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: tpUp
   m_TagString: Untagged
   m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
@@ -12915,7 +12915,7 @@ GameObject:
   - component: {fileID: 7679812595928313773}
   - component: {fileID: 3812512320375935151}
   - component: {fileID: 3960890649719776699}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: tpLeft
   m_TagString: Untagged
   m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
@@ -13008,7 +13008,7 @@ GameObject:
   - component: {fileID: 8406900211454160728}
   - component: {fileID: 7774976645325381901}
   - component: {fileID: 1724865305423119633}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: tpRight
   m_TagString: Untagged
   m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
@@ -13482,7 +13482,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1865367074691806949}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: Teleports
   m_TagString: Untagged
   m_Icon: {fileID: 0}

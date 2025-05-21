@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2352899176548020277}
   - component: {fileID: 4247196720161384666}
   - component: {fileID: 988578081798508189}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: tpDown
   m_TagString: Untagged
   m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
@@ -945,7 +945,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7960860603819455804}
   - component: {fileID: 7340776633307189341}
-  m_Layer: 13
+  m_Layer: 25
   m_Name: TeleportTarget
   m_TagString: Untagged
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
@@ -2899,7 +2899,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5864082462269912754}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: Teleports
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3426,7 +3426,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2287620715953374503}
   - component: {fileID: 885950388191670061}
-  m_Layer: 13
+  m_Layer: 25
   m_Name: TeleportTarget
   m_TagString: Untagged
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
@@ -3528,7 +3528,7 @@ Transform:
   - {fileID: 2056548845910909107}
   - {fileID: 6375160843345685208}
   - {fileID: 5307126257412061500}
-  - {fileID: 2862384074424602167}
+  - {fileID: 8241976220357639750}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4551712675252655976
@@ -3562,7 +3562,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4003132442404026688}
   - component: {fileID: 2347247683011899428}
-  m_Layer: 13
+  m_Layer: 25
   m_Name: TeleportTarget
   m_TagString: Untagged
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
@@ -8061,7 +8061,7 @@ GameObject:
   - component: {fileID: 8525712140477552091}
   - component: {fileID: 3959964552905877737}
   - component: {fileID: 5650818844472107351}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: tpUp
   m_TagString: Untagged
   m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
@@ -8732,7 +8732,7 @@ GameObject:
   - component: {fileID: 4038066496714575591}
   - component: {fileID: 1855954596395842751}
   - component: {fileID: 3300873231052857055}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: tpRight
   m_TagString: Untagged
   m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
@@ -9287,7 +9287,7 @@ GameObject:
   - component: {fileID: 6972266442441235857}
   - component: {fileID: 7543661076177644522}
   - component: {fileID: 3172898182590303379}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: tpLeft
   m_TagString: Untagged
   m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
@@ -12653,7 +12653,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5864917826156257947}
   - component: {fileID: 1176963366593297224}
-  m_Layer: 13
+  m_Layer: 25
   m_Name: TeleportTarget
   m_TagString: Untagged
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
@@ -13198,8 +13198,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a89d43103a3846a40917cb311d0cc212, type: 3}
---- !u!4 &2862384074424602167 stripped
+--- !u!4 &8241976220357639750 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5031396945290234640, guid: a89d43103a3846a40917cb311d0cc212, type: 3}
-  m_PrefabInstance: {fileID: 7091524523024106791}
+  m_PrefabInstance: {fileID: 4013408108362642774}
   m_PrefabAsset: {fileID: 0}
