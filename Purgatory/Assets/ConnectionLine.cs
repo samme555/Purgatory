@@ -20,9 +20,4 @@ public class ConnectionLine : MonoBehaviour
             image.color = isActive ? Color.white : Color.black;
         }
     }
-
-    private void Start()
-    {
-        SetActive(false);
-    }
 }

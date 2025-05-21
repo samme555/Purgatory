@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using NUnit.Framework;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SkillTreeManager : MonoBehaviour
@@ -258,21 +259,110 @@ public class SkillTreeManager : MonoBehaviour
                 }
             }
         }
-        if (root.isUnlocked && pickedBranches.Count == 0)
+        if (root.isUnlocked)
         {
-            branch1[0].SetState(true, false);
-            branch2[0].SetState(true, false);
-            branch3[0].SetState(true, false);
-            branch4[0].SetState(true, false);
-            branch5[0].SetState(true, false);
+            foreach (var branch in allBranches)
+            {
+                SkillNode firstSlot = branch[0];
+                bool isPicked = pickedBranches.Contains(branch);
+                bool canStillPick = pickedBranches.Count < 3;
 
-            HookUpBranch(branch1);
-            HookUpBranch(branch2);
-            HookUpBranch(branch3);
-            HookUpBranch(branch4);
-            HookUpBranch(branch5);
+                if (!isPicked && canStillPick)
+                {
+                    firstSlot.SetState(true, false); // Available but not unlocked
+                    HookUpBranch(branch);            // Hook up click logic
+                    Debug.Log($"[SkillTree] Enabled first slot in unpicked branch: {firstSlot.name}");
+                }
+                else if (!isPicked && !canStillPick)
+                {
+                    // We're at 3 picked branches. This branch is now locked.
+                    firstSlot.SetState(false, false);
+                    Debug.Log($"[SkillTree] Branch locked out (3 chosen): {firstSlot.name}");
+                }
+                else
+                {
+                    // Already picked — nothing to change
+                    Debug.Log($"[SkillTree] Branch already picked: {firstSlot.name}");
+                }
+            }
+        }
 
-            Debug.Log("Root was unlocked but no branches were picked — enabled first row.");
+        RefreshAllConnectionLines(allBranches);
+    }
+
+    public void ResetSkillTree()
+    {
+        Debug.Log("resetting skill tree...");
+
+        var player = PlayerData.instance;
+
+        Transform skillTreeRoot = GameObject.Find("SkillTree").transform;
+
+        List<SkillNode> allNodes = new();
+        foreach (Transform child in skillTreeRoot)
+        {
+            SkillNode node = child.GetComponent<SkillNode>();
+            if (node != null)
+            {
+                allNodes.Add(node);
+            }
+        }
+
+        int refund = 0;
+        foreach (int index in player.unlockedSkillSlots)
+        {
+            if (index >= 0 && index < allNodes.Count)
+            {
+                SkillNode node = allNodes[index];
+                if (node.upgradeData != null)
+                {
+                    refund += node.upgradeData.cost;
+                }
+            }
+        }
+        player.skillPoints += refund;
+
+        player.unlockedSkillSlots.Clear();
+        player.chosenBranches.Clear();
+        pickedBranches.Clear();
+        
+        
+        player.ResetData();
+
+        foreach (SkillNode node in allNodes)
+        {
+            node.SetState(false, false);
+            node.isAvailable = false;
+            node.isUnlocked = false;
+
+            foreach (var line in node.incomingLines)
+            {
+                line.SetActive(false);
+            }
+        }
+
+        root.SetState(true, false);
+        root.button.onClick.RemoveAllListeners();
+        root.button.onClick.AddListener(() => OnSkillClicked(root));
+
+        player.SaveToFile();   
+    }
+
+    void RefreshAllConnectionLines(List<List<SkillNode>> allBranches)
+    {
+        foreach (var branch in allBranches)
+        {
+            foreach (SkillNode node in branch)
+            {
+                if (node.isUnlocked)
+                {
+                    foreach (var line in node.incomingLines)
+                    {
+                        line.SetActive(false);
+                        line.SetActive(true);
+                    }
+                }
+            }
         }
     }
 }
