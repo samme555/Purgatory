@@ -1,3 +1,4 @@
+using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 
 public class Collisions : MonoBehaviour
@@ -66,11 +67,11 @@ public class Collisions : MonoBehaviour
         }
         if (other.CompareTag("Boss"))
         {
-            BossController boss = other.GetComponent<BossController>();
+            EnemyStats bossStats = other.GetComponent<EnemyStats>();
 
-            if (boss != null)
+            if (bossStats != null)
             {
-                boss.TakeDamage(damage);
+                bossStats.TakeDamage(damage);
             }
 
             Destroy(gameObject);

@@ -89,8 +89,9 @@ GameObject:
   - component: {fileID: 330682167072158397}
   - component: {fileID: 7832940667591640595}
   - component: {fileID: 5896048109276166189}
+  - component: {fileID: 8330582918600820626}
   m_Layer: 15
-  m_Name: Boss
+  m_Name: Elder Mage
   m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -272,6 +273,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8330582918600820626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8227506920996827222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f960e28d727cfca45b4ea3ba77cd426f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 20
+  healthBar: {fileID: 7340124213654659798}
+  xpReward: 15
 --- !u!1 &8236251768553215320
 GameObject:
   m_ObjectHideFlags: 0

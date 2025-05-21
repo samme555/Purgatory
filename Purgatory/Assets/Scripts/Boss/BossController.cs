@@ -5,10 +5,6 @@ using UnityEngine.UI;
 public class BossController : MonoBehaviour
 {
 
-    public float health;
-    float maxHealth;
-    public int xpReward = 50;
-
     public GameObject bossProjectile;
     public int projectileCount = 5;
     public float waveCooldown = 3f;
@@ -18,11 +14,18 @@ public class BossController : MonoBehaviour
     private bool isActive = false;
 
     public Image healthBar;
+    private EnemyStats stats;
 
     private void Start()
     {
-        maxHealth = health;
-        UpdateHealthBar();
+        stats = GetComponent<EnemyStats>();
+
+        if (stats == null)
+        {
+            Debug.LogError("EnemyStats not found on boss!");
+            enabled = false;
+            return;
+        }
     }
 
     private void Update()
@@ -49,11 +52,11 @@ public class BossController : MonoBehaviour
     {
         canAttack = false;
 
-        if (health == 6)
+        if (stats.health == 20)
         {
             waveCooldown = 2f;
         }
-        else if (health == 3)
+        else if (stats.health == 10)
         {
             waveCooldown = 1f;
         }
@@ -84,41 +87,5 @@ public class BossController : MonoBehaviour
 
         yield return new WaitForSeconds(waveCooldown);
         canAttack = true;
-    }
-
-    public void TakeDamage(float damage)
-    {
-        health -= damage;
-
-        UpdateHealthBar();
-
-        Debug.Log("Damage: " + damage);
-        
-
-        if (health <= 0)
-        {
-            Die();
-        }
-    }
-
-    public void UpdateHealthBar()
-    {
-        healthBar.fillAmount = health / maxHealth;
-    }
-
-    private void Die()
-    {
-        GameObject player = GameObject.FindWithTag("Player");
-
-        if (player != null)
-        {
-            PlayerStats stats = player.GetComponent<PlayerStats>();
-
-            if (stats != null)
-            {
-                stats.AddXP(xpReward);
-            }
-        }
-        Destroy(gameObject);
     }
 }
