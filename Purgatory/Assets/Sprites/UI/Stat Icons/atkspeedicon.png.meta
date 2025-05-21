@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      atkspeedicon_0: 8504991233433287554
+      atkspeedicon_1: -8636504818177419901
+      atkspeedicon_2: 8819855350098142195
+      atkspeedicon_3: 8838247892744989554
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
