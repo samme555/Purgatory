@@ -75,7 +75,7 @@ public class PlayerStats : MonoBehaviour
     {
         level++;
         currentXP -= xpToNextLevel;
-        xpToNextLevel = Mathf.RoundToInt(xpToNextLevel * 1.2f);
+        xpToNextLevel = Mathf.RoundToInt(xpToNextLevel * 1.1f);
 
         PlayerData.instance.SaveFrom(this);
 
@@ -89,7 +89,7 @@ public class PlayerStats : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.L)) 
         {
-            AddXP(100);
+            AddXP(15);
 
             PlayerData.instance.SaveFrom(this);
         }

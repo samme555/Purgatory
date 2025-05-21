@@ -14,7 +14,7 @@ public class PowerUp : MonoBehaviour
         powerUpImageRenderer.sprite = powerUp.powerUpImage;
         powerUpTextRenderer.text = powerUp.powerUpText;
 
-        FitSpriteInSlot(powerUpImageRenderer, GetComponent<SpriteRenderer>());
+        FitSpriteInSlot(powerUpImageRenderer, imageSlotRenderer);
     }
 
     private void OnMouseDown()
