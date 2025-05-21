@@ -51,6 +51,7 @@ public class PlayerData : MonoBehaviour
         moveSpeed = stats.moveSpeed;
         atkSPD = stats.atkSPD;
         atk = stats.atk;
+        skillPoints = stats.skillPoints;
 
         Debug.Log("Saved stats from Player");
     }
@@ -67,6 +68,7 @@ public class PlayerData : MonoBehaviour
         stats.moveSpeed = moveSpeed;
         stats.atkSPD = atkSPD;
         stats.atk = atk;
+        stats.skillPoints = skillPoints;
 
         Debug.Log("Loaded stats to Player");
     }
