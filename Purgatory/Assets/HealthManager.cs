@@ -11,6 +11,7 @@ public class HealthManager : MonoBehaviour
 
     public Sprite fullHeartSprite;
     public Sprite emptyHeartSprite;
+    public Sprite halfHeartSprite;
 
     private List<Image> hearts = new List<Image>();
 
@@ -32,7 +33,9 @@ public class HealthManager : MonoBehaviour
         }
         hearts.Clear();
 
-        for (int i = 0; i < playerStats.hp; i++)
+        int heartCount = Mathf.CeilToInt(playerStats.hp / 2f);
+
+        for (int i = 0; i < heartCount; i++)
         {
             GameObject heart = Instantiate(heartPrefab, heartsParent);
             Image heartImage = heart.GetComponent<Image>();
@@ -42,11 +45,19 @@ public class HealthManager : MonoBehaviour
 
     void UpdateHearts()
     {
+        int health = playerStats.hp;
+
         for (int i = 0; i < hearts.Count; i++)
         {
-            if (i < playerStats.hp)
+            int heartHealth = health - (i * 2); //2 hp per heart
+
+            if (heartHealth >= 2)
             {
                 hearts[i].sprite = fullHeartSprite;
+            }
+            else if (heartHealth == 1)
+            {
+                hearts[i].sprite = halfHeartSprite;
             }
             else
             {

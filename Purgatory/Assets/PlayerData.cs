@@ -9,7 +9,7 @@ public class PlayerData : MonoBehaviour
     public float currentXP = 0;
     public int level = 1;
     public float xpToNextLevel = 50;
-    public int hp = 3;
+    public int hp = 6;
     public float critCH = 0;
     public float critDMG = 2;
     public float moveSpeed = 1;
@@ -77,7 +77,7 @@ public class PlayerData : MonoBehaviour
         currentXP = 0;
         level = 1;
         xpToNextLevel = 100;
-        hp = 3;
+        hp = 6;
         critCH = 0;
         critDMG = 2;
         moveSpeed = 1;

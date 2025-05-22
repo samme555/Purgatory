@@ -13186,6 +13186,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6762314250208754536, guid: 0d2ec83d9a7b7f9449af1e48ba80efd0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -40708,6 +40712,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6762314250208754536, guid: 0d2ec83d9a7b7f9449af1e48ba80efd0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -40827,6 +40835,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3c89d13e3eca39489fd96fe010fdd09, type: 3}
+--- !u!1001 &1290905092
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7230659660212747520, guid: b189b5aa3c8ffd14fa9d5c39e8162b25, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.319
+      objectReference: {fileID: 0}
+    - target: {fileID: 7230659660212747520, guid: b189b5aa3c8ffd14fa9d5c39e8162b25, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.077
+      objectReference: {fileID: 0}
+    - target: {fileID: 7230659660212747520, guid: b189b5aa3c8ffd14fa9d5c39e8162b25, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7230659660212747520, guid: b189b5aa3c8ffd14fa9d5c39e8162b25, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7230659660212747520, guid: b189b5aa3c8ffd14fa9d5c39e8162b25, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7230659660212747520, guid: b189b5aa3c8ffd14fa9d5c39e8162b25, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7230659660212747520, guid: b189b5aa3c8ffd14fa9d5c39e8162b25, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7230659660212747520, guid: b189b5aa3c8ffd14fa9d5c39e8162b25, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7230659660212747520, guid: b189b5aa3c8ffd14fa9d5c39e8162b25, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7230659660212747520, guid: b189b5aa3c8ffd14fa9d5c39e8162b25, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7303037417611682965, guid: b189b5aa3c8ffd14fa9d5c39e8162b25, type: 3}
+      propertyPath: m_Name
+      value: Goblin_Thief_0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b189b5aa3c8ffd14fa9d5c39e8162b25, type: 3}
 --- !u!1001 &1335873409
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -63555,6 +63620,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 6762314250208754536, guid: 0d2ec83d9a7b7f9449af1e48ba80efd0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6979173358010926143, guid: 0d2ec83d9a7b7f9449af1e48ba80efd0, type: 3}
       propertyPath: m_Layer
       value: 5
@@ -64420,6 +64489,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6762314250208754536, guid: 0d2ec83d9a7b7f9449af1e48ba80efd0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -64803,6 +64876,10 @@ PrefabInstance:
       propertyPath: heartsParent
       value: 
       objectReference: {fileID: 1140554417}
+    - target: {fileID: 8765837961099390189, guid: 67dd473b0cce29c4f8a9e00f34793c0e, type: 3}
+      propertyPath: halfHeartSprite
+      value: 
+      objectReference: {fileID: -2906203513720773286, guid: ba46b81546743ae4d87727eac91b9c9b, type: 3}
     - target: {fileID: 9054433518389595947, guid: 67dd473b0cce29c4f8a9e00f34793c0e, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -65085,3 +65162,4 @@ SceneRoots:
   - {fileID: 1821782651}
   - {fileID: 393046070}
   - {fileID: 1403539802}
+  - {fileID: 1290905092}

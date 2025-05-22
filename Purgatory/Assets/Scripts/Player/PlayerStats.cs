@@ -35,6 +35,7 @@ public class PlayerStats : MonoBehaviour
     public float immunityTimer = 0f;
     public float immunityDuration = 0.3f;
     public float timer = 0.3f;
+    public bool isPoisoned = false; //damage over time
 
     private SpriteRenderer spriteRenderer;
 
@@ -117,7 +118,7 @@ public class PlayerStats : MonoBehaviour
             Debug.Log("Took damage, HP now: " + hp);
             
             damageImmunity = true;
-            StartCoroutine(FlashWhite());
+            StartCoroutine(DamageFlash());
             immunityTimer = immunityDuration;
 
             CameraShake camShake = Camera.main.GetComponent<CameraShake>();
@@ -139,11 +140,11 @@ public class PlayerStats : MonoBehaviour
 
     
 
-    private IEnumerator FlashWhite(float duration = 0.2f)
+    private IEnumerator DamageFlash(float duration = 0.2f)
     {
         if (spriteRenderer != null)
         {
-            spriteRenderer.color = Color.red;
+            spriteRenderer.color = isPoisoned ? Color.green : Color.red;
 
             yield return new WaitForSeconds(duration);
 
@@ -151,11 +152,36 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
-
-
     public void Die()
     {
         Destroy(gameObject);
+    }
+
+    public void ApplyPoison(int damagePerTick, float interval, int numberOfTicks)
+    {
+        if (!isPoisoned)
+        {
+            StartCoroutine(TakePoisonDamage(damagePerTick, interval, numberOfTicks));
+            Debug.Log("applying poison");
+            StartCoroutine(DamageFlash());
+        }
+    }
+
+    public IEnumerator TakePoisonDamage(int damagePerTick, float interval, int numberOfTicks)
+    {
+        isPoisoned = true;
+        Debug.Log("PLAYER POISONED");
+
+        yield return new WaitForSeconds(0.4f);
+
+        for (int i = 0; i < numberOfTicks; i++)
+        {
+            TakeDamage(damagePerTick);
+            StartCoroutine(DamageFlash());
+            yield return new WaitForSeconds(interval);
+        }
+
+        isPoisoned = false;
     }
 
 }
