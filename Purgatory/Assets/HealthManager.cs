@@ -25,7 +25,7 @@ public class HealthManager : MonoBehaviour
         UpdateHearts();
     }
 
-    void DrawHearts()
+    public void DrawHearts()
     {
         foreach (Transform child in heartsParent)
         {

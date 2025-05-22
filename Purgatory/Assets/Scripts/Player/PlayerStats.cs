@@ -1,6 +1,7 @@
 using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 
@@ -9,6 +10,7 @@ public class PlayerStats : MonoBehaviour
 {
     //current amount of XP
     public float currentXP;
+    private float originalMoveSpeed;
     //level
     public int level;
     //amount of XP needed to level up
@@ -47,6 +49,14 @@ public class PlayerStats : MonoBehaviour
         if (PlayerData.instance != null)
         {
             PlayerData.instance.LoadTo(this);
+        }
+
+        originalMoveSpeed = moveSpeed;
+
+        HealthManager hm = FindFirstObjectByType<HealthManager>();
+        if (hm != null)
+        {
+            hm.DrawHearts();
         }
 
         UpdateXPBar();
@@ -118,7 +128,7 @@ public class PlayerStats : MonoBehaviour
             Debug.Log("Took damage, HP now: " + hp);
             
             damageImmunity = true;
-            StartCoroutine(DamageFlash());
+            StartCoroutine(DamageFlash(Color.red));
             immunityTimer = immunityDuration;
 
             CameraShake camShake = Camera.main.GetComponent<CameraShake>();
@@ -138,13 +148,24 @@ public class PlayerStats : MonoBehaviour
         PlayerData.instance.SaveFrom(this);
     }
 
-    
+    public void TakePoisonDamage(int damage)
+    {
+        StartCoroutine(DamageFlash(Color.green));
+        hp -= damage;
+        
+        if (hp <= 0)
+        {
+            Die();
+        }
 
-    private IEnumerator DamageFlash(float duration = 0.2f)
+        PlayerData.instance.SaveFrom(this);
+    }
+
+    private IEnumerator DamageFlash(Color flashColor, float duration = 0.2f)
     {
         if (spriteRenderer != null)
         {
-            spriteRenderer.color = isPoisoned ? Color.green : Color.red;
+            spriteRenderer.color = flashColor;
 
             yield return new WaitForSeconds(duration);
 
@@ -161,23 +182,22 @@ public class PlayerStats : MonoBehaviour
     {
         if (!isPoisoned)
         {
-            StartCoroutine(TakePoisonDamage(damagePerTick, interval, numberOfTicks));
+            StartCoroutine(PoisonRoutine(damagePerTick, interval, numberOfTicks));
+            StartCoroutine(DamageFlash(Color.green));
             Debug.Log("applying poison");
-            StartCoroutine(DamageFlash());
         }
     }
 
-    public IEnumerator TakePoisonDamage(int damagePerTick, float interval, int numberOfTicks)
+    public IEnumerator PoisonRoutine(int damagePerTick, float interval, int numberOfTicks)
     {
         isPoisoned = true;
         Debug.Log("PLAYER POISONED");
 
-        yield return new WaitForSeconds(0.4f);
+        yield return new WaitForSeconds(2f);
 
         for (int i = 0; i < numberOfTicks; i++)
         {
-            TakeDamage(damagePerTick);
-            StartCoroutine(DamageFlash());
+            TakePoisonDamage(damagePerTick);
             yield return new WaitForSeconds(interval);
         }
 
