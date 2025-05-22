@@ -87,6 +87,9 @@ public class PowerUpManager : MonoBehaviour
                 case PowerUpEffect.biggerBullets:
                     stats.biggerBullets = true;
                     break;
+                case PowerUpEffect.burstfire:
+                    stats.burstFire = true;
+                    break;
 
             }
         PlayerData.instance.SaveFrom(stats);

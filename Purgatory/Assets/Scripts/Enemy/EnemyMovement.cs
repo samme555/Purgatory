@@ -25,6 +25,8 @@ public class EnemyMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
+      
+        rb.linearDamping = 20f;
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

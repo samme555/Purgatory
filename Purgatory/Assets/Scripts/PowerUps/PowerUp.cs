@@ -25,6 +25,7 @@ public class PowerUp : MonoBehaviour
 
     void Update()
     {
+        powerUpImageRenderer.sortingOrder = 99;
         if (Input.GetMouseButtonDown(0))
         {
             if (UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject()) return;

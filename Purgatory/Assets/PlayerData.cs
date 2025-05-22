@@ -16,6 +16,8 @@ public class PlayerData : MonoBehaviour
     public float atkSPD = 1;
     public float atk = 1;
     public int skillPoints = 0;
+    public bool biggerBullet;
+    public bool burstFire;
 
     public List<int> unlockedSkillSlots = new();
     public List<int> chosenBranches = new();
@@ -52,6 +54,8 @@ public class PlayerData : MonoBehaviour
         atkSPD = stats.atkSPD;
         atk = stats.atk;
         skillPoints = stats.skillPoints;
+        biggerBullet = stats.biggerBullets;
+        burstFire = stats.burstFire;
 
         Debug.Log("Saved stats from Player");
     }
@@ -69,6 +73,8 @@ public class PlayerData : MonoBehaviour
         stats.atkSPD = atkSPD;
         stats.atk = atk;
         stats.skillPoints = skillPoints;
+        stats.biggerBullets = biggerBullet;
+        stats.burstFire = burstFire;
 
         Debug.Log("Loaded stats to Player");
     }
@@ -83,7 +89,7 @@ public class PlayerData : MonoBehaviour
         moveSpeed = 1;
         atkSPD = 1;
         atk = 1;
-
+        biggerBullet = false;
         Debug.Log("Reset the stats");
     }
 

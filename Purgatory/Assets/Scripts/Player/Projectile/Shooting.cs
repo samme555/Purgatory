@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 
@@ -6,73 +7,76 @@ public class Shooting : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public Transform firePoint;
     public GameObject projectilePrefab;
-    private Movement playerMovement;
-
+  
+    
     public PlayerStats playerStats;
    
     public float attackSpeed = 1f;
     public float bulletForce = 20f;
     private float nextFireTime = 0f;
-  
 
+    public bool biggerBulletApplied = false;
+    public bool burstFireApplied = false;
+   
     // Update is called once per frame
     void Update()
     {
-        projectilePrefab.transform.localScale = Vector3.one;
-        if (playerStats.biggerBullets)
-        {
-            attackSpeed = playerStats.atkSPD / 2;
-            playerStats.atk *= 2;
-            projectilePrefab.transform.localScale = new Vector3(2, 2, 0);
+        
+        attackSpeed = playerStats.atkSPD;
+        if (!playerStats.biggerBullets) 
+            projectilePrefab.transform.localScale = Vector3.one;
+        if (playerStats.biggerBullets && !biggerBulletApplied)
+        { 
+            ApplyBiggerBulletPowerUp();
+        }
+        if (playerStats.burstFire && !burstFireApplied) 
+        { 
+            ApplyBurstFirePowerUp();
         }
         
         
         
+     
+        
         if (Input.GetButtonDown("Fire1") && Time.time >= nextFireTime) 
         {
-            Shoot();
-            nextFireTime = Time.time + (1f / attackSpeed);
+
+            if (playerStats.burstFire)
+            {
+                StartCoroutine(BurstFire());
+                nextFireTime = Time.time + (1f / attackSpeed);
+            }
+            else 
+            {
+                Shoot();
+                nextFireTime = Time.time + (1f / attackSpeed);
+            }
             
         }
     }
 
-    
+    void ApplyBiggerBulletPowerUp()
+    {
+        playerStats.atk *= 2;
+        playerStats.atkSPD /= 2;
+        projectilePrefab.transform.localScale *= 2;
+        biggerBulletApplied = true;
+    }
+
+    void ApplyBurstFirePowerUp() 
+    {
+        playerStats.atk /= 2;
+        burstFireApplied = true;
+    }
     void Shoot() 
     {
-        if (playerMovement == null) 
-        { 
-            playerMovement = GetComponent<Movement>();
-        }
-        
-        Vector2 firePointDirection = playerMovement.inputDirection;
-
-        if (firePointDirection.sqrMagnitude > 0.01f)
-        {
-            if (firePointDirection == new Vector2(0f, 1f)) 
-            {
-                firePoint.localPosition = new Vector2(0f, 0.08f);
-            }
-            if (firePointDirection == new Vector2(1f, 0f)) 
-            {
-                firePoint.localPosition = new Vector2(0.08f, -0.08f);
-            }
-            if (firePointDirection == new Vector2(0f, -1f)) 
-            {
-                firePoint.localPosition = new Vector2(0f, -0.08f);
-            }
-            if (firePointDirection == new Vector2(-1f, 0f))
-            {
-                firePoint.localPosition = new Vector2(-0.08f, -0.08f);
-            }
-        }
-
         
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePosition.z = 0f;
 
         Vector2 direction = (mousePosition - firePoint.position).normalized;
 
-
+        firePoint.localPosition = new Vector2(0,-0.05f) + (direction * 0.1f);
 
         GameObject bullet = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
         Collisions collisionScript = bullet.GetComponent<Collisions>();
@@ -97,5 +101,12 @@ public class Shooting : MonoBehaviour
 
     }
 
-    
+    private IEnumerator BurstFire()
+    {
+        for (int i = 0; i < 3; i++) 
+        {
+            Shoot();
+            yield return new WaitForSeconds(0.2f);
+        }
+    }
 }

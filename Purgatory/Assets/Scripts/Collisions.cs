@@ -36,7 +36,7 @@ public class Collisions : MonoBehaviour
             {
                 var crit = Random.Range((int)0f, (int)10f);
                 Debug.Log(crit);
-                if (crit <= critChance)
+                if (crit <= critChance && critChance > 0)
                 {
                     stats.TakeDamage(damage * critDMG);
                 }

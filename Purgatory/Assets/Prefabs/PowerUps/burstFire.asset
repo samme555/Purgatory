@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ed2441639cd16c048a5b841b3e5347f0, type: 3}
-  m_Name: majorTEST3
+  m_Name: burstFire
   m_EditorClassIdentifier: 
   powerUpImage: {fileID: 945694678, guid: e519c71c397e7e8439d5a97d89bac15e, type: 3}
   powerUpText: burstFire
   effectType: 6
-  effectValue: 1
+  effectValue: 0
   isMajor: 1
