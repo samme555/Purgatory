@@ -21,7 +21,7 @@ public class RoomManager : MonoBehaviour
     private Vector2Int bossRoomIndex;
 
 
-    public List<GameObject> roomObjects = new List<GameObject> ();
+    private List<GameObject> roomObjects = new List<GameObject> ();
 
     private Queue<Vector2Int> roomQueue = new Queue<Vector2Int> ();
 
