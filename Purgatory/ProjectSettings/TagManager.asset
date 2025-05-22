@@ -37,13 +37,13 @@ TagManager:
   - 
   - 
   - 
+  - Teleport Target
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Enemy Hitbox
+  - Enemy Physics
   m_SortingLayers:
   - name: Default
     uniqueID: 0

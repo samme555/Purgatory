@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 3342812566965293836}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.39, y: 0.09, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -93,6 +93,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destructionEffect: {fileID: 0}
+  replacementPrefab: {fileID: 436890450855020390, guid: 5d0555dd874e00c46916b8b8ac0fe840, type: 3}
+  dropProbability: 0.1
 --- !u!1 &7560033420067503659
 GameObject:
   m_ObjectHideFlags: 0

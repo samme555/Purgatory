@@ -12,10 +12,11 @@ public class PlayerStats : MonoBehaviour
     //level
     public int level;
     //amount of XP needed to level up
-    public float xpToNextLevel;
+    public float xpToNextLevel = 50;
 
     //visual image of the xp
     public Image xpBar;
+    public int skillPoints;
 
     //player health
     public int hp;
@@ -76,11 +77,13 @@ public class PlayerStats : MonoBehaviour
     {
         level++;
         currentXP -= xpToNextLevel;
-        xpToNextLevel = Mathf.RoundToInt(xpToNextLevel * 1.2f);
+        xpToNextLevel = Mathf.RoundToInt(xpToNextLevel * 1.1f);
 
         PlayerData.instance.SaveFrom(this);
 
         GameManager.instance.ChangeState(GameManager.GameState.powerUpSelection);
+
+        skillPoints += 1;
     }
 
     private void Update()
@@ -88,7 +91,7 @@ public class PlayerStats : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.L)) 
         {
-            AddXP(100);
+            AddXP(15);
 
             PlayerData.instance.SaveFrom(this);
         }

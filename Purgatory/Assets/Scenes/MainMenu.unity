@@ -1786,7 +1786,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 449283440}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: Play
+        m_MethodName: Lobby
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2037,7 +2037,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentXP: 0
   level: 1
-  xpToNextLevel: 100
+  xpToNextLevel: 50
   hp: 3
   critCH: 0
   critDMG: 2
@@ -2116,7 +2116,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: PLAY
+  m_text: Play
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bea8a598e06034546b6d8da5cb56b63e, type: 2}
   m_sharedMaterial: {fileID: -6094069561892073006, guid: bea8a598e06034546b6d8da5cb56b63e, type: 2}

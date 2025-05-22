@@ -111,7 +111,7 @@ public class PowerUpManager : MonoBehaviour
         }
         else 
         { 
-            availablePowerUps = availablePowerUps.FindAll(p => p.isMajor = false);
+            availablePowerUps = availablePowerUps.FindAll(p => p.isMajor == false);
         }
 
         if (availablePowerUps.Count < 3) 

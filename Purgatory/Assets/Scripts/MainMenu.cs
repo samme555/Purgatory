@@ -3,9 +3,25 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public void Lobby()
+    {
+        Debug.Log("Loading scene: lobby");
+        SceneManager.LoadScene("Lobby");
+    }
+
     public void Play()
     {
         SceneManager.LoadScene(1);
+    }
+
+    public void Menu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void Upgrades()
+    {
+        SceneManager.LoadScene("Upgrades");
     }
 
     public void Quit()
