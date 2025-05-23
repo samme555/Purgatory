@@ -4,11 +4,13 @@ using UnityEngine;
 public class BossStats : EnemyStats
 {
     private Animator animator;
+    private SpriteRenderer spriteRenderer;
     private bool isDying = false;
 
     public new void Start()
     {
         base.Start();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();        
         animator = GetComponent<Animator>();
         UpdateHealthBar();
     }
@@ -17,6 +19,18 @@ public class BossStats : EnemyStats
     {
         if (isDying) return;
         base.TakeDamage(damage);
+
+        if (spriteRenderer != null && !isDying)
+            StartCoroutine(FlashWhite());
+    }
+
+    private IEnumerator FlashWhite()
+    {
+        Color originalColor = spriteRenderer.color;
+
+        spriteRenderer.color = new Color(0.3f, 0f, 0f, 1f);
+        yield return new WaitForSeconds(0.08f);
+        spriteRenderer.color = originalColor; ;
     }
 
     protected override void Die()
