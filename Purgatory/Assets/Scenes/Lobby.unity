@@ -1124,6 +1124,7 @@ GameObject:
   - component: {fileID: 325304654}
   - component: {fileID: 325304653}
   - component: {fileID: 325304652}
+  - component: {fileID: 325304655}
   m_Layer: 5
   m_Name: OptionsButton
   m_TagString: Untagged
@@ -1269,6 +1270,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 325304650}
   m_CullTransparentMesh: 1
+--- !u!114 &325304655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325304650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5f0cb2f88d8f8349b9bdf7f8eee8a4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 325304652}
+  buttonClickClip: {fileID: 8300000, guid: 55d836bc4c84a9c4ca65f899de37428c, type: 3}
 --- !u!1 &335893510
 GameObject:
   m_ObjectHideFlags: 0
@@ -1281,6 +1296,7 @@ GameObject:
   - component: {fileID: 335893514}
   - component: {fileID: 335893513}
   - component: {fileID: 335893512}
+  - component: {fileID: 335893515}
   m_Layer: 5
   m_Name: StartButton
   m_TagString: Untagged
@@ -1402,6 +1418,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 335893510}
   m_CullTransparentMesh: 1
+--- !u!114 &335893515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335893510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5f0cb2f88d8f8349b9bdf7f8eee8a4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 335893512}
+  buttonClickClip: {fileID: 8300000, guid: 55d836bc4c84a9c4ca65f899de37428c, type: 3}
 --- !u!1 &344385055
 GameObject:
   m_ObjectHideFlags: 0
@@ -2476,6 +2506,7 @@ GameObject:
   - component: {fileID: 1227405229}
   - component: {fileID: 1227405228}
   - component: {fileID: 1227405227}
+  - component: {fileID: 1227405230}
   m_Layer: 5
   m_Name: BackButton
   m_TagString: Untagged
@@ -2571,18 +2602,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1662660994}
-        m_TargetAssemblyTypeName: VolumeSlider, Assembly-CSharp
-        m_MethodName: ChangeVolume
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1227405228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2621,6 +2640,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1227405225}
   m_CullTransparentMesh: 1
+--- !u!114 &1227405230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227405225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5f0cb2f88d8f8349b9bdf7f8eee8a4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 1227405227}
+  buttonClickClip: {fileID: 8300000, guid: 55d836bc4c84a9c4ca65f899de37428c, type: 3}
 --- !u!1 &1310048258
 GameObject:
   m_ObjectHideFlags: 0
@@ -3748,6 +3781,7 @@ GameObject:
   - component: {fileID: 1930239755}
   - component: {fileID: 1930239754}
   - component: {fileID: 1930239753}
+  - component: {fileID: 1930239756}
   m_Layer: 5
   m_Name: BackButton
   m_TagString: Untagged
@@ -3869,6 +3903,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1930239751}
   m_CullTransparentMesh: 1
+--- !u!114 &1930239756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930239751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5f0cb2f88d8f8349b9bdf7f8eee8a4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 1930239753}
+  buttonClickClip: {fileID: 8300000, guid: 55d836bc4c84a9c4ca65f899de37428c, type: 3}
 --- !u!1 &1950176959
 GameObject:
   m_ObjectHideFlags: 0
@@ -4309,6 +4357,7 @@ GameObject:
   - component: {fileID: 2101146762}
   - component: {fileID: 2101146761}
   - component: {fileID: 2101146760}
+  - component: {fileID: 2101146763}
   m_Layer: 5
   m_Name: UpgradesButton
   m_TagString: Untagged
@@ -4430,6 +4479,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2101146758}
   m_CullTransparentMesh: 1
+--- !u!114 &2101146763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2101146758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5f0cb2f88d8f8349b9bdf7f8eee8a4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 2101146760}
+  buttonClickClip: {fileID: 8300000, guid: 55d836bc4c84a9c4ca65f899de37428c, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

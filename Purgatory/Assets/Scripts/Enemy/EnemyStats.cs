@@ -11,6 +11,7 @@ public class EnemyStats : MonoBehaviour
 
     public bool orc;
     public AudioClip[] orcDamageClips;
+    public AudioClip[] orcDeathClips;
     
     
     public void Start()
@@ -21,8 +22,6 @@ public class EnemyStats : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        if (orc && orcDamageClips.Length > 0) SoundFXManager.instance.PlayRandomSoundFXClip(orcDamageClips, transform, 1f);
-        Debug.Log("hej " + orcDamageClips.Length);
         health -= damage;
 
         Debug.Log($"damage dealt:" + damage);
@@ -32,7 +31,11 @@ public class EnemyStats : MonoBehaviour
         if (health <= 0)
         {
             Die();
+
+            return;
         }
+
+        if (orc && orcDamageClips.Length > 0) SoundFXManager.instance?.PlayRandomSoundFXClip(orcDamageClips, transform, 1f);
     }
 
     public void UpdateHealthBar()
@@ -42,6 +45,7 @@ public class EnemyStats : MonoBehaviour
 
     private void Die()
     {
+        if (orc && orcDeathClips.Length > 0) SoundFXManager.instance.PlayRandomSoundFXClip(orcDeathClips, transform, 1f);
         GameObject player = GameObject.FindWithTag("Player");
 
         if (player != null)
