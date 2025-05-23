@@ -11,6 +11,9 @@ TagManager:
   - Boss
   - AdvanceLevel
   - ShootDestructible
+  - Master
+  - Music
+  - SFX
   layers:
   - Default
   - TransparentFX

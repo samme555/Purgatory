@@ -8,6 +8,9 @@ public class EnemyStats : MonoBehaviour
     float maxHealth;
     public Image healthBar;
     public int xpReward = 15;
+
+    public bool orc;
+    public AudioClip[] orcDamageClips;
     
     
     public void Start()
@@ -18,7 +21,8 @@ public class EnemyStats : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        
+        if (orc && orcDamageClips.Length > 0) SoundFXManager.instance.PlayRandomSoundFXClip(orcDamageClips, transform, 1f);
+        Debug.Log("hej " + orcDamageClips.Length);
         health -= damage;
 
         Debug.Log($"damage dealt:" + damage);
