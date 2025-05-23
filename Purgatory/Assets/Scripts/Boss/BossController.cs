@@ -15,10 +15,12 @@ public class BossController : MonoBehaviour
 
     public Image healthBar;
     private EnemyStats stats;
+    private Animator animator;
 
     private void Start()
     {
         stats = GetComponent<BossStats>();
+        animator = GetComponent<Animator>();
 
         if (stats == null)
         {
@@ -51,6 +53,7 @@ public class BossController : MonoBehaviour
     private IEnumerator WaveAttack()
     {
         canAttack = false;
+        
 
         if (stats.health == 20)
         {
@@ -68,6 +71,11 @@ public class BossController : MonoBehaviour
             Debug.Log("No player found!");
             yield break;
         }
+
+        if (animator != null)
+            animator.SetTrigger("Attack");
+
+        yield return new WaitForSeconds(0.15f);
 
         Vector2 target = (player.transform.position - transform.position).normalized;
         float baseAngle = Mathf.Atan2(target.y, target.x) * Mathf.Rad2Deg;
