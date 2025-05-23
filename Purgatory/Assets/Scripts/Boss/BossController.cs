@@ -18,11 +18,11 @@ public class BossController : MonoBehaviour
 
     private void Start()
     {
-        stats = GetComponent<EnemyStats>();
+        stats = GetComponent<BossStats>();
 
         if (stats == null)
         {
-            Debug.LogError("EnemyStats not found on boss!");
+            Debug.LogError("BossStats not found on boss!");
             enabled = false;
             return;
         }

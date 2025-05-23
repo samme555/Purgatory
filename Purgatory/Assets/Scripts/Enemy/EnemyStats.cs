@@ -16,7 +16,7 @@ public class EnemyStats : MonoBehaviour
         UpdateHealthBar();
     }
 
-    public void TakeDamage(float damage)
+    public virtual void TakeDamage(float damage)
     {
         
         health -= damage;
@@ -36,7 +36,7 @@ public class EnemyStats : MonoBehaviour
         healthBar.fillAmount = health / maxHealth;
     }
 
-    private void Die()
+    protected virtual void Die()
     {
         GameObject player = GameObject.FindWithTag("Player");
 
