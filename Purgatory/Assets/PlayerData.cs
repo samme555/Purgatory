@@ -9,12 +9,12 @@ public class PlayerData : MonoBehaviour
     public float currentXP = 0;
     public int level = 1;
     public float xpToNextLevel = 50;
-    public int hp = 10;
+    public int hp = 100;
     public float critCH = 0;
     public float critDMG = 2;
     public float moveSpeed = 1;
     public float atkSPD = 1;
-    public float atk = 1;
+    public float atk = 10;
     public int skillPoints = 0;
 
     public List<int> unlockedSkillSlots = new();
@@ -77,12 +77,12 @@ public class PlayerData : MonoBehaviour
         currentXP = 0;
         level = 1;
         xpToNextLevel = 100;
-        hp = 10;
+        hp = 100;
         critCH = 0;
         critDMG = 2;
         moveSpeed = 1;
         atkSPD = 1;
-        atk = 1;
+        atk = 10;
 
         Debug.Log("Reset the stats");
     }

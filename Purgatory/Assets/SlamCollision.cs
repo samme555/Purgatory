@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SlamCollision : MonoBehaviour
 {
-    public int damage = 2;
+    public int damage = 15;
     public float duration = 0.2f;
 
     private void OnTriggerEnter2D(Collider2D other)

@@ -20,8 +20,11 @@ public class PlayerStats : MonoBehaviour
     public Image xpBar;
     public int skillPoints;
 
+    public Image healthBar;
+
     //player health
     public int hp;
+    public float maxHp;
     //chance to critically strike, critical strike damage affected by critDMG
     public float critCH;
     //damage multiplier for critical hits
@@ -43,6 +46,8 @@ public class PlayerStats : MonoBehaviour
 
     void Start()
     {
+        maxHp = hp;
+
         spriteRenderer = GetComponent<SpriteRenderer>();
         
         // Ladda spelarens tidigare stats från PlayerData (om det finns)
@@ -53,13 +58,13 @@ public class PlayerStats : MonoBehaviour
 
         originalMoveSpeed = moveSpeed;
 
-        HealthManager hm = FindFirstObjectByType<HealthManager>();
-        if (hm != null)
-        {
-            hm.DrawHearts();
-        }
+        TryAssignHealthBar();
+        UpdateHealthBar();
 
         UpdateXPBar();
+
+        Debug.Log($"[PlayerStats Start] hp = {hp}, maxHp = {maxHp}");
+        Debug.Log($"[PlayerData] Loaded hp = {PlayerData.instance.hp}");
     }
 
     public void AddXP(int xp) 
@@ -80,6 +85,18 @@ public class PlayerStats : MonoBehaviour
     {
         xpBar.fillAmount = currentXP / xpToNextLevel;
         Debug.Log("Filled the XP bar!" + " " + currentXP + " " + xpToNextLevel + " " + currentXP / xpToNextLevel + " " + xpBar.fillAmount);
+    }
+
+    public void UpdateHealthBar()
+    {
+        if (healthBar == null)
+        {
+            Debug.LogWarning("healthBar is NULL, cannot update!");
+            return;
+        }
+
+        Debug.Log($"[UpdateHealthBar] hp: {hp}, maxHp: {maxHp}, fill: {(float)hp / maxHp}");
+        healthBar.fillAmount = (float)hp / maxHp;
     }
 
     void LevelUp() 
@@ -137,6 +154,8 @@ public class PlayerStats : MonoBehaviour
                 camShake.TriggerShake(0.10f, 0.2f);
             }
 
+            UpdateHealthBar();
+
         }
         
 
@@ -152,7 +171,9 @@ public class PlayerStats : MonoBehaviour
     {
         StartCoroutine(DamageFlash(Color.green));
         hp -= damage;
-        
+
+        UpdateHealthBar();
+
         if (hp <= 0)
         {
             Die();
@@ -202,6 +223,31 @@ public class PlayerStats : MonoBehaviour
         }
 
         isPoisoned = false;
+    }
+
+    void TryAssignHealthBar()
+    {
+        if (healthBar == null || !healthBar.gameObject.activeInHierarchy)
+        {
+            GameObject healthUI = GameObject.Find("HealthUI"); // The parent GameObject of the bar in the scene
+            if (healthUI != null)
+            {
+                Transform fill = healthUI.transform.Find("Health"); // The actual red image
+                if (fill != null)
+                {
+                    healthBar = fill.GetComponent<Image>();
+                    Debug.Log("Re-linked health bar to: " + healthBar.name);
+                }
+                else
+                {
+                    Debug.LogWarning("Could not find 'Health' inside 'HealthUI'.");
+                }
+            }
+            else
+            {
+                Debug.LogWarning("Could not find 'HealthUI' GameObject.");
+            }
+        }
     }
 
 }

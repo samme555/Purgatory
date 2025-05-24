@@ -7,7 +7,7 @@ public class ReaperProjectile : MonoBehaviour
     public float moveSpeed = 5f;
     public float delayBeforeMoving = 0.5f;
 
-    private int damage = 1;
+    public int damage = 9;
     private Transform player;
 
     private float lifeTime = 3f;

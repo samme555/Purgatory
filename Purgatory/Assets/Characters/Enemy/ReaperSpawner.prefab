@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f960e28d727cfca45b4ea3ba77cd426f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 165
   healthBar: {fileID: 7001809079079892458}
   xpReward: 25
 --- !u!1 &5158030881444738524

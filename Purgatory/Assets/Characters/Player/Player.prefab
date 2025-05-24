@@ -294,16 +294,19 @@ MonoBehaviour:
   xpToNextLevel: 50
   xpBar: {fileID: 0}
   skillPoints: 1
-  hp: 6
+  healthBar: {fileID: 2759436740125950768, guid: 8ec279757a3a3f74489bdf2000c38ee8, type: 3}
+  hp: 100
+  maxHp: 0
   critCH: 0
   critDMG: 2
   moveSpeed: 1
   atkSPD: 1
-  atk: 1
+  atk: 10
   damageImmunity: 0
   immunityTimer: 0
   immunityDuration: 0.7
   timer: 1
+  isPoisoned: 0
 --- !u!1 &6069326298474498582
 GameObject:
   m_ObjectHideFlags: 0

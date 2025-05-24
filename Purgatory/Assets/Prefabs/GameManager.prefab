@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5497636827396323135}
   - component: {fileID: 8380580861498416215}
   - component: {fileID: 9054433518389595947}
-  - component: {fileID: 8765837961099390189}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -59,20 +58,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 0}
---- !u!114 &8765837961099390189
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 287607713106886573}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a268d9a0183fec9489e8f87f45547529, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerStats: {fileID: 0}
-  heartPrefab: {fileID: 8358818611274634659, guid: 1423de939495cc54f95a92e989c3dd27, type: 3}
-  heartsParent: {fileID: 0}
-  fullHeartSprite: {fileID: 3980140487562858156, guid: ba46b81546743ae4d87727eac91b9c9b, type: 3}
-  emptyHeartSprite: {fileID: 7952763614370864699, guid: ba46b81546743ae4d87727eac91b9c9b, type: 3}
