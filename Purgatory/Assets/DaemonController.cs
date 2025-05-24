@@ -1,10 +1,11 @@
 using System.Collections;
+using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 
 public class DaemonController : MonoBehaviour
 {
     public Transform player;
-    public int damage = 1;
+    private EnemyStats stats;
 
     [Header("Movement Settings")]
     public float speed = 2f;
@@ -31,6 +32,10 @@ public class DaemonController : MonoBehaviour
     private Vector2 dashDirection;
     private float dashTimer = 0f;
 
+    private void Start()
+    {
+        stats = GetComponent<EnemyStats>();
+    }
 
     private void Update()
     {
@@ -99,6 +104,15 @@ public class DaemonController : MonoBehaviour
 
     void StartDashWindup()
     {
+        if (stats.health <= 200)
+        {
+            actionInterval = 1.5f;
+        }
+        if (stats.health <= 125)
+        {
+            actionInterval = 1f;
+        }
+
         dashDirection = (player.position - transform.position).normalized;
         windupTimer = 0f;
         isWindingUp = true;
@@ -178,18 +192,5 @@ public class DaemonController : MonoBehaviour
 
         if (dashIndicatorInstance != null)
             dashIndicatorInstance.SetActive(false);
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        bool isPlayer = collision.CompareTag("Player");
-
-        if (collision.CompareTag("Player"))
-        {
-            PlayerStats hp = collision.GetComponent<PlayerStats>();
-            hp.TakeDamage(damage);
-            Debug.Log("collided with player");
-        }
-        
     }
 }

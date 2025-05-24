@@ -7,7 +7,7 @@ public class BossController : MonoBehaviour
 
     public GameObject bossProjectile;
     public int projectileCount = 5;
-    public float waveCooldown = 3f;
+    public float waveCooldown = 2f;
     public float spreadAngle = 90f;
 
     private bool canAttack = true;
@@ -52,13 +52,13 @@ public class BossController : MonoBehaviour
     {
         canAttack = false;
 
-        if (stats.health == 20)
-        {
-            waveCooldown = 2f;
-        }
-        else if (stats.health == 10)
+        if (stats.health <= 165)
         {
             waveCooldown = 1f;
+        }
+        if (stats.health <= 82)
+        {
+            waveCooldown = 0.8f;
         }
 
             GameObject player = GameObject.FindGameObjectWithTag("Player");
