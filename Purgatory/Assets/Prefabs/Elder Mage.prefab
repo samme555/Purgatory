@@ -244,8 +244,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e397ab8281727c49afd59dbce970fdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
-  xpReward: 50
   bossProjectile: {fileID: 6243859482360521023, guid: b342a9deee1e8344080801bff9816e6c, type: 3}
   projectileCount: 5
   waveCooldown: 3
@@ -285,7 +283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f960e28d727cfca45b4ea3ba77cd426f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
+  health: 250
   healthBar: {fileID: 7340124213654659798}
   xpReward: 15
 --- !u!1 &8236251768553215320

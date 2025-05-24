@@ -358,6 +358,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2621821970028923188, guid: e011c842c4c65154d8f695596fa82111, type: 3}
+  damage: 15
   speed: 0.4
   dashSpeed: 15
   dashDuration: 0.15
@@ -377,7 +378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f960e28d727cfca45b4ea3ba77cd426f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 25
+  health: 250
   healthBar: {fileID: 7843147679572712084}
   xpReward: 75
 --- !u!70 &3869936988277604408
