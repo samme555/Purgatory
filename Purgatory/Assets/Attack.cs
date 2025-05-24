@@ -10,6 +10,7 @@ public class Attack : MonoBehaviour
     private int damage = 1;
 
     private float cooldownTimer;
+    private Animator anim;
 
     void Start()
     {
@@ -20,7 +21,7 @@ public class Attack : MonoBehaviour
                 player = obj.transform;
         }
 
-        
+        anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -39,6 +40,8 @@ public class Attack : MonoBehaviour
 
     void SummonScythes()
     {
+        anim?.SetTrigger("Attack");
+
         Vector2 left = transform.position + Vector3.left * scytheOffset;
         Vector2 right = transform.position + Vector3.right * scytheOffset;
 
