@@ -21,21 +21,20 @@ public class ToolTipManager : MonoBehaviour
 
     public void ShowToolTip(SkillUpgrade skillUpgrade, RectTransform target)
     {
-        toolTipPanel.SetActive(true);
-        toolTipText.text = GenerateUpgradeToolTip(skillUpgrade);
+        toolTipPanel.SetActive(true); //enable tooltip gameobject
+        toolTipText.text = GenerateUpgradeToolTip(skillUpgrade); //fills it with generated text
 
         // Get the position of the slot in local canvas space
         Vector2 localPoint;
-        RectTransformUtility.ScreenPointToLocalPointInRectangle(
+        RectTransformUtility.ScreenPointToLocalPointInRectangle( //converts screen point into local point inside the UI container (the slot in this case)
             toolTipPanel.transform.parent as RectTransform,
-            RectTransformUtility.WorldToScreenPoint(null, target.position),
-            null,
+            RectTransformUtility.WorldToScreenPoint(null, target.position), //converts world pos of target into screen space coordinate
+            null, //uses dfault camera (works for screen space - overlay canvas)
             out localPoint
         );
 
-        // Apply an offset so it appears to the right of the slot
-        Vector2 offset = new Vector2(200f, 0f);
-        panelRectTransform.anchoredPosition = localPoint + offset;
+        Vector2 offset = new Vector2(200f, 0f); //offset to place it in whatever position you want.
+        panelRectTransform.anchoredPosition = localPoint + offset; //apply offset to local slot point coordinates.
     }
 
     public void HideToolTip()

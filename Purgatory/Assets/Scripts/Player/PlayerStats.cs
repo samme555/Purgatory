@@ -41,6 +41,11 @@ public class PlayerStats : MonoBehaviour
     public float immunityDuration = 0.3f;
     public float timer = 0.3f;
     public bool isPoisoned = false; //damage over time
+    [SerializeField] private bool isBurning = false;
+    [SerializeField] private float burnTimer = 0f;
+    private float burnInterval = 2f;
+    private Color burnColor = new Color(1f, 0.5f, 0f);
+    private int burnDamage = 0; //set when burn is applied
 
     private SpriteRenderer spriteRenderer;
 
@@ -167,9 +172,9 @@ public class PlayerStats : MonoBehaviour
         PlayerData.instance.SaveFrom(this);
     }
 
-    public void TakePoisonDamage(int damage)
+    public void TakeDotDamage(int damage, Color color) //damage over time method, ignores immunity
     {
-        StartCoroutine(DamageFlash(Color.green));
+        StartCoroutine(DamageFlash(color));
         hp -= damage;
 
         UpdateHealthBar();
@@ -218,11 +223,41 @@ public class PlayerStats : MonoBehaviour
 
         for (int i = 0; i < numberOfTicks; i++)
         {
-            TakePoisonDamage(damagePerTick);
+            TakeDotDamage(damagePerTick, Color.green);
             yield return new WaitForSeconds(interval);
         }
 
         isPoisoned = false;
+    }
+    
+    public void ApplyBurn(int damagePerTick, float duration)
+    {
+        burnTimer = duration;
+        burnDamage = damagePerTick;
+        Debug.Log("[PlayerStats] ApplyBurn() CALLED");
+
+        if (!isBurning)
+        {
+            StartCoroutine(BurnRoutine());
+        }
+        else
+        {
+            Debug.Log("burn duration refreshed!");
+        }
+    }
+
+    private IEnumerator BurnRoutine()
+    {
+        isBurning = true;
+
+        while (burnTimer > 0f)
+        {
+            TakeDotDamage(burnDamage, burnColor);
+            yield return new WaitForSeconds(burnInterval);
+            burnTimer -= burnInterval;
+        }
+
+        isBurning = false;
     }
 
     void TryAssignHealthBar()
