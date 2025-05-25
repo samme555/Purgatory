@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
         { 
             ChangeState(GameState.powerUpSelection);
         }
-        if (Input.GetKey(KeyCode.M)) 
+        if (Input.GetKey(KeyCode.B)) 
         {
             ChangeState(GameState.majorPowerUpSelection);
         }

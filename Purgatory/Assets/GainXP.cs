@@ -9,7 +9,7 @@ public class GainXP : MonoBehaviour
         var stats = other.GetComponent<PlayerStats>();
         if (stats != null)
         {
-            stats.AddXP(15);
+            stats.AddXP(5);
         }
 
         Debug.Log("[GainXP] destroying " + name);
