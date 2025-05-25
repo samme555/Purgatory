@@ -80,7 +80,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_Sprite: {fileID: -3560852360957142242, guid: 6ce6d7ef79d6c5e40b312ebeaa96d2e9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -122,6 +122,9 @@ MonoBehaviour:
   health: 50
   healthBar: {fileID: 8783933556512912140}
   xpReward: 15
+  orc: 0
+  orcDamageClips: []
+  orcDeathClips: []
 --- !u!70 &7756543316211349253
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

@@ -3,10 +3,12 @@ using UnityEngine;
 public class SkullController : MonoBehaviour
 {
     public Transform player;
-    public float speed = 3f;
-    public float rotationSpeed = 5f;
+    public float spiralSpeed = 2f;
+    public float approachSpeed = 1f;
 
-    private Vector2 moveDirection;
+    private float angle = 0f;
+    private float currentRadius;
+    private Vector2 directionToPlayer;
 
     private void Start()
     {
@@ -15,19 +17,22 @@ public class SkullController : MonoBehaviour
             player = GameObject.FindGameObjectWithTag("Player").transform;
         }
 
-        Vector2 toPlayer = (player.position - transform.position).normalized;
-        moveDirection = toPlayer;
+        Vector2 toPlayer = player.position - transform.position;
+        currentRadius = toPlayer.magnitude;
+
+        angle = Mathf.Atan2(toPlayer.x, toPlayer.y);
     }
 
-    void Update()
+    private void Update()
     {
         if (player == null) return;
 
-        Vector2 toPlayer = (player.position - transform.position).normalized;
+        angle += spiralSpeed * Time.deltaTime;
 
-        moveDirection = Vector2.Lerp(moveDirection, toPlayer, rotationSpeed * Time.deltaTime);
-        moveDirection.Normalize();
+        currentRadius -= approachSpeed * Time.deltaTime;
+        currentRadius = Mathf.Max(0.2f, currentRadius);
 
-        transform.position += (Vector3)(moveDirection * speed * Time.deltaTime);
+        Vector2 offset = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * currentRadius;
+        transform.position = (Vector2)player.position - offset;
     }
 }
