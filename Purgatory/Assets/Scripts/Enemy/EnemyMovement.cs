@@ -29,6 +29,8 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private Vector2 hitOffsetSide = new Vector2(0.02f, 0f);
     [SerializeField] private float hitZoneRadius = 0.3f;
 
+    public AudioClip orcAttackClip;
+
 
     private Vector2 direction;
 
@@ -149,6 +151,7 @@ public class EnemyMovement : MonoBehaviour
 
     private IEnumerator PerformAttack(GameObject target)
     {
+        SoundFXManager.instance?.PlaySoundFXClip(orcAttackClip, transform, 1f);
         isAttacking = true;
         agent.isStopped = true;        
 
