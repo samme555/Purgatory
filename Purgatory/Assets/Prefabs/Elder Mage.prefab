@@ -334,7 +334,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bossProjectile: {fileID: 6243859482360521023, guid: b342a9deee1e8344080801bff9816e6c, type: 3}
   projectileCount: 5
-  waveCooldown: 3
+  waveCooldown: 2
   spreadAngle: 90
   healthBar: {fileID: 7340124213654659798}
 --- !u!95 &5896048109276166189
@@ -371,7 +371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33cd6fa393605ee4a82250e791dd05bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 12
+  health: 250
   healthBar: {fileID: 7340124213654659798}
   xpReward: 15
 --- !u!1 &8236251768553215320

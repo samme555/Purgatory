@@ -1,6 +1,7 @@
 using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 
@@ -9,6 +10,7 @@ public class PlayerStats : MonoBehaviour
 {
     //current amount of XP
     public float currentXP;
+    private float originalMoveSpeed;
     //level
     public int level;
     //amount of XP needed to level up
@@ -18,8 +20,11 @@ public class PlayerStats : MonoBehaviour
     public Image xpBar;
     public int skillPoints;
 
+    public Image healthBar;
+
     //player health
     public int hp;
+    public float maxHp;
     //chance to critically strike, critical strike damage affected by critDMG
     public float critCH;
     //damage multiplier for critical hits
@@ -38,11 +43,19 @@ public class PlayerStats : MonoBehaviour
     public float immunityTimer = 0f;
     public float immunityDuration = 0.3f;
     public float timer = 0.3f;
+    public bool isPoisoned = false; //damage over time
+    [SerializeField] private bool isBurning = false;
+    [SerializeField] private float burnTimer = 0f;
+    private float burnInterval = 2f;
+    private Color burnColor = new Color(1f, 0.5f, 0f);
+    private int burnDamage = 0; //set when burn is applied
 
     private SpriteRenderer spriteRenderer;
 
     void Start()
     {
+        maxHp = hp;
+
         spriteRenderer = GetComponent<SpriteRenderer>();
         
         // Ladda spelarens tidigare stats från PlayerData (om det finns)
@@ -51,7 +64,15 @@ public class PlayerStats : MonoBehaviour
             PlayerData.instance.LoadTo(this);
         }
 
+        originalMoveSpeed = moveSpeed;
+
+        TryAssignHealthBar();
+        UpdateHealthBar();
+
         UpdateXPBar();
+
+        Debug.Log($"[PlayerStats Start] hp = {hp}, maxHp = {maxHp}");
+        Debug.Log($"[PlayerData] Loaded hp = {PlayerData.instance.hp}");
     }
 
     public void AddXP(int xp) 
@@ -72,6 +93,18 @@ public class PlayerStats : MonoBehaviour
     {
         xpBar.fillAmount = currentXP / xpToNextLevel;
         Debug.Log("Filled the XP bar!" + " " + currentXP + " " + xpToNextLevel + " " + currentXP / xpToNextLevel + " " + xpBar.fillAmount);
+    }
+
+    public void UpdateHealthBar()
+    {
+        if (healthBar == null)
+        {
+            Debug.LogWarning("healthBar is NULL, cannot update!");
+            return;
+        }
+
+        Debug.Log($"[UpdateHealthBar] hp: {hp}, maxHp: {maxHp}, fill: {(float)hp / maxHp}");
+        healthBar.fillAmount = (float)hp / maxHp;
     }
 
     void LevelUp() 
@@ -120,7 +153,7 @@ public class PlayerStats : MonoBehaviour
             Debug.Log("Took damage, HP now: " + hp);
             
             damageImmunity = true;
-            StartCoroutine(FlashWhite());
+            StartCoroutine(DamageFlash(Color.red));
             immunityTimer = immunityDuration;
 
             CameraShake camShake = Camera.main.GetComponent<CameraShake>();
@@ -128,6 +161,8 @@ public class PlayerStats : MonoBehaviour
             {
                 camShake.TriggerShake(0.10f, 0.2f);
             }
+
+            UpdateHealthBar();
 
         }
         
@@ -140,13 +175,26 @@ public class PlayerStats : MonoBehaviour
         PlayerData.instance.SaveFrom(this);
     }
 
-    
+    public void TakeDotDamage(int damage, Color color) //damage over time method, ignores immunity
+    {
+        StartCoroutine(DamageFlash(color));
+        hp -= damage;
 
-    private IEnumerator FlashWhite(float duration = 0.2f)
+        UpdateHealthBar();
+
+        if (hp <= 0)
+        {
+            Die();
+        }
+
+        PlayerData.instance.SaveFrom(this);
+    }
+
+    private IEnumerator DamageFlash(Color flashColor, float duration = 0.2f)
     {
         if (spriteRenderer != null)
         {
-            spriteRenderer.color = Color.red;
+            spriteRenderer.color = flashColor;
 
             yield return new WaitForSeconds(duration);
 
@@ -154,11 +202,90 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
-
-
     public void Die()
     {
         Destroy(gameObject);
+    }
+
+    public void ApplyPoison(int damagePerTick, float interval, int numberOfTicks)
+    {
+        if (!isPoisoned)
+        {
+            StartCoroutine(PoisonRoutine(damagePerTick, interval, numberOfTicks));
+            StartCoroutine(DamageFlash(Color.green));
+            Debug.Log("applying poison");
+        }
+    }
+
+    public IEnumerator PoisonRoutine(int damagePerTick, float interval, int numberOfTicks)
+    {
+        isPoisoned = true;
+        Debug.Log("PLAYER POISONED");
+
+        yield return new WaitForSeconds(2f);
+
+        for (int i = 0; i < numberOfTicks; i++)
+        {
+            TakeDotDamage(damagePerTick, Color.green);
+            yield return new WaitForSeconds(interval);
+        }
+
+        isPoisoned = false;
+    }
+    
+    public void ApplyBurn(int damagePerTick, float duration)
+    {
+        burnTimer = duration;
+        burnDamage = damagePerTick;
+        Debug.Log("[PlayerStats] ApplyBurn() CALLED");
+
+        if (!isBurning)
+        {
+            StartCoroutine(BurnRoutine());
+        }
+        else
+        {
+            Debug.Log("burn duration refreshed!");
+        }
+    }
+
+    private IEnumerator BurnRoutine()
+    {
+        isBurning = true;
+
+        while (burnTimer > 0f)
+        {
+            TakeDotDamage(burnDamage, burnColor);
+            yield return new WaitForSeconds(burnInterval);
+            burnTimer -= burnInterval;
+        }
+
+        isBurning = false;
+    }
+
+    void TryAssignHealthBar()
+    {
+        if (healthBar == null || !healthBar.gameObject.activeInHierarchy)
+        {
+            GameObject healthUI = GameObject.Find("HealthUI"); // The parent GameObject of the bar in the scene
+            if (healthUI != null)
+            {
+                Transform fill = healthUI.transform.Find("Health"); // The actual red image
+                if (fill != null)
+                {
+                    healthBar = fill.GetComponent<Image>();
+                    Debug.Log("Re-linked health bar to: " + healthBar.name);
+                }
+                else
+                {
+                    Debug.LogWarning("Could not find 'Health' inside 'HealthUI'.");
+                }
+            }
+            else
+            {
+                Debug.LogWarning("Could not find 'HealthUI' GameObject.");
+            }
+        }
     }
 
 }

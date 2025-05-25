@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7342761319310410543}
   - component: {fileID: 5920297889217453101}
   - component: {fileID: 7219325694028249051}
+  - component: {fileID: 8356095718110115309}
   m_Layer: 5
   m_Name: SkillSlot
   m_TagString: Untagged
@@ -138,3 +139,15 @@ MonoBehaviour:
   isAvailable: 0
   incomingLines: []
   upgradeData: {fileID: 11400000, guid: d661b7b65d2ac2b4db1ff7c86ffe3b0b, type: 2}
+--- !u!114 &8356095718110115309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5936192013904363879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f940fb9e47bd934680d0c444d4f15fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -1,208 +1,235 @@
 fileFormatVersion: 2
-guid: 328daf6e78b5987439602a0f5befff6c
+guid: ac5b9c101dbd25c43a260e5035e88758
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6589529623761610413
-    second: Goblin_Thief_0
+      213: 8080388097954582422
+    second: Orc_Chief_0
   - first:
-      213: -2365943806681794446
-    second: Goblin_Thief_1
+      213: -2586975367195897462
+    second: Orc_Chief_1
   - first:
-      213: -5502197383058642756
-    second: Goblin_Thief_2
+      213: 5620359741553855300
+    second: Orc_Chief_2
   - first:
-      213: -9042535990127653715
-    second: Goblin_Thief_3
+      213: -2719268754033825874
+    second: Orc_Chief_3
   - first:
-      213: -2433314256359290850
-    second: Goblin_Thief_4
+      213: 214169513087692388
+    second: Orc_Chief_4
   - first:
-      213: 2520268174250653996
-    second: Goblin_Thief_5
+      213: 3125434048734341366
+    second: Orc_Chief_5
   - first:
-      213: -4098552879421618123
-    second: Goblin_Thief_6
+      213: 3307597160906421292
+    second: Orc_Chief_6
   - first:
-      213: 7097077990505547896
-    second: Goblin_Thief_7
+      213: 7891493278040307244
+    second: Orc_Chief_7
   - first:
-      213: -4923444939720022254
-    second: Goblin_Thief_8
+      213: 5814480468964860383
+    second: Orc_Chief_8
   - first:
-      213: -6696347017626845475
-    second: Goblin_Thief_9
+      213: 3562348413738950201
+    second: Orc_Chief_9
   - first:
-      213: -3837195962759815630
-    second: Goblin_Thief_10
+      213: -2089339013825428835
+    second: Orc_Chief_10
   - first:
-      213: -1983333083486579489
-    second: Goblin_Thief_11
+      213: 9023001053630954281
+    second: Orc_Chief_11
   - first:
-      213: 7159073303230633710
-    second: Goblin_Thief_12
+      213: -7580592059546668109
+    second: Orc_Chief_12
   - first:
-      213: -4206782070414937162
-    second: Goblin_Thief_13
+      213: 8525710396074964235
+    second: Orc_Chief_13
   - first:
-      213: -8745679108461498773
-    second: Goblin_Thief_14
+      213: 8097269507733758831
+    second: Orc_Chief_14
   - first:
-      213: 3656561366777742498
-    second: Goblin_Thief_15
+      213: 6068248920357429244
+    second: Orc_Chief_15
   - first:
-      213: 6073941061009693877
-    second: Goblin_Thief_16
+      213: -6565855816841163198
+    second: Orc_Chief_16
   - first:
-      213: 4727771510717487655
-    second: Goblin_Thief_17
+      213: -7794616122894836594
+    second: Orc_Chief_17
   - first:
-      213: -779346725443600853
-    second: Goblin_Thief_18
+      213: -3598748231547533269
+    second: Orc_Chief_18
   - first:
-      213: 6480995860064842575
-    second: Goblin_Thief_19
+      213: -4219022354754233358
+    second: Orc_Chief_19
   - first:
-      213: 4469006871780625425
-    second: Goblin_Thief_20
+      213: 3607955865521188150
+    second: Orc_Chief_20
   - first:
-      213: 2334569165674990858
-    second: Goblin_Thief_21
+      213: 8928405715923220161
+    second: Orc_Chief_21
   - first:
-      213: 3027386834337285769
-    second: Goblin_Thief_22
+      213: -339608831859106115
+    second: Orc_Chief_22
   - first:
-      213: 1446138542787282719
-    second: Goblin_Thief_23
+      213: 44002845061038258
+    second: Orc_Chief_23
   - first:
-      213: 1696299065634935419
-    second: Goblin_Thief_24
+      213: 6271589539083082708
+    second: Orc_Chief_24
   - first:
-      213: 4988702401381592850
-    second: Goblin_Thief_25
+      213: -8266510784325810313
+    second: Orc_Chief_25
   - first:
-      213: -4118471351954693482
-    second: Goblin_Thief_26
+      213: 8165216732378262571
+    second: Orc_Chief_26
   - first:
-      213: 596600847606931300
-    second: Goblin_Thief_27
+      213: -181623698491998326
+    second: Orc_Chief_27
   - first:
-      213: 3173469108873301543
-    second: Goblin_Thief_28
+      213: -1590127947253910989
+    second: Orc_Chief_28
   - first:
-      213: -7342242071657869457
-    second: Goblin_Thief_29
+      213: 5333778635661416286
+    second: Orc_Chief_29
   - first:
-      213: -3263522925380418664
-    second: Goblin_Thief_30
+      213: -640506333132801553
+    second: Orc_Chief_30
   - first:
-      213: -7333547613502622032
-    second: Goblin_Thief_31
+      213: -231055954531569042
+    second: Orc_Chief_31
   - first:
-      213: 4263192796536102268
-    second: Goblin_Thief_32
+      213: -4794313246067046518
+    second: Orc_Chief_32
   - first:
-      213: -2203771563044893118
-    second: Goblin_Thief_33
+      213: 478070286427664935
+    second: Orc_Chief_33
   - first:
-      213: 3653925199712688984
-    second: Goblin_Thief_34
+      213: -3526247728188954294
+    second: Orc_Chief_34
   - first:
-      213: -4411941798023901828
-    second: Goblin_Thief_35
+      213: 5161509104948255860
+    second: Orc_Chief_35
   - first:
-      213: 8418690776173431927
-    second: Goblin_Thief_36
+      213: -4223533696714040679
+    second: Orc_Chief_36
   - first:
-      213: 1803938212698807003
-    second: Goblin_Thief_37
+      213: 5470224596546997169
+    second: Orc_Chief_37
   - first:
-      213: 2876361497163039414
-    second: Goblin_Thief_38
+      213: 4609158920258006589
+    second: Orc_Chief_38
   - first:
-      213: -205196178522858472
-    second: Goblin_Thief_39
+      213: -4464334616041826826
+    second: Orc_Chief_39
   - first:
-      213: 8849064772522585153
-    second: Goblin_Thief_40
+      213: -7457456132721751628
+    second: Orc_Chief_40
   - first:
-      213: -7202853104509013221
-    second: Goblin_Thief_41
+      213: -4678216991075794369
+    second: Orc_Chief_41
   - first:
-      213: 2163432451167343793
-    second: Goblin_Thief_42
+      213: 6627023273636776750
+    second: Orc_Chief_42
   - first:
-      213: -137436052258110155
-    second: Goblin_Thief_43
+      213: 1801667420341425221
+    second: Orc_Chief_43
   - first:
-      213: 8699113147403301194
-    second: Goblin_Thief_44
+      213: -1781794849634972282
+    second: Orc_Chief_44
   - first:
-      213: 4008683841113908752
-    second: Goblin_Thief_45
+      213: 474285621286004404
+    second: Orc_Chief_45
   - first:
-      213: -3981720577901544691
-    second: Goblin_Thief_46
+      213: -356107286400561333
+    second: Orc_Chief_46
   - first:
-      213: -8698804723454395297
-    second: Goblin_Thief_47
+      213: -9168756515531005339
+    second: Orc_Chief_47
   - first:
-      213: 7891094633070574213
-    second: Goblin_Thief_48
+      213: -8548331356555519744
+    second: Orc_Chief_48
   - first:
-      213: -762225182957356281
-    second: Goblin_Thief_49
+      213: 4691309554630242574
+    second: Orc_Chief_49
   - first:
-      213: -3910028611316211115
-    second: Goblin_Thief_50
+      213: 2580926877327329788
+    second: Orc_Chief_50
   - first:
-      213: 159265369238450680
-    second: Goblin_Thief_51
+      213: 5265532523088332618
+    second: Orc_Chief_51
   - first:
-      213: -6176614836513061943
-    second: Goblin_Thief_52
+      213: 3203221971665134695
+    second: Orc_Chief_52
   - first:
-      213: 7812544524793129932
-    second: Goblin_Thief_53
+      213: 469780361776661187
+    second: Orc_Chief_53
   - first:
-      213: -4250398833750961076
-    second: Goblin_Thief_54
+      213: -6070836898639767113
+    second: Orc_Chief_54
   - first:
-      213: -8038419323025277870
-    second: Goblin_Thief_55
+      213: 7332279130642921919
+    second: Orc_Chief_55
   - first:
-      213: 2483130065280990199
-    second: Goblin_Thief_56
+      213: -6312969890592056103
+    second: Orc_Chief_56
   - first:
-      213: -7556647185114426365
-    second: Goblin_Thief_57
+      213: -1128570800682105107
+    second: Orc_Chief_57
   - first:
-      213: 6280279192150365109
-    second: Goblin_Thief_58
+      213: 3769721345818152512
+    second: Orc_Chief_58
   - first:
-      213: -5277800901478365579
-    second: Goblin_Thief_59
+      213: -3864458074550707294
+    second: Orc_Chief_59
   - first:
-      213: -2162285832227472091
-    second: Goblin_Thief_60
+      213: 7759356580054967337
+    second: Orc_Chief_60
   - first:
-      213: -8650271129087856065
-    second: Goblin_Thief_61
+      213: -2708472261383162658
+    second: Orc_Chief_61
   - first:
-      213: -1995161055365207971
-    second: Goblin_Thief_62
+      213: 8150998537123951701
+    second: Orc_Chief_62
   - first:
-      213: 7093483200207770692
-    second: Goblin_Thief_63
+      213: -4098725044035477132
+    second: Orc_Chief_63
   - first:
-      213: -5515330476260531948
-    second: Goblin_Thief_64
+      213: 6958135766611226132
+    second: Orc_Chief_64
   - first:
-      213: -5281130294730647512
-    second: Goblin_Thief_65
+      213: 1658042815344936087
+    second: Orc_Chief_65
   - first:
-      213: 5937524162764994323
-    second: Goblin_Thief_66
+      213: -5136390887351791376
+    second: Orc_Chief_66
+  - first:
+      213: 687232913908276065
+    second: Orc_Chief_67
+  - first:
+      213: 7365044968540408775
+    second: Orc_Chief_68
+  - first:
+      213: -2738400209564817818
+    second: Orc_Chief_69
+  - first:
+      213: 2029406016727051120
+    second: Orc_Chief_70
+  - first:
+      213: -1369334777242428482
+    second: Orc_Chief_71
+  - first:
+      213: 5058453855691520343
+    second: Orc_Chief_72
+  - first:
+      213: -2758310102395339848
+    second: Orc_Chief_73
+  - first:
+      213: -5033934893333710288
+    second: Orc_Chief_74
+  - first:
+      213: 5511110363002239132
+    second: Orc_Chief_75
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -235,7 +262,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -273,7 +300,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -298,13 +325,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Goblin_Thief_0
+      name: Orc_Chief_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 391
-        width: 16
-        height: 18
+        x: 4
+        y: 481
+        width: 23
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -313,680 +340,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 35996c258b94d84a0800000000000000
-      internalID: -6589529623761610413
+      spriteID: 69f80e1d92e432070800000000000000
+      internalID: 8080388097954582422
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goblin_Thief_1
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 390
-        width: 16
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2783234a4aa7a2fd0800000000000000
-      internalID: -2365943806681794446
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Goblin_Thief_2
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 390
-        width: 16
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cb8a4bac1a444a3b0800000000000000
-      internalID: -5502197383058642756
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Goblin_Thief_3
-      rect:
-        serializedVersion: 2
-        x: 104
-        y: 391
-        width: 16
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dac81c72d65728280800000000000000
-      internalID: -9042535990127653715
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Goblin_Thief_4
-      rect:
-        serializedVersion: 2
-        x: 9
-        y: 359
-        width: 15
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e188fca73912b3ed0800000000000000
-      internalID: -2433314256359290850
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Goblin_Thief_5
-      rect:
-        serializedVersion: 2
-        x: 41
-        y: 358
-        width: 15
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c29bee03d8ac9f220800000000000000
-      internalID: 2520268174250653996
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Goblin_Thief_6
-      rect:
-        serializedVersion: 2
-        x: 73
-        y: 358
-        width: 15
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5388be80fd30f17c0800000000000000
-      internalID: -4098552879421618123
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Goblin_Thief_7
-      rect:
-        serializedVersion: 2
-        x: 105
-        y: 359
-        width: 15
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 878835794d2ed7260800000000000000
-      internalID: 7097077990505547896
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Goblin_Thief_8
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 327
-        width: 16
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2172bc0b9e86cabb0800000000000000
-      internalID: -4923444939720022254
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Goblin_Thief_9
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 326
-        width: 16
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ddefa91cddbc113a0800000000000000
-      internalID: -6696347017626845475
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Goblin_Thief_10
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 326
-        width: 16
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 23e532a2a9a8fbac0800000000000000
-      internalID: -3837195962759815630
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Goblin_Thief_11
-      rect:
-        serializedVersion: 2
-        x: 104
-        y: 327
-        width: 16
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fd490879119c974e0800000000000000
-      internalID: -1983333083486579489
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Goblin_Thief_12
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 295
-        width: 16
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ee65b082d332a5360800000000000000
-      internalID: 7159073303230633710
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Goblin_Thief_13
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 295
-        width: 16
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6b37f65def18e95c0800000000000000
-      internalID: -4206782070414937162
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Goblin_Thief_14
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 294
-        width: 16
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b6ee89cff2b11a680800000000000000
-      internalID: -8745679108461498773
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Goblin_Thief_15
-      rect:
-        serializedVersion: 2
-        x: 104
-        y: 295
-        width: 16
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2a444369037beb230800000000000000
-      internalID: 3656561366777742498
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Goblin_Thief_16
-      rect:
-        serializedVersion: 2
-        x: 136
-        y: 295
-        width: 16
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5bc5420c639fa4450800000000000000
-      internalID: 6073941061009693877
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Goblin_Thief_17
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 294
-        width: 16
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 72a1783e32b6c9140800000000000000
-      internalID: 4727771510717487655
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Goblin_Thief_18
-      rect:
-        serializedVersion: 2
-        x: 9
-        y: 263
-        width: 15
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b2ef11948443f25f0800000000000000
-      internalID: -779346725443600853
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Goblin_Thief_19
-      rect:
-        serializedVersion: 2
-        x: 41
-        y: 263
-        width: 15
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f4331fd956f11f950800000000000000
-      internalID: 6480995860064842575
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Goblin_Thief_20
-      rect:
-        serializedVersion: 2
-        x: 73
-        y: 263
-        width: 15
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 11c8343721a150e30800000000000000
-      internalID: 4469006871780625425
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Goblin_Thief_21
-      rect:
-        serializedVersion: 2
-        x: 105
-        y: 263
-        width: 15
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a0d43af794e066020800000000000000
-      internalID: 2334569165674990858
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Goblin_Thief_22
-      rect:
-        serializedVersion: 2
-        x: 137
-        y: 263
-        width: 15
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9864e5a3940730a20800000000000000
-      internalID: 3027386834337285769
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Goblin_Thief_23
-      rect:
-        serializedVersion: 2
-        x: 169
-        y: 263
-        width: 15
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f1746dab757b11410800000000000000
-      internalID: 1446138542787282719
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Goblin_Thief_24
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 231
-        width: 16
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b725ff743077a8710800000000000000
-      internalID: 1696299065634935419
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Goblin_Thief_25
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 231
-        width: 16
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 21fec7c176e6b3540800000000000000
-      internalID: 4988702401381592850
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Goblin_Thief_26
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 231
-        width: 16
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6922e11402048d6c0800000000000000
-      internalID: -4118471351954693482
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Goblin_Thief_27
-      rect:
-        serializedVersion: 2
-        x: 104
-        y: 231
-        width: 16
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 46fde4a5f4d874800800000000000000
-      internalID: 596600847606931300
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Goblin_Thief_28
-      rect:
-        serializedVersion: 2
-        x: 136
-        y: 231
-        width: 16
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 72e811c375d6a0c20800000000000000
-      internalID: 3173469108873301543
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Goblin_Thief_29
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 231
-        width: 16
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f6f87e79cbd1b1a90800000000000000
-      internalID: -7342242071657869457
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Goblin_Thief_30
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 199
-        width: 16
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8934b54b033a5b2d0800000000000000
-      internalID: -3263522925380418664
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Goblin_Thief_31
+      name: Orc_Chief_1
       rect:
         serializedVersion: 2
         x: 36
-        y: 199
-        width: 20
-        height: 18
+        y: 481
+        width: 23
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -995,20 +362,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0b633c1ec410a3a90800000000000000
-      internalID: -7333547613502622032
+      spriteID: a815a932c97391cd0800000000000000
+      internalID: -2586975367195897462
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goblin_Thief_32
+      name: Orc_Chief_2
       rect:
         serializedVersion: 2
-        x: 65
-        y: 191
-        width: 30
-        height: 25
+        x: 68
+        y: 481
+        width: 23
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1017,20 +384,86 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c7dd986d247e92b30800000000000000
-      internalID: 4263192796536102268
+      spriteID: 44b493138678ffd40800000000000000
+      internalID: 5620359741553855300
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goblin_Thief_33
+      name: Orc_Chief_3
       rect:
         serializedVersion: 2
-        x: 104
-        y: 199
+        x: 100
+        y: 481
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea7aefab977334ad0800000000000000
+      internalID: -2719268754033825874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Chief_4
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 481
+        width: 23
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46e6f459902e8f200800000000000000
+      internalID: 214169513087692388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Chief_5
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 481
+        width: 23
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f8a8b345b5cf5b20800000000000000
+      internalID: 3125434048734341366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Chief_6
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 449
         width: 21
-        height: 18
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1039,20 +472,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 24e0a928071aa61e0800000000000000
-      internalID: -2203771563044893118
+      spriteID: c24faebe712f6ed20800000000000000
+      internalID: 3307597160906421292
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goblin_Thief_34
+      name: Orc_Chief_7
       rect:
         serializedVersion: 2
-        x: 116
-        y: 193
-        width: 11
-        height: 11
+        x: 37
+        y: 449
+        width: 21
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1061,86 +494,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 85b19bc1c9955b230800000000000000
-      internalID: 3653925199712688984
+      spriteID: c26b9f05357348d60800000000000000
+      internalID: 7891493278040307244
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goblin_Thief_35
+      name: Orc_Chief_8
       rect:
         serializedVersion: 2
-        x: 136
-        y: 199
-        width: 16
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c7d46176f42a5c2c0800000000000000
-      internalID: -4411941798023901828
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Goblin_Thief_36
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 199
-        width: 16
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 77ccca328a235d470800000000000000
-      internalID: 8418690776173431927
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Goblin_Thief_37
-      rect:
-        serializedVersion: 2
-        x: 9
-        y: 167
-        width: 17
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bda5aac2f30e80910800000000000000
-      internalID: 1803938212698807003
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Goblin_Thief_38
-      rect:
-        serializedVersion: 2
-        x: 41
-        y: 167
+        x: 68
+        y: 449
         width: 22
-        height: 17
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1149,42 +516,306 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6b28304ca83eae720800000000000000
-      internalID: 2876361497163039414
+      spriteID: fd1e81a1e2f21b050800000000000000
+      internalID: 5814480468964860383
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goblin_Thief_39
+      name: Orc_Chief_9
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 449
+        width: 22
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93e16171201007130800000000000000
+      internalID: 3562348413738950201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Chief_10
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 449
+        width: 21
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9202999c3d2103e0800000000000000
+      internalID: -2089339013825428835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Chief_11
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 449
+        width: 21
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92bf5a107a3283d70800000000000000
+      internalID: 9023001053630954281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Chief_12
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 417
+        width: 23
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b3f29f7fa35cc690800000000000000
+      internalID: -7580592059546668109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Chief_13
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 385
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0537ef1f68615670800000000000000
+      internalID: 8525710396074964235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Chief_14
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 417
+        width: 23
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f63a21357b74f5070800000000000000
+      internalID: 8097269507733758831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Chief_15
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 417
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cff5d8afd30c63450800000000000000
+      internalID: 6068248920357429244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Chief_16
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 417
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24e00c60ce461e4a0800000000000000
+      internalID: -6565855816841163198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Chief_17
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 385
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8c12521fe5f3d390800000000000000
+      internalID: -7794616122894836594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Chief_18
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 417
+        width: 23
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b284b86ec8dae0ec0800000000000000
+      internalID: -3598748231547533269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Chief_19
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 417
+        width: 23
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fb117d85850375c0800000000000000
+      internalID: -4219022354754233358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Chief_20
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 353
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63d6da17eb8021230800000000000000
+      internalID: 3607955865521188150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Chief_21
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 385
+        width: 23
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c6bb24a1b118eb70800000000000000
+      internalID: 8928405715923220161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Chief_22
       rect:
         serializedVersion: 2
         x: 67
-        y: 163
-        width: 30
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 81c90eda92ff62df0800000000000000
-      internalID: -205196178522858472
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Goblin_Thief_40
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 167
+        y: 385
         width: 24
-        height: 18
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1193,20 +824,86 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 14ca1a8b6813eca70800000000000000
-      internalID: 8849064772522585153
+      spriteID: dbed3761197794bf0800000000000000
+      internalID: -339608831859106115
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goblin_Thief_41
+      name: Orc_Chief_23
       rect:
         serializedVersion: 2
-        x: 104
-        y: 163
+        x: 102
+        y: 353
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b048fcba545c9000800000000000000
+      internalID: 44002845061038258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Chief_24
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 385
+        width: 23
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4db5a1e1579290750800000000000000
+      internalID: 6271589539083082708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Chief_25
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 385
+        width: 25
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77703505d34774d80800000000000000
+      internalID: -8266510784325810313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Chief_26
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 321
         width: 21
-        height: 8
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1215,20 +912,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b13bb6883435a0c90800000000000000
-      internalID: -7202853104509013221
+      spriteID: b2c6b7f5b5da05170800000000000000
+      internalID: 8165216732378262571
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goblin_Thief_42
+      name: Orc_Chief_27
       rect:
         serializedVersion: 2
-        x: 136
-        y: 167
-        width: 16
-        height: 18
+        x: 38
+        y: 353
+        width: 20
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1237,20 +934,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1b4d16b1a5e060e10800000000000000
-      internalID: 2163432451167343793
+      spriteID: a8f7790653eba7df0800000000000000
+      internalID: -181623698491998326
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goblin_Thief_43
+      name: Orc_Chief_28
       rect:
         serializedVersion: 2
-        x: 169
-        y: 167
-        width: 15
-        height: 18
+        x: 70
+        y: 353
+        width: 20
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1259,20 +956,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 535c2dd73aab71ef0800000000000000
-      internalID: -137436052258110155
+      spriteID: 332728c8e0bbee9e0800000000000000
+      internalID: -1590127947253910989
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goblin_Thief_44
+      name: Orc_Chief_29
       rect:
         serializedVersion: 2
-        x: 8
-        y: 135
-        width: 17
-        height: 20
+        x: 100
+        y: 321
+        width: 22
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1281,20 +978,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a4177e3515579b870800000000000000
-      internalID: 8699113147403301194
+      spriteID: e579a29d863650a40800000000000000
+      internalID: 5333778635661416286
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goblin_Thief_45
+      name: Orc_Chief_30
       rect:
         serializedVersion: 2
-        x: 40
-        y: 135
-        width: 16
-        height: 18
+        x: 133
+        y: 353
+        width: 21
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1303,20 +1000,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 016617ee6b4b1a730800000000000000
-      internalID: 4008683841113908752
+      spriteID: fe93b3132e67c17f0800000000000000
+      internalID: -640506333132801553
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goblin_Thief_46
+      name: Orc_Chief_31
       rect:
         serializedVersion: 2
-        x: 52
-        y: 140
-        width: 12
-        height: 12
+        x: 166
+        y: 353
+        width: 20
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1325,20 +1022,284 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d0bb05ffa361eb8c0800000000000000
-      internalID: -3981720577901544691
+      spriteID: e6238e265df1bccf0800000000000000
+      internalID: -231055954531569042
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goblin_Thief_47
+      name: Orc_Chief_32
       rect:
         serializedVersion: 2
-        x: 65
-        y: 135
+        x: 36
+        y: 321
+        width: 23
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a87493a018d277db0800000000000000
+      internalID: -4794313246067046518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Chief_33
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 321
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 722b030846272a600800000000000000
+      internalID: 478070286427664935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Chief_34
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 321
+        width: 23
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a49e443cf50401fc0800000000000000
+      internalID: -3526247728188954294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Chief_35
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 321
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47c92612f2d51a740800000000000000
+      internalID: 5161509104948255860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Chief_36
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 273
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99a9776ea7ef265c0800000000000000
+      internalID: -4223533696714040679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Chief_37
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 273
+        width: 25
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bbc9ceb9442aeb40800000000000000
+      internalID: 5470224596546997169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Chief_38
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 273
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3e2d4b1e9507ff30800000000000000
+      internalID: 4609158920258006589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Chief_39
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 269
+        width: 23
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f5d85cd15f7b02c0800000000000000
+      internalID: -4464334616041826826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Chief_40
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 269
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b9cf09982bc18890800000000000000
+      internalID: -7457456132721751628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Chief_41
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 271
+        width: 23
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f320bb0de62a31fb0800000000000000
+      internalID: -4678216991075794369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Chief_42
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 273
+        width: 23
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2bcd5f4e8ae7fb50800000000000000
+      internalID: 6627023273636776750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Chief_43
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 273
+        width: 23
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54458d029fec00910800000000000000
+      internalID: 1801667420341425221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Chief_44
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 209
         width: 30
-        height: 20
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1347,20 +1308,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f5cb2083133a74780800000000000000
-      internalID: -8698804723454395297
+      spriteID: 68d03ec460bc547e0800000000000000
+      internalID: -1781794849634972282
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goblin_Thief_48
+      name: Orc_Chief_45
       rect:
         serializedVersion: 2
-        x: 98
-        y: 131
-        width: 22
-        height: 22
+        x: 76
+        y: 209
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1369,20 +1330,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 58ab92d82ccc28d60800000000000000
-      internalID: 7891094633070574213
+      spriteID: 4b6e3da7240059600800000000000000
+      internalID: 474285621286004404
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goblin_Thief_49
+      name: Orc_Chief_46
       rect:
         serializedVersion: 2
-        x: 136
-        y: 135
-        width: 16
-        height: 18
+        x: 150
+        y: 209
+        width: 20
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1391,20 +1352,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 70b38fa0c380c65f0800000000000000
-      internalID: -762225182957356281
+      spriteID: b4f8a2c4f4ade0bf0800000000000000
+      internalID: -356107286400561333
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goblin_Thief_50
+      name: Orc_Chief_47
       rect:
         serializedVersion: 2
-        x: 168
-        y: 135
-        width: 16
-        height: 18
+        x: 212
+        y: 209
+        width: 36
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1413,20 +1374,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 55222e8b1b9ccb9c0800000000000000
-      internalID: -3910028611316211115
+      spriteID: 562e9bbf68802c080800000000000000
+      internalID: -9168756515531005339
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goblin_Thief_51
+      name: Orc_Chief_48
       rect:
         serializedVersion: 2
-        x: 9
-        y: 103
-        width: 15
-        height: 18
+        x: 276
+        y: 209
+        width: 34
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1435,20 +1396,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8f1ba7e6203d53200800000000000000
-      internalID: 159265369238450680
+      spriteID: 009dc261ce93e5980800000000000000
+      internalID: -8548331356555519744
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goblin_Thief_52
+      name: Orc_Chief_49
       rect:
         serializedVersion: 2
-        x: 41
-        y: 103
-        width: 17
-        height: 18
+        x: 340
+        y: 209
+        width: 34
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1457,20 +1418,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9c34b330881484aa0800000000000000
-      internalID: -6176614836513061943
+      spriteID: e01b12f2f21ea1140800000000000000
+      internalID: 4691309554630242574
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goblin_Thief_53
+      name: Orc_Chief_50
       rect:
         serializedVersion: 2
-        x: 73
-        y: 103
-        width: 19
-        height: 16
+        x: 404
+        y: 209
+        width: 28
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1479,20 +1440,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ccba7384adbbb6c60800000000000000
-      internalID: 7812544524793129932
+      spriteID: cf98a52125b41d320800000000000000
+      internalID: 2580926877327329788
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goblin_Thief_54
+      name: Orc_Chief_51
       rect:
         serializedVersion: 2
-        x: 105
-        y: 103
-        width: 22
-        height: 12
+        x: 470
+        y: 209
+        width: 20
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1501,20 +1462,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c441a80c7cc8305c0800000000000000
-      internalID: -4250398833750961076
+      spriteID: a4742f78eede21940800000000000000
+      internalID: 5265532523088332618
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goblin_Thief_55
+      name: Orc_Chief_52
       rect:
         serializedVersion: 2
-        x: 8
-        y: 71
-        width: 16
-        height: 18
+        x: 20
+        y: 145
+        width: 25
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1523,20 +1484,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 25c317f073cc17090800000000000000
-      internalID: -8038419323025277870
+      spriteID: 764a3dd6961247c20800000000000000
+      internalID: 3203221971665134695
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goblin_Thief_56
+      name: Orc_Chief_53
       rect:
         serializedVersion: 2
-        x: 40
-        y: 71
-        width: 16
-        height: 18
+        x: 84
+        y: 145
+        width: 24
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1545,20 +1506,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7fb7a2063a9d57220800000000000000
-      internalID: 2483130065280990199
+      spriteID: 3c2072200cef48600800000000000000
+      internalID: 469780361776661187
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goblin_Thief_57
+      name: Orc_Chief_54
       rect:
         serializedVersion: 2
-        x: 72
-        y: 71
-        width: 16
-        height: 18
+        x: 148
+        y: 145
+        width: 23
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1567,20 +1528,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3049c460c65612790800000000000000
-      internalID: -7556647185114426365
+      spriteID: 7b91e3f510e00cba0800000000000000
+      internalID: -6070836898639767113
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goblin_Thief_58
+      name: Orc_Chief_55
       rect:
         serializedVersion: 2
-        x: 104
-        y: 71
-        width: 16
-        height: 18
+        x: 212
+        y: 145
+        width: 28
+        height: 41
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1589,20 +1550,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5b35662a6a8082750800000000000000
-      internalID: 6280279192150365109
+      spriteID: fb93bff650d71c560800000000000000
+      internalID: 7332279130642921919
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goblin_Thief_59
+      name: Orc_Chief_56
       rect:
         serializedVersion: 2
-        x: 9
-        y: 39
-        width: 15
-        height: 18
+        x: 276
+        y: 145
+        width: 29
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1611,20 +1572,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 57645280b0c71c6b0800000000000000
-      internalID: -5277800901478365579
+      spriteID: 9dc16810553d368a0800000000000000
+      internalID: -6312969890592056103
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goblin_Thief_60
+      name: Orc_Chief_57
       rect:
         serializedVersion: 2
-        x: 41
-        y: 39
-        width: 15
-        height: 18
+        x: 340
+        y: 145
+        width: 29
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1633,20 +1594,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 52db83bed740ef1e0800000000000000
-      internalID: -2162285832227472091
+      spriteID: de6077116d28650f0800000000000000
+      internalID: -1128570800682105107
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goblin_Thief_61
+      name: Orc_Chief_58
       rect:
         serializedVersion: 2
-        x: 73
-        y: 39
-        width: 15
-        height: 18
+        x: 404
+        y: 145
+        width: 24
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1655,20 +1616,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f32b6eb3d3014f780800000000000000
-      internalID: -8650271129087856065
+      spriteID: 04ec2b7579db05430800000000000000
+      internalID: 3769721345818152512
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goblin_Thief_62
+      name: Orc_Chief_59
       rect:
         serializedVersion: 2
-        x: 105
-        y: 39
-        width: 15
-        height: 18
+        x: 468
+        y: 145
+        width: 24
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1677,20 +1638,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d5863494793cf44e0800000000000000
-      internalID: -1995161055365207971
+      spriteID: 2abd3012bdfae5ac0800000000000000
+      internalID: -3864458074550707294
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goblin_Thief_63
+      name: Orc_Chief_60
       rect:
         serializedVersion: 2
-        x: 8
-        y: 7
-        width: 16
-        height: 18
+        x: 5
+        y: 97
+        width: 21
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1699,20 +1660,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 444d590436d117260800000000000000
-      internalID: 7093483200207770692
+      spriteID: 92424cfd2b5ceab60800000000000000
+      internalID: 7759356580054967337
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goblin_Thief_64
+      name: Orc_Chief_61
       rect:
         serializedVersion: 2
-        x: 40
-        y: 7
-        width: 16
-        height: 18
+        x: 38
+        y: 98
+        width: 23
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1721,20 +1682,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 411ea9f372c9573b0800000000000000
-      internalID: -5515330476260531948
+      spriteID: ed4f14014d2996ad0800000000000000
+      internalID: -2708472261383162658
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goblin_Thief_65
+      name: Orc_Chief_62
       rect:
         serializedVersion: 2
-        x: 72
-        y: 7
-        width: 16
-        height: 18
+        x: 70
+        y: 96
+        width: 26
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1743,20 +1704,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 82896024af7a5b6b0800000000000000
-      internalID: -5281130294730647512
+      spriteID: 5547002dbf92e1170800000000000000
+      internalID: 8150998537123951701
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goblin_Thief_66
+      name: Orc_Chief_63
       rect:
         serializedVersion: 2
-        x: 104
-        y: 7
-        width: 16
-        height: 18
+        x: 101
+        y: 95
+        width: 28
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1765,8 +1726,272 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 317f7e684c2566250800000000000000
-      internalID: 5937524162764994323
+      spriteID: 471a446d9476e17c0800000000000000
+      internalID: -4098725044035477132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Chief_64
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 65
+        width: 23
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41e6dcb2d93409060800000000000000
+      internalID: 6958135766611226132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Chief_65
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 65
+        width: 23
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7940607e72d820710800000000000000
+      internalID: 1658042815344936087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Chief_66
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 65
+        width: 23
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f0d7d3a3bfd7b8b0800000000000000
+      internalID: -5136390887351791376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Chief_67
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 65
+        width: 23
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16b957fa1ba898900800000000000000
+      internalID: 687232913908276065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Chief_68
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 33
+        width: 21
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cb01a09065e53660800000000000000
+      internalID: 7365044968540408775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Chief_69
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 33
+        width: 21
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 666a800a48f3ff9d0800000000000000
+      internalID: -2738400209564817818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Chief_70
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 33
+        width: 21
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07b6e0c1506e92c10800000000000000
+      internalID: 2029406016727051120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Chief_71
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 33
+        width: 21
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebb50ef66452ffce0800000000000000
+      internalID: -1369334777242428482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Chief_72
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1
+        width: 23
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 759b23d1bfc333640800000000000000
+      internalID: 5058453855691520343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Chief_73
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 1
+        width: 23
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bbba56739388b9d0800000000000000
+      internalID: -2758310102395339848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Chief_74
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 1
+        width: 23
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03a766ca2eed32ab0800000000000000
+      internalID: -5033934893333710288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_Chief_75
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 1
+        width: 23
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c98f8b01da56b7c40800000000000000
+      internalID: 5511110363002239132
       vertices: []
       indices: 
       edges: []
@@ -1785,73 +2010,82 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Goblin_Thief_0: -6589529623761610413
-      Goblin_Thief_1: -2365943806681794446
-      Goblin_Thief_10: -3837195962759815630
-      Goblin_Thief_11: -1983333083486579489
-      Goblin_Thief_12: 7159073303230633710
-      Goblin_Thief_13: -4206782070414937162
-      Goblin_Thief_14: -8745679108461498773
-      Goblin_Thief_15: 3656561366777742498
-      Goblin_Thief_16: 6073941061009693877
-      Goblin_Thief_17: 4727771510717487655
-      Goblin_Thief_18: -779346725443600853
-      Goblin_Thief_19: 6480995860064842575
-      Goblin_Thief_2: -5502197383058642756
-      Goblin_Thief_20: 4469006871780625425
-      Goblin_Thief_21: 2334569165674990858
-      Goblin_Thief_22: 3027386834337285769
-      Goblin_Thief_23: 1446138542787282719
-      Goblin_Thief_24: 1696299065634935419
-      Goblin_Thief_25: 4988702401381592850
-      Goblin_Thief_26: -4118471351954693482
-      Goblin_Thief_27: 596600847606931300
-      Goblin_Thief_28: 3173469108873301543
-      Goblin_Thief_29: -7342242071657869457
-      Goblin_Thief_3: -9042535990127653715
-      Goblin_Thief_30: -3263522925380418664
-      Goblin_Thief_31: -7333547613502622032
-      Goblin_Thief_32: 4263192796536102268
-      Goblin_Thief_33: -2203771563044893118
-      Goblin_Thief_34: 3653925199712688984
-      Goblin_Thief_35: -4411941798023901828
-      Goblin_Thief_36: 8418690776173431927
-      Goblin_Thief_37: 1803938212698807003
-      Goblin_Thief_38: 2876361497163039414
-      Goblin_Thief_39: -205196178522858472
-      Goblin_Thief_4: -2433314256359290850
-      Goblin_Thief_40: 8849064772522585153
-      Goblin_Thief_41: -7202853104509013221
-      Goblin_Thief_42: 2163432451167343793
-      Goblin_Thief_43: -137436052258110155
-      Goblin_Thief_44: 8699113147403301194
-      Goblin_Thief_45: 4008683841113908752
-      Goblin_Thief_46: -3981720577901544691
-      Goblin_Thief_47: -8698804723454395297
-      Goblin_Thief_48: 7891094633070574213
-      Goblin_Thief_49: -762225182957356281
-      Goblin_Thief_5: 2520268174250653996
-      Goblin_Thief_50: -3910028611316211115
-      Goblin_Thief_51: 159265369238450680
-      Goblin_Thief_52: -6176614836513061943
-      Goblin_Thief_53: 7812544524793129932
-      Goblin_Thief_54: -4250398833750961076
-      Goblin_Thief_55: -8038419323025277870
-      Goblin_Thief_56: 2483130065280990199
-      Goblin_Thief_57: -7556647185114426365
-      Goblin_Thief_58: 6280279192150365109
-      Goblin_Thief_59: -5277800901478365579
-      Goblin_Thief_6: -4098552879421618123
-      Goblin_Thief_60: -2162285832227472091
-      Goblin_Thief_61: -8650271129087856065
-      Goblin_Thief_62: -1995161055365207971
-      Goblin_Thief_63: 7093483200207770692
-      Goblin_Thief_64: -5515330476260531948
-      Goblin_Thief_65: -5281130294730647512
-      Goblin_Thief_66: 5937524162764994323
-      Goblin_Thief_7: 7097077990505547896
-      Goblin_Thief_8: -4923444939720022254
-      Goblin_Thief_9: -6696347017626845475
+      Orc_Chief_0: 8080388097954582422
+      Orc_Chief_1: -2586975367195897462
+      Orc_Chief_10: -2089339013825428835
+      Orc_Chief_11: 9023001053630954281
+      Orc_Chief_12: -7580592059546668109
+      Orc_Chief_13: 8525710396074964235
+      Orc_Chief_14: 8097269507733758831
+      Orc_Chief_15: 6068248920357429244
+      Orc_Chief_16: -6565855816841163198
+      Orc_Chief_17: -7794616122894836594
+      Orc_Chief_18: -3598748231547533269
+      Orc_Chief_19: -4219022354754233358
+      Orc_Chief_2: 5620359741553855300
+      Orc_Chief_20: 3607955865521188150
+      Orc_Chief_21: 8928405715923220161
+      Orc_Chief_22: -339608831859106115
+      Orc_Chief_23: 44002845061038258
+      Orc_Chief_24: 6271589539083082708
+      Orc_Chief_25: -8266510784325810313
+      Orc_Chief_26: 8165216732378262571
+      Orc_Chief_27: -181623698491998326
+      Orc_Chief_28: -1590127947253910989
+      Orc_Chief_29: 5333778635661416286
+      Orc_Chief_3: -2719268754033825874
+      Orc_Chief_30: -640506333132801553
+      Orc_Chief_31: -231055954531569042
+      Orc_Chief_32: -4794313246067046518
+      Orc_Chief_33: 478070286427664935
+      Orc_Chief_34: -3526247728188954294
+      Orc_Chief_35: 5161509104948255860
+      Orc_Chief_36: -4223533696714040679
+      Orc_Chief_37: 5470224596546997169
+      Orc_Chief_38: 4609158920258006589
+      Orc_Chief_39: -4464334616041826826
+      Orc_Chief_4: 214169513087692388
+      Orc_Chief_40: -7457456132721751628
+      Orc_Chief_41: -4678216991075794369
+      Orc_Chief_42: 6627023273636776750
+      Orc_Chief_43: 1801667420341425221
+      Orc_Chief_44: -1781794849634972282
+      Orc_Chief_45: 474285621286004404
+      Orc_Chief_46: -356107286400561333
+      Orc_Chief_47: -9168756515531005339
+      Orc_Chief_48: -8548331356555519744
+      Orc_Chief_49: 4691309554630242574
+      Orc_Chief_5: 3125434048734341366
+      Orc_Chief_50: 2580926877327329788
+      Orc_Chief_51: 5265532523088332618
+      Orc_Chief_52: 3203221971665134695
+      Orc_Chief_53: 469780361776661187
+      Orc_Chief_54: -6070836898639767113
+      Orc_Chief_55: 7332279130642921919
+      Orc_Chief_56: -6312969890592056103
+      Orc_Chief_57: -1128570800682105107
+      Orc_Chief_58: 3769721345818152512
+      Orc_Chief_59: -3864458074550707294
+      Orc_Chief_6: 3307597160906421292
+      Orc_Chief_60: 7759356580054967337
+      Orc_Chief_61: -2708472261383162658
+      Orc_Chief_62: 8150998537123951701
+      Orc_Chief_63: -4098725044035477132
+      Orc_Chief_64: 6958135766611226132
+      Orc_Chief_65: 1658042815344936087
+      Orc_Chief_66: -5136390887351791376
+      Orc_Chief_67: 687232913908276065
+      Orc_Chief_68: 7365044968540408775
+      Orc_Chief_69: -2738400209564817818
+      Orc_Chief_7: 7891493278040307244
+      Orc_Chief_70: 2029406016727051120
+      Orc_Chief_71: -1369334777242428482
+      Orc_Chief_72: 5058453855691520343
+      Orc_Chief_73: -2758310102395339848
+      Orc_Chief_74: -5033934893333710288
+      Orc_Chief_75: 5511110363002239132
+      Orc_Chief_8: 5814480468964860383
+      Orc_Chief_9: 3562348413738950201
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -492,7 +492,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.05
-  m_Speed: 0.5
+  m_Speed: 0.6
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -516,7 +516,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f960e28d727cfca45b4ea3ba77cd426f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 7
+  health: 80
   healthBar: {fileID: 6531719404410110601}
   xpReward: 15
   orc: 1
@@ -687,4 +687,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fa003a7a3ae08b429006bf23598a880, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  contactDamage: 1
+  contactDamage: 10
