@@ -100,6 +100,8 @@ public class RoomManager : MonoBehaviour
         {
             PlaceSingleBossRoom();
             generationComplete = true;
+            MinimapController mm = FindObjectOfType<MinimapController>();
+            mm.FitToRooms(roomObjects);
         }
     }
 
@@ -400,5 +402,9 @@ public class RoomManager : MonoBehaviour
                 Gizmos.DrawWireCube(position, new Vector3(roomWidth, roomHeight, 1));
             }
         }
+    }
+    public List<GameObject> RoomObjects
+    {
+        get { return roomObjects; }
     }
 }
