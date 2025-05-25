@@ -75,7 +75,7 @@ public class EnemyStats : MonoBehaviour
         if (agent != null) agent.isStopped = true;
 
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
-        if (rb != null) rb.velocity = Vector2.zero;
+        if (rb != null) rb.linearVelocity = Vector2.zero;
 
         // Inaktivera colliders
         foreach (Collider2D col in GetComponents<Collider2D>())
