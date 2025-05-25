@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class BurningSkullCollision : MonoBehaviour
 {
+    public GameObject burningSkull;
 
     public int damage = 10;
     public int burnDamage = 4;
@@ -19,8 +20,8 @@ public class BurningSkullCollision : MonoBehaviour
                 stats.TakeDamage(damage);
                 stats.ApplyBurn(burnDamage, 10f);
             }
-
-            Destroy(transform.root.gameObject);
         }
+
+        Destroy(burningSkull);
     }
 }

@@ -167,7 +167,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.05
-  m_Speed: 0.6
+  m_Speed: 1
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -194,7 +194,7 @@ MonoBehaviour:
   player: {fileID: 0}
   agent: {fileID: 0}
   tileMap: {fileID: 0}
-  indicatorPrefab: {fileID: 0}
+  indicatorPrefab: {fileID: 7462610744267209726, guid: 81128c97d520102458d02e7b98877489, type: 3}
   hitboxPrefab: {fileID: 512501050580426279, guid: 80c54e1dde4b9f041bef7a64217b1518, type: 3}
   range: 0.5
   cooldown: 3
@@ -215,6 +215,9 @@ MonoBehaviour:
   health: 175
   healthBar: {fileID: 7628940671623384653}
   xpReward: 15
+  orc: 0
+  orcDamageClips: []
+  orcDeathClips: []
 --- !u!1 &2648860081825872349
 GameObject:
   m_ObjectHideFlags: 0

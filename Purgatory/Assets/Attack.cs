@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Attack : MonoBehaviour
+public class Attack : MonoBehaviour, IRoomEntity
 {
     public GameObject scythePrefab;
     public Transform player;
@@ -53,5 +53,10 @@ public class Attack : MonoBehaviour
     {
         GameObject scythe = Instantiate(scythePrefab, spawnPos, Quaternion.identity);
         scythe.GetComponent<ReaperProjectile>().Initialize(player.position);
+    }
+
+    public void SetActiveState(bool active)
+    {
+        enabled = active;
     }
 }

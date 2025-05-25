@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Linq;
 
 public class StairsActivation : MonoBehaviour
 {
@@ -22,7 +23,7 @@ public class StairsActivation : MonoBehaviour
         // 3) Then wait until that same flag flips false (boss dead)
         yield return new WaitWhile(() => room.BossIsAlive());
 
-        // 4) Finally show the stairs
+        //4) Finally show the stairs
         stairs.SetActive(true);
     }
 }

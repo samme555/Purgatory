@@ -370,6 +370,17 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   speed: 0.5
   anim: {fileID: 0}
+  isAttacking: 0
+  attackRange: 0.7
+  attackCooldown: 1
+  aggroRange: 6
+  hitZone: {fileID: 0}
+  hitZoneScript: {fileID: 0}
+  hitOffsetUp: {x: 0, y: 0.02}
+  hitOffsetDown: {x: 0, y: -0.02}
+  hitOffsetSide: {x: 0.02, y: 0}
+  hitZoneRadius: 0.3
+  orcAttackClip: {fileID: 0}
   movementFilter:
     useTriggers: 0
     useLayerMask: 0
@@ -400,6 +411,9 @@ MonoBehaviour:
   health: 30
   healthBar: {fileID: 9042534011615305348}
   xpReward: 15
+  orc: 0
+  orcDamageClips: []
+  orcDeathClips: []
 --- !u!195 &220753418843351008
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -410,7 +424,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.05
-  m_Speed: 0.8
+  m_Speed: 1.1
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120

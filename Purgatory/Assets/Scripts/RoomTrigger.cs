@@ -23,6 +23,7 @@ public class RoomTrigger : MonoBehaviour
 
         room?.SetEnemyActive(true);
 
+
         // 1) lock down the whole room
         room.CloseAllDoors();
 

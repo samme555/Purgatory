@@ -49,7 +49,6 @@ public class BossController : MonoBehaviour
         this.enabled = false; // So Update() doesn't run until player enters
     }
 
-
     private IEnumerator WaveAttack()
     {
         canAttack = false;

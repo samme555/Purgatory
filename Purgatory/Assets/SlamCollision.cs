@@ -7,6 +7,8 @@ public class SlamCollision : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log($"[Chief Orc Hitbox] Triggered with: {other.name}");
+
         if (other.CompareTag("Player"))
         {
             PlayerStats stats = other.GetComponent<PlayerStats>();

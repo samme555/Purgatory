@@ -105,8 +105,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  speed: 2
-  rotationSpeed: 2.5
+  spiralSpeed: 1
+  approachSpeed: 0.5
 --- !u!114 &3489594131106731492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -460,6 +460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64150f67142a5e94f96cc5a28a610c43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  burningSkull: {fileID: 557265804504421653}
   damage: 10
   burnDamage: 4
 --- !u!70 &3101859094757965914

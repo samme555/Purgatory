@@ -23,10 +23,14 @@ public class ChiefController : MonoBehaviour
     public bool isAttacking = false;
     private float originalSpeed;
 
+    private Rigidbody2D rb;
     private List<Vector2Int> currentPattern = new List<Vector2Int>();
 
     private void Awake()
     {
+
+        rb = GetComponent<Rigidbody2D>();
+
         for (int x = -3; x <= 3; x++)
         {
             for(int y = -3; y <= 3; y++)
@@ -37,6 +41,9 @@ public class ChiefController : MonoBehaviour
     }
     private void Start()
     {
+        transform.rotation = Quaternion.identity;
+        transform.position = new Vector3(transform.position.x, transform.position.y, 0f);
+
         if (tileMap == null)
         {
             tileMap = GameObject.Find("Floor")?.GetComponent<Tilemap>();
@@ -101,6 +108,7 @@ public class ChiefController : MonoBehaviour
 
         yield return new WaitForSeconds(warningDuration); // optional pre-attack delay
 
+        Debug.Log("spawning hitbox!");
 
         Vector3Int cell = tileMap.WorldToCell(transform.position);
         Vector3 hitboxPos = tileMap.GetCellCenterWorld(cell);
@@ -112,6 +120,8 @@ public class ChiefController : MonoBehaviour
         hitBox.transform.localScale = new Vector3(scale, scale, 1f);
         Destroy(hitBox, 0.2f);
 
+        Debug.Log("hitbox spawned success woooo");
+
         yield return new WaitForSeconds(0.5f); // small post-slam pause
 
         isAttacking = false;
@@ -122,16 +132,16 @@ public class ChiefController : MonoBehaviour
     }
 
     private void OnDrawGizmosSelected()
-{
-    if (tileMap == null) return;
-
-    Vector3Int originCell = tileMap.WorldToCell(transform.position);
-    foreach (Vector2Int offset in currentPattern)
     {
-        Vector3Int targetCell = originCell + new Vector3Int(offset.x, offset.y, 0);
-        Vector3 worldPos = tileMap.GetCellCenterWorld(targetCell);
-        Gizmos.color = new Color(1, 0, 0, 0.3f); // semi-transparent red
-        Gizmos.DrawCube(worldPos, new Vector3(0.16f, 0.16f, 0.1f)); // match tile size
+        if (tileMap == null) return;
+
+        Vector3Int originCell = tileMap.WorldToCell(transform.position);
+        foreach (Vector2Int offset in currentPattern)
+        {
+            Vector3Int targetCell = originCell + new Vector3Int(offset.x, offset.y, 0);
+            Vector3 worldPos = tileMap.GetCellCenterWorld(targetCell);
+            Gizmos.color = new Color(1, 0, 0, 0.3f); // semi-transparent red
+            Gizmos.DrawCube(worldPos, new Vector3(0.16f, 0.16f, 0.1f)); // match tile size
+        }
     }
-}
 }
