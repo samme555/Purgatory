@@ -157,7 +157,7 @@ public class EnemyMovement : MonoBehaviour
 
         TriggerAttack();
 
-        target.GetComponent<PlayerStats>()?.TakeDamage(1);
+        target.GetComponent<PlayerStats>()?.TakeDamage(10);
 
         yield return new WaitForSeconds(0.6f);
 
