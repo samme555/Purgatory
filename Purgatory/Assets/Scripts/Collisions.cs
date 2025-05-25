@@ -23,31 +23,87 @@ public class Collisions : MonoBehaviour
         critDMG = playerstats.critDMG;  
     }
 
+    //private void OnTriggerEnter2D(Collider2D other)
+    //{
+    //    bool isEnemy = other.CompareTag("Enemy");
+    //    bool isBoss = other.CompareTag("Boss");
+    //    bool isWall = other.gameObject.layer == LayerMask.NameToLayer("Projectile Block");
+
+    //    if (isEnemy || isBoss)
+    //    {
+    //        EnemyStats stats = other.GetComponent<EnemyStats>();
+    //        if (stats != null)
+    //        {
+    //            var crit = Random.Range((int)0f, (int)10f);
+    //            Debug.Log(crit);
+    //            if (crit <= critChance)
+    //            {
+    //                stats.TakeDamage(damage * critDMG);
+    //            }
+    //            else
+    //            {
+    //                stats.TakeDamage(damage);
+    //            }
+    //        }
+
+    //    }
+
+    //    if (isEnemy || isWall || isBoss)
+    //    {
+    //        if (impactEffect != null)
+    //        {
+    //            GameObject fx = Instantiate(impactEffect, transform.position, Quaternion.identity);
+    //            fx.transform.localScale = Vector3.one;
+
+    //            ParticleSystem ps = fx.GetComponent<ParticleSystem>();
+    //            if (ps != null)
+    //            {
+    //                ps.Play();
+
+    //            }                
+    //        }
+
+    //        Destroy(gameObject);
+    //    }
+    //    if (other.CompareTag("Boss"))
+    //    {
+    //        BossStats bossStats = other.GetComponent<BossStats>();
+
+    //        if (bossStats != null)
+    //        {
+    //            bossStats.TakeDamage(damage);
+    //        }
+
+    //        Destroy(gameObject);
+    //    }
+    //}
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         bool isEnemy = other.CompareTag("Enemy");
         bool isBoss = other.CompareTag("Boss");
         bool isWall = other.gameObject.layer == LayerMask.NameToLayer("Projectile Block");
 
-        if (isEnemy)
+        // Skada fiende eller boss
+        if (isEnemy || isBoss)
         {
-            EnemyStats stats = other.GetComponent<EnemyStats>();
-            if (stats != null)
+            // Först försök träffa bossen (override)
+            if (other.TryGetComponent<BossStats>(out var bossStats))
             {
-                var crit = Random.Range((int)0f, (int)10f);
-                Debug.Log(crit);
-                if (crit <= critChance && critChance > 0)
-                {
-                    stats.TakeDamage(damage * critDMG);
-                }
-                else
-                {
-                    stats.TakeDamage(damage);
-                }
+
+                var crit = Random.Range(0f, 10f);
+                bossStats.TakeDamage(crit <= critChance ? damage * critDMG : damage);
             }
-           
+            // Om inte boss, träffa vanlig fiende
+            else if (other.TryGetComponent<EnemyStats>(out var enemyStats))
+            {
+                var crit = Random.Range(0f, 10f);
+                enemyStats.TakeDamage(crit <= critChance ? damage * critDMG : damage);
+
+            }
         }
 
+        // Skapa träffeffekt
         if (isEnemy || isWall || isBoss)
         {
             if (impactEffect != null)
@@ -55,26 +111,13 @@ public class Collisions : MonoBehaviour
                 GameObject fx = Instantiate(impactEffect, transform.position, Quaternion.identity);
                 fx.transform.localScale = Vector3.one;
 
-                ParticleSystem ps = fx.GetComponent<ParticleSystem>();
+                var ps = fx.GetComponent<ParticleSystem>();
                 if (ps != null)
-                {
                     ps.Play();
-                    
-                }                
             }
 
-            Destroy(gameObject);
-        }
-        if (other.CompareTag("Boss"))
-        {
-            EnemyStats bossStats = other.GetComponent<EnemyStats>();
-
-            if (bossStats != null)
-            {
-                bossStats.TakeDamage(damage);
-            }
-
-            Destroy(gameObject);
+            Destroy(gameObject); // Bara en gång här
         }
     }
+
 }
