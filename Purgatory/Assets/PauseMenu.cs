@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenu;
+    public GameObject optionsMenu;
     public static bool isPaused;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -34,6 +35,7 @@ public class PauseMenu : MonoBehaviour
     {
         Debug.Log("resuming");
         pauseMenu.SetActive(false);
+        optionsMenu.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
     }

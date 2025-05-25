@@ -518,6 +518,17 @@ MonoBehaviour:
   health: 7
   healthBar: {fileID: 6531719404410110601}
   xpReward: 15
+  orc: 1
+  orcDamageClips:
+  - {fileID: 8300000, guid: 4d0e3f809e7f20b4d86e3f54e2d893db, type: 3}
+  - {fileID: 8300000, guid: ff314eb21397852488057e4ec684e9b0, type: 3}
+  - {fileID: 8300000, guid: 0534c801dc3409a4dab371647188d958, type: 3}
+  - {fileID: 8300000, guid: 3447c7c33a174f740abf1ba4c77fda88, type: 3}
+  - {fileID: 8300000, guid: 54891e31f3e73e74ea75980dd2a7cf42, type: 3}
+  - {fileID: 8300000, guid: 6d3009d0d8cc7d348937113dbb52dafb, type: 3}
+  orcDeathClips:
+  - {fileID: 8300000, guid: 35954ac103dfaf44bb92273b3f45b133, type: 3}
+  - {fileID: 8300000, guid: 7e37bb1135ca30246b2a4459ef56c604, type: 3}
 --- !u!1 &6979173358010926143
 GameObject:
   m_ObjectHideFlags: 0

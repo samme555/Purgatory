@@ -7,45 +7,46 @@ public class VolumeSlider : MonoBehaviour
     [SerializeField] Slider volumeSlider;
     [SerializeField] TextMeshProUGUI volumeText;
 
-    void Start()
+    private SoundMixerManager soundMixerManager;
+
+    private void Start()
     {
-        if (!PlayerPrefs.HasKey("volume"))
+        soundMixerManager = FindFirstObjectByType<SoundMixerManager>(); 
+        
+        if (soundMixerManager == null)
         {
-            Debug.Log("Volume did not exist");
-            PlayerPrefs.SetFloat("volume", 1);
+            Debug.LogError("SoundMixerManager could not be found in the scene.");
+            return;
         }
-        else if (PlayerPrefs.HasKey("volume"))
+
+        Debug.Log(soundMixerManager);
+
+        float savedVolume = 1f;
+
+        if (gameObject.tag == "Master")
         {
-            Debug.Log("Loading volume");
-            Load();
+            savedVolume = PlayerPrefs.GetFloat("masterVolume", 1f);
+            volumeSlider.onValueChanged.AddListener(soundMixerManager.SetMasterVolume);
+        }
+        else if (gameObject.tag == "Music")
+        {
+            savedVolume = PlayerPrefs.GetFloat("musicVolume", 1f);
+            volumeSlider.onValueChanged.AddListener(soundMixerManager.SetMusicVolume);
+        }
+        else if (gameObject.tag == "SFX")
+        {
+            savedVolume = PlayerPrefs.GetFloat("soundFXVolume", 1f);
+            volumeSlider.onValueChanged.AddListener(soundMixerManager.SetSoundFXVolume);
         }
 
-        ChangeVolume();
-
-        volumeSlider.onValueChanged.AddListener((v) =>
-        {
-            volumeText.text = (v * 100).ToString("0") + "%"; 
-        });
-    }
-
-    public void ChangeVolume()
-    {
-        AudioListener.volume = volumeSlider.value;
-        Save();
-    }
-
-    private void Load()
-    {
-        float savedVolume = PlayerPrefs.GetFloat("volume");
         volumeSlider.value = savedVolume;
-        volumeText.text = (savedVolume * 100).ToString("0") + "%";
-        Debug.Log("Loaded volume: " + savedVolume);
+        UpdateText();
+
+        Debug.Log("HEJ");
     }
 
-    private void Save()
+    public void UpdateText()
     {
-        PlayerPrefs.SetFloat("volume", volumeSlider.value);
-        PlayerPrefs.Save();
-        Debug.Log("Saved volume: " + volumeSlider.value);
+        volumeText.text = (volumeSlider.value * 100).ToString("0") + "%";
     }
 }

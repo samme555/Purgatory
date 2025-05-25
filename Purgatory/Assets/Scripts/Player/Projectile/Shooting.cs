@@ -7,7 +7,8 @@ public class Shooting : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public Transform firePoint;
     public GameObject projectilePrefab;
-  
+
+    public AudioClip fireBallShootingClip;
     
     public PlayerStats playerStats;
    
@@ -70,7 +71,8 @@ public class Shooting : MonoBehaviour
     }
     void Shoot() 
     {
-        
+        SoundFXManager.instance?.PlaySoundFXClip(fireBallShootingClip, transform, 1f);
+
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePosition.z = 0f;
 
