@@ -5,13 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class LevelMoveScript : MonoBehaviour
 {
-    public int sceneBuildingIndex;
-
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player")
-        {
-            SceneLoader.LoadWithLoadingScreen("Loading");
-        }
+        if (!other.CompareTag("Player")) return;
+
+        // bump our standalone tracker
+        LevelTracker.currentLevel++;
+
+        // go to loading screen
+        SceneLoader.LoadWithLoadingScreen("Loading");
     }
 }
