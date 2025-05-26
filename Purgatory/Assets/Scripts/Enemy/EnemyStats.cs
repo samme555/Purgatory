@@ -16,6 +16,8 @@ public class EnemyStats : MonoBehaviour
     public bool orc;
     public AudioClip[] orcDamageClips;
     public AudioClip[] orcDeathClips;
+
+    public System.Action OnDamaged;
     
     
     public void Start()
@@ -32,6 +34,7 @@ public class EnemyStats : MonoBehaviour
         Debug.Log($"damage dealt:" + damage);
 
         UpdateHealthBar();
+        OnDamaged?.Invoke();
 
         if (health <= 0)
         {

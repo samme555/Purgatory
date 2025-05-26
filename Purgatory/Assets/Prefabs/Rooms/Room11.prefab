@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &50397776752799313
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4264418101860585994}
+  m_Layer: 6
+  m_Name: PointA (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4264418101860585994
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50397776752799313}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.008, y: 0.743, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4419122466643834216}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &75504440855277001
 GameObject:
   m_ObjectHideFlags: 0
@@ -1734,6 +1765,37 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.0728519, y: 0.17961575}
   m_EdgeRadius: 0
+--- !u!1 &1480171123759818531
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1206458831637779258}
+  m_Layer: 6
+  m_Name: PointB
+  m_TagString: Untagged
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1206458831637779258
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1480171123759818531}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.965, y: -0.742, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4419122466643834216}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1488290511664346106
 GameObject:
   m_ObjectHideFlags: 0
@@ -1862,6 +1924,10 @@ Transform:
   - {fileID: 4486765745172491103}
   - {fileID: 6434397226690683425}
   - {fileID: 5882005028969087303}
+  - {fileID: 8299283843524903975}
+  - {fileID: 4264418101860585994}
+  - {fileID: 1206458831637779258}
+  - {fileID: 3084427989904240847}
   m_Father: {fileID: 7526801232879693865}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!156049354 &4401658296737106665
@@ -6721,6 +6787,37 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
+--- !u!1 &4540816030579753986
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3084427989904240847}
+  m_Layer: 6
+  m_Name: PointB (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3084427989904240847
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4540816030579753986}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.02, y: -0.743, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4419122466643834216}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4859155985436266906
 GameObject:
   m_ObjectHideFlags: 0
@@ -7764,6 +7861,37 @@ MonoBehaviour:
   m_UseMeshPrefab: {fileID: 0}
   m_CompressBounds: 0
   m_OverrideVector: {x: 1, y: 1, z: 1}
+--- !u!1 &5280167182809220007
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8299283843524903975}
+  m_Layer: 6
+  m_Name: PointA
+  m_TagString: Untagged
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8299283843524903975
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5280167182809220007}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.972, y: 0.739, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4419122466643834216}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5302430836927504439
 GameObject:
   m_ObjectHideFlags: 0
@@ -17132,13 +17260,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Burning Skull (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1107429961616233148, guid: 666e23517bc806541b206308e2e84c7b, type: 3}
+      propertyPath: pointA
+      value: 
+      objectReference: {fileID: 4264418101860585994}
+    - target: {fileID: 1107429961616233148, guid: 666e23517bc806541b206308e2e84c7b, type: 3}
+      propertyPath: pointB
+      value: 
+      objectReference: {fileID: 3084427989904240847}
     - target: {fileID: 2579947579328289978, guid: 666e23517bc806541b206308e2e84c7b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.42743286
+      value: 1.013
       objectReference: {fileID: 0}
     - target: {fileID: 2579947579328289978, guid: 666e23517bc806541b206308e2e84c7b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.011748511
+      value: 0.012
       objectReference: {fileID: 0}
     - target: {fileID: 2579947579328289978, guid: 666e23517bc806541b206308e2e84c7b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -18000,13 +18136,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Burning Skull
       objectReference: {fileID: 0}
+    - target: {fileID: 1107429961616233148, guid: 666e23517bc806541b206308e2e84c7b, type: 3}
+      propertyPath: pointA
+      value: 
+      objectReference: {fileID: 8299283843524903975}
+    - target: {fileID: 1107429961616233148, guid: 666e23517bc806541b206308e2e84c7b, type: 3}
+      propertyPath: pointB
+      value: 
+      objectReference: {fileID: 1206458831637779258}
     - target: {fileID: 2579947579328289978, guid: 666e23517bc806541b206308e2e84c7b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.4763338
+      value: -0.971
       objectReference: {fileID: 0}
     - target: {fileID: 2579947579328289978, guid: 666e23517bc806541b206308e2e84c7b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.011748511
+      value: 0.018
       objectReference: {fileID: 0}
     - target: {fileID: 2579947579328289978, guid: 666e23517bc806541b206308e2e84c7b, type: 3}
       propertyPath: m_LocalPosition.z

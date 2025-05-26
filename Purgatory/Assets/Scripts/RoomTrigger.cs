@@ -13,7 +13,7 @@ public class RoomTrigger : MonoBehaviour
         room = GetComponentInParent<Room>();
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other) //when player enters the room
     {
         Debug.Log("Entered");
         if (entered || !other.CompareTag("Player"))
@@ -21,14 +21,11 @@ public class RoomTrigger : MonoBehaviour
 
         entered = true;
 
-        room?.SetEnemyActive(true);
-
-
         // 1) lock down the whole room
         room.CloseAllDoors();
 
-        // 2) wake them up
-        room.SetEnemyActive(true);
+        // 2) wake enemies up
+        room?.SetEntitiesActive(true);
 
         // 3) start polling for clear
         StartCoroutine(WatchForClear());
@@ -38,22 +35,15 @@ public class RoomTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            room?.SetEnemyActive(false);
+            room?.SetEntitiesActive(false); //deactivate enemies when leaving room. <- onödigt? man kan inte lämna rummet ändå om det finns fiender.
         }
     }
 
     private IEnumerator WatchForClear()
     {
-        if (room.HasSpawners)
-            yield return new WaitUntil(() =>
-                room.HasSpawnedReapers   
-             || !room.HasLiveSpawners  
-            );
 
-        yield return new WaitUntil(() =>
-            !room.HasLiveSpawners
-         && !room.HasLiveEnemies()
-        );
+        yield return new WaitUntil(() => //waits until a room has no live entities or bosses before opening doors.
+        !room.HasLiveEntities() && !room.BossIsAlive());
 
         OpenConnectedExits();
     }
@@ -61,6 +51,6 @@ public class RoomTrigger : MonoBehaviour
 
     private void OpenConnectedExits()
     {
-        RoomManager.Instance.OpenDoors(room);
+        RoomManager.Instance.OpenDoors(room); //opens doors
     }
 }

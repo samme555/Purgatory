@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeName: Starter Kit
   description: Gives minor buffs to attackspeed, attackdamage, and crit chance.
-  attackSpeedBoost: 0.1
-  attackDamageBoost: 0.1
+  attackSpeedBoost: 0.2
+  attackDamageBoost: 2
   moveSpeedBoost: 0
-  critChanceBoost: 0.1
+  critChanceBoost: 0.05
   critDamageBoost: 0
-  cost: 1
+  cost: 5

@@ -221,7 +221,7 @@ public class RoomManager : MonoBehaviour
 
         Room initialRoomScript = initialRoom.GetComponent<Room>();
         ActivateRoomCamera(initialRoomScript); // activate the first camera
-        initialRoomScript.SetEnemyActive(true);
+        initialRoomScript.SetEntitiesActive(true);
     }
 
 

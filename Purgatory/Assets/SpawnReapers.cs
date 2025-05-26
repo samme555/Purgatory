@@ -44,15 +44,24 @@ public class SpawnReapers : MonoBehaviour
         Vector3 spawnPosition = transform.position + new Vector3(randomOffset.x, randomOffset.y, 0);
         GameObject newReaper = Instantiate(reaperPrefab, spawnPosition, Quaternion.identity);
 
-        var movement = newReaper.GetComponent<EnemyMovement>();
+        newReaper.tag = "Enemy";
+
+        // Optional: parent the spawned reaper to the room
         var room = GetComponentInParent<Room>();
-        if (movement != null && room != null)
+        if (room != null)
         {
-            room.RegisterEnemy(movement);
+            newReaper.transform.SetParent(room.transform);
         }
-        var rc = newReaper.GetComponent<ReaperController>();
-        if (rc != null && room != null)
-            room.RegisterReaper(rc);
+
+        //var movement = newReaper.GetComponent<EnemyMovement>();
+        //var room = GetComponentInParent<Room>();
+        //if (movement != null && room != null)
+        //{
+        //    room.RegisterEnemy(movement);
+        //}
+        //var rc = newReaper.GetComponent<ReaperController>();
+        //if (rc != null && room != null)
+        //    room.RegisterReaper(rc);
 
     }
 }

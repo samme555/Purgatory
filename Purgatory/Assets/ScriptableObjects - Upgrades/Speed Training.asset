@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Speed Training
   m_EditorClassIdentifier: 
   upgradeName: Speed Training
-  description: +0.15 attack speed
+  description: +0.15 Attack Speed
   attackSpeedBoost: 0.15
   attackDamageBoost: 0
   moveSpeedBoost: 0
   critChanceBoost: 0
   critDamageBoost: 0
-  cost: 1
+  cost: 10

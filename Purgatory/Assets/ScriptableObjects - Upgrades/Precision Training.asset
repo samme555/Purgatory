@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Precision Training
   m_EditorClassIdentifier: 
   upgradeName: Precision Training
-  description: +0.7 Critical Chance
+  description: +0.05 Critical Chance
   attackSpeedBoost: 0
   attackDamageBoost: 0
   moveSpeedBoost: 0
-  critChanceBoost: 0.7
+  critChanceBoost: 0.05
   critDamageBoost: 0
-  cost: 1
+  cost: 10

@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Strength Training
   m_EditorClassIdentifier: 
   upgradeName: Strenght Training
-  description: + 0.15 increased damage
+  description: +5 Increased Damage
   attackSpeedBoost: 0
-  attackDamageBoost: 0.15
+  attackDamageBoost: 5
   moveSpeedBoost: 0
   critChanceBoost: 0
   critDamageBoost: 0
-  cost: 1
+  cost: 10

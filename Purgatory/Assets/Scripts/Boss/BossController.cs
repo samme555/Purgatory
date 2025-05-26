@@ -38,17 +38,6 @@ public class BossController : MonoBehaviour
         }
     }
 
-    public void SetActive(bool active)
-    {
-        isActive = active;
-        this.enabled = active;
-    }
-
-    private void Awake()
-    {
-        this.enabled = false; // So Update() doesn't run until player enters
-    }
-
     private IEnumerator WaveAttack()
     {
         canAttack = false;
