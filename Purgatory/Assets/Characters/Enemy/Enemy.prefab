@@ -275,6 +275,7 @@ GameObject:
   - component: {fileID: 1112577173338437132}
   - component: {fileID: 2104933574025077270}
   - component: {fileID: 8239782459657392180}
+  - component: {fileID: 4344821492602499412}
   m_Layer: 31
   m_Name: Enemy
   m_TagString: Enemy
@@ -530,6 +531,20 @@ MonoBehaviour:
   orcDeathClips:
   - {fileID: 8300000, guid: 35954ac103dfaf44bb92273b3f45b133, type: 3}
   - {fileID: 8300000, guid: 7e37bb1135ca30246b2a4459ef56c604, type: 3}
+--- !u!114 &4344821492602499412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6762314250208754536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 369d60cb62c04444b80c851724289b05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heartPrefab: {fileID: 525955544927378189, guid: 236cb5c26d647fc419c38bb4dc11172b, type: 3}
+  dropChance: 0.2
 --- !u!1 &6979173358010926143
 GameObject:
   m_ObjectHideFlags: 0

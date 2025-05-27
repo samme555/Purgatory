@@ -89,6 +89,20 @@ public class PlayerStats : MonoBehaviour
         PlayerData.instance.SaveFrom(this);
     }
 
+    public void AddHP(int amount)
+    {
+        int oldHp = hp;
+
+        hp = Mathf.Min(hp + amount, (int)maxHp); //hp never goes above max hp.
+
+        //play heal particles or something maybe
+
+        Debug.Log($"[AddHP] Healed {amount} HP (from {oldHp} to {hp})");
+        UpdateHealthBar();
+
+        PlayerData.instance.SaveFrom(this);
+    }
+
     public void UpdateXPBar()
     {
         xpBar.fillAmount = currentXP / xpToNextLevel;

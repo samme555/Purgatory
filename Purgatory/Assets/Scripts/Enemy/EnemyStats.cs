@@ -101,6 +101,7 @@ public class EnemyStats : MonoBehaviour
         MonoBehaviour afterImage = GetComponent<AfterImageSpawner>();
         if (afterImage != null) afterImage.enabled = false;
 
+
         StartCoroutine(DeathSequence());
     }
 
@@ -122,6 +123,14 @@ public class EnemyStats : MonoBehaviour
                 yield return null;
             }
         }
+
+        DropOnDeath heartDropper = GetComponent<DropOnDeath>();
+
+        if (heartDropper != null)
+        {
+            heartDropper.DropHeart();
+        }
+
         Destroy(gameObject);
     }
 }

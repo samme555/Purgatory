@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3004711011916990940}
   - component: {fileID: 5420281768517420942}
   - component: {fileID: 5164510801035026290}
+  - component: {fileID: 23969684654659013}
   m_Layer: 31
   m_Name: Orc Chief
   m_TagString: Enemy
@@ -218,6 +219,20 @@ MonoBehaviour:
   orc: 0
   orcDamageClips: []
   orcDeathClips: []
+--- !u!114 &23969684654659013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877538464269049727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 369d60cb62c04444b80c851724289b05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heartPrefab: {fileID: 525955544927378189, guid: 236cb5c26d647fc419c38bb4dc11172b, type: 3}
+  dropChance: 0.25
 --- !u!1 &2648860081825872349
 GameObject:
   m_ObjectHideFlags: 0

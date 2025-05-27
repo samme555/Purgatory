@@ -91,6 +91,7 @@ GameObject:
   - component: {fileID: 8019749027363643152}
   - component: {fileID: 4839586811135938334}
   - component: {fileID: -5793892041363455771}
+  - component: {fileID: -4776674697772348559}
   m_Layer: 0
   m_Name: Reaper
   m_TagString: Enemy
@@ -291,6 +292,23 @@ MonoBehaviour:
   health: 20
   healthBar: {fileID: 5913551230340645220}
   xpReward: 7
+  orc: 0
+  orcDamageClips: []
+  orcDeathClips: []
+--- !u!114 &-4776674697772348559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4690223868148245260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 369d60cb62c04444b80c851724289b05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heartPrefab: {fileID: 525955544927378189, guid: 236cb5c26d647fc419c38bb4dc11172b, type: 3}
+  dropChance: 0.25
 --- !u!1 &5456117055620064694
 GameObject:
   m_ObjectHideFlags: 0
