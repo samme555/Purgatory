@@ -9137,12 +9137,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -9183,7 +9183,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2090391269}
   - {fileID: 826340928}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -33606,11 +33605,11 @@ Transform:
   m_GameObject: {fileID: 1137428770}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.4951762, y: 0.6890936, z: -10.034413}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 74.31915, y: 41.190643, z: -4.7264447}
+  m_LocalScale: {x: 0.47427657, y: 0.47427657, z: 0.47427657}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2090391269}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1137428772
 MonoBehaviour:
@@ -33673,8 +33672,8 @@ Camera:
   m_GameObject: {fileID: 1137428770}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -33700,10 +33699,10 @@ Camera:
   field of view: 60
   orthographic: 1
   orthographic size: 3
-  m_Depth: 0
+  m_Depth: 4
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 838897111
+    m_Bits: 838896855
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8400000, guid: 61f50eac0b4cd914aaaff71b726bab0a, type: 2}
   m_TargetDisplay: 0
@@ -33712,7 +33711,7 @@ Camera:
   m_AllowMSAA: 1
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
+  m_OcclusionCulling: 0
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
 --- !u!1 &1140554416
@@ -43985,7 +43984,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1394625044
 Transform:
   m_ObjectHideFlags: 0
@@ -55804,63 +55803,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1001 &1460078547
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1877538464269049727, guid: f7b638a012bf4784682e664b8dfb69a0, type: 3}
-      propertyPath: m_Name
-      value: Orc Chief
-      objectReference: {fileID: 0}
-    - target: {fileID: 8346954268452409477, guid: f7b638a012bf4784682e664b8dfb69a0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.27725
-      objectReference: {fileID: 0}
-    - target: {fileID: 8346954268452409477, guid: f7b638a012bf4784682e664b8dfb69a0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.77010214
-      objectReference: {fileID: 0}
-    - target: {fileID: 8346954268452409477, guid: f7b638a012bf4784682e664b8dfb69a0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8346954268452409477, guid: f7b638a012bf4784682e664b8dfb69a0, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8346954268452409477, guid: f7b638a012bf4784682e664b8dfb69a0, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8346954268452409477, guid: f7b638a012bf4784682e664b8dfb69a0, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8346954268452409477, guid: f7b638a012bf4784682e664b8dfb69a0, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8346954268452409477, guid: f7b638a012bf4784682e664b8dfb69a0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8346954268452409477, guid: f7b638a012bf4784682e664b8dfb69a0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8346954268452409477, guid: f7b638a012bf4784682e664b8dfb69a0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f7b638a012bf4784682e664b8dfb69a0, type: 3}
 --- !u!4 &1460142952 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2470461114973760011, guid: 428941772749cc2409b8201774d294a2, type: 3}
@@ -67834,12 +67776,11 @@ Transform:
   m_GameObject: {fileID: 2090391268}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -804.2052, y: -453.6091, z: 0.034413125}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 74.08432, y: 40.86383, z: 0.016321339}
+  m_LocalScale: {x: 0.47427657, y: 0.47427657, z: 0.47427657}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1137428771}
-  m_Father: {fileID: 702908029}
+  m_Children: []
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2095493612
 PrefabInstance:
@@ -68432,6 +68373,7 @@ SceneRoots:
   - {fileID: 998699866}
   - {fileID: 1394625044}
   - {fileID: 316948135}
+  - {fileID: 2090391269}
+  - {fileID: 1137428771}
   - {fileID: 702908029}
   - {fileID: 188022332}
-  - {fileID: 1460078547}
