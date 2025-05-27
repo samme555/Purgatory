@@ -6,10 +6,17 @@ using UnityEngine.UI;
 
 public class EnemyStats : MonoBehaviour
 {
+    [Header("Data")]
+    public EnemyStatsSO preset;
+
+    [HideInInspector] 
     public float health;
     float maxHealth;
+    int _xpReward;
+
+    public int xpReward;
+
     public Image healthBar;
-    public int xpReward = 15;
 
     private Animator anim;
 
@@ -22,16 +29,18 @@ public class EnemyStats : MonoBehaviour
     
     public void Start()
     {
-        anim = GetComponent<Animator>();
-        maxHealth = health;
+        int lvl = LevelTracker.currentLevel;
+        maxHealth = preset.GetHealth(lvl);
+        health = maxHealth;
+        xpReward = preset.GetXpReward(lvl);
         UpdateHealthBar();
     }
 
-    public virtual void TakeDamage(float damage)
+    public virtual void TakeDamage(float dmg)
     {
-        health -= damage;
+        health -= dmg;
 
-        Debug.Log($"damage dealt:" + damage);
+        Debug.Log($"damage dealt:" + dmg);
 
         UpdateHealthBar();
         OnDamaged?.Invoke();

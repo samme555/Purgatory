@@ -2,9 +2,11 @@ using UnityEngine;
 
 public class OrcHitZone : MonoBehaviour
 {
-    private bool canDamage = false;
+    EnemyStatsSO preset;
+    bool canDamage = false;
 
-
+    void Awake() =>
+        preset = GetComponentInParent<EnemyStats>().preset;
 
     private void OnEnable()
     {
@@ -13,16 +15,14 @@ public class OrcHitZone : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (!canDamage) return;
+        if (!canDamage || !other.CompareTag("Player")) return;
 
-        if (other.CompareTag("Player"))
+        var playerStats = other.GetComponent<PlayerStats>();
+        if (playerStats != null)
         {
-            var stats = other.GetComponent<PlayerStats>();
-            if (stats != null)
-            {
-                stats.TakeDamage(10);
-                canDamage = false; // träffa bara en gång
-            }
+            int dmg = preset.GetMeleeDamage(LevelTracker.currentLevel);
+            playerStats.TakeDamage(dmg);
+            canDamage = false;
         }
     }
 

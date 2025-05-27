@@ -517,9 +517,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f960e28d727cfca45b4ea3ba77cd426f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  preset: {fileID: 11400000, guid: 4f47e9958ef3cae489ac6a0e8fa93525, type: 2}
   health: 80
-  healthBar: {fileID: 6531719404410110601}
   xpReward: 15
+  healthBar: {fileID: 6531719404410110601}
   orc: 1
   orcDamageClips:
   - {fileID: 8300000, guid: 4d0e3f809e7f20b4d86e3f54e2d893db, type: 3}

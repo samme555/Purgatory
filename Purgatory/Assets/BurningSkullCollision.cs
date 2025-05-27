@@ -2,32 +2,26 @@ using UnityEngine;
 
 public class BurningSkullCollision : MonoBehaviour
 {
+    EnemyStatsSO preset;
 
-    public int damage = 10;
-    public int burnDamage = 4;
+    void Awake()
+    {
+        preset = GetComponentInParent<EnemyStats>().preset;
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log($"Skull trigger entered by: {other.name}");
+        if (!other.CompareTag("Player")) return;
+        var ps = other.GetComponentInParent<PlayerStats>();
+        if (ps == null) return;
 
-        if (other.CompareTag("Player"))
-        {
-            Debug.Log("Confirmed: it's the player!");
+        int hit = preset.GetMeleeDamage(LevelTracker.currentLevel);
+        int burnDmg = preset.GetBurnDamage(LevelTracker.currentLevel);
+        float duration = preset.GetBurnDuration(LevelTracker.currentLevel);
 
-            PlayerStats stats = other.GetComponentInParent<PlayerStats>();
-
-            if (stats != null)
-            {
-                Debug.Log("PlayerStats found, dealing damage.");
-                stats.TakeDamage(damage);
-                stats.ApplyBurn(burnDamage, 10f);
-
-                Destroy(transform.parent.gameObject);
-            }
-            else
-            {
-                Debug.LogWarning("PlayerStats was null!");
-            }
-        }
+        ps.TakeDamage(hit);
+        ps.ApplyBurn(burnDmg, duration);
+        Destroy(transform.parent.gameObject);
     }
 }
+
