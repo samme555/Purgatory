@@ -5,7 +5,7 @@ public class DropOnDeath : MonoBehaviour
     [Header("Drop Settings")]
     [SerializeField] private GameObject heartPrefab;
     [SerializeField, Range(0f, 1f)]
-    private float dropChance = 0.25f;
+    private float dropChance = 0.2f;
 
     private Collider2D _collider;
 

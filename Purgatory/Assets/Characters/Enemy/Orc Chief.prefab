@@ -232,7 +232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heartPrefab: {fileID: 525955544927378189, guid: 236cb5c26d647fc419c38bb4dc11172b, type: 3}
-  dropChance: 0.25
+  dropChance: 0.2
 --- !u!1 &2648860081825872349
 GameObject:
   m_ObjectHideFlags: 0

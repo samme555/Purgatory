@@ -48,6 +48,7 @@ public class ToolTipManager : MonoBehaviour
 
         sb.AppendLine($"<b>{upgrade.name}</b>");
         sb.AppendLine(upgrade.description);
+        sb.AppendLine($"Cost: {upgrade.cost}");
 
         return sb.ToString();
     }

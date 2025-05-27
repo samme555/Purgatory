@@ -42,10 +42,18 @@ public class PauseMenu : MonoBehaviour
 
     public void ReturnToMenu()
     {
+        PlayerData.instance.ResetData();
+
+        PlayerData.instance.LoadFromFile();
+
+        PlayerData.instance.skillPoints += PlayerData.instance.runSkillPoints;
+        PlayerData.instance.runSkillPoints = 0;
+
+        PlayerData.instance.SaveToFile();
+
         Time.timeScale = 1f;
         isPaused = false;
         SceneManager.LoadScene("MainMenu");
-        PlayerData.instance.ResetData();
     }
 
     public void Quit()

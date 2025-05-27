@@ -19,6 +19,8 @@ public class PlayerData : MonoBehaviour
     public bool biggerBullet;
     public bool burstFire;
 
+    public int runSkillPoints = 0; //always 0, never saved.
+
     public List<int> unlockedSkillSlots = new();
     public List<int> chosenBranches = new();
 
