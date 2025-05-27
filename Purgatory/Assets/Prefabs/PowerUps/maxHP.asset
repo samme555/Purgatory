@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: maxHP
   m_EditorClassIdentifier: 
   powerUpImage: {fileID: -2266125799702738380, guid: f1b70078cc7514945929f5b9865148fb, type: 3}
-  powerUpText: +1 maxHP
+  powerUpText: +10 maxHP
   effectType: 1
-  effectValue: 1
+  effectValue: 10
+  isMajor: 0
