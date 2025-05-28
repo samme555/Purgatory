@@ -28,13 +28,7 @@ public class EnemyStats : MonoBehaviour
         UpdateHealthBar();
     }
 
-    public void Update()
-    {
-        while (isBurning)
-        { 
-            Burning();
-        }
-    }
+   
     public virtual void TakeDamage(float damage)
     {
         health -= damage;
