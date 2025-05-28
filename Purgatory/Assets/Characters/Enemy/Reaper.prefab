@@ -288,9 +288,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f960e28d727cfca45b4ea3ba77cd426f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  preset: {fileID: 11400000, guid: 5441682a563778e46aa78f4f48b58f88, type: 2}
   health: 20
   healthBar: {fileID: 5913551230340645220}
-  xpReward: 7
   orc: 0
   orcDamageClips: []
   orcDeathClips: []

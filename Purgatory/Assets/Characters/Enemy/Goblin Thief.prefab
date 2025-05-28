@@ -371,7 +371,7 @@ MonoBehaviour:
   speed: 0.5
   anim: {fileID: 0}
   isAttacking: 0
-  attackRange: 0.7
+  attackRange: 0
   attackCooldown: 1
   aggroRange: 6
   hitZone: {fileID: 0}

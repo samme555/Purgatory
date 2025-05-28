@@ -1,27 +1,21 @@
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Projectiles/Stats Preset")]
+[CreateAssetMenu(menuName = "Projectiles/Stats Preset", fileName = "NewProjectileStats")]
 public class ProjectileStatsSO : ScriptableObject
 {
-    [Header("Speed Settings")]
-    [Tooltip("Base projectile speed at level 0")]
+    [Header("Speed")]
     public float baseSpeed = 5f;
+    [Tooltip("Fraction of baseSpeed added per level")]
+    public float speedPerLevel = 0.1f;
 
-    [Tooltip("Curve-based speed multiplier per level")]
-    public AnimationCurve speedCurve
-        = AnimationCurve.Linear(0, 1, 10, 1.2f);
-
-    [Space, Header("Damage Settings")]
-    [Tooltip("Base projectile damage at level 0")]
+    [Header("Damage")]
     public int baseDamage = 8;
-
-    [Tooltip("Curve-based damage multiplier per level")]
-    public AnimationCurve damageCurve
-        = AnimationCurve.Linear(0, 1, 10, 1.5f);
+    [Tooltip("Fraction of baseDamage added per level")]
+    public float damagePerLevel = 0.1f;
 
     public float GetSpeed(int lvl) =>
-        baseSpeed * speedCurve.Evaluate(lvl);
+        baseSpeed * (1 + speedPerLevel * (lvl - 1));
 
     public int GetDamage(int lvl) =>
-        Mathf.RoundToInt(baseDamage * damageCurve.Evaluate(lvl));
+        Mathf.RoundToInt(baseDamage * (1 + damagePerLevel * (lvl - 1)));
 }

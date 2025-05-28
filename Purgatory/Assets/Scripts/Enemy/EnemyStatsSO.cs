@@ -1,54 +1,55 @@
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Enemies/Stats Preset")]
+[CreateAssetMenu(menuName = "Enemies/Stats Preset", fileName = "NewEnemyStats")]
 public class EnemyStatsSO : ScriptableObject
 {
     [Header("Health & XP")]
     public float baseHealth = 100f;
-    public float healthPerLevel = 0.1f;        // +20% per level
-    public AnimationCurve healthCurve
-        = AnimationCurve.Linear(0, 1, 10, 1.5f);
+    [Tooltip("Fraction of baseHealth added per level (e.g. 1 = +100% per level)")]
+    public float healthPerLevel = 0.1f;
 
     public int baseXpReward = 15;
-    public float xpPerLevel = 0.1f;       // +10% per level
+    [Tooltip("Fraction of baseXpReward added per level")]
+    public float xpPerLevel = 0.05f;
 
     [Header("Melee Damage")]
     public int baseDamage = 10;
-    public float damagePerLevel = 0.2f;
-    public AnimationCurve damageCurve
-        = AnimationCurve.Linear(0, 1, 10, 2f);
+    [Tooltip("Fraction of baseDamage added per level")]
+    public float damagePerLevel = 0.05f;
 
-    [Space, Header("Burn (for BurningSkull)")]
-    [Tooltip("Base burn damage per tick at level 0")]
+    [Header("Burn (for BurningSkull)")]
     public int baseBurnDamage = 4;
-    [Tooltip("Linear % increase per level")]
-    public float burnDamagePerLevel = 0.2f;
-    [Tooltip("How many seconds the burn lasts (same at every level)")]
+    [Tooltip("Fraction of baseBurnDamage added per level")]
+    public float burnPerLevel = 0.02f;
+    [Tooltip("Fixed burn duration (seconds)")]
     public float burnDuration = 10f;
 
     [Header("Poison (for Goblin)")]
     public int basePoisonDamage = 3;
-    public float poisonPerLevel = 0.2f;
+    [Tooltip("Fraction of basePoisonDamage added per level")]
+    public float poisonPerLevel = 0.02f;
+    [Tooltip("Fixed poison duration (seconds)")]
     public float poisonDuration = 6f;
 
-    // helper methods
+    // Helper methods
     public float GetHealth(int lvl) =>
-        baseHealth * healthCurve.Evaluate(lvl);
+        baseHealth * (1 + healthPerLevel * (lvl -1));
 
     public int GetXpReward(int lvl) =>
-        Mathf.RoundToInt(baseXpReward * (1 + xpPerLevel * lvl));
+        Mathf.RoundToInt(baseXpReward * (1 + xpPerLevel * (lvl - 1)));
 
     public int GetMeleeDamage(int lvl) =>
-        Mathf.RoundToInt(baseDamage * damageCurve.Evaluate(lvl));
+        Mathf.RoundToInt(baseDamage * (1 + damagePerLevel * (lvl - 1)));
 
     public int GetBurnDamage(int lvl) =>
-        Mathf.RoundToInt(baseBurnDamage * (1 + burnDamagePerLevel * lvl));
+        Mathf.RoundToInt(baseBurnDamage * (1 + burnPerLevel * (lvl - 1)));
 
-    public float GetBurnDuration(int lvl)
-    {
-        return burnDuration;
-    }
+    public float GetBurnDuration(int lvl) =>
+        burnDuration;
 
     public int GetPoisonDamage(int lvl) =>
-        Mathf.RoundToInt(basePoisonDamage * (1 + poisonPerLevel * lvl));
+        Mathf.RoundToInt(basePoisonDamage * (1 + poisonPerLevel * (lvl - 1)));
+
+    public float GetPoisonDuration(int lvl) =>
+        poisonDuration;
 }

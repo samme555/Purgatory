@@ -9,12 +9,14 @@ public class EnemyStats : MonoBehaviour
     [Header("Data")]
     public EnemyStatsSO preset;
 
-    [HideInInspector] 
+    [HideInInspector]
     public float health;
-    float maxHealth;
-    int _xpReward;
 
-    public int xpReward;
+    private float maxHealth;
+
+    // backing store for XP; never serializes
+    private int _xpReward;
+    public int xpReward => _xpReward;
 
     public Image healthBar;
 
@@ -25,14 +27,15 @@ public class EnemyStats : MonoBehaviour
     public AudioClip[] orcDeathClips;
 
     public System.Action OnDamaged;
-    
-    
+
+
+
     public void Start()
     {
         int lvl = LevelTracker.currentLevel;
         maxHealth = preset.GetHealth(lvl);
         health = maxHealth;
-        xpReward = preset.GetXpReward(lvl);
+        _xpReward = preset.GetXpReward(lvl);
         UpdateHealthBar();
     }
 
@@ -63,20 +66,21 @@ public class EnemyStats : MonoBehaviour
     protected virtual void Die()
     {
         if (orc && orcDeathClips.Length > 0) SoundFXManager.instance.PlayRandomSoundFXClip(orcDeathClips, transform, 1f);
-        GameObject player = GameObject.FindWithTag("Player");
 
+        int xp = preset.GetXpReward(LevelTracker.currentLevel);
+
+        GameObject player = GameObject.FindWithTag("Player");
         if (player != null)
         {
-            PlayerStats stats = player.GetComponent<PlayerStats>();
-
+            var stats = player.GetComponent<PlayerStats>();
             if (stats != null)
             {
-                stats.AddXP(xpReward);
+                stats.AddXP(xp);
                 PlayerData.instance.SaveFrom(stats);
             }
         }
 
-        if(anim != null)
+        if (anim != null)
             anim.SetTrigger("Die");
 
 

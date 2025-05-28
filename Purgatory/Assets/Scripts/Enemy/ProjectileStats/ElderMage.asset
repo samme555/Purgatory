@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc3ca329e1f63294f86bdc903dee4c63, type: 3}
   m_Name: ElderMage
   m_EditorClassIdentifier: 
-  baseSpeed: 5
+  baseSpeed: 1
   speedCurve:
     serializedVersion: 2
     m_Curve:

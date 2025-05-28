@@ -40,8 +40,8 @@ MonoBehaviour:
     m_RotationOrder: 4
   baseXpReward: 20
   xpPerLevel: 0.2
-  baseDamage: 10
-  damagePerLevel: 0.2
+  baseDamage: 20
+  damagePerLevel: 0.5
   damageCurve:
     serializedVersion: 2
     m_Curve:

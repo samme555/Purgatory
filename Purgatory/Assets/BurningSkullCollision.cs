@@ -3,11 +3,8 @@ using UnityEngine;
 public class BurningSkullCollision : MonoBehaviour
 {
     EnemyStatsSO preset;
-
-    void Awake()
-    {
+    void Awake() =>
         preset = GetComponentInParent<EnemyStats>().preset;
-    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -17,11 +14,10 @@ public class BurningSkullCollision : MonoBehaviour
 
         int hit = preset.GetMeleeDamage(LevelTracker.currentLevel);
         int burnDmg = preset.GetBurnDamage(LevelTracker.currentLevel);
-        float duration = preset.GetBurnDuration(LevelTracker.currentLevel);
+        float dur = preset.GetBurnDuration(LevelTracker.currentLevel);
 
         ps.TakeDamage(hit);
-        ps.ApplyBurn(burnDmg, duration);
+        ps.ApplyBurn(burnDmg, dur);
         Destroy(transform.parent.gameObject);
     }
 }
-
