@@ -310,7 +310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2257c61845c75dc4e8f0477f3a44343e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destructionEffect: {fileID: 0}
+  destructionEffect: {fileID: 7249293404593409900, guid: 8d7588789afbcca4686e7f6f0d27304c, type: 3}
   replacementPrefab: {fileID: 436890450855020390, guid: 5d0555dd874e00c46916b8b8ac0fe840, type: 3}
   dropProbability: 0.3
 --- !u!1 &8698520108455977344

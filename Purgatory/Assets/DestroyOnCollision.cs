@@ -25,17 +25,18 @@ public class DestroyOnCollision : MonoBehaviour
         // only react to bullet’s Collisions script
         if (other.GetComponent<Collisions>() == null) return;
 
+        Vector3 spawnPos = _selfCollider != null ? _selfCollider.bounds.center : transform.position;
         // 1) play destruction VFX at this object's pivot
         if (destructionEffect != null)
         {
-            var fx = Instantiate(destructionEffect, transform.position, Quaternion.identity);
+            var fx = Instantiate(destructionEffect, spawnPos, Quaternion.identity);
             fx.transform.localScale = Vector3.one;
             var ps = fx.GetComponent<ParticleSystem>();
             if (ps != null) ps.Play();
         }
 
         // 2) figure out the spawn point from *this* object's bounds:
-        Vector3 spawnPos;
+        
         if (_selfCollider != null)
         {
             spawnPos = _selfCollider.bounds.center;
