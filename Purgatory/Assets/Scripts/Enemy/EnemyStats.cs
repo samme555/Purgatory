@@ -28,14 +28,20 @@ public class EnemyStats : MonoBehaviour
 
     public System.Action OnDamaged;
 
+    void Awake()
+    {
+        anim = GetComponent<Animator>()
+               ?? GetComponentInChildren<Animator>();
 
+        int lvl = LevelTracker.currentLevel - 1;
+        lvl = Mathf.Max(0, lvl);
+        maxHealth = preset.GetHealth(lvl + 1);
+        health = maxHealth;
+        _xpReward = preset.GetXpReward(lvl + 1);
+    }
 
     public void Start()
     {
-        int lvl = LevelTracker.currentLevel;
-        maxHealth = preset.GetHealth(lvl);
-        health = maxHealth;
-        _xpReward = preset.GetXpReward(lvl);
         UpdateHealthBar();
     }
 
