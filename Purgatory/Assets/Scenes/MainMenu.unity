@@ -2771,8 +2771,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicMixerGroup: {fileID: -5382739609587453431, guid: 3d66d0b5a21e3664cb9ac5c2c8114f5e, type: 2}
+  defaultClip: {fileID: 8300000, guid: cb1f292108d2aa748a40095388a54a15, type: 3}
   maxVolume: 0.5
-  soundFadeDuration: 3
+  soundFadeDuration: 2
 --- !u!4 &938595835
 Transform:
   m_ObjectHideFlags: 0

@@ -6,6 +6,7 @@ public class AmbientAudioManager : MonoBehaviour
 {
     public static AmbientAudioManager Instance;
     public AudioMixerGroup musicMixerGroup;
+    public AudioClip defaultClip;
 
     private AudioSource sourceA;
     private AudioSource sourceB;
