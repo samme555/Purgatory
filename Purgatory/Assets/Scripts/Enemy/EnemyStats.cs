@@ -109,6 +109,11 @@ public class EnemyStats : MonoBehaviour
         if (skullMove != null)
             skullMove.enabled = false;
 
+        MonoBehaviour chiefScript = GetComponent<ChiefController>();
+        if (chiefScript != null)
+            chiefScript.enabled = false;
+
+
 
         if (deathEffect != null)
         {

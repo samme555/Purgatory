@@ -22,7 +22,10 @@ public class ChiefController : MonoBehaviour
     private bool canAttack = true;
     public bool isAttacking = false;
     private float originalSpeed;
+    private Animator anim;
+    private Vector2 lastDirection;
 
+    [SerializeField] SpriteRenderer spriteRenderer;
     private Rigidbody2D rb;
     private List<Vector2Int> currentPattern = new List<Vector2Int>();
 
@@ -42,7 +45,7 @@ public class ChiefController : MonoBehaviour
     private void Start()
     {
         transform.rotation = Quaternion.identity;
-        transform.position = new Vector3(transform.position.x, transform.position.y, 0f);
+        transform.position = new Vector3(transform.position.x, transform.position.y, 0f);        
 
         if (tileMap == null)
         {
@@ -64,6 +67,7 @@ public class ChiefController : MonoBehaviour
         }
 
         originalSpeed = agent.speed;
+        anim = GetComponent<Animator>();
     }
 
     private void Update()
@@ -84,11 +88,18 @@ public class ChiefController : MonoBehaviour
             agent.SetDestination(player.position);
         }
 
+        if (!isAttacking)
+        {
+            Vector2 vel = agent.velocity;
+            UpdateAnimation(vel);
+        }
+
         Debug.DrawLine(transform.position, player.position, Color.yellow);
     }
 
     IEnumerator SlamAttack()
     {
+        anim.SetTrigger("Attack");
 
         canAttack = false;
         isAttacking = true;
@@ -142,6 +153,26 @@ public class ChiefController : MonoBehaviour
             Vector3 worldPos = tileMap.GetCellCenterWorld(targetCell);
             Gizmos.color = new Color(1, 0, 0, 0.3f); // semi-transparent red
             Gizmos.DrawCube(worldPos, new Vector3(0.16f, 0.16f, 0.1f)); // match tile size
+        }
+    }
+
+    void UpdateAnimation(Vector2 movement)
+    {
+        if(movement.magnitude > 0.01f)
+        {
+            lastDirection = movement.normalized;
+            anim.SetBool("Moving", true);
+            anim.SetFloat("X", lastDirection.x);
+            anim.SetFloat("Y", lastDirection.y);
+
+            if(lastDirection.x < 0)
+                spriteRenderer.flipX = true;
+            else if(lastDirection.x > 0)
+                spriteRenderer.flipX = false;
+        }
+        else
+        {
+            anim.SetBool("Moving", false);
         }
     }
 }

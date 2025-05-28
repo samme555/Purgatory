@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 5420281768517420942}
   - component: {fileID: 5164510801035026290}
   - component: {fileID: 23969684654659013}
+  - component: {fileID: 8222725945235472650}
   m_Layer: 31
   m_Name: Orc Chief
   m_TagString: Enemy
@@ -201,6 +202,7 @@ MonoBehaviour:
   cooldown: 3
   warningDuration: 1
   isAttacking: 0
+  spriteRenderer: {fileID: 4014268772967773632}
 --- !u!114 &5164510801035026290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -216,7 +218,9 @@ MonoBehaviour:
   health: 175
   healthBar: {fileID: 7628940671623384653}
   xpReward: 15
+  deathEffect: {fileID: 0}
   orc: 0
+  fastFade: 0
   orcDamageClips: []
   orcDeathClips: []
 --- !u!114 &23969684654659013
@@ -233,6 +237,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heartPrefab: {fileID: 525955544927378189, guid: 236cb5c26d647fc419c38bb4dc11172b, type: 3}
   dropChance: 0.2
+--- !u!95 &8222725945235472650
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877538464269049727}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a2dbb46d05f9f29489756aa1c212ec6d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2648860081825872349
 GameObject:
   m_ObjectHideFlags: 0
