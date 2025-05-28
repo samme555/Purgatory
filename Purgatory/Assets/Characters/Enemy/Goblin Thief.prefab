@@ -1,5 +1,86 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &730588185646538273
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8659750992819168476}
+  - component: {fileID: 2087203719294961424}
+  - component: {fileID: 8225612302880870418}
+  m_Layer: 31
+  m_Name: HitZone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8659750992819168476
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730588185646538273}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.22180775, y: -1.0742172, z: -0.001584794}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7230659660212747520}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &2087203719294961424
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730588185646538273}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.013000071, y: -0.0040625185}
+  m_Radius: 0.05
+--- !u!114 &8225612302880870418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730588185646538273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8be76cdc23e7b7745b382f7d9526d604, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2304048779392882467
 GameObject:
   m_ObjectHideFlags: 0
@@ -277,6 +358,7 @@ GameObject:
   - component: {fileID: 246514448459776546}
   - component: {fileID: 3842611147606515799}
   - component: {fileID: -6615674031603370968}
+  - component: {fileID: 7484609291404921505}
   m_Layer: 31
   m_Name: Goblin Thief
   m_TagString: Enemy
@@ -299,6 +381,7 @@ Transform:
   m_Children:
   - {fileID: 861659942343419073}
   - {fileID: 4505885909354105053}
+  - {fileID: 8659750992819168476}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1406412435238707073
@@ -368,20 +451,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08144b2a68eb2ba479dbeb33a09a8b14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 0}
-  speed: 0.5
-  anim: {fileID: 0}
+  spriteRenderer: {fileID: 1406412435238707073}
+  speed: 0.6
+  anim: {fileID: 7484609291404921505}
   isAttacking: 0
-  attackRange: 0.7
+  attackRange: 0.2
   attackCooldown: 1
   aggroRange: 6
-  hitZone: {fileID: 0}
-  hitZoneScript: {fileID: 0}
+  hitZone: {fileID: 730588185646538273}
+  hitZoneScript: {fileID: 8225612302880870418}
   hitOffsetUp: {x: 0, y: 0.02}
-  hitOffsetDown: {x: 0, y: -0.02}
-  hitOffsetSide: {x: 0.02, y: 0}
-  hitZoneRadius: 0.3
-  orcAttackClip: {fileID: 0}
+  hitOffsetDown: {x: 0, y: -0.1}
+  hitOffsetSide: {x: 0.01, y: 0}
+  hitZoneRadius: 0.1
+  orcAttackClip: {fileID: 8300000, guid: 55d836bc4c84a9c4ca65f899de37428c, type: 3}
   movementFilter:
     useTriggers: 0
     useLayerMask: 0
@@ -412,7 +495,9 @@ MonoBehaviour:
   health: 30
   healthBar: {fileID: 9042534011615305348}
   xpReward: 15
+  deathEffect: {fileID: 0}
   orc: 0
+  fastFade: 0
   orcDamageClips: []
   orcDeathClips: []
 --- !u!195 &220753418843351008
@@ -515,6 +600,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heartPrefab: {fileID: 525955544927378189, guid: 236cb5c26d647fc419c38bb4dc11172b, type: 3}
   dropChance: 0.2
+--- !u!95 &7484609291404921505
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7303037417611682965}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 49ade32cc3ecff24e9b57599c609e2a0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8443249800665472416
 GameObject:
   m_ObjectHideFlags: 0
