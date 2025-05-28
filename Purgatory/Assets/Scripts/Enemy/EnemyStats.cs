@@ -11,9 +11,13 @@ public class EnemyStats : MonoBehaviour
     public Image healthBar;
     public int xpReward = 15;
 
+    [SerializeField] private ParticleSystem deathEffect;
+    //[SerializeField] private bool instantDeath = false;
+
     private Animator anim;
 
     public bool orc;
+    public bool fastFade = false;
     public AudioClip[] orcDamageClips;
     public AudioClip[] orcDeathClips;
 
@@ -101,21 +105,66 @@ public class EnemyStats : MonoBehaviour
         MonoBehaviour afterImage = GetComponent<AfterImageSpawner>();
         if (afterImage != null) afterImage.enabled = false;
 
+        MonoBehaviour skullMove = GetComponent<SkullController>();
+        if (skullMove != null)
+            skullMove.enabled = false;
+
+
+        if (deathEffect != null)
+        {
+            deathEffect.transform.parent = null;
+            deathEffect.transform.position = transform.position;
+            deathEffect.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear); // säkerställ nollställning
+            deathEffect.Play();
+            Destroy(deathEffect.gameObject, 2f);
+        }
+
 
         StartCoroutine(DeathSequence());
     }
 
     private IEnumerator DeathSequence()
     {
-        yield return new WaitForSeconds(0.5f);
+        //yield return new WaitForSeconds(0.5f);
+
+        //if (instantDeath)
+        //{
+        //    Destroy(gameObject, 0.02f);
+        //}
+        //else
+        //{
+        //    SpriteRenderer sr = GetComponent<SpriteRenderer>();
+        //    if (sr != null)
+        //    {
+        //        float duration = 1f;
+        //        float elapsed = 0f;
+
+        //        while (elapsed < duration)
+        //        {
+        //            elapsed += Time.deltaTime;
+        //            float alpha = Mathf.Lerp(1f, 0f, elapsed / duration);
+        //            sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, alpha);
+        //            yield return null;
+        //        }
+        //    }
+        //}
+
+        //DropOnDeath heartDropper = GetComponent<DropOnDeath>();
+
+        //if (heartDropper != null)
+        //{
+        //    heartDropper.DropHeart();
+        //}
+
+        //Destroy(gameObject);
+
+        float duration = fastFade ? 0.25f : 1f;
+        float elapsed = 0f;
 
         SpriteRenderer sr = GetComponent<SpriteRenderer>();
-        if(sr != null)
+        if (sr != null)
         {
-            float duration = 1f;
-            float elapsed = 0f;
-
-            while(elapsed < duration)
+            while (elapsed < duration)
             {
                 elapsed += Time.deltaTime;
                 float alpha = Mathf.Lerp(1f, 0f, elapsed / duration);
@@ -125,11 +174,8 @@ public class EnemyStats : MonoBehaviour
         }
 
         DropOnDeath heartDropper = GetComponent<DropOnDeath>();
-
         if (heartDropper != null)
-        {
             heartDropper.DropHeart();
-        }
 
         Destroy(gameObject);
     }
