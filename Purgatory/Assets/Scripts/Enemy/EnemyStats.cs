@@ -19,8 +19,16 @@ public class EnemyStats : MonoBehaviour
     public AudioClip[] orcDeathClips;
 
     public System.Action OnDamaged;
-    
-    
+
+    public void Update()
+    {
+        isBurning = true;
+        if (isBurning) 
+        { 
+            Burning();
+        }
+    }
+
     public void Start()
     {
         anim = GetComponent<Animator>();
@@ -109,9 +117,12 @@ public class EnemyStats : MonoBehaviour
 
     public IEnumerator Burning() 
     {
-
-        TakeDamage(1);
-        yield return new WaitForSeconds(0.2f);
+        while (isBurning)
+        {
+            TakeDamage(1);
+            yield return new WaitForSeconds(0.2f);
+        }
+        
     }
     private IEnumerator DeathSequence()
     {
