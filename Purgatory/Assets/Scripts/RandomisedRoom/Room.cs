@@ -20,6 +20,8 @@ public class Room : MonoBehaviour
 
     [SerializeField] private Camera roomCamera; //camera instance for room
 
+    public AudioClip ambientClip;
+
     public Camera RoomCamera => roomCamera;
 
     private List<GameObject> roomEntities = new List<GameObject>(); //list of enemies in room

@@ -3,6 +3,12 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public AudioClip mainMenuClip;
+    private void Start()
+    {
+        AmbientAudioManager.Instance?.PlayAmbientSound(mainMenuClip);
+    }
+
     public void Lobby()
     {
         Debug.Log("Loading scene: lobby");

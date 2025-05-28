@@ -19,10 +19,10 @@ public class EnemyStats : MonoBehaviour
 
     private Animator anim;
 
-    public bool orc;
+    
     public bool fastFade = false;
-    public AudioClip[] orcDamageClips;
-    public AudioClip[] orcDeathClips;
+    public AudioClip[] damageClips;
+    public AudioClip[] deathClips;
 
     public System.Action OnDamaged;
     
@@ -56,7 +56,7 @@ public class EnemyStats : MonoBehaviour
             return;
         }
 
-        if (orc && orcDamageClips.Length > 0) SoundFXManager.instance?.PlayRandomSoundFXClip(orcDamageClips, transform, 1f);
+        if (damageClips.Length > 0) SoundFXManager.instance?.PlayRandomSoundFXClip(damageClips, transform, 1f);
     }
 
     private IEnumerator FlashRed()
@@ -73,7 +73,7 @@ public class EnemyStats : MonoBehaviour
 
     protected virtual void Die()
     {
-        if (orc && orcDeathClips.Length > 0) SoundFXManager.instance.PlayRandomSoundFXClip(orcDeathClips, transform, 1f);
+        if (deathClips.Length > 0) SoundFXManager.instance.PlayRandomSoundFXClip(deathClips, transform, 1f);
         GameObject player = GameObject.FindWithTag("Player");
 
         if (player != null)

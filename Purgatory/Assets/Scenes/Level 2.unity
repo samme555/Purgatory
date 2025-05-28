@@ -4113,6 +4113,7 @@ MonoBehaviour:
   - {fileID: 5413455746600934425, guid: 7bc812b52ad73c049b176b056df4239e, type: 3}
   - {fileID: 5219237122793748789, guid: 23243f87a0471e74aaeff9f907b0f72a, type: 3}
   - {fileID: 5219237122793748789, guid: 3250b821279e5bd43a72814c2162fcff, type: 3}
+  - {fileID: 2342789604691106487, guid: dea4753067434b0438a8316ea7d73e5e, type: 3}
   bossRoomPrefabs:
   - {fileID: 2342789604691106487, guid: 21e5a0ff99ab0e344ab8b3b22b4a0921, type: 3}
   startRoomPrefab: {fileID: 5219237122793748789, guid: 61579b1e5b1ee4b42ada0a36b7687714, type: 3}
@@ -5295,6 +5296,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 287607713106886573, guid: 67dd473b0cce29c4f8a9e00f34793c0e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1358662439726953179, guid: 67dd473b0cce29c4f8a9e00f34793c0e, type: 3}
+      propertyPath: musicMixerGroup
+      value: 
+      objectReference: {fileID: -5382739609587453431, guid: 3d66d0b5a21e3664cb9ac5c2c8114f5e, type: 2}
     - target: {fileID: 5497636827396323135, guid: 67dd473b0cce29c4f8a9e00f34793c0e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.92849

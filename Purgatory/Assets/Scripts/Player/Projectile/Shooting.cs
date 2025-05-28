@@ -71,7 +71,7 @@ public class Shooting : MonoBehaviour
     }
     void Shoot() 
     {
-        SoundFXManager.instance?.PlaySoundFXClip(fireBallShootingClip, transform, 1f);
+        SoundFXManager.instance?.PlaySoundFXClip(fireBallShootingClip, transform, 0.5f);
 
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePosition.z = 0f;

@@ -3598,6 +3598,9 @@ MonoBehaviour:
   leftWall: {fileID: 7689470809179013497}
   rightWall: {fileID: 4991770890643764246}
   roomCamera: {fileID: 302382143976200786}
+  ambientClip: {fileID: 8300000, guid: c7173d2f8c8a1f14cb513038b04b9a2b, type: 3}
+  roomEntityTag: Enemy
+  roomEntityBossTag: Boss
 --- !u!1 &2938407908454151997
 GameObject:
   m_ObjectHideFlags: 0

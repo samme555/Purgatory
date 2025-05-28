@@ -182,6 +182,7 @@ MonoBehaviour:
   critDMG: 0
   impactEffect: {fileID: 2267736383564715800, guid: e151e9121f6387b499640f9c402bb2b5, type: 3}
   playerstats: {fileID: 0}
+  fireballHitClip: {fileID: 8300000, guid: 0c27af914fa634c438d2c2e4580088f6, type: 3}
 --- !u!95 &8980392684182878915
 Animator:
   serializedVersion: 7
