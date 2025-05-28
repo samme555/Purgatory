@@ -289,7 +289,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7575900333080435444}
-  - {fileID: 8048544296326545804}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4922114864710904979
@@ -360,7 +359,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2621821970028923188, guid: e011c842c4c65154d8f695596fa82111, type: 3}
-  damage: 1
   speed: 0.4
   dashSpeed: 15
   dashDuration: 0.15
@@ -380,9 +378,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f960e28d727cfca45b4ea3ba77cd426f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  preset: {fileID: 11400000, guid: ffcfe1132cca5464b812f701fc20df55, type: 2}
   health: 250
   healthBar: {fileID: 7843147679572712084}
-  xpReward: 75
+  orc: 0
+  orcDamageClips: []
+  orcDeathClips: []
 --- !u!70 &3869936988277604408
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
