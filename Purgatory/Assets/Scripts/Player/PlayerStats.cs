@@ -38,6 +38,7 @@ public class PlayerStats : MonoBehaviour
 
     public bool biggerBullets = false;
     public bool burstFire = false;
+    public bool ignite = false;
 
     public bool damageImmunity = false;
     public float immunityTimer = 0f;

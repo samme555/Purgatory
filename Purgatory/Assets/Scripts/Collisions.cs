@@ -92,14 +92,18 @@ public class Collisions : MonoBehaviour
             {
 
                 var crit = Random.Range(0f, 10f);
-                bossStats.TakeDamage(crit <= critChance ? damage * critDMG : damage);
+                bossStats.TakeDamage(crit <= critChance && critChance > 0 ? damage * critDMG : damage);
             }
             // Om inte boss, träffa vanlig fiende
             else if (other.TryGetComponent<EnemyStats>(out var enemyStats))
             {
                 var crit = Random.Range(0f, 10f);
-                enemyStats.TakeDamage(crit <= critChance ? damage * critDMG : damage);
-
+                
+                enemyStats.TakeDamage(crit <= critChance && critChance > 0 ? damage * critDMG : damage);
+                if (crit <= critChance && critChance > 0)
+                { 
+                    enemyStats.isBurning = true;
+                }
             }
         }
 

@@ -18,7 +18,7 @@ public class PlayerData : MonoBehaviour
     public int skillPoints = 0;
     public bool biggerBullet;
     public bool burstFire;
-
+    public bool ignite;
     public int runSkillPoints = 0; //always 0, never saved.
 
     public List<int> unlockedSkillSlots = new();
@@ -58,7 +58,7 @@ public class PlayerData : MonoBehaviour
         skillPoints = stats.skillPoints;
         biggerBullet = stats.biggerBullets;
         burstFire = stats.burstFire;
-
+        ignite = stats.ignite;
         Debug.Log("Saved stats from Player");
     }
 
@@ -77,7 +77,7 @@ public class PlayerData : MonoBehaviour
         stats.skillPoints = skillPoints;
         stats.biggerBullets = biggerBullet;
         stats.burstFire = burstFire;
-
+        stats.ignite = ignite;
         Debug.Log("Loaded stats to Player");
     }
     public void ResetData()

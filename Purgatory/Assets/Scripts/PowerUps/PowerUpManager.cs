@@ -90,7 +90,9 @@ public class PowerUpManager : MonoBehaviour
                 case PowerUpEffect.burstfire:
                     stats.burstFire = true;
                     break;
-
+                case PowerUpEffect.ignite:
+                    stats.ignite = true;
+                    break;
             }
         PlayerData.instance.SaveFrom(stats);
     }
