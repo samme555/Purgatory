@@ -10,7 +10,10 @@ public class EnemyStats : MonoBehaviour
     float maxHealth;
     public Image healthBar;
     public int xpReward = 15;
+    private SpriteRenderer sr;
+    private Color originalColor;
 
+    [SerializeField] private float flashDuration = 0.1f;
     [SerializeField] private ParticleSystem deathEffect;
     //[SerializeField] private bool instantDeath = false;
 
@@ -27,6 +30,9 @@ public class EnemyStats : MonoBehaviour
     public void Start()
     {
         anim = GetComponent<Animator>();
+        sr = GetComponent<SpriteRenderer>();
+        if(sr != null )
+            originalColor = sr.color;
         maxHealth = health;
         UpdateHealthBar();
     }
@@ -38,6 +44,9 @@ public class EnemyStats : MonoBehaviour
         Debug.Log($"damage dealt:" + damage);
 
         UpdateHealthBar();
+        if (sr != null)
+            StartCoroutine(FlashRed());
+
         OnDamaged?.Invoke();
 
         if (health <= 0)
@@ -48,6 +57,13 @@ public class EnemyStats : MonoBehaviour
         }
 
         if (orc && orcDamageClips.Length > 0) SoundFXManager.instance?.PlayRandomSoundFXClip(orcDamageClips, transform, 1f);
+    }
+
+    private IEnumerator FlashRed()
+    {
+        sr.color = new Color(0.3f, 0f, 0f, 1f);
+        yield return new WaitForSeconds(flashDuration);
+        sr.color = originalColor;
     }
 
     public void UpdateHealthBar()
