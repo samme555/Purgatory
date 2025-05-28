@@ -117,11 +117,10 @@ public class EnemyStats : MonoBehaviour
 
     public IEnumerator Burning() 
     {
-        while (isBurning)
-        {
+        
             TakeDamage(1);
             yield return new WaitForSeconds(0.2f);
-        }
+       
         
     }
     private IEnumerator DeathSequence()
