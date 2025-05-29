@@ -8,7 +8,9 @@ public class Collisions : MonoBehaviour
     [SerializeField] private float critDMG;
     [SerializeField] private GameObject impactEffect;
     public PlayerStats playerstats;
-    
+
+    public AudioClip fireballHitClip;
+
 
     public void Start()
     {
@@ -112,6 +114,7 @@ public class Collisions : MonoBehaviour
         {
             if (impactEffect != null)
             {
+                SoundFXManager.instance?.PlaySoundFXClip(fireballHitClip, transform, 0.5f);
                 GameObject fx = Instantiate(impactEffect, transform.position, Quaternion.identity);
                 fx.transform.localScale = Vector3.one;
 
@@ -119,7 +122,6 @@ public class Collisions : MonoBehaviour
                 if (ps != null)
                     ps.Play();
             }
-
             Destroy(gameObject); // Bara en gång här
         }
     }

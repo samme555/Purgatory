@@ -137,6 +137,7 @@ MonoBehaviour:
   button: {fileID: 5920297889217453101}
   isUnlocked: 0
   isAvailable: 0
+  upgradeClip: {fileID: 8300000, guid: deae147ae4139184f81230b6aa98b2a3, type: 3}
   incomingLines: []
   upgradeData: {fileID: 11400000, guid: d661b7b65d2ac2b4db1ff7c86ffe3b0b, type: 2}
 --- !u!114 &8356095718110115309
@@ -151,3 +152,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f940fb9e47bd934680d0c444d4f15fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillUpgrade: {fileID: 0}

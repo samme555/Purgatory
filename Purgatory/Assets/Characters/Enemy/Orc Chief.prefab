@@ -203,6 +203,9 @@ MonoBehaviour:
   warningDuration: 1
   isAttacking: 0
   spriteRenderer: {fileID: 4014268772967773632}
+  attackClips:
+  - {fileID: 8300000, guid: 615465fae98aec64a9b5fd46aa0c113d, type: 3}
+  - {fileID: 8300000, guid: 7b08f7153730b234b8ce279a62cd968e, type: 3}
 --- !u!114 &5164510801035026290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,11 +221,14 @@ MonoBehaviour:
   health: 175
   healthBar: {fileID: 7628940671623384653}
   xpReward: 15
+  flashDuration: 0.1
   deathEffect: {fileID: 0}
-  orc: 0
   fastFade: 0
-  orcDamageClips: []
-  orcDeathClips: []
+  damageClips:
+  - {fileID: 8300000, guid: ec3426862a711c345aaaa0479a1073eb, type: 3}
+  - {fileID: 8300000, guid: 7146af92629d9354780c9d3f7c837a12, type: 3}
+  deathClips:
+  - {fileID: 8300000, guid: 106a866f54ccf9742b83ebc24dba362b, type: 3}
 --- !u!114 &23969684654659013
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -328,6 +328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41d47782ef480d649b91880d5d2dc7f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainMenuClip: {fileID: 0}
 --- !u!1001 &160650102
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -818,6 +819,7 @@ GameObject:
   - component: {fileID: 210427099}
   - component: {fileID: 210427098}
   - component: {fileID: 210427097}
+  - component: {fileID: 210427100}
   m_Layer: 5
   m_Name: ResetButton
   m_TagString: Untagged
@@ -939,6 +941,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 210427095}
   m_CullTransparentMesh: 1
+--- !u!114 &210427100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210427095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5f0cb2f88d8f8349b9bdf7f8eee8a4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 210427097}
+  buttonClickClip: {fileID: 8300000, guid: 55d836bc4c84a9c4ca65f899de37428c, type: 3}
 --- !u!224 &212291664 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7740210873938000947, guid: d873231b4deb745459690b279f1c08f6, type: 3}
@@ -2371,6 +2387,7 @@ GameObject:
   - component: {fileID: 588606592}
   - component: {fileID: 588606591}
   - component: {fileID: 588606590}
+  - component: {fileID: 588606593}
   m_Layer: 5
   m_Name: BackButton
   m_TagString: Untagged
@@ -2492,6 +2509,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 588606588}
   m_CullTransparentMesh: 1
+--- !u!114 &588606593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588606588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5f0cb2f88d8f8349b9bdf7f8eee8a4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 588606590}
+  buttonClickClip: {fileID: 8300000, guid: 55d836bc4c84a9c4ca65f899de37428c, type: 3}
 --- !u!1 &592961880
 GameObject:
   m_ObjectHideFlags: 0
@@ -8585,6 +8616,7 @@ GameObject:
   - component: {fileID: 2017192288}
   - component: {fileID: 2017192287}
   - component: {fileID: 2017192286}
+  - component: {fileID: 2017192289}
   m_Layer: 5
   m_Name: StartButton
   m_TagString: Untagged
@@ -8706,6 +8738,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2017192284}
   m_CullTransparentMesh: 1
+--- !u!114 &2017192289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2017192284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5f0cb2f88d8f8349b9bdf7f8eee8a4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 2017192286}
+  buttonClickClip: {fileID: 8300000, guid: 55d836bc4c84a9c4ca65f899de37428c, type: 3}
 --- !u!1 &2019555443
 GameObject:
   m_ObjectHideFlags: 0

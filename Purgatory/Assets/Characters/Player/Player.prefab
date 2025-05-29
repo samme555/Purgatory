@@ -274,7 +274,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 1991844357552419152}
   projectilePrefab: {fileID: 1925677939549781835, guid: 6328ede7909628e40be14ffe56bee71e, type: 3}
-  fireBallShootingClip: {fileID: 8300000, guid: 0c27af914fa634c438d2c2e4580088f6, type: 3}
+  fireBallShootingClip: {fileID: 8300000, guid: 267a3177628627f448ef78ffde727cd0, type: 3}
   playerStats: {fileID: 531783463737051170}
   attackSpeed: 1
   bulletForce: 2
@@ -312,6 +312,8 @@ MonoBehaviour:
   immunityDuration: 0.7
   timer: 1
   isPoisoned: 0
+  isBurning: 0
+  burnTimer: 0
 --- !u!1 &6069326298474498582
 GameObject:
   m_ObjectHideFlags: 0
