@@ -15,7 +15,7 @@ MonoBehaviour:
   baseHealth: 20
   healthPerLevel: 0.2
   baseXpReward: 10
-  xpPerLevel: 0.1
+  xpPerLevel: 0.2
   baseDamage: 10
   damagePerLevel: 0.2
   baseBurnDamage: 4

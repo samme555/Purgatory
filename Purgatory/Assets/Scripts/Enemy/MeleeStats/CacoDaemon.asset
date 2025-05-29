@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae86c951115eb65498b745ac7368af1c, type: 3}
   m_Name: CacoDaemon
   m_EditorClassIdentifier: 
-  baseHealth: 100
-  healthPerLevel: 0.1
-  baseXpReward: 15
-  xpPerLevel: 0.05
-  baseDamage: 10
-  damagePerLevel: 0.05
+  baseHealth: 250
+  healthPerLevel: 0.3
+  baseXpReward: 75
+  xpPerLevel: 0.3
+  baseDamage: 20
+  damagePerLevel: 0.2
   baseBurnDamage: 4
   burnPerLevel: 0.02
   burnDuration: 10

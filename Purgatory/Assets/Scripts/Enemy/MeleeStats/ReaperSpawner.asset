@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae86c951115eb65498b745ac7368af1c, type: 3}
   m_Name: ReaperSpawner
   m_EditorClassIdentifier: 
-  baseHealth: 150
+  baseHealth: 200
   healthPerLevel: 0.3
   baseXpReward: 30
   xpPerLevel: 0.3

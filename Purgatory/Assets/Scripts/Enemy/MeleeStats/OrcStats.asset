@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae86c951115eb65498b745ac7368af1c, type: 3}
   m_Name: OrcStats
   m_EditorClassIdentifier: 
-  baseHealth: 20
-  healthPerLevel: 1
+  baseHealth: 50
+  healthPerLevel: 0.2
   baseXpReward: 15
-  xpPerLevel: 0.1
+  xpPerLevel: 0.2
   baseDamage: 10
-  damagePerLevel: 0.05
+  damagePerLevel: 0.5
   baseBurnDamage: 4
-  burnPerLevel: 0.02
+  burnPerLevel: 0.2
   burnDuration: 10
   basePoisonDamage: 3
-  poisonPerLevel: 0.02
+  poisonPerLevel: 0.2
   poisonDuration: 6
