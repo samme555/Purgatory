@@ -127,10 +127,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f960e28d727cfca45b4ea3ba77cd426f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  preset: {fileID: 11400000, guid: 2fa658451c20ef9439616c28322bebfc, type: 2}
   health: 50
-  healthBar: {fileID: 8783933556512912140}
   xpReward: 15
   deathEffect: {fileID: 3301259197365733129}
+  healthBar: {fileID: 8783933556512912140}
   orc: 0
   fastFade: 1
   orcDamageClips: []
@@ -10232,8 +10233,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64150f67142a5e94f96cc5a28a610c43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
-  burnDamage: 4
 --- !u!70 &3101859094757965914
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

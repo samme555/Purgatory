@@ -517,18 +517,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f960e28d727cfca45b4ea3ba77cd426f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  preset: {fileID: 11400000, guid: 4f47e9958ef3cae489ac6a0e8fa93525, type: 2}
   health: 80
   healthBar: {fileID: 6531719404410110601}
-  xpReward: 15
-  orc: 1
-  orcDamageClips:
+  flashDuration: 0.1
+  deathEffect: {fileID: 0}
+  isBurning: 0
+  fastFade: 0
+  damageClips:
   - {fileID: 8300000, guid: 4d0e3f809e7f20b4d86e3f54e2d893db, type: 3}
   - {fileID: 8300000, guid: ff314eb21397852488057e4ec684e9b0, type: 3}
   - {fileID: 8300000, guid: 0534c801dc3409a4dab371647188d958, type: 3}
   - {fileID: 8300000, guid: 3447c7c33a174f740abf1ba4c77fda88, type: 3}
   - {fileID: 8300000, guid: 54891e31f3e73e74ea75980dd2a7cf42, type: 3}
   - {fileID: 8300000, guid: 6d3009d0d8cc7d348937113dbb52dafb, type: 3}
-  orcDeathClips:
+  deathClips:
   - {fileID: 8300000, guid: 35954ac103dfaf44bb92273b3f45b133, type: 3}
   - {fileID: 8300000, guid: 7e37bb1135ca30246b2a4459ef56c604, type: 3}
 --- !u!114 &4344821492602499412

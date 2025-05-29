@@ -8,6 +8,7 @@ public class SkillNode : MonoBehaviour
     public Button button;
     public bool isUnlocked = false;
     public bool isAvailable = false;
+    public AudioClip upgradeClip;
 
     public List<ConnectionLine> incomingLines;
 
@@ -49,5 +50,7 @@ public class SkillNode : MonoBehaviour
         {
             line.SetActive(true);
         }
+
+        SoundFXManager.instance?.PlaySoundFXClip(upgradeClip, transform, 0.5f);
     }
 }

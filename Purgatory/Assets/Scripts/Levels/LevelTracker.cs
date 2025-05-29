@@ -3,6 +3,6 @@ using UnityEngine;
 
 public static class LevelTracker
 {
-    public static int currentLevel = 0;
+    public static int currentLevel = 1;
 }
 

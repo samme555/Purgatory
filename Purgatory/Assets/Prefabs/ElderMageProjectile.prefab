@@ -4898,8 +4898,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d996f43c7a4d22b4ca662375dae5ae70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  damage: 12
+  preset: {fileID: 11400000, guid: 396ea80199202354fbc7b055d495d3d8, type: 2}
   impactEffect: {fileID: 2267736383564715800, guid: be11909e54d37eb42955918ff36b33b4, type: 3}
 --- !u!212 &-2441277126037706326
 SpriteRenderer:

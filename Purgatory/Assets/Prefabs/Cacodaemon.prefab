@@ -520,13 +520,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f960e28d727cfca45b4ea3ba77cd426f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  preset: {fileID: 11400000, guid: ffcfe1132cca5464b812f701fc20df55, type: 2}
   health: 250
   healthBar: {fileID: 7843147679572712084}
-  xpReward: 75
   flashDuration: 0.1
   deathEffect: {fileID: 0}
   isBurning: 0
-  orc: 0
   fastFade: 0
   orcDamageClips: []
   orcDeathClips: []

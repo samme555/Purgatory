@@ -29,6 +29,8 @@ public class ChiefController : MonoBehaviour
     private Rigidbody2D rb;
     private List<Vector2Int> currentPattern = new List<Vector2Int>();
 
+    public AudioClip[] attackClips;
+
     private void Awake()
     {
 
@@ -131,6 +133,7 @@ public class ChiefController : MonoBehaviour
         hitBox.transform.localScale = new Vector3(scale, scale, 1f);
         Destroy(hitBox, 0.2f);
 
+        if (attackClips.Length > 0) SoundFXManager.instance.PlayRandomSoundFXClip(attackClips, transform, 1f);
         Debug.Log("hitbox spawned success woooo");
 
         yield return new WaitForSeconds(0.5f); // small post-slam pause

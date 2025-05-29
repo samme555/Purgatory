@@ -6481,6 +6481,7 @@ MonoBehaviour:
   leftWall: {fileID: 9045063417425633833}
   rightWall: {fileID: 7035086695572273886}
   roomCamera: {fileID: 957331746346199373}
+  ambientClip: {fileID: 8300000, guid: cd82eed973ba6314e93eea95ccc1fa00, type: 3}
   roomEntityTag: Enemy
   roomEntityBossTag: Boss
 --- !u!114 &4020157793614263522
@@ -11349,7 +11350,7 @@ Transform:
   m_GameObject: {fileID: 8071317957177991671}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.025, y: -0.607, z: 0}
+  m_LocalPosition: {x: 0.025, y: -0.681, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

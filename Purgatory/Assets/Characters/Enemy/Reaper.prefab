@@ -288,10 +288,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f960e28d727cfca45b4ea3ba77cd426f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  preset: {fileID: 11400000, guid: 5441682a563778e46aa78f4f48b58f88, type: 2}
   health: 20
   healthBar: {fileID: 5913551230340645220}
-  xpReward: 7
-  orc: 0
+  flashDuration: 0.1
+  deathEffect: {fileID: 0}
+  fastFade: 0
+  damageClips: []
+  deathClips:
+  - {fileID: 8300000, guid: de651d9adb7f2ab4b82631e593d428a3, type: 3}
   orcDamageClips: []
   orcDeathClips: []
 --- !u!1 &5456117055620064694

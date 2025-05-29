@@ -21,6 +21,8 @@ public class RoomTrigger : MonoBehaviour
 
         entered = true;
 
+        AmbientAudioManager.Instance?.PlayAmbientSound(room.ambientClip);
+
         // 1) lock down the whole room
         room.CloseAllDoors();
 
