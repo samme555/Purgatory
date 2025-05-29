@@ -50,6 +50,7 @@ public class PlayerStats : MonoBehaviour
     private float burnInterval = 2f;
     private Color burnColor = new Color(1f, 0.5f, 0f);
     private int burnDamage = 0; //set when burn is applied
+    private Animator animator;
 
     private SpriteRenderer spriteRenderer;
 
@@ -58,6 +59,7 @@ public class PlayerStats : MonoBehaviour
         maxHp = hp;
 
         spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
         
         // Ladda spelarens tidigare stats från PlayerData (om det finns)
         if (PlayerData.instance != null)
@@ -219,6 +221,22 @@ public class PlayerStats : MonoBehaviour
 
     public void Die()
     {
+        if (animator != null)
+            animator.SetTrigger("Die");
+
+        StartCoroutine(DeathSequence());
+    }
+
+    private IEnumerator DeathSequence()
+    {
+        moveSpeed = 0;
+        var move = GetComponent<Movement>();
+        if (move != null) move.enabled = false;
+        var shoot = GetComponent<Shooting>();
+        if (shoot != null) shoot.enabled = false;
+
+        yield return new WaitForSeconds(1f);
+
         Destroy(gameObject);
     }
 
