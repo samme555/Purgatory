@@ -6,6 +6,7 @@ public class DaemonController : MonoBehaviour
 {
     public Transform player;
     private EnemyStats stats;
+    [SerializeField] private SpriteRenderer spriteRenderer;
 
     [Header("Movement Settings")]
     public float speed = 2f;
@@ -26,6 +27,7 @@ public class DaemonController : MonoBehaviour
 
     private bool isWindingUp = false;
     private float windupTimer;
+    private Animator anim;
 
     private float actionTimer = 0f;
     private bool isDashing = false;
@@ -37,8 +39,21 @@ public class DaemonController : MonoBehaviour
         stats = GetComponent<EnemyStats>();
     }
 
+    private void Awake()
+    {
+        anim = GetComponent<Animator>();      
+    }
+
     private void Update()
     {
+        Vector2 dir = (player.position - transform.position).normalized;
+        if (dir.x < 0f)
+            spriteRenderer.flipX = true;
+        else if (dir.x > 0f)
+            spriteRenderer.flipX = false;       
+
+
+
         if (isWindingUp)
         {
             windupTimer += Time.deltaTime;
@@ -66,6 +81,7 @@ public class DaemonController : MonoBehaviour
 
         if (player == null) return;
 
+
         if (isDashing)
         {
             DashMovement();
@@ -87,7 +103,7 @@ public class DaemonController : MonoBehaviour
     void Move()
     {
         Vector2 dir = (player.position - transform.position).normalized;
-        transform.position += (Vector3)(dir * speed * Time.deltaTime);
+        transform.position += (Vector3)(dir * speed * Time.deltaTime);                         
     }
 
     void RandomizeAction()
@@ -103,7 +119,7 @@ public class DaemonController : MonoBehaviour
     }
 
     void StartDashWindup()
-    {
+    {       
         if (stats.health <= 200)
         {
             actionInterval = 1.5f;
@@ -116,6 +132,8 @@ public class DaemonController : MonoBehaviour
         dashDirection = (player.position - transform.position).normalized;
         windupTimer = 0f;
         isWindingUp = true;
+
+        anim?.SetTrigger("Attack");
 
         if (dashIndicatorInstance == null && dashIndicatorPrefab != null)
         {
@@ -163,6 +181,8 @@ public class DaemonController : MonoBehaviour
 
     void Teleport()
     {
+        anim?.ResetTrigger("Attack");
+        anim?.SetTrigger("Idle");
         Vector2 offset = Random.insideUnitCircle.normalized * 0.6f;
         transform.position = player.position + (Vector3)offset;
     }

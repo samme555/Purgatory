@@ -14,7 +14,7 @@ public class EnemyStats : MonoBehaviour
     private Color originalColor;
 
     [SerializeField] private float flashDuration = 0.1f;
-    [SerializeField] private ParticleSystem deathEffect;
+    [SerializeField] private ParticleSystem deathEffect;    
     //[SerializeField] private bool instantDeath = false;
 
     private Animator anim;
@@ -48,8 +48,11 @@ public class EnemyStats : MonoBehaviour
 
    
     public virtual void TakeDamage(float damage)
-    {
+    {        
         health -= damage;
+
+        if (anim != null)
+            anim.SetTrigger("Hit");
 
         Debug.Log($"damage dealt:" + damage);
 
@@ -138,6 +141,10 @@ public class EnemyStats : MonoBehaviour
         MonoBehaviour chiefScript = GetComponent<ChiefController>();
         if (chiefScript != null)
             chiefScript.enabled = false;
+
+        MonoBehaviour daemonScript = GetComponent<DaemonController>();
+        if (daemonScript != null)
+            daemonScript.enabled = false;
 
 
 
