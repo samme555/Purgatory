@@ -3166,6 +3166,7 @@ MonoBehaviour:
   skillPoints: 0
   biggerBullet: 0
   burstFire: 0
+  ignite: 0
   runSkillPoints: 0
   unlockedSkillSlots: 
   chosenBranches: 

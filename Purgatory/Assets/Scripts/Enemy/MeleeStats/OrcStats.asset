@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: OrcStats
   m_EditorClassIdentifier: 
   baseHealth: 50
-  healthPerLevel: 0.2
+  healthPerLevel: 1
   baseXpReward: 15
   xpPerLevel: 0.2
   baseDamage: 10
