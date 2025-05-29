@@ -19,14 +19,23 @@ public class EnemyStats : MonoBehaviour
 
     private Animator anim;
 
+    public bool isBurning = false;
     public bool orc;
     public bool fastFade = false;
     public AudioClip[] orcDamageClips;
     public AudioClip[] orcDeathClips;
 
     public System.Action OnDamaged;
-    
-    
+
+    public void Update()
+    {
+        isBurning = true;
+        if (isBurning) 
+        { 
+            Burning();
+        }
+    }
+
     public void Start()
     {
         anim = GetComponent<Animator>();
@@ -37,6 +46,7 @@ public class EnemyStats : MonoBehaviour
         UpdateHealthBar();
     }
 
+   
     public virtual void TakeDamage(float damage)
     {
         health -= damage;
@@ -144,6 +154,14 @@ public class EnemyStats : MonoBehaviour
         StartCoroutine(DeathSequence());
     }
 
+    public IEnumerator Burning() 
+    {
+        
+            TakeDamage(1);
+            yield return new WaitForSeconds(0.2f);
+       
+        
+    }
     private IEnumerator DeathSequence()
     {
         //yield return new WaitForSeconds(0.5f);
