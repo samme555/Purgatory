@@ -2953,7 +2953,7 @@ GameObject:
   - component: {fileID: 1301542558795008260}
   - component: {fileID: 5984204170909637550}
   - component: {fileID: 3536747519249935831}
-  - component: {fileID: 7986519917825899886}
+  - component: {fileID: 4664550298849555746}
   m_Layer: 0
   m_Name: stairstonextlvl
   m_TagString: AdvanceLevel
@@ -3436,7 +3436,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.089989424, y: 0.10274798}
   m_EdgeRadius: 0
---- !u!114 &7986519917825899886
+--- !u!114 &4664550298849555746
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3445,7 +3445,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1919144120555645408}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb7f352b8c94df14e8e9a863af8c2021, type: 3}
+  m_Script: {fileID: 11500000, guid: aab39c4247c39674b9fb5973fb139add, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1958067575066483943

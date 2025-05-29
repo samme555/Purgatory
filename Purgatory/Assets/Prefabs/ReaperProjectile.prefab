@@ -103,10 +103,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 368745ad7a8dc98449fcb76600d05ffd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spinSpeed: 720
-  moveSpeed: 2
-  delayBeforeMoving: 0.5
+  preset: {fileID: 11400000, guid: a8c2a5641d3938f42a4bc743c684ac67, type: 2}
   impactEffect: {fileID: 2267736383564715800, guid: 630fcb98fab402b429ceade75be88937, type: 3}
+  spinSpeed: 720
+  delayBeforeMoving: 0.5
+  lifeTime: 3
 --- !u!70 &1771364365571202915
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

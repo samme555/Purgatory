@@ -163,7 +163,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b3d06af16c2654438a49eb90efdf676, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
 --- !u!1 &6271164652380549114
 GameObject:
   m_ObjectHideFlags: 0
@@ -492,8 +491,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f960e28d727cfca45b4ea3ba77cd426f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  preset: {fileID: 11400000, guid: 9b3d03f94bcc8e449ae77fa7071c6c66, type: 2}
   health: 30
-  healthBar: {fileID: 9042534011615305348}
   xpReward: 15
   flashDuration: 0.1
   deathEffect: {fileID: 0}
@@ -505,6 +504,9 @@ MonoBehaviour:
   deathClips:
   - {fileID: 8300000, guid: 0f1ab56c8ab3f4f4989b9877cd23082e, type: 3}
   - {fileID: 8300000, guid: bd78bd6bd9469d34797242e2113bdd24, type: 3}
+  healthBar: {fileID: 9042534011615305348}
+  orcDamageClips: []
+  orcDeathClips: []
 --- !u!195 &220753418843351008
 NavMeshAgent:
   m_ObjectHideFlags: 0

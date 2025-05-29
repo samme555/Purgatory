@@ -218,8 +218,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f960e28d727cfca45b4ea3ba77cd426f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  preset: {fileID: 11400000, guid: 434c45629a624a54abcd05057c1583da, type: 2}
   health: 175
-  healthBar: {fileID: 7628940671623384653}
   xpReward: 15
   flashDuration: 0.1
   deathEffect: {fileID: 0}
@@ -229,6 +229,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 7146af92629d9354780c9d3f7c837a12, type: 3}
   deathClips:
   - {fileID: 8300000, guid: 106a866f54ccf9742b83ebc24dba362b, type: 3}
+  healthBar: {fileID: 7628940671623384653}
+  orcDamageClips: []
+  orcDeathClips: []
 --- !u!114 &23969684654659013
 MonoBehaviour:
   m_ObjectHideFlags: 0

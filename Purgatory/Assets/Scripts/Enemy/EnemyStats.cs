@@ -6,10 +6,19 @@ using UnityEngine.UI;
 
 public class EnemyStats : MonoBehaviour
 {
+    [Header("Data")]
+    public EnemyStatsSO preset;
+
+    [HideInInspector]
     public float health;
-    float maxHealth;
+
+    private float maxHealth;
+
+    // backing store for XP; never serializes
+    private int _xpReward;
+    public int xpReward => _xpReward;
+
     public Image healthBar;
-    public int xpReward = 15;
     private SpriteRenderer sr;
     private Color originalColor;
 
@@ -29,10 +38,21 @@ public class EnemyStats : MonoBehaviour
     public void Update()
     {
         isBurning = true;
-        if (isBurning) 
-        { 
+        if (isBurning)
+        {
             Burning();
         }
+    }
+    void Awake()
+    {
+        anim = GetComponent<Animator>()
+               ?? GetComponentInChildren<Animator>();
+
+        int lvl = LevelTracker.currentLevel - 1;
+        lvl = Mathf.Max(0, lvl);
+        maxHealth = preset.GetHealth(lvl + 1);
+        health = maxHealth;
+        _xpReward = preset.GetXpReward(lvl + 1);
     }
 
     public void Start()
@@ -44,18 +64,17 @@ public class EnemyStats : MonoBehaviour
         maxHealth = health;
         UpdateHealthBar();
     }
+    public virtual void TakeDamage(float dmg)
+    {
+        health -= dmg;
 
-   
-    public virtual void TakeDamage(float damage)
-    {        
-        health -= damage;
-
-        if (anim != null)
-            anim.SetTrigger("Hit");
-
-        Debug.Log($"damage dealt:" + damage);
+        Debug.Log($"damage dealt:" + dmg);
 
         UpdateHealthBar();
+
+        //if (anim != null)
+        //    anim.SetTrigger("Hit");
+
         if (sr != null)
             StartCoroutine(FlashRed());
 
@@ -86,20 +105,21 @@ public class EnemyStats : MonoBehaviour
     protected virtual void Die()
     {
         if (deathClips.Length > 0) SoundFXManager.instance.PlayRandomSoundFXClip(deathClips, transform, 1f);
-        GameObject player = GameObject.FindWithTag("Player");
 
+        int xp = preset.GetXpReward(LevelTracker.currentLevel);
+
+        GameObject player = GameObject.FindWithTag("Player");
         if (player != null)
         {
-            PlayerStats stats = player.GetComponent<PlayerStats>();
-
+            var stats = player.GetComponent<PlayerStats>();
             if (stats != null)
             {
-                stats.AddXP(xpReward);
+                stats.AddXP(xp);
                 PlayerData.instance.SaveFrom(stats);
             }
         }
 
-        if(anim != null)
+        if (anim != null)
             anim.SetTrigger("Die");
 
 

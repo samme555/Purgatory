@@ -1,93 +1,67 @@
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 public class ReaperProjectile : MonoBehaviour
 {
-    public float spinSpeed = 720; // degrees per second
-    public float moveSpeed = 5f;
-    public float delayBeforeMoving = 0.5f;
-
-    public int damage = 9;
-    private Transform player;
-
-    private float lifeTime = 3f;
-    private float lifeTimeTimer;
-
-    private Vector2 moveDirection;
-    private float timer = 0f;
-    private bool launched = false;
+    [Header("Data")]
+    public ProjectileStatsSO preset;
     [SerializeField] private GameObject impactEffect;
 
-    public void Initialize(Vector3 targetPosition)
-    {
-        // Lock the direction toward the target position when instantiated
-        moveDirection = (targetPosition - transform.position).normalized;
-    }
+    [Header("Motion")]
+    public float spinSpeed = 720f;
+    public float delayBeforeMoving = 0.5f;
 
-    private void Start()
+    [Header("Lifetime")]
+    public float lifeTime = 3f;
+
+    private float speed;
+    private int damage;
+    private Vector2 moveDirection;
+    private float timer, lifeTimer;
+    private bool launched;
+
+    public void Initialize(Vector3 target) =>
+        moveDirection = (target - transform.position).normalized;
+
+    void Awake()
     {
-        player = GameObject.FindWithTag("Player").transform;
+        int lvl = LevelTracker.currentLevel;
+        speed = preset.GetSpeed(lvl);
+        damage = preset.GetDamage(lvl);
     }
 
     void Update()
     {
-        // Always rotate for style
-        transform.Rotate(0f, 0f, spinSpeed * Time.deltaTime);
+        // spin
+        transform.Rotate(0, 0, spinSpeed * Time.deltaTime);
 
+        // delay launch
         timer += Time.deltaTime;
-
-        if (timer >= delayBeforeMoving)
-        {
-            launched = true;
-        }
-
+        if (timer >= delayBeforeMoving) launched = true;
         if (launched)
-        {
-            transform.position += (Vector3)(moveDirection * moveSpeed * Time.deltaTime);
-        }
+            transform.Translate(moveDirection * speed * Time.deltaTime, Space.World);
 
-        lifeTimeTimer += Time.deltaTime;
-
-        if (lifeTimeTimer >= lifeTime)
-        {
+        // auto-destroy
+        lifeTimer += Time.deltaTime;
+        if (lifeTimer >= lifeTime)
             Destroy(gameObject);
-            lifeTimeTimer = 0f;
-        }
-
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        PlayerStats stats = other.GetComponent<PlayerStats>();
-
-
         bool isWall = other.gameObject.layer == LayerMask.NameToLayer("Projectile Block");
         bool isPlayer = other.CompareTag("Player");
 
+        if (isPlayer)
+            other.GetComponent<PlayerStats>()?.TakeDamage(damage);
 
         if (isPlayer || isWall)
         {
-            if (impactEffect != null)
+            if (impactEffect)
             {
-                GameObject fx = Instantiate(impactEffect, transform.position, Quaternion.identity);
-                fx.transform.localScale = Vector3.one;
-
-                ParticleSystem ps = fx.GetComponent<ParticleSystem>();
-                if (ps != null)
-                {
-                    ps.Play();
-
-                }
+                var fx = Instantiate(impactEffect, transform.position, Quaternion.identity);
+                fx.GetComponent<ParticleSystem>()?.Play();
             }
-
             Destroy(gameObject);
-        }
-
-        if (other.CompareTag("Player"))
-        {
-            stats.TakeDamage(damage);
-            Destroy(gameObject);
-            Debug.Log("player took damage");
         }
     }
 }
