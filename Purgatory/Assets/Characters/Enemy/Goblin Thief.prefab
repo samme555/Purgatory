@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8659750992819168476}
   - component: {fileID: 2087203719294961424}
-  - component: {fileID: 8225612302880870418}
+  - component: {fileID: 3792226725721714222}
   m_Layer: 31
   m_Name: HitZone
   m_TagString: Untagged
@@ -69,7 +69,7 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: -0.013000071, y: -0.0040625185}
   m_Radius: 0.05
---- !u!114 &8225612302880870418
+--- !u!114 &3792226725721714222
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -78,7 +78,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 730588185646538273}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8be76cdc23e7b7745b382f7d9526d604, type: 3}
+  m_Script: {fileID: 11500000, guid: 13e2a24314e17244ab0178894bbf3afb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2304048779392882467
@@ -158,7 +158,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2304048779392882467}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8b3d06af16c2654438a49eb90efdf676, type: 3}
   m_Name: 
@@ -358,6 +358,7 @@ GameObject:
   - component: {fileID: 3842611147606515799}
   - component: {fileID: -6615674031603370968}
   - component: {fileID: 7484609291404921505}
+  - component: {fileID: 8631325863604381302}
   m_Layer: 31
   m_Name: Goblin Thief
   m_TagString: Enemy
@@ -458,7 +459,8 @@ MonoBehaviour:
   attackCooldown: 1
   aggroRange: 6
   hitZone: {fileID: 730588185646538273}
-  hitZoneScript: {fileID: 8225612302880870418}
+  hitZoneScript: {fileID: 0}
+  goblinHitZoneScript: {fileID: 3792226725721714222}
   hitOffsetUp: {x: 0, y: 0.02}
   hitOffsetDown: {x: 0, y: -0.1}
   hitOffsetSide: {x: 0.01, y: 0}
@@ -493,9 +495,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   preset: {fileID: 11400000, guid: 9b3d03f94bcc8e449ae77fa7071c6c66, type: 2}
   health: 30
-  xpReward: 15
+  healthBar: {fileID: 9042534011615305348}
   flashDuration: 0.1
   deathEffect: {fileID: 0}
+  isBurning: 0
   fastFade: 0
   damageClips:
   - {fileID: 8300000, guid: 38a3ac5cb29de6843a7de04c9fc0c13c, type: 3}
@@ -504,9 +507,6 @@ MonoBehaviour:
   deathClips:
   - {fileID: 8300000, guid: 0f1ab56c8ab3f4f4989b9877cd23082e, type: 3}
   - {fileID: 8300000, guid: bd78bd6bd9469d34797242e2113bdd24, type: 3}
-  healthBar: {fileID: 9042534011615305348}
-  orcDamageClips: []
-  orcDeathClips: []
 --- !u!195 &220753418843351008
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -629,6 +629,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8631325863604381302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7303037417611682965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13e2a24314e17244ab0178894bbf3afb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8443249800665472416
 GameObject:
   m_ObjectHideFlags: 0

@@ -22,6 +22,7 @@ public class EnemyMovement : MonoBehaviour
     private float lastAttackTime;
     public GameObject hitZone;
     public OrcHitZone hitZoneScript;
+    public GoblinHitZone goblinHitZoneScript;
 
     
     [SerializeField] private Vector2 hitOffsetUp = new Vector2(0f, 0.02f);
@@ -104,11 +105,13 @@ public class EnemyMovement : MonoBehaviour
     public void EnableDamage()
     {
         hitZoneScript?.EnableDamage();
+        goblinHitZoneScript?.EnableDamage();
     }
 
     public void DisableDamage()
     {
         hitZoneScript?.DisableDamage();
+        goblinHitZoneScript?.DisableDamage();
     }
 
     public void TriggerAttack()

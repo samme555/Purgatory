@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class OrcHitZone : MonoBehaviour
+public class GoblinHitZone : MonoBehaviour
 {
     EnemyStatsSO preset;
     bool canDamage = false;
@@ -18,12 +18,15 @@ public class OrcHitZone : MonoBehaviour
         if (!canDamage || !other.CompareTag("Player")) return;
 
         var playerStats = other.GetComponent<PlayerStats>();
-        if (playerStats != null)
-        {
-            int dmg = preset.GetMeleeDamage(LevelTracker.currentLevel);
-            playerStats.TakeDamage(dmg);
+        int dmg = preset.GetPoisonDamage(LevelTracker.currentLevel);
 
-            canDamage = false;
+        if (playerStats.isPoisoned)
+        {
+            playerStats.TakeDamage(dmg);
+        }
+        else
+        {
+            playerStats.ApplyPoison(dmg, preset.poisonDuration, /*ticks*/ 6);
         }
     }
 
@@ -51,5 +54,4 @@ public class OrcHitZone : MonoBehaviour
         }
     }
 #endif
-
 }
