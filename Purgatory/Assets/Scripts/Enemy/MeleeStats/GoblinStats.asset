@@ -16,11 +16,11 @@ MonoBehaviour:
   healthPerLevel: 0.2
   baseXpReward: 10
   xpPerLevel: 0.2
-  baseDamage: 20
+  baseDamage: 10
   damagePerLevel: 0.2
   baseBurnDamage: 4
   burnPerLevel: 0.02
   burnDuration: 10
   basePoisonDamage: 3
   poisonPerLevel: 0
-  poisonDuration: 6
+  poisonInterval: 6
