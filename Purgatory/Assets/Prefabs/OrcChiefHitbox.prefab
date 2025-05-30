@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8370174390296890727}
   - component: {fileID: 2949228286331887068}
   - component: {fileID: 209659620795610527}
-  m_Layer: 31
+  m_Layer: 30
   m_Name: OrcChiefHitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,5 +91,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 659ae17b66721f44aa8881be08903acf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
-  duration: 0.2

@@ -131,6 +131,27 @@ public class ChiefController : MonoBehaviour
 
         GameObject hitBox = Instantiate(hitboxPrefab, hitboxPos, Quaternion.identity);
         hitBox.transform.localScale = new Vector3(scale, scale, 1f);
+
+        EnemyStats stats = GetComponent<EnemyStats>();
+        if (stats != null)
+        {
+            int damage = stats.preset.GetMeleeDamage(LevelTracker.currentLevel);
+
+            SlamCollision slam = hitBox.GetComponent<SlamCollision>();
+            if (slam != null)
+            {
+                slam.SetDamage(damage);
+            }
+            else
+            {
+                Debug.Log("SlamCollision not found on slam hitbox prefab!");
+            }
+        }
+        else
+        {
+            Debug.Log("EnemyStats not found on ChiefController!");
+        }
+
         Destroy(hitBox, 0.2f);
 
         if (attackClips.Length > 0) SoundFXManager.instance.PlayRandomSoundFXClip(attackClips, transform, 1f);
