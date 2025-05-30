@@ -1,6 +1,4 @@
 using UnityEngine;
-
-using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;      // or TMPro if you’re using TextMeshPro
 

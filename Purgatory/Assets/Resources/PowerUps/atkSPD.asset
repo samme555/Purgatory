@@ -15,4 +15,5 @@ MonoBehaviour:
   powerUpImage: {fileID: -4175376993140800949, guid: baecf07ef91835d4ea645d727daf8901, type: 3}
   powerUpText: + 10% atkSPD
   effectType: 0
-  effectValue: 0.1
+  effectValue: 0.2
+  isMajor: 0

@@ -109,7 +109,7 @@ public class RoomManager : MonoBehaviour
         {
             PlaceSingleBossRoom();
             generationComplete = true;
-            MinimapController mm = FindObjectOfType<MinimapController>();
+            MinimapController mm = FindFirstObjectByType<MinimapController>();
             mm.FitToRooms(roomObjects);
         }
     }
