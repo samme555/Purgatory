@@ -156,18 +156,24 @@ public class EnemyMovement : MonoBehaviour
     {
         SoundFXManager.instance?.PlaySoundFXClip(orcAttackClip, transform, 1f);
         isAttacking = true;
-        agent.isStopped = true;        
+        agent.isStopped = true;
 
         TriggerAttack();
+        EnableDamage();
 
-        target.GetComponent<PlayerStats>()?.TakeDamage(10);
+        //target.GetComponent<PlayerStats>()?.TakeDamage(10);
+
+        yield return new WaitForSeconds(0.2f);
+
+        DisableDamage();
 
         yield return new WaitForSeconds(0.6f);
 
-        
+
         agent.isStopped = false;
         isAttacking = false;
     }
+
 
     private void Animate(Vector2 dir)
     {

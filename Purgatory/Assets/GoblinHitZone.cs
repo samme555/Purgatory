@@ -17,22 +17,38 @@ public class GoblinHitZone : MonoBehaviour
     {
         if (!canDamage || !other.CompareTag("Player")) return;
 
-        var playerStats = other.GetComponent<PlayerStats>();
-        int dmg = preset.GetPoisonDamage(LevelTracker.currentLevel);
+        Debug.Log("[GoblinHitZone] OnTriggerStay2D called with: " + other.name);
 
+        var playerStats = other.GetComponent<PlayerStats>();
+        int poisonDMG = preset.GetPoisonDamage(LevelTracker.currentLevel);
+        int meleeDMG = preset.GetMeleeDamage(LevelTracker.currentLevel);
+
+        playerStats.TakeDamage(meleeDMG);
         if (playerStats.isPoisoned)
         {
-            playerStats.TakeDamage(dmg);
+            Debug.Log("player already poisoned!");
+            playerStats.TakeDamage(meleeDMG);
         }
         else
         {
-            playerStats.ApplyPoison(dmg, preset.poisonDuration, /*ticks*/ 6);
+            Debug.Log($"player not poisoned, dealing poison damage: {poisonDMG} to player");
+            playerStats.ApplyPoison(poisonDMG, preset.poisonInterval, /*ticks*/ 6);
         }
+
+        canDamage = false;
     }
 
     public void EnableDamage()
     {
-        gameObject.SetActive(true); // aktivera triggern
+        var col = GetComponent<Collider2D>();
+        if (col != null)
+        {
+            col.enabled = false;
+            col.enabled = true;
+        }
+
+        canDamage = true;
+        Debug.Log("[GoblinHitZone] Collider enabled and ready to damage");
     }
 
     public void DisableDamage()

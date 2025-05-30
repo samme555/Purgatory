@@ -242,6 +242,7 @@ public class PlayerStats : MonoBehaviour
 
     public void ApplyPoison(int damagePerTick, float interval, int numberOfTicks)
     {
+        Debug.Log("hi!");
         if (!isPoisoned)
         {
             StartCoroutine(PoisonRoutine(damagePerTick, interval, numberOfTicks));

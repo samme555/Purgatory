@@ -29,7 +29,7 @@ public class EnemyStatsSO : ScriptableObject
     [Tooltip("Fraction of basePoisonDamage added per level")]
     public float poisonPerLevel = 0.02f;
     [Tooltip("Fixed poison duration (seconds)")]
-    public float poisonDuration = 6f;
+    public float poisonInterval = 6f;
 
     // Helper methods
     public float GetHealth(int lvl) =>
@@ -51,5 +51,5 @@ public class EnemyStatsSO : ScriptableObject
         Mathf.RoundToInt(basePoisonDamage * (1 + poisonPerLevel * (lvl - 1)));
 
     public float GetPoisonDuration(int lvl) =>
-        poisonDuration;
+        poisonInterval;
 }

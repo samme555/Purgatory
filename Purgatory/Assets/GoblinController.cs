@@ -21,7 +21,7 @@ public class GoblinController : MonoBehaviour
         }
         else
         {
-            ps.ApplyPoison(dmg, preset.poisonDuration, /*ticks*/ 6);
+            ps.ApplyPoison(dmg, preset.poisonInterval, /*ticks*/ 6);
         }
     }
 }

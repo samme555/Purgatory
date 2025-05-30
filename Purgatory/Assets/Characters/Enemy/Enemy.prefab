@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6277806702624488110}
   - component: {fileID: 554377437099349985}
   - component: {fileID: 7718616616160411565}
-  m_Layer: 31
+  m_Layer: 30
   m_Name: HitZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -377,6 +377,7 @@ MonoBehaviour:
   aggroRange: 6
   hitZone: {fileID: 161739824508053371}
   hitZoneScript: {fileID: 7718616616160411565}
+  goblinHitZoneScript: {fileID: 0}
   hitOffsetUp: {x: 0, y: 0}
   hitOffsetDown: {x: 0, y: -0.1}
   hitOffsetSide: {x: 0.1, y: 0}
