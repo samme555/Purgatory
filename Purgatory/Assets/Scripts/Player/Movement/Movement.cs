@@ -26,7 +26,6 @@ public class Movement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         rb.linearDamping = 20f;
-        moving = false;
     }
 
     private void Update()
@@ -60,21 +59,27 @@ public class Movement : MonoBehaviour
     {
         if (input.magnitude > 0.1f || input.magnitude < -0.1f)
         {
-            if (!moving)
+            moving = true;
+
+            if (moving)
             {
                 if (!footstepSource.isPlaying)
                     footstepSource.Play();
             }
-            moving = true;
+            //if (!moving)
+            //{
+            //    if (!footstepSource.isPlaying)
+            //        footstepSource.Play();
+            //}
         }
         else
         {
-            if (moving)
+            moving = false;
+            if (!moving)
             {
                 if (footstepSource.isPlaying)
                     footstepSource.Stop();
             }
-            moving = false;
         }
 
         if (moving)

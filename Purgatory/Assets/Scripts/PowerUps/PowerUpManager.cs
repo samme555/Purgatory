@@ -89,7 +89,7 @@ public class PowerUpManager : MonoBehaviour
             switch (powerUp.effectType) 
             {
                 case PowerUpEffect.maxHP:
-                    stats.hp += (int)powerUp.effectValue;
+                    stats.maxHp += (int)powerUp.effectValue;
                     break;
                 case PowerUpEffect.moveSPD:
                     stats.moveSpeed += (float)powerUp.effectValue;
