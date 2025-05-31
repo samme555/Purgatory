@@ -71,7 +71,6 @@ public class Shooting : MonoBehaviour
     {
         playerStats.atk *= 2;
         playerStats.atkSPD /= 2;
-        projectilePrefab.transform.localScale *= 2;
         biggerBulletApplied = true;
     }
 
@@ -98,7 +97,13 @@ public class Shooting : MonoBehaviour
 
         firePoint.localPosition = new Vector2(0,-0.05f) + (direction * 0.1f);
 
+
         GameObject bullet = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
+
+        if (playerStats.biggerBullets)
+        {
+            bullet.transform.localScale *= 2f;
+        }
         Collisions collisionScript = bullet.GetComponent<Collisions>();
 
         if (collisionScript != null)
@@ -137,6 +142,11 @@ public class Shooting : MonoBehaviour
             Vector2 spreadDirection = Quaternion.Euler(0, 0, angleOffset) * baseDirection;
 
             GameObject bullet = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
+            if (playerStats.biggerBullets)
+            {
+                bullet.transform.localScale *= 2f;
+            }
+
             Collisions collisionScript = bullet.GetComponent<Collisions>();
 
             if (collisionScript != null)

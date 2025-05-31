@@ -1780,7 +1780,7 @@ GameObject:
   - component: {fileID: 7521638084977680555}
   - component: {fileID: 2729395956001980147}
   - component: {fileID: 4699169532140870911}
-  - component: {fileID: 7908944979731024355}
+  - component: {fileID: 8575642245984706883}
   m_Layer: 0
   m_Name: stairstonextlvl
   m_TagString: AdvanceLevel
@@ -2263,7 +2263,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.089989424, y: 0.10274798}
   m_EdgeRadius: 0
---- !u!114 &7908944979731024355
+--- !u!114 &8575642245984706883
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2272,7 +2272,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1524319049542408713}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb7f352b8c94df14e8e9a863af8c2021, type: 3}
+  m_Script: {fileID: 11500000, guid: aab39c4247c39674b9fb5973fb139add, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1530207845184490537
@@ -7949,6 +7949,7 @@ GameObject:
   - component: {fileID: 9208580147656608186}
   - component: {fileID: 4020157793614263522}
   - component: {fileID: 5360159924778953290}
+  - component: {fileID: 7532755698206990655}
   m_Layer: 0
   m_Name: BossRoom2
   m_TagString: Untagged
@@ -8059,6 +8060,19 @@ MonoBehaviour:
   m_UseMeshPrefab: {fileID: 0}
   m_CompressBounds: 0
   m_OverrideVector: {x: 1, y: 1, z: 1}
+--- !u!114 &7532755698206990655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5219237122793748789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 507703de394504c4fada5a83492adaed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stairs: {fileID: 1524319049542408713}
 --- !u!1 &5302430836927504439
 GameObject:
   m_ObjectHideFlags: 0
