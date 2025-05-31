@@ -27,7 +27,8 @@ public class EnemyStats : MonoBehaviour
     private Color originalColor;
 
     [SerializeField] private float flashDuration = 0.1f;
-    [SerializeField] private ParticleSystem deathEffect;    
+    [SerializeField] private ParticleSystem deathEffect;
+    [SerializeField] private bool isBoss = false;
     //[SerializeField] private bool instantDeath = false;
 
     private Animator anim;
@@ -123,6 +124,11 @@ public class EnemyStats : MonoBehaviour
             }
         }
 
+        if (isBoss)
+        {
+            GameManager.instance.ChangeState(GameManager.GameState.majorPowerUpSelection);
+        }
+
         if (anim != null)
             anim.SetTrigger("Die");
 
@@ -193,40 +199,7 @@ public class EnemyStats : MonoBehaviour
         
     }
     private IEnumerator DeathSequence()
-    {
-        //yield return new WaitForSeconds(0.5f);
-
-        //if (instantDeath)
-        //{
-        //    Destroy(gameObject, 0.02f);
-        //}
-        //else
-        //{
-        //    SpriteRenderer sr = GetComponent<SpriteRenderer>();
-        //    if (sr != null)
-        //    {
-        //        float duration = 1f;
-        //        float elapsed = 0f;
-
-        //        while (elapsed < duration)
-        //        {
-        //            elapsed += Time.deltaTime;
-        //            float alpha = Mathf.Lerp(1f, 0f, elapsed / duration);
-        //            sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, alpha);
-        //            yield return null;
-        //        }
-        //    }
-        //}
-
-        //DropOnDeath heartDropper = GetComponent<DropOnDeath>();
-
-        //if (heartDropper != null)
-        //{
-        //    heartDropper.DropHeart();
-        //}
-
-        //Destroy(gameObject);
-
+    {        
         float duration = fastFade ? 0.25f : 1f;
         float elapsed = 0f;
 

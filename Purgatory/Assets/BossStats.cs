@@ -62,6 +62,8 @@ public class BossStats : EnemyStats
         if (animator != null)
             animator.SetTrigger("Die");
 
+        GameManager.instance.ChangeState(GameManager.GameState.majorPowerUpSelection);
+
         yield break;
 
     }

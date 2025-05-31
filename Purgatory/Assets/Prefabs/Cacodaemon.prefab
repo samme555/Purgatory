@@ -612,6 +612,7 @@ MonoBehaviour:
   healthBar: {fileID: 7843147679572712084}
   flashDuration: 0.1
   deathEffect: {fileID: 0}
+  isBoss: 1
   isBurning: 0
   fastFade: 0
   damageClips: []
