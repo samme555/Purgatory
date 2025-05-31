@@ -17,44 +17,61 @@ public class DestroyOnCollision : MonoBehaviour
     {
         _selfCollider = GetComponent<Collider2D>();
         if (_selfCollider == null)
-            Debug.LogWarning($"{name} has no Collider2D for spawn?centering!");
+            Debug.LogWarning($"{name} has no Collider2D for spawn-centering!");
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // only react to bullet’s Collisions script
-        if (other.GetComponent<Collisions>() == null) return;
-
-        Vector3 spawnPos = _selfCollider != null ? _selfCollider.bounds.center : transform.position;
-        // 1) play destruction VFX at this object's pivot
-        if (destructionEffect != null)
+        // 1) If this was hit by a bullet (i.e. some object with your Collisions script), do normal destroy + drop
+        if (other.GetComponent<Collisions>() != null)
         {
-            var fx = Instantiate(destructionEffect, spawnPos, Quaternion.identity);
-            fx.transform.localScale = Vector3.one;
-            var ps = fx.GetComponent<ParticleSystem>();
-            if (ps != null) ps.Play();
-        }
+            Vector3 spawnPos = (_selfCollider != null)
+                ? _selfCollider.bounds.center
+                : transform.position;
 
-        // 2) figure out the spawn point from *this* object's bounds:
-        
-        if (_selfCollider != null)
-        {
-            spawnPos = _selfCollider.bounds.center;
+            // Play destruction VFX
+            if (destructionEffect != null)
+            {
+                var fx = Instantiate(destructionEffect, spawnPos, Quaternion.identity);
+                fx.transform.localScale = Vector3.one;
+                var ps = fx.GetComponent<ParticleSystem>();
+                if (ps != null) ps.Play();
+            }
+
+            // Random chance to drop replacementPrefab (XP, etc.)
+            if (replacementPrefab != null && Random.value <= dropProbability)
+            {
+                Instantiate(replacementPrefab, spawnPos, Quaternion.identity);
+            }
+
+            Destroy(gameObject);
+            Debug.Log($"Destroyed {gameObject.name} via bullet; spawned at {spawnPos}");
         }
+        // 2) Else if this collider is an Enemy, destroy WITHOUT dropping anything
+        else if (other.CompareTag("Enemy"))
+        {
+            Vector3 spawnPos = (_selfCollider != null)
+                ? _selfCollider.bounds.center
+                : transform.position;
+
+            // Play destruction VFX (reuse same effect)
+            if (destructionEffect != null)
+            {
+                var fx = Instantiate(destructionEffect, spawnPos, Quaternion.identity);
+                fx.transform.localScale = Vector3.one;
+                var ps = fx.GetComponent<ParticleSystem>();
+                if (ps != null) ps.Play();
+            }
+
+            // Note: no replacementPrefab instantiation here
+            Destroy(gameObject);
+            Debug.Log($"Destroyed {gameObject.name} via enemy; no drop.");
+        }
+        // 3) Otherwise, ignore all other collisions
         else
         {
-            // fallback, if you really just want the raw Transform:
-            spawnPos = transform.position;
+            Debug.Log($"{name} ignoring collision with {other.name} (tag={other.tag})");
+            return;
         }
-
-        // 3) drop with your random chance
-        if (replacementPrefab != null && Random.value <= dropProbability)
-        {
-            Instantiate(replacementPrefab, spawnPos, Quaternion.identity);
-        }
-
-        // 4) destroy this destructible
-        Destroy(gameObject);
-        Debug.Log($"Destroyed {gameObject.name}; spawned at {spawnPos}");
     }
 }
