@@ -147,3 +147,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a8e59127ca630644bf3f50a66cdabd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hpGainClips:
+  - {fileID: 8300000, guid: 5c00d6dd9ae72d64e88c398bc700e8cf, type: 3}

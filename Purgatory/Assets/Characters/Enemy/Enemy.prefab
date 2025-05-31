@@ -383,7 +383,9 @@ MonoBehaviour:
   hitOffsetDown: {x: 0, y: -0.1}
   hitOffsetSide: {x: 0.1, y: 0}
   hitZoneRadius: 0.1
-  orcAttackClip: {fileID: 8300000, guid: 55d836bc4c84a9c4ca65f899de37428c, type: 3}
+  attackClips:
+  - {fileID: 8300000, guid: 401c412906d66ab4996dc14227bb2e14, type: 3}
+  - {fileID: 8300000, guid: db1a48063461c3b4ca126f4e40b850f0, type: 3}
   movementFilter:
     useTriggers: 0
     useLayerMask: 1
@@ -524,6 +526,7 @@ MonoBehaviour:
   healthBar: {fileID: 6531719404410110601}
   flashDuration: 0.1
   deathEffect: {fileID: 0}
+  isBoss: 0
   isBurning: 0
   fastFade: 0
   damageClips:

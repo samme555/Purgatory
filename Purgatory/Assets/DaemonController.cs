@@ -25,6 +25,9 @@ public class DaemonController : MonoBehaviour
     [Header("Dash Windup")]
     public float dashWindupTime = 0.5f;
 
+    [Header("Sounds")]
+    public AudioClip[] dashClips;
+
     private bool isWindingUp = false;
     private float windupTimer;
     private Animator anim;
@@ -161,12 +164,13 @@ public class DaemonController : MonoBehaviour
 
     void StartDash()
     {
+        if (dashClips.Length > 0) SoundFXManager.instance.PlayRandomSoundFXClip(dashClips, transform, 1f);
         isDashing = true;
         dashTimer = 0f;
 
         if (dashIndicatorInstance != null)
         {
-            StartCoroutine(FadeOutDashIndicator(0.2f));
+            StartCoroutine(FadeOutDashIndicator(0.1f));
         }
     }
 

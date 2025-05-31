@@ -46,6 +46,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21e21de42b6a2464499d94ee384632a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  xpGainClips:
+  - {fileID: 8300000, guid: 5c00d6dd9ae72d64e88c398bc700e8cf, type: 3}
 --- !u!61 &2890714829655396153
 BoxCollider2D:
   m_ObjectHideFlags: 0

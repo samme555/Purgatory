@@ -8,6 +8,8 @@ using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour
 {
+    public AudioClip[] playerHurtClips;
+
     //current amount of XP
     public float currentXP;
     private float originalMoveSpeed;
@@ -173,6 +175,8 @@ public class PlayerStats : MonoBehaviour
             damageImmunity = true;
             StartCoroutine(DamageFlash(Color.red));
             immunityTimer = immunityDuration;
+
+            if (playerHurtClips.Length > 0) SoundFXManager.instance.PlayRandomSoundFXClip(playerHurtClips, transform, 1f);
 
             CameraShake camShake = Camera.main.GetComponent<CameraShake>();
             if(camShake != null)

@@ -337,6 +337,8 @@ MonoBehaviour:
   waveCooldown: 2
   spreadAngle: 90
   healthBar: {fileID: 7340124213654659798}
+  projectileSounds:
+  - {fileID: 8300000, guid: f6cec432e7a768942afaab4473d5e67f, type: 3}
 --- !u!95 &5896048109276166189
 Animator:
   serializedVersion: 7
@@ -374,9 +376,12 @@ MonoBehaviour:
   preset: {fileID: 11400000, guid: d8640bef7d643ea4c9b376823b1ab6e1, type: 2}
   health: 250
   healthBar: {fileID: 7340124213654659798}
-  orc: 0
-  orcDamageClips: []
-  orcDeathClips: []
+  flashDuration: 0.1
+  deathEffect: {fileID: 0}
+  isBurning: 0
+  fastFade: 0
+  damageClips: []
+  deathClips: []
 --- !u!1 &8236251768553215320
 GameObject:
   m_ObjectHideFlags: 0

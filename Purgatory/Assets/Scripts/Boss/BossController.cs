@@ -17,6 +17,8 @@ public class BossController : MonoBehaviour
     private EnemyStats stats;
     private Animator animator;
 
+    public AudioClip[] projectileSounds;
+
     private void Start()
     {
         stats = GetComponent<BossStats>();
@@ -79,6 +81,7 @@ public class BossController : MonoBehaviour
 
             GameObject proj = Instantiate(bossProjectile, transform.position, Quaternion.identity);
             proj.GetComponent<ElderMageProjectile>().Initialize(dir);
+            if (projectileSounds.Length > 0) SoundFXManager.instance.PlayRandomSoundFXClip(projectileSounds, transform, 1f);
         }
 
         yield return new WaitForSeconds(waveCooldown);
