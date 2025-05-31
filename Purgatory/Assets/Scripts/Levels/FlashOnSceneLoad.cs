@@ -10,9 +10,9 @@ public class LevelDisplay : MonoBehaviour
     public TMP_Text levelText;
 
     [Header("Flash settings")]
-    public int flashCount = 3;
-    public float onDuration = 0.3f;
-    public float offDuration = 0.3f;
+    public int flashCount;
+    public float onDuration;
+    public float offDuration;
 
     void OnEnable()
         => SceneManager.sceneLoaded += OnSceneLoaded;
