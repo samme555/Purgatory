@@ -223,7 +223,7 @@ public class PlayerStats : MonoBehaviour
     {
         if (animator != null)
             animator.SetTrigger("Die");
-
+        LevelTracker.currentLevel = 1;
         StartCoroutine(DeathSequence());
     }
 
