@@ -11,7 +11,7 @@ public class EnemyStats : MonoBehaviour
 
     [HideInInspector]
     public float health;
-
+    public Coroutine burnCoroutine;
     private float maxHealth;
     public float MaxHealth
     {
@@ -40,14 +40,7 @@ public class EnemyStats : MonoBehaviour
 
     public System.Action OnDamaged;
 
-    public void Update()
-    {
-        isBurning = true;
-        if (isBurning)
-        {
-            Burning();
-        }
-    }
+    
     void Awake()
     {
         anim = GetComponent<Animator>()
@@ -189,15 +182,29 @@ public class EnemyStats : MonoBehaviour
 
         StartCoroutine(DeathSequence());
     }
-
-    public IEnumerator Burning() 
+    public void ApplyBurn(float duration, float tickInterval, float damagePerTick)
     {
-        
-            TakeDamage(1);
-            yield return new WaitForSeconds(0.2f);
-       
-        
+        if (isBurning)
+            return;
+
+        StartCoroutine(BurnRoutine(duration, tickInterval, damagePerTick));
     }
+
+    private IEnumerator BurnRoutine(float duration, float tickInterval, float damagePerTick)
+    {
+        isBurning = true;
+        float elapsed = 0f;
+
+        while (elapsed < duration)
+        {
+            TakeDamage(damagePerTick);
+            yield return new WaitForSeconds(tickInterval);
+            elapsed += tickInterval;
+        }
+
+        isBurning = false;
+    }
+   
     private IEnumerator DeathSequence()
     {        
         float duration = fastFade ? 0.25f : 1f;
