@@ -234,6 +234,8 @@ public class PlayerStats : MonoBehaviour
         if (move != null) move.enabled = false;
         var shoot = GetComponent<Shooting>();
         if (shoot != null) shoot.enabled = false;
+        var hitbox = GetComponent<Collider2D>();
+        if (hitbox != null) hitbox.enabled = false;
 
         yield return new WaitForSeconds(1f);
 
