@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ed2441639cd16c048a5b841b3e5347f0, type: 3}
-  m_Name: atk
+  m_Name: maxHP
   m_EditorClassIdentifier: 
-  powerUpImage: {fileID: 4706965592451445220, guid: 3dd220759ceeaac418f0160bb6084f5d, type: 3}
-  powerUpText: +10% atk
-  effectType: 4
-  effectValue: 0.1
+  powerUpImage: {fileID: -2266125799702738380, guid: f1b70078cc7514945929f5b9865148fb, type: 3}
+  powerUpText: +1 maxHP
+  effectType: 1
+  effectValue: 10
+  isMajor: 0

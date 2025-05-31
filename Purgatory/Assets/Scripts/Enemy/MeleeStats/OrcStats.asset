@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: OrcStats
   m_EditorClassIdentifier: 
   baseHealth: 50
-  healthPerLevel: 1
+  healthPerLevel: 0.2
   baseXpReward: 15
   xpPerLevel: 0.2
   baseDamage: 10
@@ -23,4 +23,4 @@ MonoBehaviour:
   burnDuration: 10
   basePoisonDamage: 3
   poisonPerLevel: 0.2
-  poisonDuration: 6
+  poisonInterval: 6

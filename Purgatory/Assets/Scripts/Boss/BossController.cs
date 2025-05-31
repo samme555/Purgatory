@@ -43,11 +43,11 @@ public class BossController : MonoBehaviour
         canAttack = false;
         
 
-        if (stats.health <= 165)
+        if (stats.health <= stats.MaxHealth * 0.75)
         {
             waveCooldown = 0.6f;
         }
-        if (stats.health <= 82)
+        if (stats.health <= stats.MaxHealth * 0.5)
         {
             waveCooldown = 0.3f;
         }

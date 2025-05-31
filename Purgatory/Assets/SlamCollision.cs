@@ -2,15 +2,22 @@ using UnityEngine;
 
 public class SlamCollision : MonoBehaviour
 {
-    EnemyStatsSO preset;
+    private int damage;
 
-    void Awake() =>
-        preset = GetComponentInParent<EnemyStats>().preset;
+    public void SetDamage(int dmg)
+    {
+        damage = dmg;
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.CompareTag("Player")) return;
-        int dmg = preset.GetMeleeDamage(LevelTracker.currentLevel);
-        other.GetComponent<PlayerStats>()?.TakeDamage(dmg);
+
+        var stats = other.GetComponent<PlayerStats>();
+        if (stats != null)
+        {
+            Debug.Log("Slam hit player! dealing " + damage + "damage");
+            stats.TakeDamage(damage);
+        }
     }
 }

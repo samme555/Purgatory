@@ -39,7 +39,16 @@ public class RoomManager : MonoBehaviour
 
     private void Start()
     {
-        selectedBossRoomPrefab = bossRoomPrefabs[Random.Range(0, bossRoomPrefabs.Length)];
+        //selectedBossRoomPrefab = bossRoomPrefabs[Random.Range(0, bossRoomPrefabs.Length)];
+
+        int level = LevelTracker.currentLevel;
+
+        if (level == 1)
+            selectedBossRoomPrefab = bossRoomPrefabs[0]; // bossRoomPrefabs[0] is Level 1 boss
+        else if (level == 2)
+            selectedBossRoomPrefab = bossRoomPrefabs[1]; // bossRoomPrefabs[1] is Level 2 boss
+        else
+            selectedBossRoomPrefab = bossRoomPrefabs[Random.Range(0, bossRoomPrefabs.Length)]; // fallback
 
         roomGrid = new int[gridSizeX, gridSizeY];
         roomQueue = new Queue<Vector2Int>();
@@ -100,7 +109,7 @@ public class RoomManager : MonoBehaviour
         {
             PlaceSingleBossRoom();
             generationComplete = true;
-            MinimapController mm = FindObjectOfType<MinimapController>();
+            MinimapController mm = FindFirstObjectByType<MinimapController>();
             mm.FitToRooms(roomObjects);
         }
     }

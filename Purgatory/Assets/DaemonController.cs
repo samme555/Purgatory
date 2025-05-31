@@ -37,6 +37,7 @@ public class DaemonController : MonoBehaviour
     private void Start()
     {
         stats = GetComponent<EnemyStats>();
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     private void Awake()
@@ -120,13 +121,14 @@ public class DaemonController : MonoBehaviour
 
     void StartDashWindup()
     {       
-        if (stats.health <= 200)
-        {
-            actionInterval = 1.5f;
-        }
-        if (stats.health <= 125)
+        if (stats.health <= stats.MaxHealth * 0.8)
         {
             actionInterval = 1f;
+        }
+        if (stats.health <= stats.MaxHealth * 0.45)
+        {
+            actionInterval = 0.3f;
+            dashWindupTime = 0.3f;
         }
 
         dashDirection = (player.position - transform.position).normalized;

@@ -21,7 +21,6 @@ public class GameManager : MonoBehaviour
         }
 
         instance = this;
-        DontDestroyOnLoad(gameObject);
     }
 
     void Update()
@@ -49,20 +48,32 @@ public class GameManager : MonoBehaviour
         HandleStateChanged();
     }
 
-    private void HandleStateChanged() 
+    private void HandleStateChanged()
     {
-        switch (currentState) 
+        switch (currentState)
         {
             case GameState.playing:
-                PowerUpManager.instance.HidePowerUpSelection();
+                if (PowerUpManager.instance != null)
+                {
+                    PowerUpManager.instance.HidePowerUpSelection();
+                }
+                else
+                {
+                    Debug.LogWarning("[GameManager] PowerUpManager.instance is NULL on state: playing");
+                }
                 Time.timeScale = 1f;
                 break;
+
             case GameState.powerUpSelection:
-                PowerUpManager.instance.ShowPowerUpSelection();
-                Time.timeScale = 0f;
-                break;
             case GameState.majorPowerUpSelection:
-                PowerUpManager.instance.ShowPowerUpSelection();
+                if (PowerUpManager.instance != null)
+                {
+                    PowerUpManager.instance.ShowPowerUpSelection();
+                }
+                else
+                {
+                    Debug.LogWarning("[GameManager] PowerUpManager.instance is NULL on state: " + currentState);
+                }
                 Time.timeScale = 0f;
                 break;
         }

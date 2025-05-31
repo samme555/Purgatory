@@ -13,6 +13,10 @@ public class EnemyStats : MonoBehaviour
     public float health;
 
     private float maxHealth;
+    public float MaxHealth
+    {
+        get { return maxHealth; }
+    }
 
     // backing store for XP; never serializes
     private int _xpReward;
