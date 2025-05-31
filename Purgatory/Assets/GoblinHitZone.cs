@@ -13,8 +13,36 @@ public class GoblinHitZone : MonoBehaviour
         canDamage = true; // säkerställ varje gång
     }
 
+    //private void OnTriggerStay2D(Collider2D other)
+    //{
+    //    if (!canDamage || !other.CompareTag("Player")) return;
+
+    //    Debug.Log("[GoblinHitZone] OnTriggerStay2D called with: " + other.name);
+    //    DealDamage(other);
+    //}
+
+    //void DealDamage(Collider2D other)
+    //{
+    //    var playerStats = other.GetComponent<PlayerStats>();
+    //    int poisonDMG = preset.GetPoisonDamage(LevelTracker.currentLevel);
+    //    int meleeDMG = preset.GetMeleeDamage(LevelTracker.currentLevel);
+
+    //    playerStats.TakeDamage(meleeDMG);
+    //    if (playerStats.isPoisoned)
+    //    {
+    //        playerStats.TakeDamage(meleeDMG);
+    //    }
+    //    else
+    //    {
+    //        playerStats.ApplyPoison(poisonDMG, preset.poisonInterval, /*# of ticks*/ 6);
+    //    }
+
+    //    canDamage = false;
+    //}
+
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log($"CanDamage = {canDamage}");
         if (!canDamage || !other.CompareTag("Player")) return;
 
         Debug.Log("[GoblinHitZone] OnTriggerStay2D called with: " + other.name);
@@ -53,7 +81,7 @@ public class GoblinHitZone : MonoBehaviour
 
     public void DisableDamage()
     {
-        gameObject.SetActive(false); // stäng av helt
+        //gameObject.SetActive(false); // stäng av helt
         canDamage = false;
     }
 
