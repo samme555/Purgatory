@@ -1,3 +1,4 @@
+// DestroyOnCollision.cs
 using UnityEngine;
 
 public class DestroyOnCollision : MonoBehaviour
@@ -10,7 +11,6 @@ public class DestroyOnCollision : MonoBehaviour
     [SerializeField, Range(0f, 1f)]
     private float dropProbability = 0.2f;
 
-    // Cache your own collider so you can get its true bounds
     private Collider2D _selfCollider;
 
     private void Awake()
@@ -20,58 +20,65 @@ public class DestroyOnCollision : MonoBehaviour
             Debug.LogWarning($"{name} has no Collider2D for spawn-centering!");
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    // Called when a bullet hits (you already have this in your OnTriggerEnter2D)
+    public void DestroyViaBullet()
     {
-        // 1) If this was hit by a bullet (i.e. some object with your Collisions script), do normal destroy + drop
-        if (other.GetComponent<Collisions>() != null)
+        Vector3 spawnPos = (_selfCollider != null)
+            ? _selfCollider.bounds.center
+            : transform.position;
+
+        // (A) VFX
+        if (destructionEffect != null)
         {
-            Vector3 spawnPos = (_selfCollider != null)
-                ? _selfCollider.bounds.center
-                : transform.position;
-
-            // Play destruction VFX
-            if (destructionEffect != null)
-            {
-                var fx = Instantiate(destructionEffect, spawnPos, Quaternion.identity);
-                fx.transform.localScale = Vector3.one;
-                var ps = fx.GetComponent<ParticleSystem>();
-                if (ps != null) ps.Play();
-            }
-
-            // Random chance to drop replacementPrefab (XP, etc.)
-            if (replacementPrefab != null && Random.value <= dropProbability)
-            {
-                Instantiate(replacementPrefab, spawnPos, Quaternion.identity);
-            }
-
-            Destroy(gameObject);
-            Debug.Log($"Destroyed {gameObject.name} via bullet; spawned at {spawnPos}");
+            var fx = Instantiate(destructionEffect, spawnPos, Quaternion.identity);
+            fx.transform.localScale = Vector3.one;
+            var ps = fx.GetComponent<ParticleSystem>();
+            if (ps != null) ps.Play();
         }
-        // 2) Else if this collider is an Enemy, destroy WITHOUT dropping anything
-        else if (other.CompareTag("Enemy"))
+
+        // (B) Drop XP/item
+        if (replacementPrefab != null && Random.value <= dropProbability)
+            Instantiate(replacementPrefab, spawnPos, Quaternion.identity);
+
+        // (C) Destroy the tile
+        Destroy(gameObject);
+        Debug.Log($"[DestroyOnCollision] Destroyed '{name}' via bullet (with drop).");
+    }
+
+    // New: called when an enemy (or player-overlap) destroys it
+    public void DestroyViaOverlap()
+    {
+        Vector3 spawnPos = (_selfCollider != null)
+            ? _selfCollider.bounds.center
+            : transform.position;
+
+        // (A) VFX only (no XP drop)
+        if (destructionEffect != null)
         {
-            Vector3 spawnPos = (_selfCollider != null)
-                ? _selfCollider.bounds.center
-                : transform.position;
-
-            // Play destruction VFX (reuse same effect)
-            if (destructionEffect != null)
-            {
-                var fx = Instantiate(destructionEffect, spawnPos, Quaternion.identity);
-                fx.transform.localScale = Vector3.one;
-                var ps = fx.GetComponent<ParticleSystem>();
-                if (ps != null) ps.Play();
-            }
-
-            // Note: no replacementPrefab instantiation here
-            Destroy(gameObject);
-            Debug.Log($"Destroyed {gameObject.name} via enemy; no drop.");
+            var fx = Instantiate(destructionEffect, spawnPos, Quaternion.identity);
+            fx.transform.localScale = Vector3.one;
+            var ps = fx.GetComponent<ParticleSystem>();
+            if (ps != null) ps.Play();
         }
-        // 3) Otherwise, ignore all other collisions
         else
         {
-            Debug.Log($"{name} ignoring collision with {other.name} (tag={other.tag})");
-            return;
+            Debug.LogWarning($"[DestroyOnCollision] destructionEffect is null on '{name}' during overlap destroy!");
+        }
+
+        Destroy(gameObject);
+        Debug.Log($"[DestroyOnCollision] Destroyed '{name}' via overlap (no drop).");
+    }
+
+    // Your existing OnTriggerEnter2D logic can now just call these two public methods:
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.GetComponent<Collisions>() != null)
+        {
+            DestroyViaBullet();
+        }
+        else if (other.CompareTag("Enemy"))
+        {
+            DestroyViaOverlap();
         }
     }
 }
