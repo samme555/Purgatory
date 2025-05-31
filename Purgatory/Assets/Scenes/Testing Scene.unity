@@ -462,6 +462,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cacodaemon
       objectReference: {fileID: 0}
+    - target: {fileID: 7480117749347231256, guid: 9060a0fb2b1bd6c419de18205aa7abfd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
