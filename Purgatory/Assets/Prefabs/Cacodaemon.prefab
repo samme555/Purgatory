@@ -595,6 +595,8 @@ MonoBehaviour:
   teleportChance: 0.08
   dashIndicatorPrefab: {fileID: 213854503159819857, guid: 02feb662498a4f240b43eee026683a62, type: 3}
   dashWindupTime: 0.3
+  dashClips:
+  - {fileID: 8300000, guid: 84744e27499ed6142bdb79c5a6e630bd, type: 3}
 --- !u!114 &3607547078344698310
 MonoBehaviour:
   m_ObjectHideFlags: 0
