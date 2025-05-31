@@ -12,6 +12,8 @@ public class Attack : MonoBehaviour, IRoomEntity
     private float cooldownTimer;
     private Animator anim;
 
+    public AudioClip[] scytheClips;
+
     void Start()
     {
         if (player == null)
@@ -45,12 +47,14 @@ public class Attack : MonoBehaviour, IRoomEntity
         Vector2 left = transform.position + Vector3.left * scytheOffset;
         Vector2 right = transform.position + Vector3.right * scytheOffset;
 
+        if (scytheClips.Length > 0) SoundFXManager.instance.PlayRandomSoundFXClip(scytheClips, transform, 1f);
         CreateScythe(left);
         CreateScythe(right);
     }
 
     void CreateScythe(Vector2 spawnPos)
     {
+
         GameObject scythe = Instantiate(scythePrefab, spawnPos, Quaternion.identity);
         scythe.GetComponent<ReaperProjectile>().Initialize(player.position);
     }

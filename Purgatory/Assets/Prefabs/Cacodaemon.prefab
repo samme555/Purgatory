@@ -592,11 +592,12 @@ MonoBehaviour:
   dashSpeed: 15
   dashDuration: 0.15
   actionInterval: 1.6
-  teleportChance: 0.08
+  teleportChance: 0.15
   dashIndicatorPrefab: {fileID: 213854503159819857, guid: 02feb662498a4f240b43eee026683a62, type: 3}
   dashWindupTime: 0.3
   dashClips:
-  - {fileID: 8300000, guid: 84744e27499ed6142bdb79c5a6e630bd, type: 3}
+  - {fileID: 8300000, guid: d28c9c1588edbec4fa4aace04a8f2497, type: 3}
+  warpClip: {fileID: 8300000, guid: 61632c47e196cee44b3650991a801f6a, type: 3}
 --- !u!114 &3607547078344698310
 MonoBehaviour:
   m_ObjectHideFlags: 0

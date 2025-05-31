@@ -27,6 +27,7 @@ public class DaemonController : MonoBehaviour
 
     [Header("Sounds")]
     public AudioClip[] dashClips;
+    public AudioClip warpClip;
 
     private bool isWindingUp = false;
     private float windupTimer;
@@ -187,6 +188,7 @@ public class DaemonController : MonoBehaviour
 
     void Teleport()
     {
+        SoundFXManager.instance.PlaySoundFXClip(warpClip, transform, 1f);
         anim?.ResetTrigger("Attack");
         anim?.SetTrigger("Idle");
         Vector2 offset = Random.insideUnitCircle.normalized * 0.6f;

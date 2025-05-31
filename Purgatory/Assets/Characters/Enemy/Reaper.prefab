@@ -203,6 +203,8 @@ MonoBehaviour:
   player: {fileID: 0}
   attackCooldown: 1
   scytheOffset: 0.2
+  scytheClips:
+  - {fileID: 8300000, guid: 97a6cb10f4214184f81fc61d36a38022, type: 3}
 --- !u!114 &723841263298787527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -293,12 +295,12 @@ MonoBehaviour:
   healthBar: {fileID: 5913551230340645220}
   flashDuration: 0.1
   deathEffect: {fileID: 0}
+  isBoss: 0
+  isBurning: 0
   fastFade: 0
   damageClips: []
   deathClips:
   - {fileID: 8300000, guid: de651d9adb7f2ab4b82631e593d428a3, type: 3}
-  orcDamageClips: []
-  orcDeathClips: []
 --- !u!1 &5456117055620064694
 GameObject:
   m_ObjectHideFlags: 0

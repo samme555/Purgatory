@@ -26,7 +26,7 @@ public class Movement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         rb.linearDamping = 20f;
-
+        moving = false;
     }
 
     private void Update()
