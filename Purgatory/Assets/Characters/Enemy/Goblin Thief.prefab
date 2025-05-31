@@ -345,6 +345,7 @@ GameObject:
   - component: {fileID: 3842611147606515799}
   - component: {fileID: -6615674031603370968}
   - component: {fileID: 7484609291404921505}
+  - component: {fileID: 2134715991376012462}
   m_Layer: 31
   m_Name: Goblin Thief
   m_TagString: Enemy
@@ -615,6 +616,24 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2134715991376012462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7303037417611682965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2accfb725fef6c44eba37c0527d91b53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  overlapSize: {x: 0.01, y: 0.01}
+  destroyableLayer:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  requiredTags:
+  - ShootDestructible
 --- !u!1 &8443249800665472416
 GameObject:
   m_ObjectHideFlags: 0

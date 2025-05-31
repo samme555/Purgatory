@@ -276,6 +276,7 @@ GameObject:
   - component: {fileID: 2104933574025077270}
   - component: {fileID: 8239782459657392180}
   - component: {fileID: 4344821492602499412}
+  - component: {fileID: 5617865849604902437}
   m_Layer: 31
   m_Name: Enemy
   m_TagString: Enemy
@@ -549,6 +550,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heartPrefab: {fileID: 525955544927378189, guid: 236cb5c26d647fc419c38bb4dc11172b, type: 3}
   dropChance: 0.2
+--- !u!114 &5617865849604902437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6762314250208754536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2accfb725fef6c44eba37c0527d91b53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  overlapSize: {x: 0.01, y: 0.01}
+  destroyableLayer:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  requiredTags:
+  - ShootDestructible
 --- !u!1 &6979173358010926143
 GameObject:
   m_ObjectHideFlags: 0
