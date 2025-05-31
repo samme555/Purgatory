@@ -25,5 +25,6 @@ public enum PowerUpEffect
     shotgun,
     shield,
     biggerBullets,
-    ignite
+    ignite,
+    health
 }

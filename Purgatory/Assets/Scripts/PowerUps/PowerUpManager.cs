@@ -118,6 +118,10 @@ public class PowerUpManager : MonoBehaviour
                 case PowerUpEffect.shotgun:
                     stats.shotgun = true;
                     break;
+                case PowerUpEffect.health:
+                    stats.AddHP((int)powerUp.effectValue);
+                    break;
+
             }
         PlayerData.instance.SaveFrom(stats);
     }

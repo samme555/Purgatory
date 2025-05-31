@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed2441639cd16c048a5b841b3e5347f0, type: 3}
   m_Name: BiggerBullets
   m_EditorClassIdentifier: 
-  powerUpImage: {fileID: 5040525879542414627, guid: 4f7e8c64d7c4fd94d8bff442c371c0ab, type: 3}
+  powerUpImage: {fileID: -1180066530460850607, guid: 99fea4f08b853bb4eb2a809c750794db, type: 3}
   powerUpText: Bigger Projectiles
   effectType: 9
   effectValue: 0
