@@ -451,7 +451,9 @@ MonoBehaviour:
   hitOffsetDown: {x: 0, y: -0.1}
   hitOffsetSide: {x: 0.01, y: 0}
   hitZoneRadius: 0.1
-  orcAttackClip: {fileID: 8300000, guid: 55d836bc4c84a9c4ca65f899de37428c, type: 3}
+  attackClips:
+  - {fileID: 8300000, guid: ceb754da8c7686946aed1c2e53597c16, type: 3}
+  - {fileID: 8300000, guid: b652fbd4d64cb714d972e4d88e2a0ca2, type: 3}
   movementFilter:
     useTriggers: 0
     useLayerMask: 0

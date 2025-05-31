@@ -13,6 +13,7 @@ public class Movement : MonoBehaviour
     //private List<RaycastHit2D> castCollisions = new List<RaycastHit2D>(); //store raycasts
 
     public Animator anim;
+    [SerializeField] private AudioSource footstepSource;
 
     private float x;
     private float y;
@@ -59,10 +60,20 @@ public class Movement : MonoBehaviour
     {
         if (input.magnitude > 0.1f || input.magnitude < -0.1f)
         {
+            if (!moving)
+            {
+                if (!footstepSource.isPlaying)
+                    footstepSource.Play();
+            }
             moving = true;
         }
         else
         {
+            if (moving)
+            {
+                if (footstepSource.isPlaying)
+                    footstepSource.Stop();
+            }
             moving = false;
         }
 

@@ -9,6 +9,8 @@ public class ElderMageProjectile : MonoBehaviour
     float speed;
     Vector2 direction;
 
+    public AudioClip[] projectileSounds;
+
     [SerializeField] private GameObject impactEffect;
 
     void Awake()
@@ -20,6 +22,7 @@ public class ElderMageProjectile : MonoBehaviour
 
     public void Initialize(Vector2 dir)
     {
+        if (projectileSounds.Length > 0) SoundFXManager.instance.PlayRandomSoundFXClip(projectileSounds, transform, 1f);
         direction = dir.normalized;
     }
 
