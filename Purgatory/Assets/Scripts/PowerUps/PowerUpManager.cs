@@ -115,6 +115,9 @@ public class PowerUpManager : MonoBehaviour
                 case PowerUpEffect.ignite:
                     stats.ignite = true;
                     break;
+                case PowerUpEffect.shotgun:
+                    stats.shotgun = true;
+                    break;
             }
         PlayerData.instance.SaveFrom(stats);
     }
