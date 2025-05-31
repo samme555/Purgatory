@@ -50,6 +50,8 @@ MonoBehaviour:
   destructionEffect: {fileID: 7249293404593409900, guid: 8d7588789afbcca4686e7f6f0d27304c, type: 3}
   replacementPrefab: {fileID: 436890450855020390, guid: 5d0555dd874e00c46916b8b8ac0fe840, type: 3}
   dropProbability: 0.5
+  destroyClips:
+  - {fileID: 8300000, guid: 98e1993b28eb2b545993ddf1264a9007, type: 3}
 --- !u!61 &2726674371038470612
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -111,6 +113,7 @@ MonoBehaviour:
   destructionEffect: {fileID: 0}
   replacementPrefab: {fileID: 436890450855020390, guid: 5d0555dd874e00c46916b8b8ac0fe840, type: 3}
   dropProbability: 0.1
+  destroyClips: []
 --- !u!1 &4396901308783450888
 GameObject:
   m_ObjectHideFlags: 0

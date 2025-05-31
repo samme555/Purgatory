@@ -95,6 +95,8 @@ MonoBehaviour:
   destructionEffect: {fileID: 7249293404593409900, guid: 8d7588789afbcca4686e7f6f0d27304c, type: 3}
   replacementPrefab: {fileID: 436890450855020390, guid: 5d0555dd874e00c46916b8b8ac0fe840, type: 3}
   dropProbability: 0.1
+  destroyClips:
+  - {fileID: 8300000, guid: 421a9d58dd6faa247ab4bb205ff0a9f4, type: 3}
 --- !u!1 &7560033420067503659
 GameObject:
   m_ObjectHideFlags: 0

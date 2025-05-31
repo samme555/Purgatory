@@ -279,10 +279,13 @@ MonoBehaviour:
   projectilePrefab: {fileID: 1925677939549781835, guid: 6328ede7909628e40be14ffe56bee71e, type: 3}
   fireBallShootingClip: {fileID: 8300000, guid: 267a3177628627f448ef78ffde727cd0, type: 3}
   playerStats: {fileID: 531783463737051170}
+  shotgunPellets: 5
+  spreadAngle: 30
   attackSpeed: 1
   bulletForce: 2
   biggerBulletApplied: 0
   burstFireApplied: 0
+  shotgunApplied: 0
 --- !u!114 &531783463737051170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -295,6 +298,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c904c55ed968f894697ab4379285fb9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerHurtClips:
+  - {fileID: 8300000, guid: 5e108b0228135954b82f1e4abb77f42a, type: 3}
+  - {fileID: 8300000, guid: 25ff6c9d9763f454290490968360fca8, type: 3}
   currentXP: 0
   level: 1
   xpToNextLevel: 50
@@ -311,6 +317,7 @@ MonoBehaviour:
   biggerBullets: 0
   burstFire: 0
   ignite: 0
+  shotgun: 0
   damageImmunity: 0
   immunityTimer: 0
   immunityDuration: 0.7

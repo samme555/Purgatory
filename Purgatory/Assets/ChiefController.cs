@@ -17,7 +17,7 @@ public class ChiefController : MonoBehaviour
     [Header("Attack Settings")]
     public float range = 0.75f;
     public float cooldown = 3f;
-    public float warningDuration = 1f;
+    public float warningDuration = 0.3f;
 
     private bool canAttack = true;
     public bool isAttacking = false;
@@ -30,6 +30,7 @@ public class ChiefController : MonoBehaviour
     private List<Vector2Int> currentPattern = new List<Vector2Int>();
 
     public AudioClip[] attackClips;
+    public AudioClip[] slamClips;
 
     private void Awake()
     {
@@ -110,6 +111,7 @@ public class ChiefController : MonoBehaviour
         agent.ResetPath(); // force stop movement in case it wasn't already
 
         Vector3Int originCell = tileMap.WorldToCell(transform.position);
+        if (attackClips.Length > 0) SoundFXManager.instance.PlayRandomSoundFXClip(attackClips, transform, 1f);
 
         foreach (Vector2Int offset in currentPattern)
         {
@@ -118,7 +120,7 @@ public class ChiefController : MonoBehaviour
             GameObject indicator = Instantiate(indicatorPrefab, indicatorPos, Quaternion.identity);
             Destroy(indicator, warningDuration);
         }
-
+        if (slamClips.Length > 0) SoundFXManager.instance.PlayRandomSoundFXClip(slamClips, transform, 1f);
         yield return new WaitForSeconds(warningDuration); // optional pre-attack delay
 
         Debug.Log("spawning hitbox!");
@@ -153,9 +155,6 @@ public class ChiefController : MonoBehaviour
         }
 
         Destroy(hitBox, 0.2f);
-
-        if (attackClips.Length > 0) SoundFXManager.instance.PlayRandomSoundFXClip(attackClips, transform, 1f);
-        Debug.Log("hitbox spawned success woooo");
 
         yield return new WaitForSeconds(0.5f); // small post-slam pause
 

@@ -13,6 +13,8 @@ public class DestroyOnCollision : MonoBehaviour
 
     private Collider2D _selfCollider;
 
+    public AudioClip[] destroyClips;
+
     private void Awake()
     {
         _selfCollider = GetComponent<Collider2D>();
@@ -23,6 +25,8 @@ public class DestroyOnCollision : MonoBehaviour
     // Called when a bullet hits (you already have this in your OnTriggerEnter2D)
     public void DestroyViaBullet()
     {
+        if (destroyClips.Length > 0) SoundFXManager.instance.PlayRandomSoundFXClip(destroyClips, transform, 1f);
+
         Vector3 spawnPos = (_selfCollider != null)
             ? _selfCollider.bounds.center
             : transform.position;
@@ -48,6 +52,8 @@ public class DestroyOnCollision : MonoBehaviour
     // New: called when an enemy (or player-overlap) destroys it
     public void DestroyViaOverlap()
     {
+        if (destroyClips.Length > 0) SoundFXManager.instance.PlayRandomSoundFXClip(destroyClips, transform, 1f);
+
         Vector3 spawnPos = (_selfCollider != null)
             ? _selfCollider.bounds.center
             : transform.position;
