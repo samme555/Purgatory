@@ -102,9 +102,9 @@ public class Collisions : MonoBehaviour
                 var crit = Random.Range(0f, 10f);
                 
                 enemyStats.TakeDamage(crit <= critChance && critChance > 0 ? damage * critDMG : damage);
-                if (crit <= critChance && critChance > 0)
-                { 
-                    enemyStats.isBurning = true;
+                if (crit <= critChance && critChance > 0 && playerstats.ignite == true)
+                {
+                    enemyStats.ApplyBurn(3f, 0.2f, 1f);
                 }
             }
         }

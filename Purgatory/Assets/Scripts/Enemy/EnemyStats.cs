@@ -11,7 +11,7 @@ public class EnemyStats : MonoBehaviour
 
     [HideInInspector]
     public float health;
-
+    public Coroutine burnCoroutine;
     private float maxHealth;
     public float MaxHealth
     {
@@ -27,7 +27,8 @@ public class EnemyStats : MonoBehaviour
     private Color originalColor;
 
     [SerializeField] private float flashDuration = 0.1f;
-    [SerializeField] private ParticleSystem deathEffect;    
+    [SerializeField] private ParticleSystem deathEffect;
+    [SerializeField] private bool isBoss = false;
     //[SerializeField] private bool instantDeath = false;
 
     private Animator anim;
@@ -39,14 +40,7 @@ public class EnemyStats : MonoBehaviour
 
     public System.Action OnDamaged;
 
-    public void Update()
-    {
-        isBurning = true;
-        if (isBurning)
-        {
-            Burning();
-        }
-    }
+    
     void Awake()
     {
         anim = GetComponent<Animator>()
@@ -123,6 +117,11 @@ public class EnemyStats : MonoBehaviour
             }
         }
 
+        if (isBoss)
+        {
+            GameManager.instance.ChangeState(GameManager.GameState.majorPowerUpSelection);
+        }
+
         if (anim != null)
             anim.SetTrigger("Die");
 
@@ -183,50 +182,31 @@ public class EnemyStats : MonoBehaviour
 
         StartCoroutine(DeathSequence());
     }
-
-    public IEnumerator Burning() 
+    public void ApplyBurn(float duration, float tickInterval, float damagePerTick)
     {
-        
-            TakeDamage(1);
-            yield return new WaitForSeconds(0.2f);
-       
-        
+        if (isBurning)
+            return;
+
+        StartCoroutine(BurnRoutine(duration, tickInterval, damagePerTick));
     }
-    private IEnumerator DeathSequence()
+
+    private IEnumerator BurnRoutine(float duration, float tickInterval, float damagePerTick)
     {
-        //yield return new WaitForSeconds(0.5f);
+        isBurning = true;
+        float elapsed = 0f;
 
-        //if (instantDeath)
-        //{
-        //    Destroy(gameObject, 0.02f);
-        //}
-        //else
-        //{
-        //    SpriteRenderer sr = GetComponent<SpriteRenderer>();
-        //    if (sr != null)
-        //    {
-        //        float duration = 1f;
-        //        float elapsed = 0f;
+        while (elapsed < duration)
+        {
+            TakeDamage(damagePerTick);
+            yield return new WaitForSeconds(tickInterval);
+            elapsed += tickInterval;
+        }
 
-        //        while (elapsed < duration)
-        //        {
-        //            elapsed += Time.deltaTime;
-        //            float alpha = Mathf.Lerp(1f, 0f, elapsed / duration);
-        //            sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, alpha);
-        //            yield return null;
-        //        }
-        //    }
-        //}
-
-        //DropOnDeath heartDropper = GetComponent<DropOnDeath>();
-
-        //if (heartDropper != null)
-        //{
-        //    heartDropper.DropHeart();
-        //}
-
-        //Destroy(gameObject);
-
+        isBurning = false;
+    }
+   
+    private IEnumerator DeathSequence()
+    {        
         float duration = fastFade ? 0.25f : 1f;
         float elapsed = 0f;
 
