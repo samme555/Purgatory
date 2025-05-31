@@ -69907,6 +69907,14 @@ PrefabInstance:
       propertyPath: powerUpSelectionUI
       value: 
       objectReference: {fileID: 486287816}
+    - target: {fileID: 796513968292205109, guid: 46a54c46f0a7e23449a0ea7caf03fb9d, type: 3}
+      propertyPath: powerUpList.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 796513968292205109, guid: 46a54c46f0a7e23449a0ea7caf03fb9d, type: 3}
+      propertyPath: 'powerUpList.Array.data[10]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 0c395c58e2ad421409ca63860ef12865, type: 2}
     - target: {fileID: 6285247933263005544, guid: 46a54c46f0a7e23449a0ea7caf03fb9d, type: 3}
       propertyPath: m_Name
       value: powerUpManager
