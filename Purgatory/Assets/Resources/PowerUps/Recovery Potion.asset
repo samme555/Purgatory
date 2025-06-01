@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ed2441639cd16c048a5b841b3e5347f0, type: 3}
-  m_Name: Shotgun
+  m_Name: Recovery Potion
   m_EditorClassIdentifier: 
-  powerUpImage: {fileID: 1275589539659018210, guid: 4de6b08f4fe531e429f72752e9478f14, type: 3}
-  powerUpText: shotgun
-  effectType: 7
-  effectValue: 1
+  powerUpImage: {fileID: 8640904453533441609, guid: 701847f0084fb444e8cf6ffd5545d379, type: 3}
+  powerUpText: Recover your health
+  effectType: 11
+  effectValue: 500
   isMajor: 1

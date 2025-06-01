@@ -184,6 +184,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0f82686f67f58384fb82b3829a1f62dc, type: 2}
   - {fileID: 11400000, guid: 04e5f755e8f8ff1449eda03b1ca1aa8b, type: 2}
   - {fileID: 11400000, guid: 0c395c58e2ad421409ca63860ef12865, type: 2}
+  - {fileID: 11400000, guid: 8ed05bacd6a06f341a88b7f132b47d1c, type: 2}
   powerUpButtonOne: {fileID: 0}
   iconOne: {fileID: 0}
   labelOne: {fileID: 0}

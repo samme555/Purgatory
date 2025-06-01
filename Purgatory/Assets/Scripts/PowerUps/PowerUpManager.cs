@@ -89,7 +89,7 @@ public class PowerUpManager : MonoBehaviour
             switch (powerUp.effectType) 
             {
                 case PowerUpEffect.maxHP:
-                    stats.hp += (int)powerUp.effectValue;
+                    stats.maxHp += (int)powerUp.effectValue;
                     break;
                 case PowerUpEffect.moveSPD:
                     stats.moveSpeed += (float)powerUp.effectValue;
@@ -118,8 +118,12 @@ public class PowerUpManager : MonoBehaviour
                 case PowerUpEffect.shotgun:
                     stats.shotgun = true;
                     break;
+                case PowerUpEffect.health:
+                    stats.AddHP((int)powerUp.effectValue);
+                    break;
+
             }
-        PlayerData.instance.SaveFrom(stats);
+        //PlayerData.instance.SaveFrom(stats);
     }
 
     void RandomizeNewPowerUps(bool isMajor) 

@@ -158,9 +158,14 @@ MonoBehaviour:
   preset: {fileID: 11400000, guid: 4d7b026cff8fc0142bd4312c04483326, type: 2}
   health: 165
   healthBar: {fileID: 7001809079079892458}
-  orc: 0
-  orcDamageClips: []
-  orcDeathClips: []
+  flashDuration: 0.1
+  deathEffect: {fileID: 0}
+  isBoss: 0
+  isBurning: 0
+  fastFade: 0
+  damageClips: []
+  deathClips:
+  - {fileID: 8300000, guid: b1001b86d0c955e42949962670069d27, type: 3}
 --- !u!1 &5158030881444738524
 GameObject:
   m_ObjectHideFlags: 0
