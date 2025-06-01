@@ -9,6 +9,7 @@ using UnityEngine.UI;
 public class PlayerStats : MonoBehaviour
 {
     public AudioClip[] playerHurtClips;
+    public GameObject deathScreenUI;
 
     //current amount of XP
     public float currentXP;
@@ -245,6 +246,9 @@ public class PlayerStats : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         Destroy(gameObject);
+
+        if (deathScreenUI != null)
+            deathScreenUI.SetActive(true);
     }
 
     public void ApplyPoison(int damagePerTick, float interval, int numberOfTicks)
