@@ -51,6 +51,7 @@ public class BossStats : EnemyStats
             {
                 stats.AddXP(xpReward);
                 PlayerData.instance.SaveFrom(stats);
+                if (deathClips.Length > 0) SoundFXManager.instance.PlayRandomSoundFXClip(deathClips, transform, 1f);
             }
         }
 

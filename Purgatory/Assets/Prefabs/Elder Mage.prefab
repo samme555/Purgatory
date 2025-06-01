@@ -378,10 +378,12 @@ MonoBehaviour:
   healthBar: {fileID: 7340124213654659798}
   flashDuration: 0.1
   deathEffect: {fileID: 0}
+  isBoss: 0
   isBurning: 0
   fastFade: 0
   damageClips: []
-  deathClips: []
+  deathClips:
+  - {fileID: 8300000, guid: 2a878a2d21019f64097226df81c2c61a, type: 3}
 --- !u!1 &8236251768553215320
 GameObject:
   m_ObjectHideFlags: 0
