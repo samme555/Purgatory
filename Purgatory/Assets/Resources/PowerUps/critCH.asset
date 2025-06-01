@@ -16,3 +16,4 @@ MonoBehaviour:
   powerUpText: +10% critCH
   effectType: 2
   effectValue: 1
+  isMajor: 0

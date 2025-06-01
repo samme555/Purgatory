@@ -46,6 +46,7 @@ public class PauseMenu : MonoBehaviour
     // Resets player data, returns skill points, and loads main menu
     public void ReturnToMenu()
     {
+        LevelTracker.currentLevel = 1;
         PlayerData.instance.ResetData();
         PlayerData.instance.LoadFromFile();
 

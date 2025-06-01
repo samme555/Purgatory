@@ -552,7 +552,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heartPrefab: {fileID: 525955544927378189, guid: 236cb5c26d647fc419c38bb4dc11172b, type: 3}
-  dropChance: 1
+  dropChance: 0.2
 --- !u!114 &5617865849604902437
 MonoBehaviour:
   m_ObjectHideFlags: 0
