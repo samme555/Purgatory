@@ -18,6 +18,9 @@ public class EnemyStats : MonoBehaviour
         get { return maxHealth; }
     }
 
+    private bool isDead;
+    public bool IsDead => isDead;
+
     // backing store for XP; never serializes
     private int _xpReward;
     public int xpReward => _xpReward;
@@ -102,6 +105,10 @@ public class EnemyStats : MonoBehaviour
 
     protected virtual void Die()
     {
+        if (isDead) return;
+
+        isDead = true;
+
         if (deathClips.Length > 0) SoundFXManager.instance.PlayRandomSoundFXClip(deathClips, transform, 1f);
 
         int xp = preset.GetXpReward(LevelTracker.currentLevel);
@@ -200,13 +207,15 @@ public class EnemyStats : MonoBehaviour
             TakeDamage(damagePerTick);
             yield return new WaitForSeconds(tickInterval);
             elapsed += tickInterval;
+
+            if (health <= 0) yield break;
         }
 
         isBurning = false;
     }
    
     private IEnumerator DeathSequence()
-    {        
+    {
         float duration = fastFade ? 0.25f : 1f;
         float elapsed = 0f;
 
