@@ -19,11 +19,13 @@ public class ReaperProjectile : MonoBehaviour
     private float timer, lifeTimer;
     private bool launched;
 
+    // Sets direction towards a target position
     public void Initialize(Vector3 target) =>
         moveDirection = (target - transform.position).normalized;
 
     void Awake()
     {
+        // Fetch stats from SO based on current level
         int lvl = LevelTracker.currentLevel;
         speed = preset.GetSpeed(lvl);
         damage = preset.GetDamage(lvl);
@@ -31,16 +33,18 @@ public class ReaperProjectile : MonoBehaviour
 
     void Update()
     {
-        // spin
+        // Spin the projectile visually
         transform.Rotate(0, 0, spinSpeed * Time.deltaTime);
 
-        // delay launch
+        // Count time since spawned to delay movement
         timer += Time.deltaTime;
         if (timer >= delayBeforeMoving) launched = true;
+
+        // Begin movement in set direction after delay
         if (launched)
             transform.Translate(moveDirection * speed * Time.deltaTime, Space.World);
 
-        // auto-destroy
+        // Destroy the projectile after its lifetime expires
         lifeTimer += Time.deltaTime;
         if (lifeTimer >= lifeTime)
             Destroy(gameObject);
@@ -51,9 +55,11 @@ public class ReaperProjectile : MonoBehaviour
         bool isWall = other.gameObject.layer == LayerMask.NameToLayer("Projectile Block");
         bool isPlayer = other.CompareTag("Player");
 
+        // Apply damage if hitting player
         if (isPlayer)
             other.GetComponent<PlayerStats>()?.TakeDamage(damage);
 
+        // Impact effect and destroy on player or wall hit
         if (isPlayer || isWall)
         {
             if (impactEffect)

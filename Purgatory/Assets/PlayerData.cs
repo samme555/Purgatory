@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class PlayerData : MonoBehaviour
 {
-    public static PlayerData instance;
+    public static PlayerData instance; // Singleton-instans för global åtkomst
 
+    // Spelarens sparade statistik
     public float currentXP = 0;
     public int level = 1;
     public float xpToNextLevel = 50;
@@ -16,35 +17,41 @@ public class PlayerData : MonoBehaviour
     public float atkSPD = 1;
     public float atk = 10;
     public int skillPoints = 0;
+
+    // Bool-värden som speglar olika powerups
     public bool biggerBullet;
     public bool burstFire;
     public bool ignite;
     public bool shotgun;
-    public int runSkillPoints = 0; //always 0, never saved.
 
+    public int runSkillPoints = 0; // Tillfälliga skillpoints för denna session
+
+    // För att spara vilka färdigheter spelaren låst upp
     public List<int> unlockedSkillSlots = new();
     public List<int> chosenBranches = new();
 
-    private string path;
+    private string path; // Filväg för att spara/läsa JSON
 
     private void Awake()
     {
+        // Singleton-skydd
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject); // Behåll mellan scener
+            DontDestroyOnLoad(gameObject); // Behåll objektet mellan scener
+
             path = Application.persistentDataPath + "/playerdata.json";
             Debug.Log("Instantiated playerData");
 
-            LoadFromFile();
+            LoadFromFile(); // Försök läsa tidigare sparning
         }
         else
         {
-            Destroy(gameObject); // Ta bort dubletter
+            Destroy(gameObject); // Dublett – ta bort
         }
     }
 
-    // En metod för att kopiera från PlayerStats
+    // Kopierar statistik från ett aktivt PlayerStats-objekt till denna databehållare
     public void SaveFrom(PlayerStats stats)
     {
         currentXP = stats.currentXP;
@@ -61,10 +68,11 @@ public class PlayerData : MonoBehaviour
         burstFire = stats.burstFire;
         ignite = stats.ignite;
         shotgun = stats.shotgun;
+
         Debug.Log("Saved stats from Player");
     }
 
-    // En metod för att kopiera till PlayerStats
+    // Återställer PlayerStats-objekt från sparad data
     public void LoadTo(PlayerStats stats)
     {
         stats.currentXP = currentXP;
@@ -81,8 +89,11 @@ public class PlayerData : MonoBehaviour
         stats.burstFire = burstFire;
         stats.ignite = ignite;
         stats.shotgun = shotgun;
+
         Debug.Log("Loaded stats to Player");
     }
+
+    // Återställer spelarens data till grundvärden
     public void ResetData()
     {
         currentXP = 0;
@@ -95,17 +106,21 @@ public class PlayerData : MonoBehaviour
         atkSPD = 1;
         atk = 10;
         biggerBullet = false;
+
         Debug.Log("Reset the stats");
     }
 
+    // Sparar spelarens data till JSON-fil
     public void SaveToFile()
     {
         PlayerSaveData data = new PlayerSaveData(this);
         string json = JsonUtility.ToJson(data, true);
         File.WriteAllText(path, json);
+
         Debug.Log("Saved player data to: " + path);
     }
 
+    // Läser in data från JSON om fil finns
     public void LoadFromFile()
     {
         if (!File.Exists(path))
@@ -117,6 +132,7 @@ public class PlayerData : MonoBehaviour
         string json = File.ReadAllText(path);
         PlayerSaveData data = JsonUtility.FromJson<PlayerSaveData>(json);
 
+        // Tilldela alla fält från laddad data
         hp = data.hp;
         critCH = data.critCH;
         critDMG = data.critDMG;
@@ -124,13 +140,13 @@ public class PlayerData : MonoBehaviour
         atkSPD = data.atkSPD;
         atk = data.atk;
         skillPoints = data.skillPoints;
-
         unlockedSkillSlots = new List<int>(data.unlockedSkillSlots);
         chosenBranches = new List<int>(data.chosenBranches);
 
         Debug.Log("Loaded player data from: " + path);
     }
 
+    // Intern klass som speglar vilka fält som sparas till disk
     [System.Serializable]
     private class PlayerSaveData
     {

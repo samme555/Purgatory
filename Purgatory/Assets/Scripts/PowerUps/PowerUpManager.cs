@@ -4,20 +4,13 @@ using System.Linq;
 using UnityEngine.UI;
 using TMPro;
 
+// Manages the power-up selection logic during gameplay
 public class PowerUpManager : MonoBehaviour
 {
     [SerializeField] GameObject powerUpSelectionUI;
-
-    //[SerializeField] GameObject powerUpPrefab;
-
-    //[SerializeField] Transform powerUpPositionOne;
-
-    //[SerializeField] Transform powerUpPositionTwo;
-
-    //[SerializeField] Transform powerUpPositionThree;
-
     [SerializeField] List<PowerUpSO> powerUpList;
 
+    // UI elements for each power-up button
     [SerializeField] private Button powerUpButtonOne;
     [SerializeField] private Image iconOne;
     [SerializeField] private TextMeshProUGUI labelOne;
@@ -30,23 +23,19 @@ public class PowerUpManager : MonoBehaviour
     [SerializeField] private Image iconThree;
     [SerializeField] private TextMeshProUGUI labelThree;
 
-    //[SerializeField] GameObject powerUpOne, powerUpTwo, powerUpThree;
-
     List<PowerUpSO> alreadySelectedPowerUp = new List<PowerUpSO>();
-
     PlayerStats playerStats;
-
     public static PowerUpManager instance;
-
     Vector3 screenCenter = new Vector3(Screen.width / 2, Screen.height / 2, 0f);
 
+    // Setup on game start
     private void Start()
     {
         Debug.Log("[PowerUpManager] Start running.");
-
         playerStats = FindAnyObjectByType<PlayerStats>();
         powerUpSelectionUI.SetActive(false);
 
+        // Subscribe to game state changes
         if (GameManager.instance != null)
         {
             Debug.Log("[PowerUpManager] Subscribing to GameManager.OnGameStateChanged.");
@@ -58,17 +47,16 @@ public class PowerUpManager : MonoBehaviour
         }
     }
 
-
-
+    // Unsubscribe from game state event on disable
     private void OnDisable()
     {
-        
         if (GameManager.instance != null)
         {
             GameManager.instance.OnGameStateChanged -= HandleGameStateChanged;
         }
     }
 
+    // Responds to game state changes and triggers UI
     private void HandleGameStateChanged(GameManager.GameState state)
     {
         Debug.Log($"[PowerUpManager] HandleGameStateChanged called with state: {state}");
@@ -83,50 +71,50 @@ public class PowerUpManager : MonoBehaviour
         }
     }
 
-    public void ApplyPowerUp(PowerUpSO powerUp, PlayerStats stats) 
+    // Applies the selected power-up to the player
+    public void ApplyPowerUp(PowerUpSO powerUp, PlayerStats stats)
     {
-     
-            switch (powerUp.effectType) 
-            {
-                case PowerUpEffect.maxHP:
-                    stats.maxHp += (int)powerUp.effectValue;
-                    break;
-                case PowerUpEffect.moveSPD:
-                    stats.moveSpeed += (float)powerUp.effectValue;
-                    break;
-                case PowerUpEffect.atk:
-                    stats.atk += (float)powerUp.effectValue;
-                    break;
-                case PowerUpEffect.atkSPD:
-                    stats.atkSPD += (float)powerUp.effectValue;
-                    break;
-                case PowerUpEffect.critCH:
-                    stats.critCH += (float)powerUp.effectValue;
-                    break;
-                case PowerUpEffect.critDMG:
-                    stats.critDMG += (float)powerUp.effectValue;
-                    break;
-                case PowerUpEffect.biggerBullets:
-                    stats.biggerBullets = true;
-                    break;
-                case PowerUpEffect.burstfire:
-                    stats.burstFire = true;
-                    break;
-                case PowerUpEffect.ignite:
-                    stats.ignite = true;
-                    break;
-                case PowerUpEffect.shotgun:
-                    stats.shotgun = true;
-                    break;
-                case PowerUpEffect.health:
-                    stats.AddHP((int)powerUp.effectValue);
-                    break;
-
-            }
+        switch (powerUp.effectType)
+        {
+            case PowerUpEffect.maxHP:
+                stats.maxHp += (int)powerUp.effectValue;
+                break;
+            case PowerUpEffect.moveSPD:
+                stats.moveSpeed += (float)powerUp.effectValue;
+                break;
+            case PowerUpEffect.atk:
+                stats.atk += (float)powerUp.effectValue;
+                break;
+            case PowerUpEffect.atkSPD:
+                stats.atkSPD += (float)powerUp.effectValue;
+                break;
+            case PowerUpEffect.critCH:
+                stats.critCH += (float)powerUp.effectValue;
+                break;
+            case PowerUpEffect.critDMG:
+                stats.critDMG += (float)powerUp.effectValue;
+                break;
+            case PowerUpEffect.biggerBullets:
+                stats.biggerBullets = true;
+                break;
+            case PowerUpEffect.burstfire:
+                stats.burstFire = true;
+                break;
+            case PowerUpEffect.ignite:
+                stats.ignite = true;
+                break;
+            case PowerUpEffect.shotgun:
+                stats.shotgun = true;
+                break;
+            case PowerUpEffect.health:
+                stats.AddHP((int)powerUp.effectValue);
+                break;
+        }
         PlayerData.instance.SaveFrom(stats);
     }
 
-    void RandomizeNewPowerUps(bool isMajor) 
+    // Randomly selects and displays 3 new power-ups to choose from
+    void RandomizeNewPowerUps(bool isMajor)
     {
         Debug.Log("[PowerUpManager] Randomizing powerups | Major: " + isMajor);
 
@@ -146,6 +134,7 @@ public class PowerUpManager : MonoBehaviour
             return;
         }
 
+        // Pick 3 unique power-ups at random
         while (randomizedPowerUps.Count < 3)
         {
             PowerUpSO randomPowerUp = availablePowerUps[Random.Range(0, availablePowerUps.Count)];
@@ -161,19 +150,17 @@ public class PowerUpManager : MonoBehaviour
             Debug.Log($"[PowerUpManager] Slot {i + 1}: {randomizedPowerUps[i].name} | Text: {randomizedPowerUps[i].powerUpText} | Sprite: {(randomizedPowerUps[i].powerUpImage != null ? randomizedPowerUps[i].powerUpImage.name : "null")}");
         }
 
-        // Button 1
+        // Assign visuals and functionality to each button
         iconOne.sprite = randomizedPowerUps[0].powerUpImage;
         labelOne.text = randomizedPowerUps[0].powerUpText;
         powerUpButtonOne.onClick.RemoveAllListeners();
         powerUpButtonOne.onClick.AddListener(() => SelectPowerUp(randomizedPowerUps[0]));
 
-        // Button 2
         iconTwo.sprite = randomizedPowerUps[1].powerUpImage;
         labelTwo.text = randomizedPowerUps[1].powerUpText;
         powerUpButtonTwo.onClick.RemoveAllListeners();
         powerUpButtonTwo.onClick.AddListener(() => SelectPowerUp(randomizedPowerUps[1]));
 
-        // Button 3
         iconThree.sprite = randomizedPowerUps[2].powerUpImage;
         labelThree.text = randomizedPowerUps[2].powerUpText;
         powerUpButtonThree.onClick.RemoveAllListeners();
@@ -181,62 +168,10 @@ public class PowerUpManager : MonoBehaviour
 
         Debug.Log("[PowerUpManager] Powerup UI should now be visible.");
         ShowPowerUpSelection();
-
-        //Vector3 screenCenter = new Vector3(Screen.width / 2, Screen.height / 2, Camera.main.nearClipPlane);
-        //Vector3 worldCenter = Camera.main.ScreenToWorldPoint(screenCenter);
-        //worldCenter.z = 0f;
-        //if (powerUpOne != null) Destroy(powerUpOne);
-        //if (powerUpTwo != null) Destroy(powerUpTwo);
-        //if (powerUpThree != null) Destroy(powerUpThree);
-
-        //List<PowerUpSO> randomizedPowerUps = new List<PowerUpSO>();
-
-        //List<PowerUpSO> availablePowerUps = new List<PowerUpSO>(powerUpList);
-
-        //if (isMajor)
-        //{
-        //    availablePowerUps = availablePowerUps.FindAll(p => p.isMajor);
-        //}
-        //else 
-        //{ 
-        //    availablePowerUps = availablePowerUps.FindAll(p => p.isMajor == false);
-        //}
-
-        //if (availablePowerUps.Count < 3) 
-        //{
-        //    Debug.Log("Not enough powerUps. Add more into the cardManager object inspector");
-        //    return;
-        //}
-
-        //while (randomizedPowerUps.Count < 3) 
-        //{ 
-        //    PowerUpSO randomPowerUp = availablePowerUps[Random.Range(0, availablePowerUps.Count)];
-        //    if (!randomizedPowerUps.Contains(randomPowerUp))
-        //    { 
-        //        randomizedPowerUps.Add(randomPowerUp);  
-        //    }
-        //}
-
-        //worldCenter.z = 0f;
-        //float offset = 0.5f;
-
-        //powerUpPositionOne.position = worldCenter + new Vector3(0, -offset, 0);
-        //powerUpPositionTwo.position = worldCenter;
-        //powerUpPositionThree.position = worldCenter + new Vector3(0, +offset, 0);
-        //powerUpOne = InstantiatePowerUp(randomizedPowerUps[0], powerUpPositionOne);
-        //powerUpTwo = InstantiatePowerUp(randomizedPowerUps[1], powerUpPositionTwo);
-        //powerUpThree = InstantiatePowerUp(randomizedPowerUps[2], powerUpPositionThree);
-
-        //GameObject InstantiatePowerUp(PowerUpSO powerUpSO, Transform position) 
-        //{ 
-        //    GameObject powerUpGO = Instantiate(powerUpPrefab, position.position, Quaternion.identity, position);
-        //    PowerUp powerUp = powerUpGO.GetComponent<PowerUp>();
-        //    powerUp.Setup(powerUpSO);
-        //    return powerUpGO;
-        //}
     }
 
-    public void SelectPowerUp(PowerUpSO selectedPowerUp) 
+    // Called when the player chooses one of the three power-ups
+    public void SelectPowerUp(PowerUpSO selectedPowerUp)
     {
         Debug.Log("[PowerUpManager] Selected powerup: " + selectedPowerUp.name + " | Effect: " + selectedPowerUp.effectType + " | Value: " + selectedPowerUp.effectValue);
 
@@ -248,12 +183,13 @@ public class PowerUpManager : MonoBehaviour
         GameManager.instance.ChangeState(GameManager.GameState.playing);
     }
 
-    public void ShowPowerUpSelection() 
-    { 
+    public void ShowPowerUpSelection()
+    {
         powerUpSelectionUI.SetActive(true);
     }
-    public void HidePowerUpSelection() 
-    { 
+
+    public void HidePowerUpSelection()
+    {
         powerUpSelectionUI.SetActive(false);
     }
 }

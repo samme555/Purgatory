@@ -4,23 +4,29 @@ using System.Collections.Generic;
 
 public class RoomManager : MonoBehaviour
 {
+    // Room prefab arrays
     [SerializeField] GameObject[] roomPrefabs;
     [SerializeField] private GameObject[] bossRoomPrefabs;
     [SerializeField] private GameObject startRoomPrefab;
 
+    // Max and min room limits
+
     [SerializeField] private int maxRooms = 15;
     [SerializeField] private int minRooms = 10;
 
+    // Size of rooms in Unity units
     int roomWidth = 5;
     int roomHeight = 3;
 
+    // Grid dimensions for generation
     [SerializeField] int gridSizeX = 10;
     [SerializeField] int gridSizeY = 10;
 
+    // Selected boss prefab and its grid position
     private GameObject selectedBossRoomPrefab;
     private Vector2Int bossRoomIndex;
 
-
+    // Tracking room objects, positions, and queue for generation
     private List<GameObject> roomObjects = new List<GameObject> ();
 
     private Queue<Vector2Int> roomQueue = new Queue<Vector2Int> ();
@@ -33,6 +39,7 @@ public class RoomManager : MonoBehaviour
 
     private bool bossRoomPlaced = false;
 
+    // Tracks current room camera
     private Camera currentCamera;
 
     public static RoomManager Instance { get; private set; }
@@ -53,6 +60,7 @@ public class RoomManager : MonoBehaviour
         roomGrid = new int[gridSizeX, gridSizeY];
         roomQueue = new Queue<Vector2Int>();
 
+        // Start from center
         Vector2Int initialRoomIndex = new Vector2Int(gridSizeX / 2, gridSizeY / 2);
         StartRoomGenerationFromRoom(initialRoomIndex);
     }
@@ -60,6 +68,7 @@ public class RoomManager : MonoBehaviour
 
     private void Update()
     {
+        // Continue room generation
         if (roomQueue.Count > 0 && roomCount < maxRooms && !generationComplete)
         {
             Vector2Int roomIndex = roomQueue.Dequeue();
@@ -74,7 +83,7 @@ public class RoomManager : MonoBehaviour
                 new Vector2Int(0, -1)   // Down
             };
 
-            // Shuffle directions
+            // Randomize directions
             for (int i = 0; i < directions.Count; i++)
             {
                 Vector2Int temp = directions[i];
@@ -101,10 +110,12 @@ public class RoomManager : MonoBehaviour
                 }
             }
         }
+        // Regenerate if too few rooms
         else if (roomCount < minRooms)
         {
             RegenerateRooms();
         }
+        // Place boss once generation is done
         else if (!generationComplete)
         {
             PlaceSingleBossRoom();
@@ -125,6 +136,7 @@ public class RoomManager : MonoBehaviour
 
         List<Vector2Int> leafCandidates = new List<Vector2Int>();
 
+        // Find dead-end rooms
         foreach (GameObject roomObj in roomObjects)
         {
             Room room = roomObj.GetComponent<Room>();

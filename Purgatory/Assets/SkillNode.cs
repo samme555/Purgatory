@@ -10,10 +10,11 @@ public class SkillNode : MonoBehaviour
     public bool isAvailable = false;
     public AudioClip upgradeClip;
 
-    public List<ConnectionLine> incomingLines;
+    public List<ConnectionLine> incomingLines; // Visual lines connecting nodes
 
-    public SkillUpgrade upgradeData;
+    public SkillUpgrade upgradeData; // Data describing this skill's effect
 
+    // Sets availability and unlock state for the node
     public void SetState(bool available, bool unlocked)
     {
         isAvailable = available;
@@ -21,8 +22,7 @@ public class SkillNode : MonoBehaviour
         button.interactable = available;
     }
 
-
-
+    // Unlocks the node and applies its upgrade
     public void Unlock()
     {
         isUnlocked = true;
@@ -31,6 +31,7 @@ public class SkillNode : MonoBehaviour
 
         Debug.Log($"{name} unlocked.");
 
+        // Track unlocked node in PlayerData if not already present
         int index = transform.GetSiblingIndex();
         if (!PlayerData.instance.unlockedSkillSlots.Contains(index))
         {
@@ -38,6 +39,7 @@ public class SkillNode : MonoBehaviour
             Debug.Log($"Chosen slot index {index} added to PlayerData.");
         }
 
+        // Apply this node's skill upgrade to the player
         if (upgradeData != null)
         {
             SkillTreeManager.Instance.ApplyUpgrade(upgradeData);
@@ -46,11 +48,13 @@ public class SkillNode : MonoBehaviour
             Debug.Log($"Saved playerdata to file!");
         }
 
+        // Activate incoming visual connection lines
         foreach (var line in incomingLines)
         {
             line.SetActive(true);
         }
 
+        // Play upgrade sound if available
         SoundFXManager.instance?.PlaySoundFXClip(upgradeClip, transform, 0.5f);
     }
 }

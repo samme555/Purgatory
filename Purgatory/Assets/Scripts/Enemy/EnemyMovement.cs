@@ -4,51 +4,53 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+// Controls enemy movement, attack behavior, and animation
 public class EnemyMovement : MonoBehaviour
 {
-    [SerializeField] SpriteRenderer spriteRenderer;
+    [SerializeField] SpriteRenderer spriteRenderer; // Handles sprite flipping
 
-    NavMeshAgent agent;
+    NavMeshAgent agent; // Navigation agent for pathfinding
+    Rigidbody2D rb; // 2D physics component
 
-    Rigidbody2D rb;
-    public float speed = 0.5f;
-    private Transform player;
-    public Animator anim;
-    public bool isAttacking = false;
-    private bool playerDetected = false;
-    public float attackRange = 0.7f;
-    public float attackCooldown = 1f;
-    public float aggroRange = 6f;
-    private float lastAttackTime;
-    public GameObject hitZone;
-    public OrcHitZone hitZoneScript;
-    public GoblinHitZone goblinHitZoneScript;
+    public float speed = 0.5f; // Movement speed (unused)
+    private Transform player; // Reference to player target
+    public Animator anim; // Animator controller
+    public bool isAttacking = false; // Flag if enemy is currently attacking
+    private bool playerDetected = false; // If player has entered aggro range
 
-    
-    [SerializeField] private Vector2 hitOffsetUp = new Vector2(0f, 0.02f);
-    [SerializeField] private Vector2 hitOffsetDown = new Vector2(0f, -0.02f);
-    [SerializeField] private Vector2 hitOffsetSide = new Vector2(0.02f, 0f);
-    [SerializeField] private float hitZoneRadius = 0.3f;
+    public float attackRange = 0.7f; // Distance required to attack
+    public float attackCooldown = 1f; // Delay between attacks
+    public float aggroRange = 6f; // Aggro detection range
+    private float lastAttackTime; // Time of last attack
 
-    public AudioClip[] attackClips;
+    public GameObject hitZone; // Collider used for damage
+    public OrcHitZone hitZoneScript; // Reference to damage logic for orc
+    public GoblinHitZone goblinHitZoneScript; // Reference to damage logic for goblin
 
+    [SerializeField] private Vector2 hitOffsetUp = new Vector2(0f, 0.02f); // Hitbox position when facing up
+    [SerializeField] private Vector2 hitOffsetDown = new Vector2(0f, -0.02f); // Hitbox position when facing down
+    [SerializeField] private Vector2 hitOffsetSide = new Vector2(0.02f, 0f); // Hitbox position when facing sideways
+    [SerializeField] private float hitZoneRadius = 0.3f; // Radius of hitbox
 
-    private Vector2 direction;
+    public AudioClip[] attackClips; // Sound to play on attack
+
+    private Vector2 direction; // Current movement direction
 
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
-    public ContactFilter2D movementFilter;
+    public ContactFilter2D movementFilter; // Used for custom physics collision
     public float collisionOffset = 0.05f;
+
+    // Initialize references and physics flags
     void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
         rb = GetComponent<Rigidbody2D>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
-      
         rb.linearDamping = 20f;
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    // Setup references to player and adjust hitzone collider
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -61,26 +63,28 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
+    // Handles AI logic: chase, attack, stop
     void Update()
     {
-        if (player == null || agent.pathPending) return;
+        if (player == null || agent.pathPending) return; // Wait if path not ready
 
         float trueDistance = Vector2.Distance(transform.position, player.position);
 
         if (!playerDetected && trueDistance <= aggroRange)
-            playerDetected = true;
+            playerDetected = true; // Detect player
 
-        if (!playerDetected) return;
+        if (!playerDetected) return; // Stop if not yet triggered
 
         float dist = Vector2.Distance(transform.position, player.position);
 
+        // Start attack if within range and cooldown is over
         if (!isAttacking && dist <= attackRange && Time.time >= lastAttackTime + attackCooldown)
         {
             lastAttackTime = Time.time;
             StartCoroutine(PerformAttack(player.gameObject));
         }
 
+        // If not attacking, continue pathing or idle based on range
         if (!isAttacking)
         {
             if (dist > attackRange)
@@ -102,21 +106,24 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
+    // Enables damage logic on hit zone
     public void EnableDamage()
     {
         hitZoneScript?.EnableDamage();
         goblinHitZoneScript?.EnableDamage();
     }
 
+    // Disables damage logic
     public void DisableDamage()
     {
         hitZoneScript?.DisableDamage();
         goblinHitZoneScript?.DisableDamage();
     }
 
+    // Triggers the attack animation and repositions hitZone
     public void TriggerAttack()
     {
-        if(anim != null)
+        if (anim != null)
         {
             Vector2 dir = (player.position - transform.position).normalized;
 
@@ -124,7 +131,7 @@ public class EnemyMovement : MonoBehaviour
             anim.SetFloat("Y", dir.y);
             anim.SetTrigger("Attack");
 
-            if(dir.x < 0) spriteRenderer.flipX = true;
+            if (dir.x < 0) spriteRenderer.flipX = true;
             else if (dir.x > 0) spriteRenderer.flipX = false;
 
             if (hitZone != null)
@@ -141,17 +148,9 @@ public class EnemyMovement : MonoBehaviour
             }
         }
         Debug.Log("HitZone new pos: " + hitZone.transform.localPosition);
-
     }
 
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if (collision.gameObject.CompareTag("Player"))
-    //    {
-    //        StartCoroutine(PerformAttack(collision.gameObject));
-    //    }
-    //}
-
+    // Attack logic with damage window and cooldown
     private IEnumerator PerformAttack(GameObject target)
     {
         if (attackClips.Length > 0) SoundFXManager.instance?.PlayRandomSoundFXClip(attackClips, transform, 1f);
@@ -161,20 +160,17 @@ public class EnemyMovement : MonoBehaviour
         TriggerAttack();
         EnableDamage();
 
-        //target.GetComponent<PlayerStats>()?.TakeDamage(10);
-
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.2f); // Attack active frame
 
         DisableDamage();
 
-        yield return new WaitForSeconds(0.6f);
-
+        yield return new WaitForSeconds(0.6f); // Attack recovery
 
         agent.isStopped = false;
         isAttacking = false;
     }
 
-
+    // Update animation direction and moving flag
     private void Animate(Vector2 dir)
     {
         bool isMoving = dir.magnitude > 0.1f;
@@ -192,5 +188,4 @@ public class EnemyMovement : MonoBehaviour
 
         anim.SetBool("Moving", isMoving);
     }
-
 }

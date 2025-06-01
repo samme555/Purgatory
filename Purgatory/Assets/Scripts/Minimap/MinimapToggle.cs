@@ -7,11 +7,13 @@ public class MinimapToggle : MonoBehaviour
     [SerializeField] private MinimapController minimapController;
     [SerializeField] private RoomManager roomManager; // drag your RoomManager here
 
+    // === Hide minimap initially ===
     private void Start()
     {
         minimapPanel.SetActive(false);
     }
 
+    // === Check for toggle input and update minimap visibility ===
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.M))
@@ -21,7 +23,7 @@ public class MinimapToggle : MonoBehaviour
 
             if (isOn)
             {
-                // Fit to rooms whenever it pops up
+                // Whenever toggled on, update the view to match current room layout
                 minimapController.FitToRooms(roomManager.RoomObjects);
             }
         }

@@ -1,21 +1,21 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+// Handles the pause menu UI and related actions like resume, quit, or return to main menu
 public class PauseMenu : MonoBehaviour
 {
-    public GameObject pauseMenu;
-    public GameObject optionsMenu;
-    public static bool isPaused;
+    public GameObject pauseMenu; // Reference to pause menu UI
+    public GameObject optionsMenu; // Reference to options menu UI
+    public static bool isPaused; // Global pause state flag
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    // Initializes pause menu state
     void Start()
     {
-
         pauseMenu.SetActive(false);
         isPaused = false;
     }
 
-    // Update is called once per frame
+    // Checks for Escape key input to toggle pause/resume
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -25,6 +25,7 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
+    // Activates pause menu and freezes time
     public void PauseGame()
     {
         pauseMenu.SetActive(true);
@@ -32,6 +33,7 @@ public class PauseMenu : MonoBehaviour
         isPaused = true;
     }
 
+    // Hides pause/options menu and resumes game
     public void ResumeGame()
     {
         Debug.Log("resuming");
@@ -41,10 +43,10 @@ public class PauseMenu : MonoBehaviour
         isPaused = false;
     }
 
+    // Resets player data, returns skill points, and loads main menu
     public void ReturnToMenu()
     {
         PlayerData.instance.ResetData();
-
         PlayerData.instance.LoadFromFile();
 
         PlayerData.instance.skillPoints += PlayerData.instance.runSkillPoints;
@@ -57,6 +59,7 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
+    // Quits the application
     public void Quit()
     {
         Application.Quit();

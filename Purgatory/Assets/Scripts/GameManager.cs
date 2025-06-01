@@ -1,17 +1,17 @@
 using UnityEngine;
 using System;
 
-
+// Central controller for global game state transitions and level tracking
 public class GameManager : MonoBehaviour
 {
-    public static GameManager instance;
+    public static GameManager instance; // Singleton reference to allow global access
 
-    int currentlevel = 0;
+    int currentlevel = 0; // Tracks the current level number
+    GameState currentState; // Stores the current game state
 
-    GameState currentState;
+    public event Action<GameState> OnGameStateChanged; // Event triggered on state changes
 
-    public event Action<GameState> OnGameStateChanged;
-
+    // Singleton enforcement: ensures only one instance exists
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -23,35 +23,40 @@ public class GameManager : MonoBehaviour
         instance = this;
     }
 
+    // Debug/testing key inputs to trigger state changes
     void Update()
     {
-        
         if (Input.GetKey(KeyCode.P))
-        { 
+        {
             ChangeState(GameState.powerUpSelection);
         }
-        if (Input.GetKey(KeyCode.B)) 
+
+        if (Input.GetKey(KeyCode.B))
         {
             ChangeState(GameState.majorPowerUpSelection);
         }
     }
 
-    public int GetCurrentLevel() 
-    { 
+    // Public method to access the current level number
+    public int GetCurrentLevel()
+    {
         return currentlevel;
     }
 
-    public void ChangeState(GameState newState) 
-    { 
+    // Changes the active game state and notifies subscribers
+    public void ChangeState(GameState newState)
+    {
         currentState = newState;
-        OnGameStateChanged?.Invoke(newState);
-        HandleStateChanged();
+        OnGameStateChanged?.Invoke(newState); // Notify listeners
+        HandleStateChanged(); // Apply logic based on new state
     }
 
+    // Handles logic when a new state is applied
     private void HandleStateChanged()
     {
         switch (currentState)
         {
+            // Resume normal gameplay
             case GameState.playing:
                 if (PowerUpManager.instance != null)
                 {
@@ -61,9 +66,10 @@ public class GameManager : MonoBehaviour
                 {
                     Debug.LogWarning("[GameManager] PowerUpManager.instance is NULL on state: playing");
                 }
-                Time.timeScale = 1f;
+                Time.timeScale = 1f; // Unpause game
                 break;
 
+            // Pause game and show power-up UI
             case GameState.powerUpSelection:
             case GameState.majorPowerUpSelection:
                 if (PowerUpManager.instance != null)
@@ -74,17 +80,16 @@ public class GameManager : MonoBehaviour
                 {
                     Debug.LogWarning("[GameManager] PowerUpManager.instance is NULL on state: " + currentState);
                 }
-                Time.timeScale = 0f;
+                Time.timeScale = 0f; // Pause game
                 break;
         }
     }
 
-    public enum GameState 
-    { 
+    // Defines the different states the game can be in
+    public enum GameState
+    {
         playing,
-
         powerUpSelection,
-
         majorPowerUpSelection
     }
 }

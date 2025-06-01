@@ -5,9 +5,11 @@ public class PowerUp : MonoBehaviour
 {
     [SerializeField] SpriteRenderer powerUpImageRenderer;
     [SerializeField] SpriteRenderer imageSlotRenderer;
-
     [SerializeField] TextMeshPro powerUpTextRenderer;
+
     private PowerUpSO powerUpInfo;
+
+    // Initialize visuals from the PowerUpSO
     public void Setup(PowerUpSO powerUp)
     {
         powerUpInfo = powerUp;
@@ -26,6 +28,8 @@ public class PowerUp : MonoBehaviour
     void Update()
     {
         powerUpImageRenderer.sortingOrder = 99;
+
+        // Handle mouse click detection when not over UI
         if (Input.GetMouseButtonDown(0))
         {
             if (UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject()) return;
@@ -34,7 +38,6 @@ public class PowerUp : MonoBehaviour
             wp.z = 0;
 
             Collider2D[] hits = Physics2D.OverlapPointAll(wp);
-
             foreach (var hit in hits)
             {
                 PowerUp pu = hit.GetComponent<PowerUp>();
@@ -47,6 +50,7 @@ public class PowerUp : MonoBehaviour
         }
     }
 
+    // Auto-scale icon to fit within slot size
     private void FitSpriteInSlot(SpriteRenderer iconRenderer, SpriteRenderer slotRenderer)
     {
         if (iconRenderer.sprite == null || slotRenderer.sprite == null)
@@ -57,7 +61,6 @@ public class PowerUp : MonoBehaviour
 
         float scaleX = slotSize.x / iconSize.x;
         float scaleY = slotSize.y / iconSize.y;
-
         float scale = Mathf.Min(scaleX, scaleY);
 
         iconRenderer.transform.localScale = new Vector3(scale, scale, 1f);

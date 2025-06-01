@@ -6,6 +6,7 @@ public class LevelMoveMain : MonoBehaviour
     private bool _hasFired = false;
     private Collider2D _triggerCollider;
 
+    // === Setup vid start ===
     private void Awake()
     {
         _triggerCollider = GetComponent<Collider2D>();
@@ -13,6 +14,7 @@ public class LevelMoveMain : MonoBehaviour
             Debug.LogError("[LevelMoveMain] No Collider2D on this GameObject!");
     }
 
+    // === Reagerar när spelaren går in i kollidern ===
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (_hasFired) return;
@@ -21,10 +23,10 @@ public class LevelMoveMain : MonoBehaviour
         _hasFired = true;
         _triggerCollider.enabled = false;
 
-        // Instead of direct ++, call our new wrapper:
+        // Ökar nuvarande level via LevelTracker
         LevelTracker.Increment();
 
-        // Now load the “Loading” screen:
+        // Byter till laddningsscen (Loading)
         SceneLoader.LoadWithLoadingScreen("Loading");
     }
 }

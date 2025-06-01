@@ -11,75 +11,22 @@ public class Collisions : MonoBehaviour
 
     public AudioClip fireballHitClip;
 
-
+    // Initierar vapnets stats från spelarens statistik
     public void Start()
     {
         SetStats(playerstats);
     }
 
+    // Hämtar spelarens skada, kritchans och kritskada
     public void SetStats(PlayerStats stats)
     {
         playerstats = stats;
         damage = playerstats.atk;
         critChance = playerstats.critCH;
-        critDMG = playerstats.critDMG;  
+        critDMG = playerstats.critDMG;
     }
 
-    //private void OnTriggerEnter2D(Collider2D other)
-    //{
-    //    bool isEnemy = other.CompareTag("Enemy");
-    //    bool isBoss = other.CompareTag("Boss");
-    //    bool isWall = other.gameObject.layer == LayerMask.NameToLayer("Projectile Block");
-
-    //    if (isEnemy || isBoss)
-    //    {
-    //        EnemyStats stats = other.GetComponent<EnemyStats>();
-    //        if (stats != null)
-    //        {
-    //            var crit = Random.Range((int)0f, (int)10f);
-    //            Debug.Log(crit);
-    //            if (crit <= critChance)
-    //            {
-    //                stats.TakeDamage(damage * critDMG);
-    //            }
-    //            else
-    //            {
-    //                stats.TakeDamage(damage);
-    //            }
-    //        }
-
-    //    }
-
-    //    if (isEnemy || isWall || isBoss)
-    //    {
-    //        if (impactEffect != null)
-    //        {
-    //            GameObject fx = Instantiate(impactEffect, transform.position, Quaternion.identity);
-    //            fx.transform.localScale = Vector3.one;
-
-    //            ParticleSystem ps = fx.GetComponent<ParticleSystem>();
-    //            if (ps != null)
-    //            {
-    //                ps.Play();
-
-    //            }                
-    //        }
-
-    //        Destroy(gameObject);
-    //    }
-    //    if (other.CompareTag("Boss"))
-    //    {
-    //        BossStats bossStats = other.GetComponent<BossStats>();
-
-    //        if (bossStats != null)
-    //        {
-    //            bossStats.TakeDamage(damage);
-    //        }
-
-    //        Destroy(gameObject);
-    //    }
-    //}
-
+    // Huvudfunktion som hanterar kollision med fiender, bossar eller väggar
     private void OnTriggerEnter2D(Collider2D other)
     {
         bool isEnemy = other.CompareTag("Enemy");
@@ -89,19 +36,19 @@ public class Collisions : MonoBehaviour
         // Skada fiende eller boss
         if (isEnemy || isBoss)
         {
-            // Först försök träffa bossen (override)
+            // Försök hämta BossStats först
             if (other.TryGetComponent<BossStats>(out var bossStats))
             {
-
                 var crit = Random.Range(0f, 10f);
                 bossStats.TakeDamage(crit <= critChance && critChance > 0 ? damage * critDMG : damage);
             }
-            // Om inte boss, träffa vanlig fiende
+            // Om inte boss, försök fiende
             else if (other.TryGetComponent<EnemyStats>(out var enemyStats))
             {
                 var crit = Random.Range(0f, 10f);
-                
                 enemyStats.TakeDamage(crit <= critChance && critChance > 0 ? damage * critDMG : damage);
+
+                // Om spelaren har "ignite" effekt, applicera brännskada
                 if (crit <= critChance && critChance > 0 && playerstats.ignite == true)
                 {
                     enemyStats.ApplyBurn(3f, 0.2f, 1f);
@@ -109,7 +56,7 @@ public class Collisions : MonoBehaviour
             }
         }
 
-        // Skapa träffeffekt
+        // Skapa effekt på träff, oavsett om det är fiende, boss eller vägg
         if (isEnemy || isWall || isBoss)
         {
             if (impactEffect != null)
@@ -122,7 +69,7 @@ public class Collisions : MonoBehaviour
                 if (ps != null)
                     ps.Play();
             }
-            Destroy(gameObject); // Bara en gång här
+            Destroy(gameObject); // Förstör projektilen efter träff
         }
     }
 

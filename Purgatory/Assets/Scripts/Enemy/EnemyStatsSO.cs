@@ -3,6 +3,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Enemies/Stats Preset", fileName = "NewEnemyStats")]
 public class EnemyStatsSO : ScriptableObject
 {
+    // === Grundläggande hälsa och XP ===
     [Header("Health & XP")]
     public float baseHealth = 100f;
     [Tooltip("Fraction of baseHealth added per level (e.g. 1 = +100% per level)")]
@@ -12,11 +13,13 @@ public class EnemyStatsSO : ScriptableObject
     [Tooltip("Fraction of baseXpReward added per level")]
     public float xpPerLevel = 0.05f;
 
+    // === Närstridsskada ===
     [Header("Melee Damage")]
     public int baseDamage = 10;
     [Tooltip("Fraction of baseDamage added per level")]
     public float damagePerLevel = 0.05f;
 
+    // === Eldskada för brännande fiender ===
     [Header("Burn (for BurningSkull)")]
     public int baseBurnDamage = 4;
     [Tooltip("Fraction of baseBurnDamage added per level")]
@@ -24,6 +27,7 @@ public class EnemyStatsSO : ScriptableObject
     [Tooltip("Fixed burn duration (seconds)")]
     public float burnDuration = 10f;
 
+    // === Giftskada för goblins ===
     [Header("Poison (for Goblin)")]
     public int basePoisonDamage = 3;
     [Tooltip("Fraction of basePoisonDamage added per level")]
@@ -31,9 +35,9 @@ public class EnemyStatsSO : ScriptableObject
     [Tooltip("Fixed poison duration (seconds)")]
     public float poisonInterval = 6f;
 
-    // Helper methods
+    // === Dynamiska beräkningar baserat på level ===
     public float GetHealth(int lvl) =>
-        baseHealth * (1 + healthPerLevel * (lvl -1));
+        baseHealth * (1 + healthPerLevel * (lvl - 1));
 
     public int GetXpReward(int lvl) =>
         Mathf.RoundToInt(baseXpReward * (1 + xpPerLevel * (lvl - 1)));

@@ -2,12 +2,15 @@ using UnityEngine;
 using UnityEditor;
 using System.IO;
 
+/// <summary>
+/// Unity Editor tool for generating destructible decoration ScriptableObjects from selected top/bottom sprites.
+/// </summary>
 public class DestructibleDecoGenerator : EditorWindow
 {
-    private Sprite topSprite;
-    private Sprite bottomSprite;
-    private string saveFolder = "Assets/Tiles/Destructibles/";
-    private static int decoCounter = 1;
+    private Sprite topSprite; // Optional sprite for top deco tile
+    private Sprite bottomSprite; // Optional sprite for bottom deco tile
+    private string saveFolder = "Assets/Tiles/Destructibles/"; // Default folder to save assets
+    private static int decoCounter = 1; // Keeps track of group index
 
     [MenuItem("Window/Tools/Destructible Deco Generator")]
     public static void ShowWindow()
@@ -19,10 +22,13 @@ public class DestructibleDecoGenerator : EditorWindow
     {
         GUILayout.Label("Generate Destructible Decoration", EditorStyles.boldLabel);
 
+        // Sprite selectors
         topSprite = (Sprite)EditorGUILayout.ObjectField("Top Sprite", topSprite, typeof(Sprite), false);
         bottomSprite = (Sprite)EditorGUILayout.ObjectField("Bottom Sprite", bottomSprite, typeof(Sprite), false);
 
         EditorGUILayout.Space();
+
+        // Folder selector
         EditorGUILayout.LabelField("Save Location:", saveFolder);
         if (GUILayout.Button("Choose Folder"))
         {
@@ -34,6 +40,8 @@ public class DestructibleDecoGenerator : EditorWindow
         }
 
         EditorGUILayout.Space();
+
+        // Main button
         if (GUILayout.Button("Generate Decoration"))
         {
             GenerateDecoTiles();
@@ -55,6 +63,7 @@ public class DestructibleDecoGenerator : EditorWindow
             Directory.CreateDirectory(saveFolder);
         }
 
+        // Generate top tile asset
         if (topSprite != null)
         {
             DestructibleDeco topTile = CreateInstance<DestructibleDeco>();
@@ -64,6 +73,7 @@ public class DestructibleDecoGenerator : EditorWindow
             AssetDatabase.CreateAsset(topTile, topPath);
         }
 
+        // Generate bottom tile asset
         if (bottomSprite != null)
         {
             DestructibleDeco bottomTile = CreateInstance<DestructibleDeco>();

@@ -7,111 +7,108 @@ using UnityEngine.UI;
 public class EnemyStats : MonoBehaviour
 {
     [Header("Data")]
-    public EnemyStatsSO preset;
+    public EnemyStatsSO preset; // ScriptableObject with enemy base stats and XP reward
 
-    [HideInInspector]
-    public float health;
-    public Coroutine burnCoroutine;
-    private float maxHealth;
-    public float MaxHealth
-    {
-        get { return maxHealth; }
-    }
+    public float health; // Current health
+    public Coroutine burnCoroutine; // Reference to burn coroutine
+    private float maxHealth; // Internal max health reference
+    public float MaxHealth => maxHealth; // Read-only public max health
 
-    private bool isDead;
-    public bool IsDead => isDead;
+    private bool isDead; // Internal death state
+    public bool IsDead => isDead; // Read-only public dead flag
 
-    // backing store for XP; never serializes
-    private int _xpReward;
-    public int xpReward => _xpReward;
+    private int _xpReward; // XP to give on death
+    public int xpReward => _xpReward; // Read-only XP reward
 
-    public Image healthBar;
-    private SpriteRenderer sr;
-    private Color originalColor;
+    public Image healthBar; // UI element for health bar
+    private SpriteRenderer sr; // Sprite renderer used for flashing
+    private Color originalColor; // Default sprite color
 
-    [SerializeField] private float flashDuration = 0.1f;
-    [SerializeField] private ParticleSystem deathEffect;
-    [SerializeField] private bool isBoss = false;
-    //[SerializeField] private bool instantDeath = false;
+    [SerializeField] private float flashDuration = 0.1f; // Flash time when damaged
+    [SerializeField] private ParticleSystem deathEffect; // VFX on death
+    [SerializeField] private bool isBoss = false; // Boss flag for triggering boss UI
 
-    private Animator anim;
+    private Animator anim; // Animator component
 
-    public bool isBurning = false;
-    public bool fastFade = false;
-    public AudioClip[] damageClips;
-    public AudioClip[] deathClips;
+    public bool isBurning = false; // Burn effect status
+    public bool fastFade = false; // Fast fade visual toggle
+    public AudioClip[] damageClips; // Audio played on hit
+    public AudioClip[] deathClips; // Audio played on death
 
-    public System.Action OnDamaged;
+    public System.Action OnDamaged; // Callback on damage taken
 
-    
+    // Setup enemy health and XP based on current level
     void Awake()
     {
-        anim = GetComponent<Animator>()
-               ?? GetComponentInChildren<Animator>();
+        anim = GetComponent<Animator>() ?? GetComponentInChildren<Animator>();
 
-        int lvl = LevelTracker.currentLevel - 1;
-        lvl = Mathf.Max(0, lvl);
-        maxHealth = preset.GetHealth(lvl + 1);
-        health = maxHealth;
-        _xpReward = preset.GetXpReward(lvl + 1);
+        int lvl = LevelTracker.currentLevel - 1; // Levels start at 1, so -1 for index
+        lvl = Mathf.Max(0, lvl); // Clamp to minimum of 0
+        maxHealth = preset.GetHealth(lvl + 1); // Get scaled health
+        health = maxHealth; // Set current health
+        _xpReward = preset.GetXpReward(lvl + 1); // Get XP reward
     }
 
+
+    // Cache sprite color and update health bar
     public void Start()
     {
         anim = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
-        if(sr != null )
-            originalColor = sr.color;
-        maxHealth = health;
-        UpdateHealthBar();
-    }
-    public virtual void TakeDamage(float dmg)
-    {
-        health -= dmg;
-
-        Debug.Log($"damage dealt:" + dmg);
-
-        UpdateHealthBar();
-
-        //if (anim != null)
-        //    anim.SetTrigger("Hit");
 
         if (sr != null)
-            StartCoroutine(FlashRed());
+            originalColor = sr.color; // Save original color
 
-        OnDamaged?.Invoke();
+        maxHealth = health;
+        UpdateHealthBar(); // Show initial health
+    }
+    // Take flat damage value and react
+    public virtual void TakeDamage(float dmg)
+    {
+        health -= dmg; // Subtract damage
+        Debug.Log($"damage dealt:" + dmg);
+        UpdateHealthBar();
+
+        if (sr != null)
+            StartCoroutine(FlashRed()); // Visual feedback
+
+        OnDamaged?.Invoke(); // Call damage listeners
 
         if (health <= 0)
         {
-            Die();
-
+            Die(); // Trigger death sequence
             return;
         }
 
-        if (damageClips.Length > 0) SoundFXManager.instance?.PlayRandomSoundFXClip(damageClips, transform, 1f);
+        if (damageClips.Length > 0)
+            SoundFXManager.instance?.PlayRandomSoundFXClip(damageClips, transform, 1f); // Play hit audio
     }
 
+    //Flash red when hit
     private IEnumerator FlashRed()
     {
-        sr.color = new Color(0.3f, 0f, 0f, 1f);
+        sr.color = new Color(0.3f, 0f, 0f, 1f); // Red tint
         yield return new WaitForSeconds(flashDuration);
-        sr.color = originalColor;
+        sr.color = originalColor; // Restore color
     }
 
+    // Update UI health bar based on current health
     public void UpdateHealthBar()
     {
         healthBar.fillAmount = health / maxHealth;
     }
 
+    // Handles enemy death, XP reward, disables movement and visuals
     protected virtual void Die()
     {
-        if (isDead) return;
+        if (isDead) return; // Prevent double-triggering
 
         isDead = true;
 
-        if (deathClips.Length > 0) SoundFXManager.instance.PlayRandomSoundFXClip(deathClips, transform, 1f);
+        if (deathClips.Length > 0) SoundFXManager.instance.PlayRandomSoundFXClip(deathClips, transform, 1f); // Play death sound
 
-        int xp = preset.GetXpReward(LevelTracker.currentLevel);
+
+        int xp = preset.GetXpReward(LevelTracker.currentLevel); // Get XP
 
         GameObject player = GameObject.FindWithTag("Player");
         if (player != null)
@@ -119,14 +116,14 @@ public class EnemyStats : MonoBehaviour
             var stats = player.GetComponent<PlayerStats>();
             if (stats != null)
             {
-                stats.AddXP(xp);
+                stats.AddXP(xp); // Give XP
                 PlayerData.instance.SaveFrom(stats);
             }
         }
 
         if (isBoss)
         {
-            GameManager.instance.ChangeState(GameManager.GameState.majorPowerUpSelection);           
+            GameManager.instance.ChangeState(GameManager.GameState.majorPowerUpSelection); // Show boss "loot"          
         }
 
         if (anim != null)
@@ -134,15 +131,16 @@ public class EnemyStats : MonoBehaviour
 
 
         if (healthBar != null && healthBar.transform.parent != null)
-            healthBar.transform.parent.gameObject.SetActive(false);
+            healthBar.transform.parent.gameObject.SetActive(false); // Hide UI
 
+        // Stop movement
         NavMeshAgent agent = GetComponent<NavMeshAgent>();
         if (agent != null) agent.isStopped = true;
 
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
         if (rb != null) rb.linearVelocity = Vector2.zero;
 
-        // Inaktivera colliders
+        // Disable all physics and AI components
         foreach (Collider2D col in GetComponents<Collider2D>())
             col.enabled = false;
 
@@ -181,7 +179,7 @@ public class EnemyStats : MonoBehaviour
         foreach (Collider2D col in GetComponentsInChildren<Collider2D>())
             col.enabled = false;
 
-
+        // Spawn death particles
         if (deathEffect != null)
         {
             deathEffect.transform.parent = null;
@@ -192,16 +190,19 @@ public class EnemyStats : MonoBehaviour
         }
 
 
-        StartCoroutine(DeathSequence());
+        StartCoroutine(DeathSequence()); // Fade out and destroy
     }
+
+    // Apply burn effect as DoT
     public void ApplyBurn(float duration, float tickInterval, float damagePerTick)
     {
-        if (isBurning)
+        if (isBurning) // Don't stack
             return;
 
         StartCoroutine(BurnRoutine(duration, tickInterval, damagePerTick));
     }
 
+    // Apply repeated damage while burning
     private IEnumerator BurnRoutine(float duration, float tickInterval, float damagePerTick)
     {
         isBurning = true;
@@ -209,16 +210,17 @@ public class EnemyStats : MonoBehaviour
 
         while (elapsed < duration)
         {
-            TakeDamage(damagePerTick);
+            TakeDamage(damagePerTick); // Apply damage tick
             yield return new WaitForSeconds(tickInterval);
             elapsed += tickInterval;
 
-            if (health <= 0) yield break;
+            if (health <= 0) yield break; // Stop if dead
         }
 
         isBurning = false;
     }
-   
+
+    // Fades out sprite and destroys object
     private IEnumerator DeathSequence()
     {
         float duration = fastFade ? 0.25f : 1f;
@@ -230,16 +232,17 @@ public class EnemyStats : MonoBehaviour
             while (elapsed < duration)
             {
                 elapsed += Time.deltaTime;
-                float alpha = Mathf.Lerp(1f, 0f, elapsed / duration);
+                float alpha = Mathf.Lerp(1f, 0f, elapsed / duration); // Fade out
                 sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, alpha);
                 yield return null;
             }
         }
 
+        // Drop heart pickup if available
         DropOnDeath heartDropper = GetComponent<DropOnDeath>();
         if (heartDropper != null)
             heartDropper.DropHeart();
 
-        Destroy(gameObject);
+        Destroy(gameObject); // Remove enemy from scene
     }
 }

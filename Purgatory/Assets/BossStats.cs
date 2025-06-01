@@ -3,46 +3,53 @@ using UnityEngine;
 
 public class BossStats : EnemyStats
 {
-    private Animator animator;
-    private SpriteRenderer spriteRenderer;
-    private bool isDying = false;
+    private Animator animator; // Reference to animator component
+    private SpriteRenderer spriteRenderer; // For flashing effect
+    private bool isDying = false; // Flag to prevent repeated death logic
 
+    // Initialization: fetch sprite and animator, update UI
     public new void Start()
     {
         base.Start();
-        spriteRenderer = GetComponentInChildren<SpriteRenderer>();        
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         animator = GetComponent<Animator>();
         UpdateHealthBar();
     }
 
+    // Handles taking damage, overrides base method
     public override void TakeDamage(float damage)
     {
-        if (isDying) return;
+        if (isDying) return; // Prevents damage during death
         base.TakeDamage(damage);
 
+        // Flash red briefly on damage
         if (spriteRenderer != null && !isDying)
             StartCoroutine(FlashWhite());
     }
 
+    // Coroutine to visually flash the boss on hit
     private IEnumerator FlashWhite()
     {
         Color originalColor = spriteRenderer.color;
 
         spriteRenderer.color = new Color(0.3f, 0f, 0f, 1f);
         yield return new WaitForSeconds(0.08f);
-        spriteRenderer.color = originalColor; ;
+        spriteRenderer.color = originalColor;
     }
 
+    // Override death logic to start custom animation sequence
     protected override void Die()
     {
-        if (isDying) return;
+        if (isDying) return; // Prevent multiple calls
         StartCoroutine(PlayDeathAnimation());
     }
 
+    // Coroutine to animate boss death, reward player, and change game state
     private IEnumerator PlayDeathAnimation()
     {
         isDying = true;
 
+        // Reward XP to player
         GameObject player = GameObject.FindWithTag("Player");
         if (player != null)
         {
@@ -55,24 +62,26 @@ public class BossStats : EnemyStats
             }
         }
 
+        // Hide health UI
         if (healthBar != null && healthBar.transform.parent != null)
             healthBar.transform.parent.gameObject.SetActive(false);
 
-
+        // Disable boss controller if present
         BossController controller = GetComponent<BossController>();
-
         if (controller != null)
             controller.enabled = false;
 
+        // Trigger death animation
         if (animator != null)
             animator.SetTrigger("Die");
 
+        // Notify game manager
         GameManager.instance.ChangeState(GameManager.GameState.majorPowerUpSelection);
 
         yield break;
-
     }
 
+    // Optional coroutine to fade sprite before destroying boss
     private IEnumerator FadeOutAndDestroy()
     {
         SpriteRenderer[] sprites = GetComponentsInChildren<SpriteRenderer>();
@@ -95,7 +104,4 @@ public class BossStats : EnemyStats
 
         Destroy(gameObject);
     }
-
-
-
 }

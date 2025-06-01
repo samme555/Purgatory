@@ -7,6 +7,7 @@ public class SkillPointsText : MonoBehaviour
 
     private void Update()
     {
+        // Hämtar aktuella skill points från PlayerData och uppdaterar texten varje frame
         if (PlayerData.instance != null)
         {
             skillPointsText.text = "Skill Points: " + PlayerData.instance.skillPoints;
@@ -15,6 +16,5 @@ public class SkillPointsText : MonoBehaviour
         {
             Debug.Log("player data anus");
         }
-
     }
 }
