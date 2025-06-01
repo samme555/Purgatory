@@ -126,7 +126,7 @@ public class EnemyStats : MonoBehaviour
 
         if (isBoss)
         {
-            GameManager.instance.ChangeState(GameManager.GameState.majorPowerUpSelection);
+            GameManager.instance.ChangeState(GameManager.GameState.majorPowerUpSelection);           
         }
 
         if (anim != null)
