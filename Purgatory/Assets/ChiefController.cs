@@ -16,9 +16,11 @@ public class ChiefController : MonoBehaviour
     public GameObject hitboxPrefab; // Slam hitbox object
 
     [Header("Attack Settings")]
-    public float range = 0.75f; // Distance within which enemy slams
-    public float cooldown = 3f; // Time before next slam
-    public float warningDuration = 0.3f; // Time between warning and slam
+
+    public float range = 0.75f;
+    public float cooldown = 3f;
+    public float warningDuration = 0.7f;
+
 
     private bool canAttack = true; // Cooldown flag
     public bool isAttacking = false; // Currently in slam sequence
