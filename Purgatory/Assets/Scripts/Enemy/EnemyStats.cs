@@ -175,6 +175,11 @@ public class EnemyStats : MonoBehaviour
         if (daemonScript != null)
             daemonScript.enabled = false;
 
+        foreach (Collider2D col in GetComponents<Collider2D>())
+            col.enabled = false;     
+
+        foreach (Collider2D col in GetComponentsInChildren<Collider2D>())
+            col.enabled = false;
 
 
         if (deathEffect != null)
