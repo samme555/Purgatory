@@ -123,7 +123,7 @@ public class PowerUpManager : MonoBehaviour
                     break;
 
             }
-        //PlayerData.instance.SaveFrom(stats);
+        PlayerData.instance.SaveFrom(stats);
     }
 
     void RandomizeNewPowerUps(bool isMajor) 
