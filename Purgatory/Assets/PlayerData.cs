@@ -15,7 +15,7 @@ public class PlayerData : MonoBehaviour
     public float critCH = 0;
     public float critDMG = 2;
     public float moveSpeed = 1;
-    public float atkSPD = 1;
+    public float atkSPD = 1.3f;
     public float atk = 10;
     public int skillPoints = 0;
 
