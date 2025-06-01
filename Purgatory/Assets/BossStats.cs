@@ -55,6 +55,10 @@ public class BossStats : EnemyStats
             }
         }
 
+        if (healthBar != null && healthBar.transform.parent != null)
+            healthBar.transform.parent.gameObject.SetActive(false);
+
+
         BossController controller = GetComponent<BossController>();
 
         if (controller != null)
