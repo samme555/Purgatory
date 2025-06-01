@@ -1,7 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
-using NUnit.Framework;
-using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 
 public class FadeInDeathScreen : MonoBehaviour

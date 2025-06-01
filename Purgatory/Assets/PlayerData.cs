@@ -10,6 +10,7 @@ public class PlayerData : MonoBehaviour
     public int level = 1;
     public float xpToNextLevel = 50;
     public int hp = 100;
+    public float maxHp = 100;
     public float critCH = 0;
     public float critDMG = 2;
     public float moveSpeed = 1;
@@ -51,6 +52,7 @@ public class PlayerData : MonoBehaviour
         level = stats.level;
         xpToNextLevel = stats.xpToNextLevel;
         hp = stats.hp;
+        maxHp = stats.maxHp;
         critCH = stats.critCH;
         critDMG = stats.critDMG;
         moveSpeed = stats.moveSpeed;
@@ -71,6 +73,7 @@ public class PlayerData : MonoBehaviour
         stats.level = level;
         stats.xpToNextLevel = xpToNextLevel;
         stats.hp = hp;
+        stats.maxHp = maxHp;
         stats.critCH = critCH;
         stats.critDMG = critDMG;
         stats.moveSpeed = moveSpeed;
@@ -89,12 +92,16 @@ public class PlayerData : MonoBehaviour
         level = 1;
         xpToNextLevel = 100;
         hp = 100;
+        maxHp = 100;
         critCH = 0;
         critDMG = 2;
         moveSpeed = 1;
         atkSPD = 1;
         atk = 10;
         biggerBullet = false;
+        shotgun = false;
+        burstFire = false;
+        ignite = false;
         Debug.Log("Reset the stats");
     }
 

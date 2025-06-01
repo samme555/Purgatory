@@ -17,7 +17,7 @@ public class ChiefController : MonoBehaviour
     [Header("Attack Settings")]
     public float range = 0.75f;
     public float cooldown = 3f;
-    public float warningDuration = 0.3f;
+    public float warningDuration = 0.7f;
 
     private bool canAttack = true;
     public bool isAttacking = false;

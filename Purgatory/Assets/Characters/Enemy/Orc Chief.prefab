@@ -200,7 +200,7 @@ MonoBehaviour:
   hitboxPrefab: {fileID: 512501050580426279, guid: 80c54e1dde4b9f041bef7a64217b1518, type: 3}
   range: 0.5
   cooldown: 3
-  warningDuration: 0.5
+  warningDuration: 0.7
   isAttacking: 0
   spriteRenderer: {fileID: 4014268772967773632}
   slamEffectPrefab: {fileID: 114447683477968215, guid: 68a445d6c5194f547ab912e1ff9a39b3, type: 3}
