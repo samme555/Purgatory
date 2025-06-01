@@ -588,6 +588,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 2621821970028923188, guid: e011c842c4c65154d8f695596fa82111, type: 3}
   spriteRenderer: {fileID: 4922114864710904979}
+  teleportEffect: {fileID: 8284082024645238499, guid: 7158f99c5b119394da0871172addf408, type: 3}
   speed: 0.4
   dashSpeed: 15
   dashDuration: 0.15

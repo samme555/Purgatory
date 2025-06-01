@@ -7,6 +7,7 @@ public class DaemonController : MonoBehaviour
     public Transform player;
     private EnemyStats stats;
     [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private ParticleSystem teleportEffect;
 
     [Header("Movement Settings")]
     public float speed = 2f;
@@ -188,11 +189,17 @@ public class DaemonController : MonoBehaviour
 
     void Teleport()
     {
+        if(teleportEffect != null)
+            Instantiate(teleportEffect, transform.position, Quaternion.identity);
+
         SoundFXManager.instance.PlaySoundFXClip(warpClip, transform, 1f);
         anim?.ResetTrigger("Attack");
         anim?.SetTrigger("Idle");
         Vector2 offset = Random.insideUnitCircle.normalized * 0.6f;
         transform.position = player.position + (Vector3)offset;
+
+        if (teleportEffect != null)
+            Instantiate(teleportEffect, transform.position, Quaternion.identity);
     }
 
     IEnumerator FadeOutDashIndicator(float duration)
