@@ -26,6 +26,7 @@ public class ChiefController : MonoBehaviour
     private Vector2 lastDirection;
 
     [SerializeField] SpriteRenderer spriteRenderer;
+    [SerializeField] private ParticleSystem slamEffectPrefab;
     private Rigidbody2D rb;
     private List<Vector2Int> currentPattern = new List<Vector2Int>();
 
@@ -133,6 +134,13 @@ public class ChiefController : MonoBehaviour
 
         GameObject hitBox = Instantiate(hitboxPrefab, hitboxPos, Quaternion.identity);
         hitBox.transform.localScale = new Vector3(scale, scale, 1f);
+        if(slamEffectPrefab != null)
+        {
+            Vector3 effectPos = hitboxPos + new Vector3(0f, 0.1f, 0f);
+            ParticleSystem fx = Instantiate(slamEffectPrefab, hitboxPos, Quaternion.identity);
+            fx.Play();
+            Destroy(fx.gameObject, 1f);
+        }
 
         EnemyStats stats = GetComponent<EnemyStats>();
         if (stats != null)
