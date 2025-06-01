@@ -129,13 +129,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   preset: {fileID: 11400000, guid: 2fa658451c20ef9439616c28322bebfc, type: 2}
   health: 50
-  xpReward: 15
-  deathEffect: {fileID: 3301259197365733129}
   healthBar: {fileID: 8783933556512912140}
-  orc: 0
+  flashDuration: 0.1
+  deathEffect: {fileID: 3301259197365733129}
+  isBoss: 0
+  isBurning: 0
   fastFade: 1
-  orcDamageClips: []
-  orcDeathClips: []
+  damageClips:
+  - {fileID: 8300000, guid: 0cf30913e431e124189e496f62f5841d, type: 3}
+  - {fileID: 8300000, guid: 83f1d213c2fd06e41bfcf41a07b62eed, type: 3}
+  - {fileID: 8300000, guid: bc3c3f2831e63764da1dbbb0cf02efd3, type: 3}
+  deathClips:
+  - {fileID: 8300000, guid: 5529aee81c1435647999dffde108f93e, type: 3}
 --- !u!70 &7756543316211349253
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
